@@ -1,5 +1,9 @@
 # Final Full-Site Audit
 
+## User-requested website URL rename — 2026-09-18
+
+After reviewing the HINGETRA branding release, the user requested changing the remaining old brand in the address bar. The repository and Pages prefix now use `hingetra-industrial-hinges`; the current preview is `https://songselect8-pixel.github.io/hingetra-industrial-hinges/`. The workflow derives `PAGES_BASE_PATH` and `SITE_URL` from the renamed Pages configuration, rebuilding all navigation, assets, metadata, structured data, sitemap and RSS for that prefix. Existing product/article suffixes, approved page designs, technical data, RFQ behavior and preview indexing policy are unchanged. `hingetra.com` is still not connected. Use the new website address for bookmarks and shared links.
+
 ## User-authorized branding update — 2026-09-18
 
 The user requested the public English identity **HINGETRA** / **Hingetra Industrial Hinges** and supplied its logo. The shared header/footer use an English-only horizontal adaptation; the browser icon uses the same hinge emblem. Page titles, business-name displays, RSS and resource publishers, and Organization/BlogPosting logo metadata now follow the shared brand configuration. The proposed `hingetra.com` domain is not connected; the GitHub Pages preview address, original catalog/company provenance, product specifications, contacts, non-indexable preview policy and “Request checked, not sent.” behavior remain unchanged. The existing production RFQ-delivery and legal-identity checks still apply. See `docs/research/2026-09-18-hingetra-branding.md`. No approved page composition was redesigned.

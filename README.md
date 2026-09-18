@@ -1,5 +1,7 @@
 # HINGETRA industrial hinge website
 
+[Open the website preview](https://songselect8-pixel.github.io/hingetra-industrial-hinges/)
+
 An English B2B manufacturer website built with Next.js, TypeScript and Tailwind CSS. The homepage, Products center and Bearing Type product-detail template are approved and locked. The approved master route is `/products/bearing-weld-on-hinges`; all nine remaining catalog-family detail routes now reuse that template.
 
 **Homepage, Products and product-detail design systems: LOCKED.** Reuse the components, styles and rules documented in [docs/design-system.md](docs/design-system.md) for inner pages. The product-detail baseline and section order are recorded in [docs/product-detail-template-lock.json](docs/product-detail-template-lock.json).

@@ -5,7 +5,7 @@ import sharp from "sharp";
 import staticImageLoader from "../src/lib/static-image-loader.ts";
 
 test("the static image loader serves a real responsive WebP variant", () => {
-  process.env.NEXT_PUBLIC_BASE_PATH = "/yipinxiang-industrial-hinges";
+  process.env.NEXT_PUBLIC_BASE_PATH = "/hingetra-industrial-hinges";
 
   const url = staticImageLoader({
     src: "/images/hinge-pin-hero.jpg",
@@ -15,21 +15,21 @@ test("the static image loader serves a real responsive WebP variant", () => {
 
   assert.equal(
     url,
-    "/yipinxiang-industrial-hinges/images/optimized/hinge-pin-hero-640.webp",
+    "/hingetra-industrial-hinges/images/optimized/hinge-pin-hero-640.webp",
   );
 });
 
 test("the static image loader rounds up to the next prepared width", () => {
-  process.env.NEXT_PUBLIC_BASE_PATH = "/yipinxiang-industrial-hinges";
+  process.env.NEXT_PUBLIC_BASE_PATH = "/hingetra-industrial-hinges";
 
   assert.equal(
     staticImageLoader({ src: "/images/hinge-pin-hero.jpg", width: 700 }),
-    "/yipinxiang-industrial-hinges/images/optimized/hinge-pin-hero-768.webp",
+    "/hingetra-industrial-hinges/images/optimized/hinge-pin-hero-768.webp",
   );
 });
 
 test("external and unregistered images remain usable", () => {
-  process.env.NEXT_PUBLIC_BASE_PATH = "/yipinxiang-industrial-hinges";
+  process.env.NEXT_PUBLIC_BASE_PATH = "/hingetra-industrial-hinges";
 
   assert.equal(
     staticImageLoader({ src: "https://example.com/hinge.jpg", width: 640 }),
@@ -37,7 +37,7 @@ test("external and unregistered images remain usable", () => {
   );
   assert.equal(
     staticImageLoader({ src: "/images/future-source.jpg", width: 640 }),
-    "/yipinxiang-industrial-hinges/images/future-source.jpg",
+    "/hingetra-industrial-hinges/images/future-source.jpg",
   );
 });
 
