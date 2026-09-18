@@ -132,12 +132,20 @@
   {
     "publicPath": "/images/illustrations/application-trailer-gate.png",
     "originalSource": "铰链/application-trailer-gate.png",
-    "kind": "supplied supporting illustration",
+    "kind": "AI-edited supporting illustration",
     "isCompanyEvidence": false,
     "width": 1448,
     "height": 1086,
-    "sha256": "cfa708dcaf83b9a2f001658bb5cdb9372bce09f68de27663cd46c251f6b564cc",
-    "method": "User-supplied illustration copied unchanged. Not evidence of company personnel, equipment, inspection facilities or customer installations."
+    "sha256": "8ef551d3a6725f6d5fb80016deb07a87b68fc494b8df4353dd5b4e79a09b2e06",
+    "method": "User-requested replacement of the incorrect short hinge and mounting strap, using the original catalog page-6 product photograph as the geometry reference. Generated with the built-in imagegen tool and copied without further image editing. Remains an illustrative application scene, not actual product photography or evidence of a customer installation.",
+    "revisedAt": "2026-09-18",
+    "productReference": {
+      "catalog": "铰链/Products show 2026(1).pdf",
+      "page": 6,
+      "family": "12 / 14 / 16 Type",
+      "sourceImage": "public/images/drawing-12-14-16-type.png"
+    },
+    "prompt": "docs/research/2026-09-18-trailer-gate-image-prompt.txt"
   },
   {
     "publicPath": "/images/illustrations/packaging-shipping.png",

@@ -1,0 +1,19 @@
+Use case: precise-object-edit / product-reference compositing.
+Asset type: one premium industrial website application illustration, landscape 4:3, 1448 x 1086 if possible.
+
+INPUT ROLES:
+Image 1 is the EDIT TARGET and reference for the trailer/gate environment and photographic style. Its CURRENT HINGE IS WRONG and must NOT be preserved or copied.
+Image 2 is the AUTHORITATIVE PRODUCT REFERENCE, an unmodified photo and technical drawing extracted from page 6 of the manufacturer's catalog. Use ONLY the physical hinge photo on the LEFT of this reference as the hinge appearance guide. The right-hand drawing is only to understand the structure; DO NOT include any drawing or text in the output.
+
+PRIMARY REQUEST:
+Rework the trailer-door/gate application image so the visible mounted hinge has the same slim elongated 12 / 14 / 16 type two-piece weld-on hinge construction as the reference photograph. The product identity is essential; do not substitute generic trailer hardware.
+
+PRODUCT GEOMETRY:
+A straight vertical slim steel barrel, two approximately equal-length elongated bodies meeting at ONE narrow horizontal joint at the middle; a very thin warm metallic washer line at that joint; continuous matching outer profile and one shared vertical axis. The assembled hinge has approximately the same tall slender silhouette as the reference photo, about 7 times as long as its visible width, with subtly chamfered closed top and bottom. Preserve the understated raw machined dark steel appearance and flat welding edge / water-drop profile in the source. Pin is internal when assembled, not sticking out.
+
+INSTALLATION AND SCENE:
+Show ONE complete hinge prominently and clearly, installed vertically at the narrow seam between a gray steel trailer gate on the left and its gray square-tube frame on the right. Bring the door edge and frame close enough to form a physically credible installation. Upper half welded along its outside flat edge to the moving door; lower half welded along its opposite outside flat edge to the fixed frame, leaving the central pivot seam free. Subtle realistic weld beads, no oversized steel straps or hinge leaves. Remove the original short chunky hinge AND its broad horizontal hinge mounting strap. A nearby trailer rail or diagonal bracing can remain as environmental context, but must NOT connect to the hinge as a leaf or strap.
+Keep gray painted fabricated steel surfaces, subdued industrial yard background, gravel, and understated red/white trailer reflector detail along the lower part of the frame. Camera close-up, soft daylight, realistic restrained metal texture. Hinge central in composition, roughly 42 percent of image height, fully visible with comfortable space at both ends, so square/mobile crops retain the entire hinge. The hinge itself is the focal point, environmental elements secondary.
+
+INVARIANTS / AVOID:
+Use reference 2's product structure, not image 1's incorrect generic hinge. No butt hinges, no strap hinges, no flat perforated leaves, no mounting plates, no bolts, no three-knuckle hinges, no grease nipple, no external adjustment screw, no visible long protruding pin. No labels, dimensions, annotations, company logos, captions, text or watermark in the pixels. Do not reproduce the source drawing. One coherent photorealistic industrial application illustration, not a collage or product catalog sheet.
