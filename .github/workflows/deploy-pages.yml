@@ -44,10 +44,14 @@ jobs:
         run: |
           npm run build
           npm run verify:static
+          npm run verify:seo
         env:
           STATIC_EXPORT: "true"
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          SITE_URL: https://${{ github.repository_owner }}.github.io${{ steps.pages.outputs.base_path }}
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          SEARCH_INDEXING_ENABLED: ${{ vars.SEARCH_INDEXING_ENABLED || 'false' }}
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+          BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
 
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3

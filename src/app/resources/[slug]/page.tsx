@@ -56,13 +56,17 @@ export default async function ResourceArticlePage({ params }: ResourcePageProps)
   };
   const articleSchema = {
     "@context": "https://schema.org", "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    url,
+    inLanguage: "en",
+    isPartOf: { "@id": `${joinSiteUrl(baseUrl, "/")}#website` },
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt ?? article.publishedAt,
     image: joinSiteUrl(baseUrl, article.featuredImage),
     mainEntityOfPage: url,
-    publisher: { "@type": "Organization", name: resourcePublisher.name, logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo) } },
+    publisher: { "@type": "Organization", "@id": `${joinSiteUrl(baseUrl, "/")}#organization`, name: resourcePublisher.name, logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo) } },
   };
-  return <><ResourceArticleTemplate article={article} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\u003c") }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\u003c") }} /></>;
+  return <><ResourceArticleTemplate article={article} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} /></>;
 }

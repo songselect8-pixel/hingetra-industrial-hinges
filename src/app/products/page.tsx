@@ -8,6 +8,7 @@ import { ProductFinder } from "@/components/products/ProductFinder";
 import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/data/site";
+import { products } from "@/data/products";
 import "./products.css";
 
 const title = `Industrial Weld-On Hinges | Product Range | ${site.brand}`;
@@ -21,6 +22,18 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
+  const collection = {
+    "@context": "https://schema.org", "@type": "CollectionPage",
+    "@id": `${joinSiteUrl(baseUrl, "/products")}#webpage`,
+    url: joinSiteUrl(baseUrl, "/products"), name: "Industrial Weld-On Hinges", description,
+    isPartOf: { "@id": `${joinSiteUrl(baseUrl, "/")}#website` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: products.filter((product) => product.detailPagePublished).map((product, index) => ({
+        "@type": "ListItem", position: index + 1, name: product.name, url: joinSiteUrl(baseUrl, product.detailPath),
+      })),
+    },
+  };
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
@@ -48,5 +61,6 @@ export default function ProductsPage() {
       <Footer currentPage="products" />
     </InquiryProvider>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collection).replace(/</g, "\\u003c") }} />
   </div>;
 }

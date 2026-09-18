@@ -20,6 +20,7 @@ Brand update, 2026-09-18: the user confirmed **HINGETRA** / **Hingetra Industria
 - `noindex: true` uses the same public-list exclusion. It is reserved for material that must not be published as a discoverable route.
 - A public guide requires both `draft: false` and `noindex: false`.
 - The whole website still has a separate pre-launch global noindex/robots gate. Remove that gate only during the controlled production launch described in `docs/pre-launch-checklist.md`.
+- The default-off `SEARCH_INDEXING_ENABLED` setting controls the global gate. The sitemap now includes published main/product pages as well as public guides; preparing this inventory does not authorize indexing.
 
 ## Source and copy rules
 
@@ -40,3 +41,5 @@ npm run build
 ```
 
 Then verify the guide at 1440, 1024, 768 and 390px. Check one H1, canonical metadata, `BlogPosting` and breadcrumb structured data, table-of-contents anchors, technical-table scrolling, image captions, related links and the RFQ destination. Confirm the guide appears in `/resources`, `/sitemap.xml` and `/feed.xml` only when public.
+
+For a static deployment, also run `npm run verify:static` and `npm run verify:seo` with the same `SITE_URL`, `PAGES_BASE_PATH` and search-policy environment as the build. These check unique metadata, shared publisher/site IDs, canonical URLs, sitemap/RSS coverage and fragment destinations. Use `/contact#contact-rfq` for the Contact form; `/contact#rfq` is not defined. Do not change publication dates to simulate freshness.

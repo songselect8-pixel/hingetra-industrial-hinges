@@ -60,7 +60,7 @@
     },
     {
       "path": "src/components/products/ProductCard.tsx",
-      "sha256": "0c4dc84280e00e9548eaa2cbbe9f219c1befef6b131d00ac2a3d901ec4c80cb6"
+      "sha256": "922adb42148eec8cc8509de5f9c039c47a180b59fb29f43b9ce465fb3328b3fd"
     },
     {
       "path": "src/components/inquiry/RFQForm.tsx",
@@ -102,5 +102,11 @@
     "asset": "/images/illustrations/hingetra-factory-exterior.png",
     "kind": "AI-generated illustration; not company photographic evidence",
     "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
+  },
+  "seoFoundationUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
+    "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
+    "research": "docs/seo-geo-operations.md"
   }
 }

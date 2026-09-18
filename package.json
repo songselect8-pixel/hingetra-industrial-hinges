@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "pretest": "npm run prepare:images",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "verify:static": "node scripts/verify-static-export.mjs"
+    "verify:static": "node scripts/verify-static-export.mjs",
+    "verify:seo": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

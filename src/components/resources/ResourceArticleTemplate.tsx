@@ -38,7 +38,7 @@ export function ResourceArticleTemplate({ article }: { article: ResourceArticle 
 
   return <div id="resources-top" className="resources-page resource-article-page">
     <InquiryProvider>
-      <Header currentPage="resources" rfqHref="/contact#rfq" />
+      <Header currentPage="resources" rfqHref="/contact#contact-rfq" />
       <main id="main-content">
         <article>
           <header className="resource-article-hero"><div className="shell">
@@ -49,7 +49,7 @@ export function ResourceArticleTemplate({ article }: { article: ResourceArticle 
           </div></header>
 
           <div className="shell resource-reading-layout">
-            <aside className="resource-reading-aside" aria-label="Table of Contents"><ResourceTableOfContents items={toc} /><Link href="/contact#rfq" className="resource-toc-support"><span className="micro-label">Selection support</span><strong>Have a drawing or dimensions?</strong><span>Send your requirement <Arrow /></span></Link></aside>
+            <aside className="resource-reading-aside" aria-label="Table of Contents"><ResourceTableOfContents items={toc} /><Link href="/contact#contact-rfq" className="resource-toc-support"><span className="micro-label">Selection support</span><strong>Have a drawing or dimensions?</strong><span>Send your requirement <Arrow /></span></Link></aside>
             <div className="resource-reading-column"><ResourceTableOfContents items={toc} /><ResourceArticleBody article={article} />
               <section className="resource-key-takeaways" aria-labelledby="key-takeaways-title"><span className="micro-label">Guide summary</span><h2 id="key-takeaways-title">Key Takeaways</h2><ul>{article.keyTakeaways.map((takeaway) => <li key={takeaway}>{takeaway}</li>)}</ul></section>
               <footer className="resource-publisher"><span className="micro-label">Publisher</span><h2>{resourcePublisher.name}</h2><p>Industrial hinge manufacturer and supplier. This guide uses the supplied product catalog and approved website data as its technical references.</p><nav aria-label="Company capability references"><Link href="/manufacturing">Manufacturing</Link><Link href="/quality">Quality Control</Link><Link href="/contact">Contact</Link></nav></footer>
@@ -63,9 +63,9 @@ export function ResourceArticleTemplate({ article }: { article: ResourceArticle 
 
         <section className="section resource-related-resources" aria-labelledby="related-resources-title"><div className="shell"><SectionHeading eyebrow="Keep researching" title={<span id="related-resources-title">Related Resources</span>}><Link href="/resources" className="text-link section-heading-link">All resources <Arrow /></Link></SectionHeading><div className="resource-card-grid">{relatedResources.map((resource) => <ResourceCard article={resource} compact key={resource.slug} />)}</div></div></section>
 
-        <section className="section rfq-section resource-rfq" aria-labelledby="article-rfq-title"><div className="shell resource-rfq-layout"><div><Eyebrow light>RFQ and selection support</Eyebrow><h2 id="article-rfq-title">Ready to discuss your hinge requirement?</h2><p>Tell us the hinge type, dimensions, estimated quantity and application. Attach your drawing where available.</p></div><Link href="/contact#rfq" className="button button-primary">Request a Quote <Arrow /></Link></div></section>
+        <section className="section rfq-section resource-rfq" aria-labelledby="article-rfq-title"><div className="shell resource-rfq-layout"><div><Eyebrow light>RFQ and selection support</Eyebrow><h2 id="article-rfq-title">Ready to discuss your hinge requirement?</h2><p>Tell us the hinge type, dimensions, estimated quantity and application. Attach your drawing where available.</p></div><Link href="/contact#contact-rfq" className="button button-primary">Request a Quote <Arrow /></Link></div></section>
       </main>
-      <Footer currentPage="resources" rfqHref="/contact#rfq" />
+      <Footer currentPage="resources" rfqHref="/contact#contact-rfq" />
     </InquiryProvider>
   </div>;
 }

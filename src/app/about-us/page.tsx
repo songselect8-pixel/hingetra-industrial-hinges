@@ -48,9 +48,10 @@ export default function AboutUsPage() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${joinSiteUrl(baseUrl, "/")}#organization`,
     name: aboutCompany.name,
     logo: joinSiteUrl(baseUrl, site.logo),
-    url: joinSiteUrl(baseUrl, "/about-us"),
+    url: joinSiteUrl(baseUrl, "/"),
   };
 
   return (

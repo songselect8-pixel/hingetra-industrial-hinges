@@ -6,7 +6,7 @@ This preview is not ready for public production traffic until every blocking ite
 
 - GitHub Pages preview: `https://songselect8-pixel.github.io/hingetra-industrial-hinges/`
 - Keep this deployment under the existing global `noindex` and robots gate until the production blockers are complete.
-- A push to `main` must pass the GitHub Pages build and static route/link verification before it is published.
+- A push to `main` must pass the GitHub Pages build, static route/link verification and `npm run verify:seo` before it is published.
 - The hosted preview does not change the RFQ delivery blocker below.
 
 ## RFQ delivery — blocking
@@ -24,11 +24,15 @@ Connect the RFQ form to a real server-side delivery system and perform a real su
 
 - Set `SITE_URL` to the final HTTPS origin and verify every canonical URL and Open Graph URL.
 - Keep the current global `noindex` preview policy until the production domain, content and inquiry delivery are ready.
-- Before launch, intentionally enable indexing and recheck `robots.txt`, `sitemap.xml`, canonicals and structured data on the deployed origin.
+- Before launch, intentionally set `SEARCH_INDEXING_ENABLED=true` only after all blockers are resolved, rebuild, and recheck `robots.txt`, `sitemap.xml`, canonicals and structured data on the deployed origin. The unset/default state remains false.
+- GitHub Actions reads the same repository variable and the actual Pages `base_url` for `SITE_URL`. Optional `GOOGLE_SITE_VERIFICATION` / `BING_SITE_VERIFICATION` values must come from the owner's accounts; empty configuration does not connect an account.
+- Verify robots at the host root. A project-subdirectory `/hingetra-industrial-hinges/robots.txt` does not control the entire host. Page-level noindex is retained; neither noindex nor robots makes a public preview private.
 - Confirm `/resources`, all published resource articles and `/feed.xml` use the final HTTPS origin.
 - Verify that every intended public guide has `draft: false` and `noindex: false`; draft or noindex content must remain absent from the Resources index, related-guide modules and sitemap.
 - Validate every article canonical, Open Graph payload, `BlogPosting` and `BreadcrumbList` on the deployed origin.
-- Confirm the production sitemap contains `/resources` and exactly the six approved published article routes. It must contain no drafts, test records, `localhost` URLs or `127.0.0.1` URLs.
+- Confirm the production sitemap contains all 25 currently published content routes: nine main pages, ten product details and six approved articles. It must contain no drafts, error pages, test records, `localhost` URLs or `127.0.0.1` URLs. Use actual article modification dates; do not mark unchanged pages as updated on every build.
+- Verify the Organization / WebSite IDs, article publisher, canonical, breadcrumb, RSS and sitemap URLs agree on the final origin and trailing-slash convention.
+- After readiness and ownership verification, submit the final sitemap through Search Console / Bing Webmaster Tools. Review search access separately from optional AI-training access; do not promise indexing or AI citations.
 
 ## Resources publishing and navigation
 
@@ -54,6 +58,7 @@ Connect the RFQ form to a real server-side delivery system and perform a real su
 - `hingetra.com` is a proposed domain only. Connect it and update the canonical origin only after ownership and deployment configuration are confirmed; the current GitHub Pages preview URL is unchanged.
 - Keep unverified street addresses, maps, additional channels, timing promises and commercial claims unpublished.
 - Confirm that the production recipient can receive the advertised PDF, DWG, DXF, JPG and PNG attachments within the configured limit.
+- Follow `docs/seo-geo-operations.md` for source-backed content, search measurement and qualified-RFQ operations. Do not count local validation as a delivered inquiry or add tracking before privacy/measurement setup is confirmed.
 
 ## Final deployed regression
 

@@ -20,7 +20,7 @@ export function Hero() {
         </div>
         <figure className="hero-visual">
           <div className="hero-image-label"><span>THE WELD-ON COLLECTION</span><span>2026</span></div>
-          <Image src="/images/hinge-pin-hero.jpg" alt="Water-drop weld-on hinges with an exposed pin and separated hinge body" width={5252} height={3505} preload quality={90} sizes="(max-width: 768px) 100vw, 55vw" className="hero-product-image" />
+          <Image src="/images/hinge-pin-hero.jpg" alt="Water-drop weld-on hinges with an exposed pin and separated hinge body" width={5252} height={3505} loading="eager" fetchPriority="high" quality={90} sizes="(max-width: 768px) 100vw, 55vw" className="hero-product-image" />
           <figcaption className="hero-image-caption"><div><span className="micro-label">A closer look</span><p>Water-drop profile. Pin construction.</p></div><Link href="#range-pin" aria-label="View pin-type hinge specifications" className="hero-image-link"><Arrow diagonal /></Link></figcaption>
         </figure>
       </div>

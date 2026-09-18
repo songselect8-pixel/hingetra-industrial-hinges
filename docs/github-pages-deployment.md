@@ -12,7 +12,7 @@ This hosting integration does not change the locked visual system. Internal navi
 
 The deployed site remains a pre-launch preview:
 
-- Search indexing is disabled by the existing robots policy.
+- Page metadata remains `noindex, nofollow` by default (`SEARCH_INDEXING_ENABLED=false`). The project's subdirectory robots.txt is not a host-root file or a privacy barrier.
 - The RFQ form continues to show **“Request checked, not sent.”**
 - No SMTP or external email delivery service is configured.
 - The production domain and real RFQ delivery must still complete `docs/pre-launch-checklist.md`.
@@ -23,6 +23,10 @@ For a local production-style Pages check:
 $env:STATIC_EXPORT='true'
 $env:PAGES_BASE_PATH='/hingetra-industrial-hinges'
 $env:SITE_URL='https://songselect8-pixel.github.io/hingetra-industrial-hinges'
+$env:SEARCH_INDEXING_ENABLED='false'
 npm run build
 npm run verify:static
+npm run verify:seo
 ```
+
+The workflow reads `SITE_URL` from `actions/configure-pages`'s `base_url` output, including a configured custom domain if later connected. It reads optional repository variables `SEARCH_INDEXING_ENABLED`, `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION`; indexing defaults to false and empty verification tags are omitted. Changing a variable requires a new deployment. Do not enable indexing until domain, identity, privacy and real RFQ delivery checks are complete. There are no analytics or email credentials in these settings.

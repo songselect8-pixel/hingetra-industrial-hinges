@@ -77,7 +77,7 @@
     },
     {
       "path": "src/components/sections/Hero.tsx",
-      "sha256": "3625747c9117cfa4f31ff3b35cc0dd8a0c7aaf23d31f99fbebc14a66ad16df23"
+      "sha256": "68712febf665c357f2ba9e0135ce60b891fa3a7d3a0f33acdb708ff48ed8d86f"
     },
     {
       "path": "src/components/sections/ProductGrid.tsx",
@@ -93,7 +93,7 @@
     },
     {
       "path": "src/components/products/ProductCard.tsx",
-      "sha256": "0c4dc84280e00e9548eaa2cbbe9f219c1befef6b131d00ac2a3d901ec4c80cb6"
+      "sha256": "922adb42148eec8cc8509de5f9c039c47a180b59fb29f43b9ce465fb3328b3fd"
     },
     {
       "path": "src/components/products/TechnicalTable.tsx",
@@ -149,7 +149,7 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "469b0a8147cbbb821df06789b0ac51dcf1c8606d9c7699ad11c2781029d56b38"
+      "sha256": "1340194b757d80a828e445c68aaa251795fcf8b6cb4bb45740ddb3af1a6460ac"
     },
     {
       "path": "src/data/catalog-overview.ts",
@@ -157,7 +157,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "889eaf9b98521ceba980b26134f08399f51698afb26123544ee48ca01219633c"
+      "sha256": "f32bc25c84a5cef53d3aec40dd7e87e3cf3d5cc64d374ba9dda0a8e2cdb19929"
     },
     {
       "path": "src/app/products/products.css",
@@ -300,5 +300,11 @@
       }
     ],
     "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
+  },
+  "seoFoundationUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
+    "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
+    "research": "docs/seo-geo-operations.md"
   }
 }

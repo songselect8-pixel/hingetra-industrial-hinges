@@ -1,5 +1,15 @@
 # Final Full-Site Audit
 
+## User-requested SEO / AI-search foundation update — 2026-09-18
+
+The user requested current official SEO/GEO research and practical improvements. This scoped update preserves layouts, CSS, article text, verified specifications, source images, contact fields and the honest RFQ preview. It expands the sitemap to all 25 content routes, aligns canonical / RSS / structured URLs, adds shared Organization / WebSite identity and a product CollectionPage, completes Contact share metadata, and corrects Resources links to `contact-rfq`. Homepage image loading priority and accessible card labels change without visual changes.
+
+`SEARCH_INDEXING_ENABLED` is a default-off launch setting shared by page metadata and robots. Verification tags are configurable but no external account is connected. Deployment uses the real Pages `base_url`. New `verify:seo` checks all-page metadata, publisher identity, published sitemap/RSS coverage and fragment targets; the local export passes for 25 content pages, six articles and 904 fragment links. The static check passes all 28 HTML files including errors. The site remains non-indexable; email delivery and tracking were not implemented.
+
+The single-run Lighthouse mobile baseline reports Performance 97, Accessibility 100, Best Practices 100 and SEO 66; the SEO blocker is deliberate noindex. This is a lab snapshot, not field performance or ranking. The JSON has no runtimeError, although CLI temporary-profile cleanup returned Windows EPERM. No screenshots or viewport review were performed. Sources, limitations, settings and operations plan: `docs/seo-geo-operations.md`. This entry supersedes older sitemap counts and brand/hosting descriptions below; the original audit remains historical evidence.
+
+Release checks: 79 tests pass, TypeScript and the static production build pass, both export verification commands pass, and all 145 recorded entries across existing lock manifests match. No CSS, product-data, article-content, original-image or RFQ-delivery files changed.
+
 ## User-requested website URL rename — 2026-09-18
 
 After reviewing the HINGETRA branding release, the user requested changing the remaining old brand in the address bar. The repository and Pages prefix now use `hingetra-industrial-hinges`; the current preview is `https://songselect8-pixel.github.io/hingetra-industrial-hinges/`. The workflow derives `PAGES_BASE_PATH` and `SITE_URL` from the renamed Pages configuration, rebuilding all navigation, assets, metadata, structured data, sitemap and RSS for that prefix. Existing product/article suffixes, approved page designs, technical data, RFQ behavior and preview indexing policy are unchanged. `hingetra.com` is still not connected. Use the new website address for bookmarks and shared links.

@@ -135,15 +135,15 @@
     },
     {
       "path": "src/components/resources/ResourcesIndexContent.tsx",
-      "sha256": "abe07736537051284b4a15db787522354f111f0963611f27f06c436b1a0c38cb"
+      "sha256": "7f4ff835d59731cd16fba25b906ee57139c8eb795bbf47961fc48511f4c88579"
     },
     {
       "path": "src/components/resources/ResourceArticleTemplate.tsx",
-      "sha256": "5b2edd3fe9d72127f8b78c81c1323f63ab003b798b9ccf57f31f25609b0ec093"
+      "sha256": "e7b3b02744dae773377e5512162e66263b7d2ebee367cc35f579f4cdf34c834b"
     },
     {
       "path": "src/app/resources/page.tsx",
-      "sha256": "9b4d13e19e4c69dc2fba6a20e7343640518726ea415b1a10fcb1fa090231200b"
+      "sha256": "ce78e6529a0b3c206938bb12e5e1ff98d83daacd80f9363c22065e551e4169ee"
     },
     {
       "path": "src/app/resources/resources.css",
@@ -151,7 +151,7 @@
     },
     {
       "path": "src/app/resources/[slug]/page.tsx",
-      "sha256": "875bcd725040c028add24c649e52f1a7988357f6e9f6bcc5a31647b2f3f20c1c"
+      "sha256": "ed07a93deff59a6eddba130181c40874cd3f40205f7c93f2d755c0dfaecf9f45"
     },
     {
       "path": "src/app/resources/[slug]/article.css",
@@ -159,11 +159,11 @@
     },
     {
       "path": "src/app/feed.xml/route.ts",
-      "sha256": "b45a258a95fb36836f916cca1340d634b76f86d7d6a38f30ab95b8779c5e9d51"
+      "sha256": "fab03a66891c87876455fa8a4f5ea3b5214d214cdfbd0083bf8b66a602ed4607"
     },
     {
       "path": "src/app/sitemap.ts",
-      "sha256": "bfad18a4e991693c4394da4cdf86edced9c336e4435eb7466a34788c8a0019f6"
+      "sha256": "ed5da2d35e0839a44642baf02a57130dca4171d61db2cb750b1aa3dadd8a233b"
     },
     {
       "path": "src/data/site.ts",
@@ -183,7 +183,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "889eaf9b98521ceba980b26134f08399f51698afb26123544ee48ca01219633c"
+      "sha256": "f32bc25c84a5cef53d3aec40dd7e87e3cf3d5cc64d374ba9dda0a8e2cdb19929"
     },
     {
       "path": "src/components/applications/ApplicationsPageContent.tsx",
@@ -223,7 +223,7 @@
     },
     {
       "path": "docs/resources-publishing-guide.md",
-      "sha256": "d3f108ec3191325d2f01d4f85d360e7603449dc862d93856073a906373f1f24a"
+      "sha256": "a8725c94788929a28739cac6fb78c7941d8e2689aeef2e1eb7f024509d26324f"
     }
   ],
   "factoryExteriorUpdate": {
@@ -251,5 +251,11 @@
     "logo": "/images/brand/hingetra-logo.png",
     "provenance": "docs/research/2026-09-18-hingetra-branding.md",
     "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
+  },
+  "seoFoundationUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
+    "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
+    "research": "docs/seo-geo-operations.md"
   }
 }

@@ -113,3 +113,7 @@ The two actual catalog packaging photographs remain first and retain their origi
 - The homepage RFQ remains a local preview. The Contact RFQ also sends nothing by default; it can post multipart form data only after `NEXT_PUBLIC_RFQ_ENDPOINT` is configured, and it never reports success without a successful endpoint response.
 
 Baseline source hashes and final screenshots are recorded under `output/qa/final-refinement/`. They support comparison; the implemented components and CSS remain the working source of truth. Do not treat earlier exploratory screenshots as a new design direction.
+
+## Authorized technical SEO maintenance — 2026-09-18
+
+The user's SEO / AI-search optimization request permits nonvisual metadata, canonical URL, sitemap/RSS, shared brand-entity, default-off indexing configuration, link-target, loading-priority and accessibility-label fixes. This does not unlock visual composition, CSS, catalog facts, article content, imagery provenance or RFQ delivery. Preserve all previous source and approval boundaries. Research and launch operations are recorded in `docs/seo-geo-operations.md`.

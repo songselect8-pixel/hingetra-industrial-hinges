@@ -26,5 +26,5 @@ export default function ResourcesPage() {
       { "@type": "ListItem", position: 2, name: "Resources", item: joinSiteUrl(baseUrl, "/resources") },
     ],
   };
-  return <div id="resources-top" className="resources-page"><InquiryProvider><Header currentPage="resources" rfqHref="/contact#rfq" /><main id="main-content"><ResourcesIndexContent /></main><Footer currentPage="resources" rfqHref="/contact#rfq" /></InquiryProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\u003c") }} /></div>;
+  return <div id="resources-top" className="resources-page"><InquiryProvider><Header currentPage="resources" rfqHref="/contact#contact-rfq" /><main id="main-content"><ResourcesIndexContent /></main><Footer currentPage="resources" rfqHref="/contact#contact-rfq" /></InquiryProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\u003c") }} /></div>;
 }

@@ -37,7 +37,7 @@
     "A future server-side delivery connection may replace only the configured delivery boundary and must preserve this locked page composition and failure honesty."
   ],
   "files": [
-    { "path": "src/app/contact/page.tsx", "sha256": "c1e321b3a427771f702c20c519ef0c8cc75a9a4ce2ebc551af3adbcb61d50dd1" },
+    { "path": "src/app/contact/page.tsx", "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db" },
     { "path": "src/app/contact/contact.css", "sha256": "2f85385859991205439261cc6fbfb020e27456146e29fba28a5376431485d27f" },
     { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "27a74429c014cbc110252ce7070c44045d22576121691a38fec61a9f3f618433" },
     { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "5754cc122e53ec2b632f4e1c642d2c902fb63fadb94f671a7ab62416a6780f2d" },
@@ -53,5 +53,11 @@
     "logo": "/images/brand/hingetra-logo.png",
     "provenance": "docs/research/2026-09-18-hingetra-branding.md",
     "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
+  },
+  "seoFoundationUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
+    "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
+    "research": "docs/seo-geo-operations.md"
   }
 }

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.brand,
+    images: [{ url: "/images/hinge-pin-hero.jpg", width: 5252, height: 3505, alt: "Catalog water-drop weld-on hinge body and pin for a technical hinge inquiry" }],
   },
 };
 
@@ -38,9 +39,10 @@ export default function ContactPage() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${joinSiteUrl(baseUrl, "/")}#organization`,
     name: contactDetails.company,
     logo: joinSiteUrl(baseUrl, site.logo),
-    url: joinSiteUrl(baseUrl, "/contact"),
+    url: joinSiteUrl(baseUrl, "/"),
     email: contactDetails.email,
     telephone: contactDetails.phoneHref,
     contactPoint: {

@@ -62,7 +62,7 @@
   "files": [
     {
       "path": "src/app/about-us/page.tsx",
-      "sha256": "06902dc978cdd310ff720b1e64a7f97f458385d8cb337e960f8a3699775a4299"
+      "sha256": "127e1ae6f6889352216c8fe0676e23e08267bd9f597a095d44008922bc0825a8"
     },
     {
       "path": "src/app/about-us/about-us.css",
@@ -98,7 +98,7 @@
     },
     {
       "path": "src/components/products/ProductCard.tsx",
-      "sha256": "0c4dc84280e00e9548eaa2cbbe9f219c1befef6b131d00ac2a3d901ec4c80cb6"
+      "sha256": "922adb42148eec8cc8509de5f9c039c47a180b59fb29f43b9ce465fb3328b3fd"
     }
   ],
   "factoryExteriorUpdate": {
@@ -126,5 +126,11 @@
     "logo": "/images/brand/hingetra-logo.png",
     "provenance": "docs/research/2026-09-18-hingetra-branding.md",
     "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
+  },
+  "seoFoundationUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
+    "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
+    "research": "docs/seo-geo-operations.md"
   }
 }
