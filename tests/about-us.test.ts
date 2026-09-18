@@ -103,15 +103,15 @@ test("About route implements the requested hierarchy, SEO, and internal navigati
   }
 });
 
-test("About imagery keeps actual company evidence separate from disclosed illustrations", () => {
+test("About imagery discloses the factory concept and preserves real product references", () => {
   const existing = [contentPath, capabilitiesPath, evidencePath]
     .filter(existsSync)
     .map((path) => readFileSync(path, "utf8"))
     .join("\n");
 
-  assert.match(existing, /src="\/images\/factory-exterior\.jpg"/);
-  assert.match(existing, /data-asset-kind="company-photo"/);
-  assert.match(existing, /Actual company photo · catalog p3/);
+  assert.equal((existing.match(/src=\{illustrations\.factory\.src\}/g) ?? []).length, 2);
+  assert.equal((existing.match(/AI-generated illustration/g) ?? []).length, 2);
+  assert.doesNotMatch(existing, /factory-exterior\.jpg|data-asset-kind="company-photo"|Actual company photo/i);
   assert.equal((existing.match(/asset="manufacturing"/g) ?? []).length, 1);
   assert.equal((existing.match(/asset="cabinets"/g) ?? []).length, 1);
   assert.equal((existing.match(/asset="trailers"/g) ?? []).length, 1);

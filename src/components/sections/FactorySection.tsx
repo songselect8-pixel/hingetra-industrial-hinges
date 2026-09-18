@@ -4,6 +4,7 @@ import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { SupportingVisual } from "@/components/ui/SupportingVisual";
 import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 
 const processes = [
   { title: "Lathe processing", detail: "Lathe processing for hinge components." },
@@ -21,9 +22,9 @@ export function FactorySection() {
           <p className="factory-intro" id="about-us">We are {site.companyName}. We produce hinges to customer requirements with a self-owned factory and equipment.</p>
         </div>
         <div className="factory-evidence-grid">
-          <figure className="factory-evidence-figure" data-asset-kind="company-photo">
-            <Image src="/images/factory-exterior.jpg" alt="Actual exterior of the Yipinxiang factory shown in the company’s 2026 catalog" width={2591} height={1943} quality={85} sizes="(max-width: 599px) 100vw, 50vw" />
-            <figcaption><span>{site.brand} factory</span><span>Actual company photo · 2026 catalog</span></figcaption>
+          <figure className="factory-evidence-figure" data-asset-kind="illustration">
+            <Image src={illustrations.factory.src} alt={illustrations.factory.alt} width={illustrations.factory.width} height={illustrations.factory.height} quality={85} sizes="(max-width: 599px) 100vw, 50vw" />
+            <figcaption><span>{illustrations.factory.label}</span><span>AI-generated illustration</span></figcaption>
           </figure>
           <SupportingVisual asset="manufacturing" sizes="(max-width: 599px) 100vw, 50vw" />
         </div>

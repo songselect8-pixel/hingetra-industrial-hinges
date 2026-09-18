@@ -9,6 +9,7 @@ import { AboutCTASection } from "@/components/about/AboutCTASection";
 import { AboutPageContent } from "@/components/about/AboutPageContent";
 import { aboutCompany } from "@/data/about";
 import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 import "./about-us.css";
 
 const title = `About Yipinxiang | Industrial Hinge Manufacturer | ${site.brand}`;
@@ -27,10 +28,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: site.brand,
     images: [{
-      url: "/images/factory-exterior.jpg",
-      width: 2591,
-      height: 1943,
-      alt: "Actual Yipinxiang factory exterior from the company catalog",
+      url: illustrations.factory.src,
+      width: illustrations.factory.width,
+      height: illustrations.factory.height,
+      alt: illustrations.factory.alt,
     }],
   },
 };

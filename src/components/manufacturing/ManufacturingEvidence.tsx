@@ -11,7 +11,7 @@ import {
   manufacturingSummary,
   packagingRecords,
 } from "@/data/manufacturing";
-import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 
 function CustomManufacturingBridge() {
   return (
@@ -52,11 +52,11 @@ function FactoryEvidence() {
   return (
     <section className="section manufacturing-factory-evidence" aria-labelledby="manufacturing-factory-title">
       <div className="shell">
-        <SectionHeading eyebrow="Company evidence" title={<span id="manufacturing-factory-title">A Real Manufacturing Base</span>} description="The catalog identifies a self-owned factory and supports the capability statements shown beside the actual company photograph." />
+        <SectionHeading eyebrow="Catalog reference" title={<span id="manufacturing-factory-title">Catalog-Backed Manufacturing Capabilities</span>} description="The catalog supports the capability statements below. The factory exterior concept is an AI-generated illustration, not a photograph of company facilities." />
         <div className="manufacturing-factory-grid">
-          <figure data-asset-kind="company-photo">
-            <Image src="/images/factory-exterior.jpg" alt={`Actual exterior of the ${site.brand} factory shown in the 2026 company catalog`} width={2591} height={1943} quality={85} sizes="(max-width: 768px) calc(100vw - 40px), 55vw" />
-            <figcaption><span>{site.brand} factory exterior</span><span>Actual company photo · catalog p3</span></figcaption>
+          <figure data-asset-kind="illustration">
+            <Image src={illustrations.factory.src} alt={illustrations.factory.alt} width={illustrations.factory.width} height={illustrations.factory.height} quality={85} sizes="(max-width: 768px) calc(100vw - 40px), 55vw" />
+            <figcaption><span>{illustrations.factory.label}</span><span>AI-generated illustration</span></figcaption>
           </figure>
           <div className="manufacturing-evidence-list">
             {companyEvidence.map((item, index) => <article key={item.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{item.title}</h3><p>{item.description}</p><small>Catalog p{item.sourcePages.join(" / ")}</small></div></article>)}

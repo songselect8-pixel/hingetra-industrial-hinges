@@ -83,7 +83,7 @@ test("Custom Hinges uses only approved real and supporting visual assets", () =>
   for (const asset of [
     "/images/illustrations/custom-engineering.png",
     "/images/drawing-20-type.png",
-    "/images/factory-exterior.jpg",
+    "/images/illustrations/hingetra-factory-exterior.png",
     "/images/illustrations/manufacturing-capability.png",
     "/images/illustrations/quality-control.png",
   ]) assert.ok(existing.includes(asset) || existing.includes(asset.split("/").at(-1)!.split(".")[0]), asset);
@@ -91,6 +91,8 @@ test("Custom Hinges uses only approved real and supporting visual assets", () =>
   assert.match(pageAssets, /asset="engineering"/);
   assert.match(pageAssets, /asset="manufacturing"/);
   assert.match(pageAssets, /asset="quality"/);
+  assert.match(pageAssets, /AI-generated illustration/);
+  assert.doesNotMatch(pageAssets, /factory-exterior\.jpg|data-asset-kind="company-photo"|Actual company photo/i);
   assert.doesNotMatch(pageAssets, /application-control-cabinet|application-trailer-gate|placeholder/i);
 });
 

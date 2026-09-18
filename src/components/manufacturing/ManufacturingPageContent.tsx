@@ -4,7 +4,7 @@ import { ManufacturingCapabilities } from "./ManufacturingCapabilities";
 import { ManufacturingEvidence } from "./ManufacturingEvidence";
 import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow } from "@/components/ui/SectionHeading";
-import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 
 function ManufacturingHero() {
   return (
@@ -26,9 +26,9 @@ function ManufacturingHero() {
               <span>Machining</span><span>Punching</span><span>Assembly</span><span>Inspection</span><span>Packaging</span>
             </div>
           </div>
-          <figure className="manufacturing-hero-figure" data-asset-kind="company-photo">
-            <Image src="/images/factory-exterior.jpg" alt={`Actual exterior of the ${site.brand} factory shown in the 2026 company catalog`} width={2591} height={1943} quality={85} preload sizes="(max-width: 768px) calc(100vw - 40px), 52vw" />
-            <figcaption><span>{site.brand} factory</span><span>Actual company photo · catalog p3</span></figcaption>
+          <figure className="manufacturing-hero-figure" data-asset-kind="illustration">
+            <Image src={illustrations.factory.src} alt={illustrations.factory.alt} width={illustrations.factory.width} height={illustrations.factory.height} quality={85} preload sizes="(max-width: 768px) calc(100vw - 40px), 52vw" />
+            <figcaption><span>{illustrations.factory.label}</span><span>AI-generated illustration</span></figcaption>
           </figure>
         </div>
       </div>

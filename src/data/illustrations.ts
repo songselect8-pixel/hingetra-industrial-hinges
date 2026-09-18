@@ -13,6 +13,12 @@ const sourceDimensions = { width: 1448, height: 1086, kind: "illustration", isCo
 // These supplied scenes support an explanation. They are not company evidence
 // and must never enter the actual product photography or specification data.
 export const illustrations = {
+  factory: {
+    ...sourceDimensions,
+    src: "/images/illustrations/hingetra-factory-exterior.png",
+    label: "HINGETRA factory concept",
+    alt: "AI-generated factory exterior concept with an entrance sign reading 铰拓工业 and HINGETRA",
+  },
   manufacturing: {
     ...sourceDimensions,
     src: "/images/illustrations/manufacturing-capability.png",

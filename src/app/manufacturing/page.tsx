@@ -6,6 +6,7 @@ import { InquiryProvider } from "@/components/inquiry/InquiryProvider";
 import { Footer } from "@/components/navigation/Footer";
 import { Header } from "@/components/navigation/Header";
 import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 import "./manufacturing.css";
 
 const title = `Industrial Hinge Manufacturing | Factory Capability | ${site.brand}`;
@@ -24,10 +25,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: site.brand,
     images: [{
-      url: "/images/factory-exterior.jpg",
-      width: 2591,
-      height: 1943,
-      alt: "Actual exterior of the Yipinxiang factory shown in the company catalog",
+      url: illustrations.factory.src,
+      width: illustrations.factory.width,
+      height: illustrations.factory.height,
+      alt: illustrations.factory.alt,
     }],
   },
 };

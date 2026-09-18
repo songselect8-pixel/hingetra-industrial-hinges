@@ -191,7 +191,7 @@
     },
     {
       "path": "src/components/custom-hinges/CustomHingesPageContent.tsx",
-      "sha256": "eed8e7c813592dd72cc93bd46920353a358c61d07998647b856811807f3631f7"
+      "sha256": "daa10739315c9f915b9c58fd0b25b5d44079a74801b95ff6cf3a978ff7d91077"
     },
     {
       "path": "src/app/custom-hinges/custom-hinges.css",
@@ -211,7 +211,7 @@
     },
     {
       "path": "src/components/products/detail/ProductDetailTemplate.tsx",
-      "sha256": "255fd7bd3f0200522d887d3a37da70a62b5701481eb7cdbe99fbfb3bd6937b33"
+      "sha256": "ecf94860b95b47941a5acaf48c0b69f4b02e8f28c2df545db392ab58fbcca38d"
     },
     {
       "path": "src/app/products/bearing-weld-on-hinges/product-detail.css",
@@ -225,5 +225,12 @@
       "path": "docs/resources-publishing-guide.md",
       "sha256": "bd3645d81ee9ecc1e256892f7b8451b574937c68059bdd49913afe0cf971cc5d"
     }
-  ]
+  ],
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
+  }
 }

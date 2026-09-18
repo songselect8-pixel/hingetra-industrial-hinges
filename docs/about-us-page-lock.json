@@ -33,10 +33,10 @@
   ],
   "qaEvidence": "output/playwright/about-us/verification.json",
   "sectionOrder": [
-    "breadcrumb-and-actual-factory-hero",
+    "breadcrumb-and-factory-concept-hero",
     "company-profile",
     "focused-industrial-hinge-range",
-    "manufacturing-capability-and-company-evidence",
+    "manufacturing-capability-with-supporting-illustrations",
     "standard-products-and-custom-requirements",
     "supported-industrial-applications",
     "conservative-quality-control-summary",
@@ -49,7 +49,7 @@
   "rules": [
     "Do not redesign the approved About Us page or independently restyle its locked shared components.",
     "Preserve the current desktop and mobile composition, section order, typography, spacing, image crops, cards, navigation hierarchy and dark navy RFQ treatment.",
-    "Keep the real catalog factory exterior as the primary company evidence and keep actual product photography tied to the audited product-family data.",
+    "Keep the approved factory concept explicitly labeled AI-generated illustration; it is not company photographic evidence. Keep actual product photography tied to the audited product-family data.",
     "Keep the manufacturing and application supporting visuals visibly disclosed as Illustrative scene and described with neutral labels such as Manufacturing process, Cabinet application and Trailer & gate application.",
     "Do not label generated imagery as Our Workshop, Our Production Line, Our Equipment, company staff, a customer installation or other company photographic evidence.",
     "Keep company-specific manufacturing and quality statements limited to their recorded catalog pages unless later verified source evidence expands them.",
@@ -62,7 +62,7 @@
   "files": [
     {
       "path": "src/app/about-us/page.tsx",
-      "sha256": "747926eceee8eeb03e2544081f09499f9756b74e8161e71bb6b8e8f37cec8c12"
+      "sha256": "0b7266d485ef9e16ba4075bf47058a08c042ba64f47ebe33bdd68b7616ad6fff"
     },
     {
       "path": "src/app/about-us/about-us.css",
@@ -70,11 +70,11 @@
     },
     {
       "path": "src/components/about/AboutPageContent.tsx",
-      "sha256": "eefe73c858cb9863a5b67e87ff8e076a4da5032e44afff0b1920354472ea0a11"
+      "sha256": "7a10ee265dfcc338409ea346433e8ba23bcd8afbd0c23fdce6954da827b1f36e"
     },
     {
       "path": "src/components/about/AboutCapabilities.tsx",
-      "sha256": "c856434ad4b456b3bf84150d47f9765d929c6627e80c56a943eb45a42c88501b"
+      "sha256": "4b9e2c78cbcfba9547c4c5f05b2e31efc59223d9f3f0e830d0194641d6d974a7"
     },
     {
       "path": "src/components/about/AboutCompanyEvidence.tsx",
@@ -90,7 +90,7 @@
     },
     {
       "path": "src/data/illustrations.ts",
-      "sha256": "06ddfd736e25b39cbf9945fb438f7a6a97fe7e5f977682173c1ebbf0ea964ff5"
+      "sha256": "7eee7488402a3df4a03c97b78cbb0c0a997902a9cd2969ab6bb45a85c895c853"
     },
     {
       "path": "src/components/ui/SupportingVisual.tsx",
@@ -100,5 +100,12 @@
       "path": "src/components/products/ProductCard.tsx",
       "sha256": "0c4dc84280e00e9548eaa2cbbe9f219c1befef6b131d00ac2a3d901ec4c80cb6"
     }
-  ]
+  ],
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
+  }
 }

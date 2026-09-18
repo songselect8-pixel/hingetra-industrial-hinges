@@ -522,6 +522,36 @@ export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEnt
       "1448": "/images/optimized/illustrations/custom-engineering-1448.webp"
     }
   },
+  "/images/illustrations/hingetra-factory-exterior.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      1024,
+      1280,
+      1440,
+      1448
+    ],
+    "variants": {
+      "64": "/images/optimized/illustrations/hingetra-factory-exterior-64.webp",
+      "96": "/images/optimized/illustrations/hingetra-factory-exterior-96.webp",
+      "128": "/images/optimized/illustrations/hingetra-factory-exterior-128.webp",
+      "256": "/images/optimized/illustrations/hingetra-factory-exterior-256.webp",
+      "384": "/images/optimized/illustrations/hingetra-factory-exterior-384.webp",
+      "390": "/images/optimized/illustrations/hingetra-factory-exterior-390.webp",
+      "640": "/images/optimized/illustrations/hingetra-factory-exterior-640.webp",
+      "768": "/images/optimized/illustrations/hingetra-factory-exterior-768.webp",
+      "1024": "/images/optimized/illustrations/hingetra-factory-exterior-1024.webp",
+      "1280": "/images/optimized/illustrations/hingetra-factory-exterior-1280.webp",
+      "1440": "/images/optimized/illustrations/hingetra-factory-exterior-1440.webp",
+      "1448": "/images/optimized/illustrations/hingetra-factory-exterior-1448.webp"
+    }
+  },
   "/images/illustrations/manufacturing-capability.png": {
     "widths": [
       64,

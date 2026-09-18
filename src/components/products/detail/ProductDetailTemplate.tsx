@@ -4,6 +4,7 @@ import type { ProductDetail } from "@/data/product-details";
 import { getFamily, getVariants } from "@/data/catalog";
 import { getProduct, productHref, products } from "@/data/products";
 import { productInquiryHref } from "@/data/product-inquiry";
+import { illustrations } from "@/data/illustrations";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/navigation/Footer";
 import { InquiryProvider } from "@/components/inquiry/InquiryProvider";
@@ -85,7 +86,7 @@ export function ProductDetailTemplate({ detail }: { detail: ProductDetail }) {
         </div></section>
 
         <section className="section detail-manufacturing" aria-labelledby="detail-manufacturing-title"><div className="shell detail-manufacturing-layout">
-          <figure className="detail-factory-photo"><Image src="/images/factory-exterior.jpg" alt="Yipinxiang company building, actual factory exterior photograph from the catalog" width={2591} height={1943} sizes="(max-width: 899px) 100vw, 45vw" quality={85} /><figcaption>Actual company photograph · catalog page 3</figcaption></figure>
+          <figure className="detail-factory-photo" data-asset-kind="illustration"><Image src={illustrations.factory.src} alt={illustrations.factory.alt} width={illustrations.factory.width} height={illustrations.factory.height} sizes="(max-width: 899px) 100vw, 45vw" quality={85} /><figcaption>{illustrations.factory.label} · AI-generated illustration</figcaption></figure>
           <div className="detail-manufacturing-copy"><SectionHeading eyebrow="From the factory" title={<span id="detail-manufacturing-title">Manufacturing & Quality</span>} /><div className="detail-capabilities">{detail.manufacturing.map((capability) => <div key={capability.title}><h3>{capability.title}</h3><p>{capability.description}</p></div>)}</div><Link className="text-link" href="/#manufacturing">Explore manufacturing capabilities <Arrow /></Link></div>
         </div></section>
 

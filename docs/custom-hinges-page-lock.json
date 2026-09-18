@@ -123,7 +123,7 @@
     "Preserve Requirement / Specification Confirmation in the workflow where confirmation is described.",
     "Do not promise sample or prototype capability, sample or prototype timing, lead-time, timeline or turnaround without a new verified source.",
     "Keep the original catalog drawing unchanged and labeled as a communication reference rather than a custom specification.",
-    "Keep the real factory exterior labeled as an actual company photo and supporting engineering, manufacturing and inspection visuals labeled as illustrative scenes.",
+    "Keep the approved factory concept labeled AI-generated illustration and supporting engineering, manufacturing and inspection visuals labeled as illustrative scenes. None is company photographic evidence.",
     "Do not add unsupported material, finish, load, tolerance, certification, MOQ, equipment-model, capacity, fee or test claims.",
     "Keep the final RFQ as a local preview until a real submission destination is separately implemented and verified."
   ],
@@ -138,7 +138,7 @@
     },
     {
       "path": "src/components/custom-hinges/CustomHingesPageContent.tsx",
-      "sha256": "eed8e7c813592dd72cc93bd46920353a358c61d07998647b856811807f3631f7"
+      "sha256": "daa10739315c9f915b9c58fd0b25b5d44079a74801b95ff6cf3a978ff7d91077"
     },
     {
       "path": "src/components/custom-hinges/CustomRFQSection.tsx",
@@ -156,5 +156,12 @@
   "resourcesLinkExtension": {
     "implementedAt": "2026-09-02T22:53:59.6791237+08:00",
     "compatibilityNote": "A contextual custom hinge guide link was added inside the existing requirement note without changing page composition or customization badges."
+  },
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
   }
 }

@@ -5,6 +5,7 @@ import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
 import { aboutCompany, aboutProducts } from "@/data/about";
 import { productHref } from "@/data/products";
+import { illustrations } from "@/data/illustrations";
 
 function AboutHero() {
   return (
@@ -27,16 +28,16 @@ function AboutHero() {
               <span>Weld-on hinges</span><span>Catalog specifications</span><span>Custom requirements</span>
             </div>
           </div>
-          <figure className="about-hero-figure" data-asset-kind="company-photo">
+          <figure className="about-hero-figure" data-asset-kind="illustration">
             <Image
-              src="/images/factory-exterior.jpg"
-              alt="Actual exterior of the Yipinxiang factory shown in the company catalog"
-              width={2591}
-              height={1943}
+              src={illustrations.factory.src}
+              alt={illustrations.factory.alt}
+              width={illustrations.factory.width}
+              height={illustrations.factory.height}
               quality={85}
               sizes="(max-width: 899px) calc(100vw - 40px), 52vw"
             />
-            <figcaption><span>YIPINXIANG factory</span><span>Actual company photo · catalog p3</span></figcaption>
+            <figcaption><span>{illustrations.factory.label}</span><span>AI-generated illustration</span></figcaption>
           </figure>
         </div>
       </div>

@@ -2,6 +2,8 @@
 
 Status: locked by the user's final homepage refinement instruction, 2026-08-31. The implemented homepage is the visual reference for all subsequent inner pages. This is a preservation and reuse contract, not a proposal to redesign the site.
 
+User-approved asset update, 2026-09-18: every displayed catalog factory exterior and its share-image reference now uses the approved HINGETRA factory concept at `/images/illustrations/hingetra-factory-exterior.png`. Preserve the existing layouts; label this asset “AI-generated illustration”, never actual company evidence. This specific approval supersedes earlier instructions to display the catalog factory photograph. The original photograph remains unmodified in the source assets, and company facts still come from the catalog. The update does not authorize a site-wide company-name change.
+
 The user subsequently approved and locked the Products center before requesting a single Bearing Type pilot detail page. Preserve `src/app/products/page.tsx`, `src/app/products/products.css`, the finder layout, cards, filters and comparison styling. Updating a family link to an implemented detail route is an approved functional extension; it is not a visual redesign.
 
 The user approved the Bearing Type detail page on 2026-09-01. It is now the locked master product-detail template. Its exact section order and baseline files are recorded in `docs/product-detail-template-lock.json`; the machine-readable family/image/page provenance map is `docs/research/product-family-source-manifest.json`. Reuse this template for every remaining family. Source-driven omissions or copy changes are allowed, but a second page structure or visual system is not.
@@ -84,7 +86,7 @@ The master template version is `1.0-locked`, declared in `src/data/product-detai
 
 ## Content and image boundaries
 
-The company photograph remains captioned as actual catalog evidence. The six supplied industrial scenes remain visibly labeled “Illustrative scene”; some may be AI-generated. Do not relabel them as company staff, workshops, equipment, laboratories or customer installations. Neutral process headings do not establish ownership of equipment visible in an illustration.
+The approved HINGETRA factory concept remains captioned “AI-generated illustration” and must not be described as an actual company photograph or evidence of premises. The six process/application scenes remain visibly labeled “Illustrative scene”; some may be AI-generated. Do not relabel any illustration as company staff, workshops, equipment, laboratories or customer installations. Neutral process headings do not establish ownership of equipment visible in an illustration.
 
 Catalog pages 3 and 18 support self-owned equipment/factory, lathe processing, automatic punching, mass assembly, standardized packaging, custom production and product checking tools. They do not establish particular CNC machines, inspection percentages, tolerances, laboratory capabilities, certification validity or test results.
 
@@ -97,7 +99,7 @@ The two actual catalog packaging photographs remain first and retain their origi
 ## Responsive and behavioral invariants
 
 - Verify at 1440, 1024, 768 and 390px when adding inner pages or changing shared behavior.
-- Preserve the existing mobile stacking order, especially real factory evidence before the process illustration.
+- Preserve the existing mobile stacking order, including the approved factory concept before the process illustration.
 - Keep all six supporting image frames visible. Do not crop away cabinet hinges, caliper/workpiece details, engineering drawings or packaging contents.
 - Keep technical overflow inside the focusable table wrapper. Its `position: relative` contains the screen-reader labels; removing it can cause mobile page overflow.
 - The mobile overview reserves sufficient width for complete raw dimensions. Do not truncate or shrink away technical values.

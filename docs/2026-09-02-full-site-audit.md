@@ -1,5 +1,11 @@
 # Final Full-Site Audit
 
+## Approved factory image update — 2026-09-18
+
+The user approved the HINGETRA V5 factory concept for every previous factory-exterior placement. All 14 affected routes (Home, Custom Hinges, Manufacturing, About Us and ten product details) now use it in 16 image placements; Manufacturing and About Us share-image metadata also uses the new asset. Every placement is labeled “AI-generated illustration”, and adjacent company-evidence wording was corrected. The original catalog photo remains unchanged as source material but has no current page references. Layout/CSS, company identity, contact details, product photos, technical drawings and specifications are unchanged.
+
+The release passes 77 existing tests, TypeScript, the static production build and the 28-page static link/asset check. Generated HTML contains no old factory-image references. The existing responsive pipeline serves the new image as WebP (390px: 28,740 bytes; 640px: 72,812 bytes). No browser screenshots or new visual audit were performed for this asset update. All production blockers below remain in force.
+
 **Audit date:** 2026-09-04  
 **Audited preview:** `http://127.0.0.1:3100`  
 **Result:** The approved site, including the Resources system, passes the local production-preview audit. It is intentionally **not ready for public production traffic** until the launch blockers below are completed.

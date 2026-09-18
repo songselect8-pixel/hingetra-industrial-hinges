@@ -61,7 +61,7 @@
     },
     {
       "path": "src/components/sections/FactorySection.tsx",
-      "sha256": "f26b474e1cf06c7f6207a2d77a8692f202d46dc27fd3e6582f0486c794b9bd06"
+      "sha256": "f58de4b1736827b42c755235dbd9e4540a52f83b944ab0c3b89442e7686cd044"
     },
     {
       "path": "src/components/sections/QualitySection.tsx",
@@ -137,7 +137,7 @@
     },
     {
       "path": "src/data/illustrations.ts",
-      "sha256": "06ddfd736e25b39cbf9945fb438f7a6a97fe7e5f977682173c1ebbf0ea964ff5"
+      "sha256": "7eee7488402a3df4a03c97b78cbb0c0a997902a9cd2969ab6bb45a85c895c853"
     },
     {
       "path": "src/data/site.ts",
@@ -256,5 +256,12 @@
     "lock": "docs/resources-system-lock.json",
     "review": "docs/2026-09-02-resources-center-review.md",
     "compatibilityNote": "Resources route awareness, a compact fifth footer column, and approved contextual guide links extend the locked system without changing its visual tokens or page compositions."
+  },
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
   }
 }

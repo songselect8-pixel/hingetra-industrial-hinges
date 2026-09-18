@@ -22,14 +22,14 @@
   "qaEvidence": "output/qa/manufacturing-page-lock/verification.json",
   "qualityRouteCompatibilityNote": "The approved Explore Quality Control link now resolves to the implemented /quality route. This functional destination update does not change the locked Manufacturing layout, visual styling, copy boundary or section order.",
   "sectionOrder": [
-    "breadcrumb-and-actual-factory-hero",
+    "breadcrumb-and-factory-concept-hero",
     "catalog-listed-manufacturing-capabilities",
     "lathe-processing",
     "automatic-punching",
     "standing-stock-standardized-turnover-and-mass-assembly",
     "custom-manufacturing-connection",
     "checks-during-production",
-    "actual-factory-evidence",
+    "catalog-capabilities-with-factory-concept",
     "series-specific-catalog-packaging",
     "catalog-supported-logistics",
     "capability-summary-and-faq",
@@ -38,7 +38,7 @@
   "rules": [
     "Do not redesign the approved Manufacturing page or independently restyle its locked shared components.",
     "Preserve Manufacturing Capabilities from Processing to Assembly as a capability-range heading; the listed blocks are capability areas and must not be presented as a strict chronological process.",
-    "Keep the actual factory exterior as the primary company evidence and keep the catalog packaging photographs tied to their named product series.",
+    "Keep the approved factory concept explicitly labeled AI-generated illustration; it is not company photographic evidence. Keep actual catalog packaging photographs tied to their named product series.",
     "Keep manufacturing, engineering and quality-control supporting visuals labeled as Illustrative scene with neutral captions such as Manufacturing process, Drawing & specification review and Dimensional inspection.",
     "Do not label an illustration as Our Workshop, Our Equipment, Our Lathe, Our Quality Inspector, company staff, a company production line or other company evidence.",
     "Keep company-specific capability statements limited to catalog pages 3 and 18 unless a later verified source expands them.",
@@ -51,7 +51,7 @@
   "files": [
     {
       "path": "src/app/manufacturing/page.tsx",
-      "sha256": "0ad790c3cdbaeddcd533408b5a435a348c9b73c315ae1a457d63c6469354e04a"
+      "sha256": "9b653ade588787c8c591d711a2bcf4ff875bb4856d89bb142e73905b1db5cbd6"
     },
     {
       "path": "src/app/manufacturing/manufacturing.css",
@@ -59,7 +59,7 @@
     },
     {
       "path": "src/components/manufacturing/ManufacturingPageContent.tsx",
-      "sha256": "1b83aa19a9bdb66475919347fe41ceca9ea5693e51196ec469caf2ef320e12c7"
+      "sha256": "34514157f9efa7f0e8f69749ede5b3181f3dc7911b2880d4602ca7da05777380"
     },
     {
       "path": "src/components/manufacturing/ManufacturingCapabilities.tsx",
@@ -67,7 +67,7 @@
     },
     {
       "path": "src/components/manufacturing/ManufacturingEvidence.tsx",
-      "sha256": "980e9e6afc219b9f51c2a4b040d52efe37e4f1bc0fd947a10ed87503b14db7ec"
+      "sha256": "31016e7121cafff5289fb13cab94b98d17c651416b2b6a071ea1da82d0a6fe16"
     },
     {
       "path": "src/components/manufacturing/ManufacturingRFQSection.tsx",
@@ -79,11 +79,18 @@
     },
     {
       "path": "src/data/illustrations.ts",
-      "sha256": "06ddfd736e25b39cbf9945fb438f7a6a97fe7e5f977682173c1ebbf0ea964ff5"
+      "sha256": "7eee7488402a3df4a03c97b78cbb0c0a997902a9cd2969ab6bb45a85c895c853"
     },
     {
       "path": "src/components/ui/SupportingVisual.tsx",
       "sha256": "bd51e7a0e6ef81754c85b8d231e4f848deba1a9f34cd6d5f9455c49cd158913b"
     }
-  ]
+  ],
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
+  }
 }

@@ -49,6 +49,7 @@ Connect the RFQ form to a real server-side delivery system and perform a real su
 ## Business and configuration review
 
 - Confirm the production company name, recipient, contact name, email and phone environment values.
+- The approved HINGETRA factory exterior is an AI-generated concept, not photographic evidence. Keep that disclosure visible and confirm the relationship between the HINGETRA sign and the catalog company identity before production; do not infer a legal-entity or site-wide brand change from the image request.
 - Keep unverified street addresses, maps, additional channels, timing promises and commercial claims unpublished.
 - Confirm that the production recipient can receive the advertised PDF, DWG, DXF, JPG and PNG attachments within the configured limit.
 

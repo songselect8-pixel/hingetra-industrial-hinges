@@ -19,6 +19,7 @@ import {
 } from "@/data/custom-hinges";
 import { getFamily } from "@/data/catalog";
 import { productHref } from "@/data/products";
+import { illustrations } from "@/data/illustrations";
 
 function WhenStandardSizesAreNotEnough() {
   return (
@@ -138,7 +139,7 @@ function ManufacturingSupport() {
       <div className="shell">
         <SectionHeading eyebrow="Compact capability overview" title={<span id="custom-manufacturing-title">Manufacturing Behind the Requirement</span>} description="The catalog supports custom product development and production, together with the listed factory capabilities below." />
         <div className="custom-manufacturing-media">
-          <figure className="custom-factory-figure" data-asset-kind="company-photo"><Image src="/images/factory-exterior.jpg" alt="Actual exterior of the Yipinxiang factory shown in the company 2026 catalog" width={2591} height={1943} sizes="(max-width: 599px) 100vw, 50vw" /><figcaption><span>YIPINXIANG factory</span><span>Actual company photo · catalog p3</span></figcaption></figure>
+          <figure className="custom-factory-figure" data-asset-kind="illustration"><Image src={illustrations.factory.src} alt={illustrations.factory.alt} width={illustrations.factory.width} height={illustrations.factory.height} sizes="(max-width: 599px) 100vw, 50vw" /><figcaption><span>{illustrations.factory.label}</span><span>AI-generated illustration</span></figcaption></figure>
           <SupportingVisual asset="manufacturing" sizes="(max-width: 599px) 100vw, 50vw" />
         </div>
         <div className="custom-capability-list">{manufacturingCapabilities.map((capability, index) => <div key={capability.title}><span>0{index + 1}</span><h3>{capability.title}</h3><p>Catalog source · p{capability.sourcePages.join(" / ")}</p></div>)}</div>

@@ -83,7 +83,7 @@
     },
     {
       "path": "src/data/illustrations.ts",
-      "sha256": "06ddfd736e25b39cbf9945fb438f7a6a97fe7e5f977682173c1ebbf0ea964ff5"
+      "sha256": "7eee7488402a3df4a03c97b78cbb0c0a997902a9cd2969ab6bb45a85c895c853"
     },
     {
       "path": "src/components/ui/SupportingVisual.tsx",
@@ -93,5 +93,12 @@
   "resourcesLinkExtension": {
     "implementedAt": "2026-09-02T22:53:59.6791237+08:00",
     "compatibilityNote": "A contextual Technical Guides link was added beside the existing product-family reference without changing the approved quality hierarchy."
+  },
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
   }
 }

@@ -40,7 +40,7 @@
   "baselineFiles": [
     {
       "path": "src/components/products/detail/ProductDetailTemplate.tsx",
-      "sha256": "255fd7bd3f0200522d887d3a37da70a62b5701481eb7cdbe99fbfb3bd6937b33"
+      "sha256": "ecf94860b95b47941a5acaf48c0b69f4b02e8f28c2df545db392ab58fbcca38d"
     },
     {
       "path": "src/components/products/detail/ProductGallery.tsx",
@@ -95,5 +95,12 @@
   "resourcesExtension": {
     "scope": "product detail related guides",
     "compatibilityNote": "The user-authorized Resources phase adds a compact Related Guides section after Related Hinges. It reuses the locked typography, spacing and link language; all earlier product-detail sections remain unchanged."
+  },
+  "factoryExteriorUpdate": {
+    "approvedAt": "2026-09-18",
+    "approvedBy": "User: 全部替换吧, after approving the V5 preview",
+    "asset": "/images/illustrations/hingetra-factory-exterior.png",
+    "kind": "AI-generated illustration; not company photographic evidence",
+    "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
   }
 }

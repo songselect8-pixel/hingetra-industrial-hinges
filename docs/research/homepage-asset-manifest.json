@@ -62,7 +62,9 @@
   {
     "publicPath": "/images/factory-exterior.jpg",
     "originalSource": "tmp\\pdfs\\embedded\\page-03-image-04-IM59.jpg",
-    "method": "Original bytes copied; no AI generation or retouching"
+    "method": "Original bytes copied; no AI generation or retouching",
+    "usage": "Original catalog photo retained unchanged as source material; no current page or share-image reference.",
+    "supersededBy": "/images/illustrations/hingetra-factory-exterior.png"
   },
   {
     "publicPath": "/images/drawing-20-type.png",
@@ -158,5 +160,18 @@
     "height": 1086,
     "sha256": "df607fcc8f26e190d51051c8c071b4a490a7dc8a164eaaa8ae3bf9b2faf3174b",
     "method": "User-supplied illustration copied unchanged. Not evidence of company personnel, equipment, inspection facilities or customer installations."
+  },
+  {
+    "publicPath": "/images/illustrations/hingetra-factory-exterior.png",
+    "originalSource": "output/imagegen/hingetra-factory-preview-v5-2026-09-18.png",
+    "kind": "AI-generated supporting illustration",
+    "isCompanyEvidence": false,
+    "width": 1448,
+    "height": 1086,
+    "sha256": "7dfed79870d230fe9d2160e6ae0ffe8db167641feec75e34416495bf44d884a5",
+    "method": "User-approved original fictional factory exterior concept with 铰拓工业 / HINGETRA signage. Built-in image_gen output copied unchanged. Not evidence of company premises, equipment, personnel or capacity.",
+    "approvedAt": "2026-09-18",
+    "replacesPageReferencesTo": "/images/factory-exterior.jpg",
+    "prompt": "docs/research/2026-09-18-hingetra-factory-image-prompt.md"
   }
 ]

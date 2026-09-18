@@ -68,7 +68,7 @@ test("Manufacturing route implements the approved structure, SEO, and RFQ contra
     "Organized for Consistent Production",
     "Built Around Confirmed Requirements",
     "Checks During Production",
-    "A Real Manufacturing Base",
+    "Catalog-Backed Manufacturing Capabilities",
     "Standardized Packaging for Shipment",
     "Positioned for Export Shipment",
     "Manufacturing Capability Summary",
@@ -83,14 +83,15 @@ test("Manufacturing route implements the approved structure, SEO, and RFQ contra
   assert.match(rfq, /submitLabel:\s*"Request a Quote"/);
 });
 
-test("Manufacturing imagery keeps real company evidence separate from illustrations", () => {
+test("Manufacturing imagery discloses the approved factory concept and keeps catalog packaging evidence", () => {
   assert.ok(existsSync(contentPath), "manufacturing content must exist");
   const existing = [contentPath, capabilitiesPath, evidencePath].filter(existsSync).map((path) => readFileSync(path, "utf8")).join("\n");
   const illustrationData = readFileSync(illustrationsPath, "utf8");
   const supportingVisual = readFileSync(supportingVisualPath, "utf8");
-  assert.ok((existing.match(/\/images\/factory-exterior\.jpg/g) ?? []).length >= 2, "actual factory image must anchor the hero and evidence section");
-  assert.match(existing, /data-asset-kind="company-photo"/);
-  assert.match(existing, /Actual company photo/);
+  assert.equal((existing.match(/src=\{illustrations\.factory\.src\}/g) ?? []).length, 2, "both factory placements must use the approved shared illustration");
+  assert.equal((existing.match(/>AI-generated illustration<\/span>/g) ?? []).length, 2);
+  assert.match(existing, /data-asset-kind="catalog-packaging"/);
+  assert.doesNotMatch(existing, /factory-exterior\.jpg|data-asset-kind="company-photo"|Actual company photo/i);
   assert.match(existing, /asset="manufacturing"/);
   assert.match(existing, /asset="engineering"/);
   assert.match(existing, /asset="quality"/);

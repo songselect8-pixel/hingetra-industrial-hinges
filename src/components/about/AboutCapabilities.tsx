@@ -4,6 +4,7 @@ import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
 import { SupportingVisual } from "@/components/ui/SupportingVisual";
 import { aboutApplications, aboutCapabilities, standardAndCustom } from "@/data/about";
+import { illustrations } from "@/data/illustrations";
 
 function ManufacturingFoundation() {
   return (
@@ -12,21 +13,21 @@ function ManufacturingFoundation() {
         <SectionHeading
           eyebrow="Manufacturing foundation"
           title={<span id="about-manufacturing-title">Manufacturing Behind the Product</span>}
-          description="The actual factory photograph identifies the company. The supporting process scene explains the catalog-listed manufacturing context without serving as company evidence."
+          description="The capabilities below come from the company catalog. The factory exterior concept and process scene are supporting illustrations, not photographs of company facilities."
         >
           <Link href="/manufacturing" className="text-link section-heading-link">Explore Manufacturing <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="about-manufacturing-media">
-          <figure data-asset-kind="company-photo" className="about-factory-evidence">
+          <figure data-asset-kind="illustration" className="about-factory-evidence">
             <Image
-              src="/images/factory-exterior.jpg"
-              alt="Actual Yipinxiang factory exterior from the company catalog"
-              width={2591}
-              height={1943}
+              src={illustrations.factory.src}
+              alt={illustrations.factory.alt}
+              width={illustrations.factory.width}
+              height={illustrations.factory.height}
               quality={85}
               sizes="(max-width: 768px) calc(100vw - 40px), 55vw"
             />
-            <figcaption><span>Company factory exterior</span><span>Actual company photo · catalog p3</span></figcaption>
+            <figcaption><span>{illustrations.factory.label}</span><span>AI-generated illustration</span></figcaption>
           </figure>
           <SupportingVisual asset="manufacturing" className="about-process-visual" sizes="(max-width: 768px) calc(100vw - 40px), 38vw" />
         </div>
