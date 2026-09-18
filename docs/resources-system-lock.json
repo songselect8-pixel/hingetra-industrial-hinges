@@ -107,7 +107,7 @@
     },
     {
       "path": "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
-      "sha256": "c36d0fa01218e6cdc4287b30ac1d1bdc0a9ed93e83f6fc049d6e98957baa9670"
+      "sha256": "c493d31b20f3fc50693f977b459c27036c940f56444567f07b99bbc883fcc988"
     },
     {
       "path": "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
@@ -232,5 +232,15 @@
     "asset": "/images/illustrations/hingetra-factory-exterior.png",
     "kind": "AI-generated illustration; not company photographic evidence",
     "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
+  },
+  "industrialSceneUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request to regenerate and replace all references to the three manufacturing, engineering-review and dimensional-inspection scenes",
+    "assets": [
+      "/images/illustrations/manufacturing-capability-cn.png",
+      "/images/illustrations/custom-engineering-cn.png",
+      "/images/illustrations/quality-control-cn.png"
+    ],
+    "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
   }
 }

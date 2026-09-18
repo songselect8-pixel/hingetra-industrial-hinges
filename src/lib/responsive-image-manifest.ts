@@ -492,6 +492,36 @@ export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEnt
       "1448": "/images/optimized/illustrations/application-trailer-gate-1448.webp"
     }
   },
+  "/images/illustrations/custom-engineering-cn.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      1024,
+      1280,
+      1440,
+      1448
+    ],
+    "variants": {
+      "64": "/images/optimized/illustrations/custom-engineering-cn-64.webp",
+      "96": "/images/optimized/illustrations/custom-engineering-cn-96.webp",
+      "128": "/images/optimized/illustrations/custom-engineering-cn-128.webp",
+      "256": "/images/optimized/illustrations/custom-engineering-cn-256.webp",
+      "384": "/images/optimized/illustrations/custom-engineering-cn-384.webp",
+      "390": "/images/optimized/illustrations/custom-engineering-cn-390.webp",
+      "640": "/images/optimized/illustrations/custom-engineering-cn-640.webp",
+      "768": "/images/optimized/illustrations/custom-engineering-cn-768.webp",
+      "1024": "/images/optimized/illustrations/custom-engineering-cn-1024.webp",
+      "1280": "/images/optimized/illustrations/custom-engineering-cn-1280.webp",
+      "1440": "/images/optimized/illustrations/custom-engineering-cn-1440.webp",
+      "1448": "/images/optimized/illustrations/custom-engineering-cn-1448.webp"
+    }
+  },
   "/images/illustrations/custom-engineering.png": {
     "widths": [
       64,
@@ -552,6 +582,36 @@ export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEnt
       "1448": "/images/optimized/illustrations/hingetra-factory-exterior-1448.webp"
     }
   },
+  "/images/illustrations/manufacturing-capability-cn.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      1024,
+      1280,
+      1440,
+      1448
+    ],
+    "variants": {
+      "64": "/images/optimized/illustrations/manufacturing-capability-cn-64.webp",
+      "96": "/images/optimized/illustrations/manufacturing-capability-cn-96.webp",
+      "128": "/images/optimized/illustrations/manufacturing-capability-cn-128.webp",
+      "256": "/images/optimized/illustrations/manufacturing-capability-cn-256.webp",
+      "384": "/images/optimized/illustrations/manufacturing-capability-cn-384.webp",
+      "390": "/images/optimized/illustrations/manufacturing-capability-cn-390.webp",
+      "640": "/images/optimized/illustrations/manufacturing-capability-cn-640.webp",
+      "768": "/images/optimized/illustrations/manufacturing-capability-cn-768.webp",
+      "1024": "/images/optimized/illustrations/manufacturing-capability-cn-1024.webp",
+      "1280": "/images/optimized/illustrations/manufacturing-capability-cn-1280.webp",
+      "1440": "/images/optimized/illustrations/manufacturing-capability-cn-1440.webp",
+      "1448": "/images/optimized/illustrations/manufacturing-capability-cn-1448.webp"
+    }
+  },
   "/images/illustrations/manufacturing-capability.png": {
     "widths": [
       64,
@@ -610,6 +670,36 @@ export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEnt
       "1280": "/images/optimized/illustrations/packaging-shipping-1280.webp",
       "1440": "/images/optimized/illustrations/packaging-shipping-1440.webp",
       "1448": "/images/optimized/illustrations/packaging-shipping-1448.webp"
+    }
+  },
+  "/images/illustrations/quality-control-cn.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      1024,
+      1280,
+      1440,
+      1448
+    ],
+    "variants": {
+      "64": "/images/optimized/illustrations/quality-control-cn-64.webp",
+      "96": "/images/optimized/illustrations/quality-control-cn-96.webp",
+      "128": "/images/optimized/illustrations/quality-control-cn-128.webp",
+      "256": "/images/optimized/illustrations/quality-control-cn-256.webp",
+      "384": "/images/optimized/illustrations/quality-control-cn-384.webp",
+      "390": "/images/optimized/illustrations/quality-control-cn-390.webp",
+      "640": "/images/optimized/illustrations/quality-control-cn-640.webp",
+      "768": "/images/optimized/illustrations/quality-control-cn-768.webp",
+      "1024": "/images/optimized/illustrations/quality-control-cn-1024.webp",
+      "1280": "/images/optimized/illustrations/quality-control-cn-1280.webp",
+      "1440": "/images/optimized/illustrations/quality-control-cn-1440.webp",
+      "1448": "/images/optimized/illustrations/quality-control-cn-1448.webp"
     }
   },
   "/images/illustrations/quality-control.png": {

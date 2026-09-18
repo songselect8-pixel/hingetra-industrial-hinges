@@ -81,11 +81,11 @@ test("Custom Hinges uses only approved real and supporting visual assets", () =>
   const illustrationAssets = readFileSync(illustrationDataPath, "utf8");
   const existing = `${pageAssets}\n${illustrationAssets}`;
   for (const asset of [
-    "/images/illustrations/custom-engineering.png",
+    "/images/illustrations/custom-engineering-cn.png",
     "/images/drawing-20-type.png",
     "/images/illustrations/hingetra-factory-exterior.png",
-    "/images/illustrations/manufacturing-capability.png",
-    "/images/illustrations/quality-control.png",
+    "/images/illustrations/manufacturing-capability-cn.png",
+    "/images/illustrations/quality-control-cn.png",
   ]) assert.ok(existing.includes(asset) || existing.includes(asset.split("/").at(-1)!.split(".")[0]), asset);
   assert.match(pageAssets, /ProductCard/);
   assert.match(pageAssets, /asset="engineering"/);

@@ -1,5 +1,11 @@
 # Final Full-Site Audit
 
+## User-requested process-scene update — 2026-09-18
+
+The manufacturing, requirement-review and dimensional-inspection illustrations were regenerated with fictional Chinese personnel and ordinary Chinese hardware-workplace settings, using the original pin/bearing product photos as appearance references. All 17 rendered placements across ten routes, including Resources thumbnails, article imagery and share metadata, use the new `-cn.png` URLs. Existing illustration captions are unchanged; ALT text explicitly identifies AI-generated scenes. The legacy URLs also contain the replacement pixels for cached pages, while the original supplied source files remain archived unchanged. Layout/CSS, actual product photos, drawings, technical data, company facts and all other approved visuals are untouched.
+
+The update passes 77 existing tests, the TypeScript production build and the 28-page static link/asset check. Rendered pages contain no previous URLs for these three scenes. The 640px WebP files are 64,834 bytes (manufacturing), 46,330 bytes (engineering) and 43,046 bytes (inspection). No browser screenshots or expanded visual audit were performed. Prompts and source boundaries: `docs/research/2026-09-18-chinese-industrial-scenes-prompts.md`.
+
 ## Approved factory image update — 2026-09-18
 
 The user approved the HINGETRA V5 factory concept for every previous factory-exterior placement. All 14 affected routes (Home, Custom Hinges, Manufacturing, About Us and ten product details) now use it in 16 image placements; Manufacturing and About Us share-image metadata also uses the new asset. Every placement is labeled “AI-generated illustration”, and adjacent company-evidence wording was corrected. The original catalog photo remains unchanged as source material but has no current page references. Layout/CSS, company identity, contact details, product photos, technical drawings and specifications are unchanged.

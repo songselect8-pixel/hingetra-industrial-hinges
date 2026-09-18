@@ -1,5 +1,6 @@
 import { resourcePublisher } from "../publishing.ts";
 import { resourceLink, type ResourceArticle } from "../types.ts";
+import { illustrations } from "../../../data/illustrations.ts";
 
 export const standardVsCustomHinges = {
   slug: "standard-vs-custom-weld-on-hinges",
@@ -10,10 +11,10 @@ export const standardVsCustomHinges = {
   publishedAt: "2026-09-02",
   updatedAt: null,
   author: resourcePublisher.name,
-  featuredImage: "/images/illustrations/custom-engineering.png",
-  featuredImageAlt: "Supporting custom engineering illustration with an industrial hinge, drawing and specification review scene",
-  featuredImageWidth: 1448,
-  featuredImageHeight: 1086,
+  featuredImage: illustrations.engineering.src,
+  featuredImageAlt: illustrations.engineering.alt,
+  featuredImageWidth: illustrations.engineering.width,
+  featuredImageHeight: illustrations.engineering.height,
   keywords: ["custom weld-on hinges", "standard industrial hinges", "custom hinge drawing", "hinge specification request"],
   relatedProducts: ["round", "pin", "gasket", "grease-nipple", "adjustable", "square", "flag"],
   relatedApplications: [],
@@ -44,7 +45,7 @@ export const standardVsCustomHinges = {
       ["Clearly marked open questions that require specification confirmation."],
     ] },
     { type: "paragraph", content: ["Reference photographs can be useful when they show an existing hinge or installation, but they should be paired with a drawing. Add a scale or measurement annotation instead of expecting dimensions to be estimated from the image. If the desired part is based on a physical sample, state which values were measured and where."] },
-    { type: "image", src: "/images/illustrations/custom-engineering.png", alt: "Neutral supporting illustration of hinge drawings and a custom engineering requirements discussion", width: 1448, height: 1086, caption: "Custom engineering support illustration for requirement and specification review.", evidence: "supporting-illustration" },
+    { type: "image", src: illustrations.engineering.src, alt: illustrations.engineering.alt, width: illustrations.engineering.width, height: illustrations.engineering.height, caption: "Custom engineering support illustration for requirement and specification review.", evidence: "supporting-illustration" },
 
     { type: "heading", level: 2, id: "confirmation-workflow", title: "Use a conservative confirmation workflow" },
     { type: "paragraph", content: ["The website uses a simple sequence: requirement, drawing or specification, requirement and specification confirmation, manufacturing, inspection, packaging and shipment. This sequence communicates the information flow without promising a prototype stage or a particular timetable. Any manufacturing step remains tied to a confirmed requirement."] },

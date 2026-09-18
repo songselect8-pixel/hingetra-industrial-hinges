@@ -6,6 +6,7 @@ import { InquiryProvider } from "@/components/inquiry/InquiryProvider";
 import { Footer } from "@/components/navigation/Footer";
 import { Header } from "@/components/navigation/Header";
 import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 import "./custom-hinges.css";
 
 const title = `Custom Weld-On Hinges | Made to Drawing | ${site.brand}`;
@@ -24,10 +25,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: site.brand,
     images: [{
-      url: "/images/illustrations/custom-engineering.png",
-      width: 1448,
-      height: 1086,
-      alt: "Illustration of a technical hinge drawing under review beside industrial hinges and measuring tools",
+      url: illustrations.engineering.src,
+      width: illustrations.engineering.width,
+      height: illustrations.engineering.height,
+      alt: illustrations.engineering.alt,
     }],
   },
 };

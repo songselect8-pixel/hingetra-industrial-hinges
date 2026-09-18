@@ -92,34 +92,61 @@
     "method": "Original bytes copied; no AI generation or retouching"
   },
   {
-    "publicPath": "/images/illustrations/manufacturing-capability.png",
-    "originalSource": "铰链/manufacturing-capability.png",
-    "kind": "supplied supporting illustration",
+    "publicPath": "/images/illustrations/manufacturing-capability-cn.png",
+    "originalSource": "Built-in image_gen: exec-61027910-462a-4469-85d7-c241a13fd0c6.png",
+    "kind": "AI-generated supporting illustration",
     "isCompanyEvidence": false,
     "width": 1448,
     "height": 1086,
-    "sha256": "dde1b1a7253503c70d6070be4d5ea178114005a1fab872a964ef57e3892a6c2a",
-    "method": "User-supplied illustration copied unchanged. Not evidence of company personnel, equipment, inspection facilities or customer installations."
+    "sha256": "4c42a20258c359d10851be266f7e395f4916c577feee7786238ca94fa29cc929",
+    "method": "User-requested full regeneration with fictional Chinese personnel and a plausible Chinese hardware workplace. Original pin/bearing product photographs supplied as appearance references. No real company personnel, premises, equipment, laboratory or test evidence is implied.",
+    "previousSuppliedSource": "铰链/manufacturing-capability.png",
+    "legacyPublicPath": "/images/illustrations/manufacturing-capability.png",
+    "revisedAt": "2026-09-18",
+    "deliveryNote": "All active page, resource and share-image references use the new cn URL. The legacy URL contains identical regenerated pixels for older cached pages. Original supplied images in 铰链 remain unchanged.",
+    "productAppearanceReferences": [
+      "public/images/hinge-pin-hero.jpg",
+      "public/images/hinge-bearing.jpg"
+    ],
+    "prompt": "docs/research/2026-09-18-chinese-industrial-scenes-prompts.md"
   },
   {
-    "publicPath": "/images/illustrations/quality-control.png",
-    "originalSource": "铰链/quality-control.png",
-    "kind": "supplied supporting illustration",
+    "publicPath": "/images/illustrations/quality-control-cn.png",
+    "originalSource": "Built-in image_gen: exec-5dac6162-173e-4a40-bebc-39f7b898675c.png",
+    "kind": "AI-generated supporting illustration",
     "isCompanyEvidence": false,
     "width": 1448,
     "height": 1086,
-    "sha256": "38d0066f32513044d24e8b85d3a0b00421d0b13bf9c076e565645bd2b8a878aa",
-    "method": "User-supplied illustration copied unchanged. Not evidence of company personnel, equipment, inspection facilities or customer installations."
+    "sha256": "234825e1678ef5093e4712cb765fec927c1fcc2f6842d7456ff4adbe0fe0b273",
+    "method": "User-requested full regeneration with fictional Chinese personnel and a plausible Chinese hardware workplace. Original pin/bearing product photographs supplied as appearance references. No real company personnel, premises, equipment, laboratory or test evidence is implied.",
+    "previousSuppliedSource": "铰链/quality-control.png",
+    "legacyPublicPath": "/images/illustrations/quality-control.png",
+    "revisedAt": "2026-09-18",
+    "deliveryNote": "All active page, resource and share-image references use the new cn URL. The legacy URL contains identical regenerated pixels for older cached pages. Original supplied images in 铰链 remain unchanged.",
+    "productAppearanceReferences": [
+      "public/images/hinge-pin-hero.jpg",
+      "public/images/hinge-bearing.jpg"
+    ],
+    "prompt": "docs/research/2026-09-18-chinese-industrial-scenes-prompts.md"
   },
   {
-    "publicPath": "/images/illustrations/custom-engineering.png",
-    "originalSource": "铰链/custom-engineering.png",
-    "kind": "supplied supporting illustration",
+    "publicPath": "/images/illustrations/custom-engineering-cn.png",
+    "originalSource": "Built-in image_gen: exec-bfe95e6e-0d60-4028-8cfc-ef581eadee39.png",
+    "kind": "AI-generated supporting illustration",
     "isCompanyEvidence": false,
     "width": 1448,
     "height": 1086,
-    "sha256": "05aa11c9612e1d9aec00996b670ec31b6f910b24c53ddd05da69ebd2cdbbc2d3",
-    "method": "User-supplied illustration copied unchanged. Not evidence of company personnel, equipment, inspection facilities or customer installations."
+    "sha256": "41b6cc9c4d5d04f4480ebc57434b5e076b36bb586d9a8e8a2307673a757ae707",
+    "method": "User-requested full regeneration with fictional Chinese personnel and a plausible Chinese hardware workplace. Original pin/bearing product photographs supplied as appearance references. No real company personnel, premises, equipment, laboratory or test evidence is implied.",
+    "previousSuppliedSource": "铰链/custom-engineering.png",
+    "legacyPublicPath": "/images/illustrations/custom-engineering.png",
+    "revisedAt": "2026-09-18",
+    "deliveryNote": "All active page, resource and share-image references use the new cn URL. The legacy URL contains identical regenerated pixels for older cached pages. Original supplied images in 铰链 remain unchanged.",
+    "productAppearanceReferences": [
+      "public/images/hinge-pin-hero.jpg",
+      "public/images/hinge-bearing.jpg"
+    ],
+    "prompt": "docs/research/2026-09-18-chinese-industrial-scenes-prompts.md"
   },
   {
     "publicPath": "/images/illustrations/application-control-cabinet.png",

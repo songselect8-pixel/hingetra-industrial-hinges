@@ -6,6 +6,7 @@ import { Header } from "@/components/navigation/Header";
 import { QualityPageContent } from "@/components/quality/QualityPageContent";
 import { QualityRFQSection } from "@/components/quality/QualityRFQSection";
 import { site } from "@/data/site";
+import { illustrations } from "@/data/illustrations";
 import "./quality.css";
 
 const title = `Industrial Hinge Quality Control | In-Process Inspection | ${site.brand}`;
@@ -24,10 +25,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: site.brand,
     images: [{
-      url: "/images/illustrations/quality-control.png",
-      width: 1448,
-      height: 1086,
-      alt: "Illustration of dimensional inspection with a hinge and calipers",
+      url: illustrations.quality.src,
+      width: illustrations.quality.width,
+      height: illustrations.quality.height,
+      alt: illustrations.quality.alt,
     }],
   },
 };

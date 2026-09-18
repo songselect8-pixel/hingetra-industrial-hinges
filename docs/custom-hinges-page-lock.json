@@ -130,7 +130,7 @@
   "files": [
     {
       "path": "src/app/custom-hinges/page.tsx",
-      "sha256": "3d6864910280ac0d16b3d309e1a6be6339928c289d64c761722846a860280645"
+      "sha256": "786a73d9582469545b48cbaa053ff5467364253b3f79a5277212279c45969190"
     },
     {
       "path": "src/app/custom-hinges/custom-hinges.css",
@@ -163,5 +163,15 @@
     "asset": "/images/illustrations/hingetra-factory-exterior.png",
     "kind": "AI-generated illustration; not company photographic evidence",
     "scope": "Replace all displayed factory exteriors and share images, correct provenance captions and adjacent evidence wording; preserve approved layouts and source-backed product/company data."
+  },
+  "industrialSceneUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request to regenerate and replace all references to the three manufacturing, engineering-review and dimensional-inspection scenes",
+    "assets": [
+      "/images/illustrations/manufacturing-capability-cn.png",
+      "/images/illustrations/custom-engineering-cn.png",
+      "/images/illustrations/quality-control-cn.png"
+    ],
+    "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
   }
 }

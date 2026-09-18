@@ -21,21 +21,21 @@ export const illustrations = {
   },
   manufacturing: {
     ...sourceDimensions,
-    src: "/images/illustrations/manufacturing-capability.png",
+    src: "/images/illustrations/manufacturing-capability-cn.png",
     label: "Manufacturing process",
-    alt: "Illustration of hinge components on a workbench with machining and punching equipment in the background",
+    alt: "AI-generated scene of water-drop weld-on hinge components in turnover trays beside a worker and a conventional lathe in a Chinese workshop setting",
   },
   quality: {
     ...sourceDimensions,
-    src: "/images/illustrations/quality-control.png",
+    src: "/images/illustrations/quality-control-cn.png",
     label: "Dimensional inspection",
-    alt: "Illustration of a hinge being measured with calipers during dimensional inspection",
+    alt: "AI-generated scene of a worker checking a water-drop weld-on hinge with digital calipers at a workshop inspection table",
   },
   engineering: {
     ...sourceDimensions,
-    src: "/images/illustrations/custom-engineering.png",
+    src: "/images/illustrations/custom-engineering-cn.png",
     label: "Drawing & specification review",
-    alt: "Illustration of a technical drawing being reviewed beside industrial hinges and measuring tools",
+    alt: "AI-generated scene of a worker reviewing a requirement sketch beside water-drop weld-on hinges at a workshop office desk",
   },
   cabinets: {
     ...sourceDimensions,
