@@ -130,7 +130,9 @@
     "method": "User-supplied illustration copied unchanged. Not evidence of company personnel, equipment, inspection facilities or customer installations."
   },
   {
-    "publicPath": "/images/illustrations/application-trailer-gate.png",
+    "publicPath": "/images/illustrations/application-trailer-gate-catalog.png",
+    "legacyPublicPath": "/images/illustrations/application-trailer-gate.png",
+    "deliveryNote": "All page images, resource thumbnails and article metadata use the new catalog-named URL to avoid old image caches. The legacy URL retains the same corrected image only for already cached pages.",
     "originalSource": "铰链/application-trailer-gate.png",
     "kind": "AI-edited supporting illustration",
     "isCompanyEvidence": false,

@@ -432,6 +432,36 @@ export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEnt
       "1448": "/images/optimized/illustrations/application-control-cabinet-1448.webp"
     }
   },
+  "/images/illustrations/application-trailer-gate-catalog.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      1024,
+      1280,
+      1440,
+      1448
+    ],
+    "variants": {
+      "64": "/images/optimized/illustrations/application-trailer-gate-catalog-64.webp",
+      "96": "/images/optimized/illustrations/application-trailer-gate-catalog-96.webp",
+      "128": "/images/optimized/illustrations/application-trailer-gate-catalog-128.webp",
+      "256": "/images/optimized/illustrations/application-trailer-gate-catalog-256.webp",
+      "384": "/images/optimized/illustrations/application-trailer-gate-catalog-384.webp",
+      "390": "/images/optimized/illustrations/application-trailer-gate-catalog-390.webp",
+      "640": "/images/optimized/illustrations/application-trailer-gate-catalog-640.webp",
+      "768": "/images/optimized/illustrations/application-trailer-gate-catalog-768.webp",
+      "1024": "/images/optimized/illustrations/application-trailer-gate-catalog-1024.webp",
+      "1280": "/images/optimized/illustrations/application-trailer-gate-catalog-1280.webp",
+      "1440": "/images/optimized/illustrations/application-trailer-gate-catalog-1440.webp",
+      "1448": "/images/optimized/illustrations/application-trailer-gate-catalog-1448.webp"
+    }
+  },
   "/images/illustrations/application-trailer-gate.png": {
     "widths": [
       64,

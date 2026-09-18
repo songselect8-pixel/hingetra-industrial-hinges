@@ -39,7 +39,7 @@ export const illustrations = {
   },
   trailers: {
     ...sourceDimensions,
-    src: "/images/illustrations/application-trailer-gate.png",
+    src: "/images/illustrations/application-trailer-gate-catalog.png",
     label: "Trailer & gate application",
     alt: "Illustration of a weld-on hinge connecting a steel trailer gate to its frame",
   },

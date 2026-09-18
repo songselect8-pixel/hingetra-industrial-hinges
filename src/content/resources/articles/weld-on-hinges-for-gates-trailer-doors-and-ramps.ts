@@ -10,7 +10,7 @@ export const gateTrailerRampHinges = {
   publishedAt: "2026-09-02",
   updatedAt: null,
   author: resourcePublisher.name,
-  featuredImage: "/images/illustrations/application-trailer-gate.png",
+  featuredImage: "/images/illustrations/application-trailer-gate-catalog.png",
   featuredImageAlt: "Industrial application illustration showing a weld-on hinge connection on a fabricated gate or trailer structure",
   featuredImageWidth: 1448,
   featuredImageHeight: 1086,
@@ -26,7 +26,7 @@ export const gateTrailerRampHinges = {
     { type: "heading", level: 2, id: "catalog-relationship", title: "Begin with the catalog-supported application relationship" },
     { type: "paragraph", content: ["Catalog page 6 presents the 12-A, 14-A and 16-A models and names gates, trailer doors and ramps as applications. This is the direct source relationship for the family. It makes the series relevant for buyers working on these fabricated structures, but it does not establish that one model is automatically appropriate for every gate, trailer door or ramp."] },
     { type: "paragraph", content: ["Selection still requires the geometry of the moving part and fixed frame, the intended hinge position and the required catalog dimensions. A buyer should show whether the hinge bodies will be welded to flat edges, formed sections or another prepared surface. Photographs of the assembly can explain access and orientation, while a dimensioned drawing identifies the values that must be checked."] },
-    { type: "image", src: "/images/illustrations/application-trailer-gate.png", alt: "Supporting industrial scene illustrating a weld-on hinge connection on a gate or trailer door structure", width: 1448, height: 1086, caption: "Industrial application illustration. Use the catalog drawing and buyer dimensions for product confirmation.", evidence: "supporting-illustration" },
+    { type: "image", src: "/images/illustrations/application-trailer-gate-catalog.png", alt: "Supporting industrial scene illustrating a weld-on hinge connection on a gate or trailer door structure", width: 1448, height: 1086, caption: "Industrial application illustration. Use the catalog drawing and buyer dimensions for product confirmation.", evidence: "supporting-illustration" },
 
     { type: "heading", level: 2, id: "compare-models", title: "Compare 12-A, 14-A and 16-A as separate models" },
     { type: "paragraph", content: ["The three model labels form one catalog series, but each row has its own parameter values. The labels 12, 14 and 16 are not replacements for the printed D parameters. The catalog gives D as 11.80 for 12-A, 13.80 for 14-A and 15.80 for 16-A. Those decimal values must remain unchanged when copied into a technical request."] },

@@ -39,7 +39,7 @@ test("Applications overview uses two labeled illustrations and real product refe
   ]);
   assert.deepEqual(applicationOverview.filter((item: { mediaKind: string }) => item.mediaKind === "illustration").map((item: { image: string }) => item.image), [
     "/images/illustrations/application-control-cabinet.png",
-    "/images/illustrations/application-trailer-gate.png",
+    "/images/illustrations/application-trailer-gate-catalog.png",
   ]);
   assert.ok(applicationOverview.filter((item: { mediaKind: string }) => item.mediaKind === "product-reference").every((item: { image: string }) => item.image.startsWith("/images/hinge-")));
   for (const item of applicationOverview) {

@@ -54,7 +54,7 @@ export const applicationOverview: readonly ApplicationOverviewItem[] = [
     id: "gates-trailers-ramps",
     title: "Trailers, Gates & Heavy-Duty Doors",
     description: "A practical starting point for trailer doors, gates and ramps listed with the 12 / 14 / 16 Type series.",
-    image: "/images/illustrations/application-trailer-gate.png",
+    image: "/images/illustrations/application-trailer-gate-catalog.png",
     alt: "Illustration of a weld-on hinge connecting a steel trailer gate to its frame",
     mediaKind: "illustration",
     mediaLabel: "Illustrative application view",
