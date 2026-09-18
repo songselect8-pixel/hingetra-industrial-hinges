@@ -62,7 +62,7 @@
   "files": [
     {
       "path": "src/app/about-us/page.tsx",
-      "sha256": "0b7266d485ef9e16ba4075bf47058a08c042ba64f47ebe33bdd68b7616ad6fff"
+      "sha256": "06902dc978cdd310ff720b1e64a7f97f458385d8cb337e960f8a3699775a4299"
     },
     {
       "path": "src/app/about-us/about-us.css",
@@ -70,7 +70,7 @@
     },
     {
       "path": "src/components/about/AboutPageContent.tsx",
-      "sha256": "7a10ee265dfcc338409ea346433e8ba23bcd8afbd0c23fdce6954da827b1f36e"
+      "sha256": "4afbe0252166a4dcfcc5c406fe9a3b24b01c89b8a24ef716d6d62a633289a3ef"
     },
     {
       "path": "src/components/about/AboutCapabilities.tsx",
@@ -86,7 +86,7 @@
     },
     {
       "path": "src/data/about.ts",
-      "sha256": "d4d7052f055a4740f854428f7fb61893e794ce4ef64a6317d7e86d3e36b235fe"
+      "sha256": "dbd0a1da5460f90a3d3749b3e36f966376412e82e378289ff5c53149ec329f77"
     },
     {
       "path": "src/data/illustrations.ts",
@@ -117,5 +117,14 @@
       "/images/illustrations/quality-control-cn.png"
     ],
     "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
+  },
+  "brandIdentityUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request to replace the website English name with HINGETRA and adapt the supplied logo without Chinese wording",
+    "brand": "HINGETRA",
+    "businessDisplayName": "Hingetra Industrial Hinges",
+    "logo": "/images/brand/hingetra-logo.png",
+    "provenance": "docs/research/2026-09-18-hingetra-branding.md",
+    "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
   }
 }

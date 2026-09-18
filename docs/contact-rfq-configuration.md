@@ -4,11 +4,11 @@ The `/contact` page is implemented as a validated RFQ interface. It does not tra
 
 ## Contact values
 
-The catalog-confirmed fallback values live in `src/data/contact.ts`. They can be updated before deployment with these server environment variables:
+The user-approved business display name and catalog-confirmed contact fallback values live in `src/data/contact.ts`. The business name defaults to the shared HINGETRA identity in `src/data/site.ts`; this is not a verified registered legal-entity change. They can be updated before deployment with these server environment variables:
 
-| Variable | Current catalog fallback |
+| Variable | Current fallback |
 | --- | --- |
-| `CONTACT_COMPANY_NAME` | `Pinghu Yipinxiang Machinery Technology Co., Ltd.` |
+| `CONTACT_COMPANY_NAME` | `Hingetra Industrial Hinges` (user-approved business display name) |
 | `CONTACT_PERSON_NAME` | `Eric Huang` |
 | `CONTACT_EMAIL` | `hjhuman0205@gmail.com` |
 | `CONTACT_PHONE_DISPLAY` | `+86 18767359360` |

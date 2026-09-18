@@ -7,8 +7,8 @@ import { contactDetails } from "@/data/contact";
 import { site } from "@/data/site";
 import "./contact.css";
 
-const title = `Contact Yipinxiang | Request an Industrial Hinge Quote | ${site.brand}`;
-const description = "Contact Yipinxiang and submit a technical RFQ for industrial weld-on hinges. Share the hinge type, dimensions, application, quantity or drawing.";
+const title = `Contact ${site.brand} | Request an Industrial Hinge Quote`;
+const description = `Contact ${site.brand} and submit a technical RFQ for industrial weld-on hinges. Share the hinge type, dimensions, application, quantity or drawing.`;
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {
@@ -39,6 +39,7 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: contactDetails.company,
+    logo: joinSiteUrl(baseUrl, site.logo),
     url: joinSiteUrl(baseUrl, "/contact"),
     email: contactDetails.email,
     telephone: contactDetails.phoneHref,

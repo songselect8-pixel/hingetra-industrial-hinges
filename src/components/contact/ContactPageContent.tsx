@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ContactRFQForm } from "@/components/contact/ContactRFQForm";
 import { Arrow, Plus } from "@/components/ui/Arrow";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
+import { site } from "@/data/site";
 import {
   contactApplicationEntries,
   contactChecklist,
@@ -50,11 +51,11 @@ function ContactDetails() {
       <div className="shell">
         <SectionHeading
           eyebrow="Direct contact"
-          title={<span id="contact-details-title">Contact Yipinxiang</span>}
+          title={<span id="contact-details-title">Contact {site.brand}</span>}
           description="Use the catalog-confirmed contact below for industrial hinge and OEM inquiries."
         />
         <dl className="contact-details-grid">
-          <div className="contact-company-detail"><dt>Company</dt><dd>{contactDetails.company}</dd><small>Catalog contact · p{contactDetails.sourcePage}</small></div>
+          <div className="contact-company-detail"><dt>Business name</dt><dd>{contactDetails.company}</dd><small>Contact reference · catalog p{contactDetails.sourcePage}</small></div>
           <div><dt>Contact</dt><dd>{contactDetails.contact}</dd></div>
           <div><dt>Email</dt><dd><Link href={`mailto:${contactDetails.email}`}>{contactDetails.email}<Arrow diagonal /></Link></dd></div>
           <div><dt>Phone</dt><dd><Link href={`tel:${contactDetails.phoneHref}`}>{contactDetails.phoneDisplay}<Arrow diagonal /></Link></dd></div>

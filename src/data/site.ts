@@ -1,13 +1,14 @@
 export const site = {
-  brand: "YIPINXIANG",
-  companyName: "Pinghu Yipinxiang Machinery Technology Co., Ltd",
+  brand: "HINGETRA",
+  companyName: "Hingetra Industrial Hinges",
   descriptor: "INDUSTRIAL HINGES",
+  logo: "/images/brand/hingetra-logo.png",
   isPreview: true,
   identityPublicationConfirmed: false,
   publicEmail: "TBD",
   publicPhone: "TBD",
   publicAddress: "TBD",
-  title: "Industrial Weld-On Hinge Manufacturer | Yipinxiang",
+  title: "Industrial Weld-On Hinge Manufacturer | HINGETRA",
   description:
     "Explore weld-on hinge types and catalog sizes for steel doors, gates and industrial cabinets. Discuss custom hinge requirements and request a quote.",
 } as const;

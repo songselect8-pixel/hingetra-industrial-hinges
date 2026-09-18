@@ -2,6 +2,8 @@
 
 Resources use typed structured content. No CMS or MDX runtime is required. The registry lives in `src/content/resources/`, while React components only render the typed blocks.
 
+Brand update, 2026-09-18: the user confirmed **HINGETRA** / **Hingetra Industrial Hinges** as the public identity. Use `resourcePublisher` from `publishing.ts`, which reads the shared business name from `src/data/site.ts`; do not hardcode another publisher or invent a legal entity or author credentials. Article structured data uses the same supplied English logo as the website. Original catalog identity and technical provenance remain unchanged.
+
 ## Add a guide
 
 1. Create one file in `src/content/resources/articles/` that exports a `ResourceArticle`.

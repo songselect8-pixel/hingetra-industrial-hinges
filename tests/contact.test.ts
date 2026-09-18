@@ -16,7 +16,7 @@ function requireFile(path: string) {
   return readFileSync(path, "utf8");
 }
 
-test("Contact data publishes only the catalog-confirmed company contact and existing product families", async () => {
+test("Contact data uses the approved brand, catalog-confirmed contact and existing product families", async () => {
   requireFile(dataPath);
   const [{ contactDetails, contactProductOptions }, { families }] = await Promise.all([
     import("../src/data/contact.ts"),
@@ -24,7 +24,7 @@ test("Contact data publishes only the catalog-confirmed company contact and exis
   ]);
 
   assert.deepEqual(contactDetails, {
-    company: "Pinghu Yipinxiang Machinery Technology Co., Ltd.",
+    company: "Hingetra Industrial Hinges",
     contact: "Eric Huang",
     email: "hjhuman0205@gmail.com",
     phoneDisplay: "+86 18767359360",
@@ -91,7 +91,7 @@ test("Contact route implements the approved hierarchy, SEO, exact links, and con
   const form = requireFile(formPath);
   const combined = `${page}\n${content}\n${form}\n${css}`;
 
-  assert.match(page, /Contact Yipinxiang \| Request an Industrial Hinge Quote/);
+  assert.match(page, /Contact \$\{site.brand\} \| Request an Industrial Hinge Quote/);
   assert.match(page, /alternates:\s*\{\s*canonical:\s*"\/contact"\s*\}/);
   assert.match(page, /BreadcrumbList/);
   assert.match(page, /<Header currentPage="contact"/);
@@ -100,7 +100,7 @@ test("Contact route implements the approved hierarchy, SEO, exact links, and con
 
   for (const heading of [
     "Tell Us About Your Hinge Requirement",
-    "Contact Yipinxiang",
+    "Contact {site.brand}",
     "Request a Quote",
     "Not Sure Which Hinge You Need?",
     "Information That Helps Us Understand Your Requirement",

@@ -1,4 +1,4 @@
-# Yipinxiang industrial hinge website
+# HINGETRA industrial hinge website
 
 An English B2B manufacturer website built with Next.js, TypeScript and Tailwind CSS. The homepage, Products center and Bearing Type product-detail template are approved and locked. The approved master route is `/products/bearing-weld-on-hinges`; all nine remaining catalog-family detail routes now reuse that template.
 

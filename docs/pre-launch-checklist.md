@@ -49,7 +49,9 @@ Connect the RFQ form to a real server-side delivery system and perform a real su
 ## Business and configuration review
 
 - Confirm the production company name, recipient, contact name, email and phone environment values.
-- The approved HINGETRA factory exterior is an AI-generated concept, not photographic evidence. Keep that disclosure visible and confirm the relationship between the HINGETRA sign and the catalog company identity before production; do not infer a legal-entity or site-wide brand change from the image request.
+- The user explicitly confirmed HINGETRA / Hingetra Industrial Hinges as the public website brand on 2026-09-18. The supplied logo's English-only adaptation is used across the site. Confirm the registered legal entity before production; a brand change does not change the original catalog identity or verify a new legal company name.
+- The approved HINGETRA factory exterior remains an AI-generated concept, not photographic evidence. Keep its disclosure visible.
+- `hingetra.com` is a proposed domain only. Connect it and update the canonical origin only after ownership and deployment configuration are confirmed; the current GitHub Pages preview URL is unchanged.
 - Keep unverified street addresses, maps, additional channels, timing promises and commercial claims unpublished.
 - Confirm that the production recipient can receive the advertised PDF, DWG, DXF, JPG and PNG attachments within the configured limit.
 

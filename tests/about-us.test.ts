@@ -18,7 +18,7 @@ test("About data keeps company, manufacturing, application, and logistics claims
   assert.ok(existsSync(dataPath), "About data layer must exist");
   const data = await import("../src/data/about.ts");
 
-  assert.equal(data.aboutCompany.name, "Pinghu Yipinxiang Machinery Technology Co., Ltd.");
+  assert.equal(data.aboutCompany.name, "Hingetra Industrial Hinges");
   assert.deepEqual(data.aboutCompany.sourcePages, [1, 3, 18]);
   assert.deepEqual(data.aboutProductIds, [
     "bearing",
@@ -75,7 +75,7 @@ test("About route implements the requested hierarchy, SEO, and internal navigati
   const data = readFileSync(dataPath, "utf8");
   const combined = `${page}\n${content}\n${capabilities}\n${evidence}\n${cta}\n${data}`;
 
-  assert.match(page, /About Yipinxiang \| Industrial Hinge Manufacturer/);
+  assert.match(page, /About \$\{site.brand\} \| Industrial Hinge Manufacturer/);
   assert.match(page, /alternates:\s*\{\s*canonical:\s*"\/about-us"\s*\}/);
   assert.match(page, /BreadcrumbList/);
   assert.match(page, /<Header currentPage="about-us"/);
@@ -83,7 +83,7 @@ test("About route implements the requested hierarchy, SEO, and internal navigati
   assert.equal((combined.match(/<h1\b/g) ?? []).length, 1);
 
   for (const heading of [
-    "About Yipinxiang",
+    "About {site.brand}",
     "Industrial Hinge Manufacturing Built Around Practical Requirements",
     "Focused on Industrial Hinges",
     "A Focused Hinge Product Range",
@@ -116,7 +116,7 @@ test("About imagery discloses the factory concept and preserves real product ref
   assert.equal((existing.match(/asset="cabinets"/g) ?? []).length, 1);
   assert.equal((existing.match(/asset="trailers"/g) ?? []).length, 1);
   assert.match(existing, /<ProductCard/);
-  assert.doesNotMatch(existing, /(?:our|yipinxiang) (?:workshop|lathe|punching machine|technician|quality inspector)/i);
+  assert.doesNotMatch(existing, /(?:our|yipinxiang|hingetra) (?:workshop|lathe|punching machine|technician|quality inspector)/i);
 });
 
 test("About public copy omits unsupported company history, scale, commercial, and technical claims", () => {

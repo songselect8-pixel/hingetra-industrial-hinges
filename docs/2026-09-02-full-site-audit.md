@@ -1,5 +1,11 @@
 # Final Full-Site Audit
 
+## User-authorized branding update — 2026-09-18
+
+The user requested the public English identity **HINGETRA** / **Hingetra Industrial Hinges** and supplied its logo. The shared header/footer use an English-only horizontal adaptation; the browser icon uses the same hinge emblem. Page titles, business-name displays, RSS and resource publishers, and Organization/BlogPosting logo metadata now follow the shared brand configuration. The proposed `hingetra.com` domain is not connected; the GitHub Pages preview address, original catalog/company provenance, product specifications, contacts, non-indexable preview policy and “Request checked, not sent.” behavior remain unchanged. The existing production RFQ-delivery and legal-identity checks still apply. See `docs/research/2026-09-18-hingetra-branding.md`. No approved page composition was redesigned.
+
+The branding release passes the 77 existing checks, TypeScript, production build and 28-page static link/asset check. All 25 content pages contain the new header/footer logo, HINGETRA metadata title and browser icon, with no previous brand in visible text. Organization and article-publisher logo URLs use the current hosted-preview origin. The responsive logo is 12,764 bytes at 384px and 23,214 bytes at 640px. No browser screenshots or expanded visual audit were performed.
+
 ## User-requested process-scene update — 2026-09-18
 
 The manufacturing, requirement-review and dimensional-inspection illustrations were regenerated with fictional Chinese personnel and ordinary Chinese hardware-workplace settings, using the original pin/bearing product photos as appearance references. All 17 rendered placements across ten routes, including Resources thumbnails, article imagery and share metadata, use the new `-cn.png` URLs. Existing illustration captions are unchanged; ALT text explicitly identifies AI-generated scenes. The legacy URLs also contain the replacement pixels for cached pages, while the original supplied source files remain archived unchanged. Layout/CSS, actual product photos, drawings, technical data, company facts and all other approved visuals are untouched.

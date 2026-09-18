@@ -12,8 +12,8 @@ import { site } from "@/data/site";
 import { illustrations } from "@/data/illustrations";
 import "./about-us.css";
 
-const title = `About Yipinxiang | Industrial Hinge Manufacturer | ${site.brand}`;
-const description = "Learn about Pinghu Yipinxiang Machinery Technology Co., Ltd., its industrial weld-on hinge range, manufacturing capabilities, custom-requirement support and port-adjacent location.";
+const title = `About ${site.brand} | Industrial Hinge Manufacturer`;
+const description = `Learn about ${site.companyName}, its industrial weld-on hinge range, manufacturing capabilities, custom-requirement support and port-adjacent location.`;
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {
@@ -49,6 +49,7 @@ export default function AboutUsPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: aboutCompany.name,
+    logo: joinSiteUrl(baseUrl, site.logo),
     url: joinSiteUrl(baseUrl, "/about-us"),
   };
 

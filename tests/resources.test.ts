@@ -54,7 +54,7 @@ test("Resources categories stay extensible while empty categories remain hidden"
 });
 
 test("Every guide has publisher, useful structure, generated TOC, and automatic reading time", () => {
-  assert.equal(resourcePublisher.name, "Pinghu Yipinxiang Machinery Technology Co., Ltd.");
+  assert.equal(resourcePublisher.name, "Hingetra Industrial Hinges");
   for (const article of getPublishedResources()) {
     assert.equal(article.author, resourcePublisher.name);
     assert.match(article.publishedAt, /^2026-09-02$/);

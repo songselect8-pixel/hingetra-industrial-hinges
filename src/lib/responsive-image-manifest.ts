@@ -6,6 +6,50 @@ export type ResponsiveImageEntry = {
 };
 
 export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEntry>> = {
+  "/images/brand/hingetra-logo.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      960
+    ],
+    "variants": {
+      "64": "/images/optimized/brand/hingetra-logo-64.webp",
+      "96": "/images/optimized/brand/hingetra-logo-96.webp",
+      "128": "/images/optimized/brand/hingetra-logo-128.webp",
+      "256": "/images/optimized/brand/hingetra-logo-256.webp",
+      "384": "/images/optimized/brand/hingetra-logo-384.webp",
+      "390": "/images/optimized/brand/hingetra-logo-390.webp",
+      "640": "/images/optimized/brand/hingetra-logo-640.webp",
+      "768": "/images/optimized/brand/hingetra-logo-768.webp",
+      "960": "/images/optimized/brand/hingetra-logo-960.webp"
+    }
+  },
+  "/images/brand/hingetra-mark.png": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      512
+    ],
+    "variants": {
+      "64": "/images/optimized/brand/hingetra-mark-64.webp",
+      "96": "/images/optimized/brand/hingetra-mark-96.webp",
+      "128": "/images/optimized/brand/hingetra-mark-128.webp",
+      "256": "/images/optimized/brand/hingetra-mark-256.webp",
+      "384": "/images/optimized/brand/hingetra-mark-384.webp",
+      "390": "/images/optimized/brand/hingetra-mark-390.webp",
+      "512": "/images/optimized/brand/hingetra-mark-512.webp"
+    }
+  },
   "/images/drawing-12-14-16-type.png": {
     "widths": [
       64,

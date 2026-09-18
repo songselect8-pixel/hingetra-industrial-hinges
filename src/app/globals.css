@@ -63,9 +63,8 @@ section, [id^="range-"], #about-us, #rfq, #main-content { scroll-margin-top: 0; 
 .utility-secondary { font-size: 10px; letter-spacing: .3px; color: #c1cbd5; }
 .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid #e7eaed; }
 .header-inner { min-height: 83px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.brand { display: inline-flex; flex-direction: column; align-items: flex-start; flex-shrink: 0; color: var(--navy); }
-.brand-name { font-size: 22px; font-weight: 600; line-height: 1.16; letter-spacing: .65px; }
-.brand-descriptor { font-size: 8px; font-weight: 500; line-height: 1.6; letter-spacing: 3.38px; margin-top: 5px; }
+.brand { display: inline-flex; align-items: center; flex: 0 1 auto; min-width: 0; color: var(--navy); }
+.brand-logo { display: block; width: 204px; height: auto; max-width: 100%; }
 .desktop-nav { display: flex; align-items: center; gap: 23px; margin-left: auto; }
 .desktop-nav > a, .desktop-nav > button { display: inline-flex; gap: 4px; align-items: center; padding: 29px 0; white-space: nowrap; font-size: 12px; font-weight: 400; border: 0; background: transparent; transition: color 150ms; }
 .desktop-nav > a:hover, .desktop-nav > button:hover { color: #415c70; }
@@ -348,8 +347,7 @@ section, [id^="range-"], #about-us, #rfq, #main-content { scroll-margin-top: 0; 
 
 .site-footer { padding-top: 56px; }
 .footer-top { display: flex; align-items: center; gap: 70px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
-.footer-top .brand-name { font-size: 25px; }
-.footer-top .brand-descriptor { letter-spacing: 4.1px; }
+.footer-top .brand-logo { width: 224px; }
 .footer-top > p { font-size: 12px; line-height: 1.85; color: var(--steel); }
 .footer-top .text-link { margin-left: auto; }
 .footer-grid { display: grid; grid-template-columns: 1.05fr 1fr .95fr .9fr 1fr; gap: 44px; padding-block: 40px 43px; }
@@ -552,8 +550,7 @@ section, [id^="range-"], #about-us, #rfq, #main-content { scroll-margin-top: 0; 
   .utility-content { font-size: 8px; letter-spacing: 1.05px; }
   .utility-secondary { display: none; }
   .header-inner { min-height: 67px; gap: 12px; }
-  .brand-name { font-size: 19px; letter-spacing: .1px; }
-  .brand-descriptor { font-size: 6.6px; letter-spacing: 2.84px; margin-top: 4px; }
+  .brand-logo { width: 170px; }
   .header-quote { font-size: 11px; min-height: 42px; padding: 10px 12px; gap: 11px; }
   .header-quote svg { width: 14px; height: 14px; }
   .menu-toggle { height: 42px; width: 40px; }
@@ -651,8 +648,6 @@ section, [id^="range-"], #about-us, #rfq, #main-content { scroll-margin-top: 0; 
   .form-error-summary ul { font-size: 10px; }
   .site-footer { padding-top: 38px; }
   .footer-top { gap: 21px; padding-bottom: 28px; }
-  .footer-top .brand-name { font-size: 25px; }
-  .footer-top .brand-descriptor { font-size: 8px; letter-spacing: 4px; }
   .footer-top > p { font-size: 11px; margin-left: 0; width: 100%; }
   .footer-top .text-link { font-size: 12px; }
   .footer-grid { gap: 29px 20px; padding-block: 31px; }

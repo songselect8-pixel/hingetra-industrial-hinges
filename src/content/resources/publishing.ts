@@ -1,7 +1,8 @@
 import type { ResourceArticle, ResourceContentBlock, ResourceRichText, ResourceTocItem } from "./types.ts";
+import { site } from "../../data/site.ts";
 
 export const resourcePublisher = {
-  name: "Pinghu Yipinxiang Machinery Technology Co., Ltd.",
+  name: site.companyName,
   type: "Organization",
 } as const;
 

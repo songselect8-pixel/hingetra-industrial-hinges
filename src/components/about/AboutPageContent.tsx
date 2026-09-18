@@ -6,6 +6,7 @@ import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
 import { aboutCompany, aboutProducts } from "@/data/about";
 import { productHref } from "@/data/products";
 import { illustrations } from "@/data/illustrations";
+import { site } from "@/data/site";
 
 function AboutHero() {
   return (
@@ -17,7 +18,7 @@ function AboutHero() {
         <div className="about-hero-grid">
           <div className="about-hero-copy">
             <Eyebrow>Industrial hinge manufacturer</Eyebrow>
-            <h1 id="about-page-title">About Yipinxiang</h1>
+            <h1 id="about-page-title">About {site.brand}</h1>
             <p className="about-hero-headline">Industrial Hinge Manufacturing Built Around Practical Requirements</p>
             <p>{aboutCompany.name} manufactures industrial weld-on hinges and supports published standard products and customer-specific requirements.</p>
             <div className="about-hero-actions">
@@ -55,11 +56,11 @@ function CompanyProfile() {
           description="A concise manufacturer profile based on the supplied company catalog."
         />
         <div className="about-profile-grid">
-          <p className="about-profile-statement">Yipinxiang focuses on industrial weld-on hinges for supported steel-door, cabinet, gate, trailer-door and ramp applications.</p>
+          <p className="about-profile-statement">{site.brand} focuses on industrial weld-on hinges for supported steel-door, cabinet, gate, trailer-door and ramp applications.</p>
           <div className="about-profile-copy">
             <p>The product range covers several weld-on hinge structures, including bearing, pin, grease-nipple, adjustable and numbered-series configurations.</p>
             <p>The catalog describes support from design through production and sales, together with the ability to develop and produce products according to client requirements. It also describes many years of manufacturing experience without publishing a founding date.</p>
-            <div className="about-profile-source"><span>Company identity</span><strong>{aboutCompany.name}</strong><small>Catalog sources · p1 / p3 / p18</small></div>
+            <div className="about-profile-source"><span>Brand &amp; business name</span><strong>{aboutCompany.name}</strong><small>Capability references · catalog p3 / p18</small></div>
           </div>
         </div>
       </div>

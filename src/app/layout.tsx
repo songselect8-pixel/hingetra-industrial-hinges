@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: site.brand,
-    images: [{ url: "/images/hinge-pin-hero.jpg", width: 5252, height: 3505, alt: "Yipinxiang water-drop weld-on hinge products" }],
+    images: [{ url: "/images/hinge-pin-hero.jpg", width: 5252, height: 3505, alt: `${site.brand} water-drop weld-on hinge products` }],
   },
 };
 

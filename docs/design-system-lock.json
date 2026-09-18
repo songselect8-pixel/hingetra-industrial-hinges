@@ -49,7 +49,7 @@
   "files": [
     {
       "path": "src/app/globals.css",
-      "sha256": "e1f34265b2ff031db7295539a5731eeabe1634d9b08997ee45c4b8519368c3b7"
+      "sha256": "4b89075dfdb1b681ee82901e6be19370da6b132fbfd96a62fa21d58397d89c17"
     },
     {
       "path": "src/components/sections/Applications.tsx",
@@ -101,11 +101,11 @@
     },
     {
       "path": "src/components/navigation/Header.tsx",
-      "sha256": "21b1013994556fa06950d026370437b2a0a8e1db9911406ce681787cf9f11800"
+      "sha256": "2589e211ae11a4fa1c74696eea6b56f2c8f7a70ddd2af0a713ce044ab39beb37"
     },
     {
       "path": "src/components/navigation/Footer.tsx",
-      "sha256": "81d87c42a6464e44540c55ffbb30f67317327a5e6f8b38ffe99b8332df384b95"
+      "sha256": "85aafba0776476b339e984c1dbc0154eb73f207cac04b688ee834a527c206ef5"
     },
     {
       "path": "src/components/inquiry/InquiryProvider.tsx",
@@ -141,7 +141,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "1825fedd204e10dbf0b8ba8af48d3dfa12502c567aabd5c3c1651de201a79a99"
+      "sha256": "477e27c9fdca0e6b0d18f30e850899b39e600a75e3d18a284f4f7743d34a8c50"
     },
     {
       "path": "src/app/page.tsx",
@@ -149,7 +149,7 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "3dc86c126d85997de63273ce6d0742e21290b898d32f1204b3d7b73c41b4dbb0"
+      "sha256": "469b0a8147cbbb821df06789b0ac51dcf1c8606d9c7699ad11c2781029d56b38"
     },
     {
       "path": "src/data/catalog-overview.ts",
@@ -273,5 +273,32 @@
       "/images/illustrations/quality-control-cn.png"
     ],
     "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
+  },
+  "brandIdentityUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request to replace the website English name with HINGETRA and adapt the supplied logo without Chinese wording",
+    "brand": "HINGETRA",
+    "businessDisplayName": "Hingetra Industrial Hinges",
+    "logo": "/images/brand/hingetra-logo.png",
+    "provenance": "docs/research/2026-09-18-hingetra-branding.md",
+    "files": [
+      {
+        "path": "src/components/navigation/BrandLogo.tsx",
+        "sha256": "e02eefc738397b77c3e83396a9a3aabd6581de8bdb2953942941e0a4b9132b31"
+      },
+      {
+        "path": "public/images/brand/hingetra-logo.png",
+        "sha256": "76a13d7b6dcfc8547ca55fe60c4a3b3872bd690b5ace8d3d68909a16e8832a2b"
+      },
+      {
+        "path": "public/images/brand/hingetra-mark.png",
+        "sha256": "2b877bf3b25cda346405b5b5dae55782e3eede3ba3bc4891ffe2351cf6d291cc"
+      },
+      {
+        "path": "src/app/icon.png",
+        "sha256": "25eef13464481bb9e4d942a1541d73d34db5f56e2a514332447fda850b2b56c2"
+      }
+    ],
+    "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
   }
 }

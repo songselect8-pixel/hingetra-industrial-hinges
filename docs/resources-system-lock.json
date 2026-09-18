@@ -83,7 +83,7 @@
     },
     {
       "path": "src/content/resources/publishing.ts",
-      "sha256": "a4a6d78688ebe7877b56f151c863c65b02b898358cd2e394f1d6fe6550a23609"
+      "sha256": "eaa8a7d46774c19a4ab2bf44d606e1bcd933775cd84425057f7dd6cff04687a8"
     },
     {
       "path": "src/content/resources/index.ts",
@@ -151,7 +151,7 @@
     },
     {
       "path": "src/app/resources/[slug]/page.tsx",
-      "sha256": "5bdc2c29490f3bbf9a6b2861923d6b5cec7bfed85e9b56d46d3c6d787a1c2f7a"
+      "sha256": "875bcd725040c028add24c649e52f1a7988357f6e9f6bcc5a31647b2f3f20c1c"
     },
     {
       "path": "src/app/resources/[slug]/article.css",
@@ -167,19 +167,19 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "1825fedd204e10dbf0b8ba8af48d3dfa12502c567aabd5c3c1651de201a79a99"
+      "sha256": "477e27c9fdca0e6b0d18f30e850899b39e600a75e3d18a284f4f7743d34a8c50"
     },
     {
       "path": "src/components/navigation/Header.tsx",
-      "sha256": "21b1013994556fa06950d026370437b2a0a8e1db9911406ce681787cf9f11800"
+      "sha256": "2589e211ae11a4fa1c74696eea6b56f2c8f7a70ddd2af0a713ce044ab39beb37"
     },
     {
       "path": "src/components/navigation/Footer.tsx",
-      "sha256": "81d87c42a6464e44540c55ffbb30f67317327a5e6f8b38ffe99b8332df384b95"
+      "sha256": "85aafba0776476b339e984c1dbc0154eb73f207cac04b688ee834a527c206ef5"
     },
     {
       "path": "src/app/globals.css",
-      "sha256": "e1f34265b2ff031db7295539a5731eeabe1634d9b08997ee45c4b8519368c3b7"
+      "sha256": "4b89075dfdb1b681ee82901e6be19370da6b132fbfd96a62fa21d58397d89c17"
     },
     {
       "path": "src/app/products/page.tsx",
@@ -219,11 +219,11 @@
     },
     {
       "path": "tests/resources.test.ts",
-      "sha256": "aec6a19fda694b30eb6da111e794cacf62ca3a82d3b31eeaa7a0ec621f01a0a4"
+      "sha256": "5eb5d8af6708eb397fd10a1dda020bcfc665f55bcfd4a67557a70f46988fd2d1"
     },
     {
       "path": "docs/resources-publishing-guide.md",
-      "sha256": "bd3645d81ee9ecc1e256892f7b8451b574937c68059bdd49913afe0cf971cc5d"
+      "sha256": "d3f108ec3191325d2f01d4f85d360e7603449dc862d93856073a906373f1f24a"
     }
   ],
   "factoryExteriorUpdate": {
@@ -242,5 +242,14 @@
       "/images/illustrations/quality-control-cn.png"
     ],
     "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
+  },
+  "brandIdentityUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request to replace the website English name with HINGETRA and adapt the supplied logo without Chinese wording",
+    "brand": "HINGETRA",
+    "businessDisplayName": "Hingetra Industrial Hinges",
+    "logo": "/images/brand/hingetra-logo.png",
+    "provenance": "docs/research/2026-09-18-hingetra-branding.md",
+    "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
   }
 }

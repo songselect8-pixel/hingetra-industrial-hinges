@@ -7,6 +7,7 @@ import { navigation, site } from "@/data/site";
 import { Arrow, Chevron } from "@/components/ui/Arrow";
 import { CatalogLink } from "@/components/products/CatalogLink";
 import { productHref } from "@/data/products";
+import { BrandLogo } from "./BrandLogo";
 
 const productGroups = [
   { label: "Water-drop profiles", ids: ["bearing", "pin", "gasket", "grease-nipple"] },
@@ -103,9 +104,8 @@ export function Header({ currentPage = "home", rfqHref }: { currentPage?: "home"
         onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) closeMenus(); }}
         onMouseLeave={() => { if (!mobileOpen && !root.current?.querySelector(".mega-menu")?.contains(document.activeElement)) { setProductsOpen(false); if (hoverTimer.current) clearTimeout(hoverTimer.current); } }}>
         <div className="shell header-inner">
-          <Link className="brand" href={homeHref("#home")} aria-label="Yipinxiang home" onClick={closeMenus}>
-            <span className="brand-name">{site.brand}</span>
-            <span className="brand-descriptor">{site.descriptor}</span>
+          <Link className="brand" href={homeHref("#home")} aria-label={`${site.brand} home`} onClick={closeMenus}>
+            <BrandLogo preload />
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link href={homeHref("#home")} className={currentPage === "home" ? "nav-home" : undefined} aria-current={currentPage === "home" ? "page" : undefined} onClick={closeMenus}>Home</Link>

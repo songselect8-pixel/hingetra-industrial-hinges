@@ -1,11 +1,12 @@
 import { families } from "./catalog.ts";
+import { site } from "./site.ts";
 
 function configured(name: string, fallback: string) {
   return process.env[name]?.trim() || fallback;
 }
 
 export const contactDetails = {
-  company: configured("CONTACT_COMPANY_NAME", "Pinghu Yipinxiang Machinery Technology Co., Ltd."),
+  company: configured("CONTACT_COMPANY_NAME", site.companyName),
   contact: configured("CONTACT_PERSON_NAME", "Eric Huang"),
   email: configured("CONTACT_EMAIL", "hjhuman0205@gmail.com"),
   phoneDisplay: configured("CONTACT_PHONE_DISPLAY", "+86 18767359360"),
@@ -63,4 +64,3 @@ export const contactFaq = [
     answer: "Use the catalog-confirmed email or phone details shown on this page and include the hinge requirement where possible.",
   },
 ] as const;
-

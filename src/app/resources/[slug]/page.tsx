@@ -62,7 +62,7 @@ export default async function ResourceArticlePage({ params }: ResourcePageProps)
     dateModified: article.updatedAt ?? article.publishedAt,
     image: joinSiteUrl(baseUrl, article.featuredImage),
     mainEntityOfPage: url,
-    publisher: { "@type": "Organization", name: resourcePublisher.name },
+    publisher: { "@type": "Organization", name: resourcePublisher.name, logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo) } },
   };
   return <><ResourceArticleTemplate article={article} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\u003c") }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\u003c") }} /></>;
 }

@@ -30,19 +30,28 @@
     "Do not implement SMTP, email APIs, Resend, SendGrid or another external email service at this stage.",
     "Before production, connect the RFQ form to a real server-side delivery system and perform a real submission test to the configured inquiry recipient.",
     "Keep product options derived from the existing catalog family data rather than maintaining a second product taxonomy.",
-    "Keep the catalog-confirmed company, Eric Huang, email and phone values configurable through the recorded environment variables.",
+    "Keep the user-approved business display name and catalog-confirmed Eric Huang, email and phone values configurable through the recorded environment variables; the brand update does not verify a new registered legal entity.",
     "Do not add an unverified address, map, contact channel, office, branch, business hour or response-time promise.",
     "Do not add MOQ, lead-time, sample-time, load, tolerance, certification, payment, shipping-time or other unsupported technical or commercial claims.",
     "Keep the current accepted file formats and 10 MB client limit aligned with the future receiving endpoint; narrow both together if production support differs.",
     "A future server-side delivery connection may replace only the configured delivery boundary and must preserve this locked page composition and failure honesty."
   ],
   "files": [
-    { "path": "src/app/contact/page.tsx", "sha256": "b9f4db1a50d3b1f4dd95880e794748170e73e4eaf105e79f966d2ac1745a4c50" },
+    { "path": "src/app/contact/page.tsx", "sha256": "c1e321b3a427771f702c20c519ef0c8cc75a9a4ce2ebc551af3adbcb61d50dd1" },
     { "path": "src/app/contact/contact.css", "sha256": "2f85385859991205439261cc6fbfb020e27456146e29fba28a5376431485d27f" },
-    { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "b6e4a22e83b3bf34e4c84f2edb9cf7adf2d89e03be28b59bcb62f02745974c0c" },
+    { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "27a74429c014cbc110252ce7070c44045d22576121691a38fec61a9f3f618433" },
     { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "5754cc122e53ec2b632f4e1c642d2c902fb63fadb94f671a7ab62416a6780f2d" },
-    { "path": "src/data/contact.ts", "sha256": "277cb64647ab30f32d585f6563b3673f2e48759b825e1cf6d31ef7e89bf13080" },
+    { "path": "src/data/contact.ts", "sha256": "34023f289f38b84e56d085f6e3f61a6abdbd142e8d11114701945c43f9c3969e" },
     { "path": "src/data/contact-rfq.ts", "sha256": "ab3e6de2bd73a57c6565016673db0882a60ddd9e9592ea2c916a26c03eaccea5" },
-    { "path": "docs/contact-rfq-configuration.md", "sha256": "ee4432027ee39998883e247b1863840d0cdefabefea485661d2ae8a2f41b1183" }
-  ]
+    { "path": "docs/contact-rfq-configuration.md", "sha256": "0b45a797f62b365af62668c38d54b38e896a10ddda21a3cc2f0a7312a6918201" }
+  ],
+  "brandIdentityUpdate": {
+    "requestedAt": "2026-09-18",
+    "authorizedBy": "User request to replace the website English name with HINGETRA and adapt the supplied logo without Chinese wording",
+    "brand": "HINGETRA",
+    "businessDisplayName": "Hingetra Industrial Hinges",
+    "logo": "/images/brand/hingetra-logo.png",
+    "provenance": "docs/research/2026-09-18-hingetra-branding.md",
+    "scope": "Shared logo, logo-only sizing, favicon, displayed brand/business name and publisher/SEO metadata. Approved page composition, technical evidence, source catalog identity, contact channels, RFQ behavior and hosting origin remain unchanged. This does not confirm a new registered legal entity."
+  }
 }

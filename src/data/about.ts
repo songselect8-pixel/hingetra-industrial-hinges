@@ -1,5 +1,6 @@
 import { getFamily, type CatalogFamily } from "./catalog.ts";
 import { productApplications } from "./products.ts";
+import { site } from "./site.ts";
 
 export type AboutSourceRecord = {
   title: string;
@@ -8,7 +9,7 @@ export type AboutSourceRecord = {
 };
 
 export const aboutCompany = {
-  name: "Pinghu Yipinxiang Machinery Technology Co., Ltd.",
+  name: site.companyName,
   description: "An industrial hinge manufacturer focused on weld-on hinge products, published catalog specifications and requirement-based production support.",
   sourcePages: [1, 3, 18],
 } as const;
