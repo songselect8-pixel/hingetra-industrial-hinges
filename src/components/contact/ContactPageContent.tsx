@@ -52,10 +52,10 @@ function ContactDetails() {
         <SectionHeading
           eyebrow="Direct contact"
           title={<span id="contact-details-title">Contact {site.brand}</span>}
-          description="Use the catalog-confirmed contact below for industrial hinge and OEM inquiries."
+          description="Use the contact details below for industrial hinge and OEM inquiries."
         />
         <dl className="contact-details-grid">
-          <div className="contact-company-detail"><dt>Business name</dt><dd>{contactDetails.company}</dd><small>Contact reference · catalog p{contactDetails.sourcePage}</small></div>
+          <div className="contact-company-detail"><dt>Business name</dt><dd>{contactDetails.company}</dd><small>Phone reference · catalog p{contactDetails.sourcePage}</small></div>
           <div><dt>Contact</dt><dd>{contactDetails.contact}</dd></div>
           <div><dt>Email</dt><dd><Link href={`mailto:${contactDetails.email}`}>{contactDetails.email}<Arrow diagonal /></Link></dd></div>
           <div><dt>Phone</dt><dd><Link href={`tel:${contactDetails.phoneHref}`}>{contactDetails.phoneDisplay}<Arrow diagonal /></Link></dd></div>

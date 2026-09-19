@@ -16,7 +16,7 @@ function requireFile(path: string) {
   return readFileSync(path, "utf8");
 }
 
-test("Contact data uses the approved brand, catalog-confirmed contact and existing product families", async () => {
+test("Contact data uses the approved brand, updated email, catalog phone and existing product families", async () => {
   requireFile(dataPath);
   const [{ contactDetails, contactProductOptions }, { families }] = await Promise.all([
     import("../src/data/contact.ts"),
@@ -26,7 +26,7 @@ test("Contact data uses the approved brand, catalog-confirmed contact and existi
   assert.deepEqual(contactDetails, {
     company: "Hingetra Industrial Hinges",
     contact: "Eric Huang",
-    email: "hjhuman0205@gmail.com",
+    email: "cindy@hingetra.com",
     phoneDisplay: "+86 18767359360",
     phoneHref: "+8618767359360",
     sourcePage: 19,

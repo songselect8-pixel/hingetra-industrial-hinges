@@ -47,8 +47,10 @@
     390
   ],
   "files": [
-    {"path":"src/components/navigation/FloatingActions.tsx","sha256":"92704c5ccaba361bd1e8bd57d5edfa45c080a2b9672266d102f891a03a3e02d2"},
-    {"path":"src/data/quick-contact.ts","sha256":"4b5f5807a17078027a3f781091e5586a74099a127253027516eb5f804ed88d94"},
+    {"path":"src/components/navigation/floating-actions.css","sha256":"e260a2173412b346b38503b653ac966ced38b25bde478fe934eb9c008cfa8f56"},
+    {"path":"public/contact/whatsapp-qr.png","sha256":"bd8bbfa8b89872b272c9071f78b20e02c6596285396c1511ee33acb2a3703697"},
+    {"path":"src/components/navigation/FloatingActions.tsx","sha256":"23a118ca1d0585c2b55963c5835aeb15682ea3ba7f33e6e41c99b178e4940266"},
+    {"path":"src/data/quick-contact.ts","sha256":"efd9adecde854da55e37eece89519a1f3f5698e94f89e62074bbe45d8aba25d1"},
     {
       "path": "src/app/globals.css",
       "sha256": "ee43d38ae41aa31ecaf1f06ff498cb6106c859ba055a33b8acbcfffc81a9aa00"
@@ -308,6 +310,12 @@
     "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
     "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
     "research": "docs/seo-geo-operations.md"
+  },
+  "liveContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User supplied cindy@hingetra.com, WhatsApp +86 15584143652 and a QR image, and requested a separate WhatsApp QR button",
+    "scope": "Replace contact placeholders, align the Contact-page email and add a native QR popover using the supplied unchanged image. Preserve all approved page layouts, voice-phone details, automatic back-to-top visibility, noindex policy and RFQ non-delivery.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   },
   "readabilityContactUpdate": {
     "requestedAt": "2026-09-19",

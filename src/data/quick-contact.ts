@@ -1,11 +1,11 @@
 import { site } from "./site.ts";
 
-// User-requested placeholders, 2026-09-19. Replace these together before launch.
-// This reserved fictional number and .example mailbox do not belong to a buyer.
+// Contact channels supplied by the user on 2026-09-19.
 export const quickContact = {
-  whatsappNumber: "+1 202 555 0143",
-  email: "sales@hingetra.example",
-  isPlaceholder: true,
+  whatsappNumber: "+86 15584143652",
+  whatsappQrImage: "/contact/whatsapp-qr.png",
+  email: "cindy@hingetra.com",
+  isPlaceholder: false,
 } as const;
 
 export const quickContactLinks = {

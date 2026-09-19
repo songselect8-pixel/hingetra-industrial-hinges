@@ -39,6 +39,17 @@
 
 保留所有工厂概念图与加工示意图的 AI / Illustrative scene 标识。没有增加工厂面积、人数、产能、创立年份、证书有效性、MOQ、载荷、材质牌号、容差、交期或出口数量。
 
+## 用户提供正式联系渠道 — 2026-09-19 后续更新
+
+- 用户提供邮箱 `cindy@hingetra.com`，随后补充 WhatsApp `+86 15584143652` 和二维码图片，明确要求增加独立的二维码按钮。以上值替代前文记录的演示联系方式，`isPlaceholder` 改为 `false`。
+- Contact 页的邮箱默认值与悬浮入口共享同一配置，不再把新邮箱描述为目录中的联系方式。原目录联系人和语音电话保持不变；用户只确认新号码用于 WhatsApp。
+- 直接聊天链接采用 `https://wa.me/8615584143652`，邮件入口采用 `mailto:cindy@hingetra.com`；只打开访客的聊天/邮件应用，不自动发送消息。
+- 二维码来自用户附件 `codex-clipboard-70faddff-a590-4b88-8d0a-1df95c75b43d.png`，原样复制到 `public/contact/whatsapp-qr.png`，不重新生成、不裁剪、不经有损图片优化。
+- 使用现有圆形悬浮按钮样式和浏览器原生 `popover="auto"`。点击二维码按钮打开，关闭按钮、点弹层外部和 Esc 都可关闭；移动端提供直接打开 WhatsApp 的备选链接。交互依据 [MDN Popover 文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover)。不引入第三方聊天或二维码依赖。
+- 保留到顶隐藏返回顶部按钮、既有页面布局和全站 noindex。没有配置 SMTP、邮件 API 或 RFQ 接收端，仍显示 `Request checked, not sent.`。
+- 用户提供了联系方式及邮箱解析生效截图，但真实收发和 WhatsApp 目标仍需要实际确认；本轮不会主动发送任何测试消息，也不做截图或扩展视觉审核。
+- 此次更新通过 79 项现有测试与包含 TypeScript 的 Cloudflare 静态生产构建。28 个 HTML 的本地链接和资源检查通过；25 个内容页均包含正式邮箱、WhatsApp 和二维码入口，不再包含旧邮箱或演示号码。二维码导出后的 SHA-256 与用户原图一致，132 条顶层文件锁定记录一致。全站仍禁止收录，RFQ 投递边界未改。
+
 ## 参考站值得借鉴的内容
 
 [KINETOP 首页](https://kinetoptape.com/)、[About](https://kinetoptape.com/about)、[Factory](https://kinetoptape.com/factory) 的表达方式值得借鉴：联系入口容易找到；公司介绍解释具体产品与工作；采购清单和 FAQ 帮买家准备询盘。本轮应用前两项，既有 Resources、表格和 RFQ 清单继续承担第三项。

@@ -39,11 +39,11 @@
   "files": [
     { "path": "src/app/contact/page.tsx", "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db" },
     { "path": "src/app/contact/contact.css", "sha256": "70074204caf5609a24fcc4b71744b6f234d623c39271a35e19b512d4e16a77ac" },
-    { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "27a74429c014cbc110252ce7070c44045d22576121691a38fec61a9f3f618433" },
+    { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "aecacdcea2806ef9c82f340e2d8a4a54abee7ef12c7d8966427eba1be71cc1d6" },
     { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "5754cc122e53ec2b632f4e1c642d2c902fb63fadb94f671a7ab62416a6780f2d" },
-    { "path": "src/data/contact.ts", "sha256": "34023f289f38b84e56d085f6e3f61a6abdbd142e8d11114701945c43f9c3969e" },
+    { "path": "src/data/contact.ts", "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8" },
     { "path": "src/data/contact-rfq.ts", "sha256": "ab3e6de2bd73a57c6565016673db0882a60ddd9e9592ea2c916a26c03eaccea5" },
-    { "path": "docs/contact-rfq-configuration.md", "sha256": "0b45a797f62b365af62668c38d54b38e896a10ddda21a3cc2f0a7312a6918201" }
+    { "path": "docs/contact-rfq-configuration.md", "sha256": "f0d0e45b6f9bc547c34e0030e88346da58580e355662d122b2fb1f730dd3d426" }
   ],
   "brandIdentityUpdate": {
     "requestedAt": "2026-09-18",
@@ -59,6 +59,12 @@
     "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
     "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
     "research": "docs/seo-geo-operations.md"
+  },
+  "liveContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User supplied cindy@hingetra.com, WhatsApp +86 15584143652 and a QR image, and requested a separate WhatsApp QR button",
+    "scope": "The Contact-page email now follows the user-supplied mailbox; adjacent wording no longer attributes that mailbox to the catalog. Shared floating channels use the supplied mailbox, WhatsApp number and QR image. Preserve page layout, catalog voice-phone/contact name and checked-not-sent RFQ behavior.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   },
   "readabilityContactUpdate": {
     "requestedAt": "2026-09-19",

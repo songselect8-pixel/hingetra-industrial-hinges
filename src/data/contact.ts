@@ -1,5 +1,6 @@
 import { families } from "./catalog.ts";
 import { site } from "./site.ts";
+import { quickContact } from "./quick-contact.ts";
 
 function configured(name: string, fallback: string) {
   return process.env[name]?.trim() || fallback;
@@ -8,7 +9,7 @@ function configured(name: string, fallback: string) {
 export const contactDetails = {
   company: configured("CONTACT_COMPANY_NAME", site.companyName),
   contact: configured("CONTACT_PERSON_NAME", "Eric Huang"),
-  email: configured("CONTACT_EMAIL", "hjhuman0205@gmail.com"),
+  email: configured("CONTACT_EMAIL", quickContact.email),
   phoneDisplay: configured("CONTACT_PHONE_DISPLAY", "+86 18767359360"),
   phoneHref: configured("CONTACT_PHONE_HREF", "+8618767359360"),
   sourcePage: 19,
@@ -61,6 +62,6 @@ export const contactFaq = [
   },
   {
     question: "How can I contact the company directly?",
-    answer: "Use the catalog-confirmed email or phone details shown on this page and include the hinge requirement where possible.",
+    answer: "Use the email or phone details shown on this page and include the hinge requirement where possible.",
   },
 ] as const;
