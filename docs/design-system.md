@@ -112,7 +112,7 @@ The two actual catalog packaging photographs remain first and retain their origi
 - Keep technical overflow inside the focusable table wrapper. Its `position: relative` contains the screen-reader labels; removing it can cause mobile page overflow.
 - The mobile overview reserves sufficient width for complete raw dimensions. Do not truncate or shrink away technical values.
 - Keep the RFQ field spacing, labels, validation, visible focus styles and footer readability. No registration is required.
-- The homepage RFQ remains a local preview. The Contact RFQ also sends nothing by default; it can post multipart form data only after `NEXT_PUBLIC_RFQ_ENDPOINT` is configured, and it never reports success without a successful endpoint response.
+- RFQ delivery and storage were authorized on 2026-09-19. The shared and Contact forms still send nothing by default. A configured Cloudflare endpoint plus Turnstile can submit privately only when server bindings/secrets and activation are complete; receipt requires a saved-inquiry JSON acknowledgment, not merely HTTP success. Preserve the original field order and design; see `docs/inquiry-storage-setup.md`.
 
 Baseline source hashes and final screenshots are recorded under `output/qa/final-refinement/`. They support comparison; the implemented components and CSS remain the working source of truth. Do not treat earlier exploratory screenshots as a new design direction.
 

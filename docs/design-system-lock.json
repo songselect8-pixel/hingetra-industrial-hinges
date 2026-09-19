@@ -117,7 +117,7 @@
     },
     {
       "path": "src/components/inquiry/RFQForm.tsx",
-      "sha256": "589bd2006e1898199ebd3dac9a5f949caedb128a2601bf8db6cf5e8367eedf5d"
+      "sha256": "85cdaf06077e2b471d90ca6885585dcf2181a6e2c506867aa6caf830589e32a2"
     },
     {
       "path": "src/components/ui/SupportingVisual.tsx",
@@ -323,5 +323,11 @@
     "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
     "record": "docs/2026-09-19-readability-contact-factory-update.md",
     "backToTopVisibility": "User-requested refinement: hide at the top and on initial render; show after scrolling down. Shared component uses a passive scroll listener and page-restoration refresh, without changing contact links or styling."
+  },
+  "productionDeliveryUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User agreed to connect production inquiry delivery and asked how to store inquiry data",
+    "scope": "Connect existing Contact and shared RFQ forms to gated same-origin Cloudflare Pages Functions with D1 records, private R2 attachments, Turnstile and fixed-recipient Resend notifications. Preserve page layouts, catalog data, honest unconfigured states, failure input retention and disabled indexing. Real resources, activation and inbox tests are pending.",
+    "record": "docs/inquiry-storage-setup.md"
   }
 }

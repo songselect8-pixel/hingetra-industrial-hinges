@@ -11,3 +11,5 @@ output/
 .playwright-cli/
 .playwright-mcp/
 .DS_Store
+.wrangler/
+.dev.vars*

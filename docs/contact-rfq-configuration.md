@@ -20,11 +20,15 @@ The user separately supplied WhatsApp `+86 15584143652` and its QR image on 2026
 
 ## RFQ delivery endpoint
 
-Set `NEXT_PUBLIC_RFQ_ENDPOINT` to an HTTPS endpoint that accepts `multipart/form-data`. Until this variable is present, a valid form displays **Request checked, not sent.** and preserves the buyer's entries and selected files in the current browser tab. No request is made.
+Production delivery and storage were authorized by the user on 2026-09-19. Follow `docs/inquiry-storage-setup.md` for the Cloudflare D1 / private R2 / Turnstile / Resend setup. Real cloud configuration and inbox verification are still pending.
 
-The endpoint must accept the named text fields rendered by `ContactRFQForm.tsx` and the optional `drawing` and `referenceImage` files. The browser reports success only after an HTTP success response. Network errors and non-success responses preserve the form values and display an accessible delivery error.
+Set `NEXT_PUBLIC_RFQ_ENDPOINT=/api/inquiries` and the public `NEXT_PUBLIC_TURNSTILE_SITE_KEY` only for the Cloudflare production build. Both are required; otherwise a valid Contact form still displays **Request checked, not sent.** and preserves the buyer's entries and selected files in the current browser tab. The shared catalog form retains **Request prepared, not sent.**. GitHub Pages remains an inert static preview.
 
-Before connecting production delivery, implement server-side validation, file type and file size checks, secure storage or email delivery, abuse protection, logging appropriate to the deployment, and the site's final privacy handling. Client-side validation is a usability layer and must not be the only security boundary.
+The same-origin Pages Function accepts multipart fields and files from both forms. Server activation (`RFQ_ENABLED=true`), D1/R2 bindings, Turnstile and notification secrets are mandatory. The browser reports receipt only after a valid JSON saved-inquiry acknowledgment with its UUID. An HTTP 200 HTML fallback, generic success object, failed storage, expired challenge or non-success response cannot simulate success. Network errors preserve entries/files and the request ID for a safe retry; editing fields creates a new request.
+
+Private R2 attachments are stored before the D1 record. A successful response means the inquiry was saved, not that an email reached the recipient. Notification to `cindy@hingetra.com` runs separately with a recorded `pending`, `accepted` or `failed` state. The owner downloads attachments from authenticated Cloudflare R2, rather than a public URL. No public database or attachment-reading API is exposed. The first version requires the owner to review pending/failed notifications; it does not promise automatic retries, malware scanning or a CRM interface.
+
+Before collecting live inquiries, finish the documented cloud setup, owner review of privacy/retention practices and real submission tests for both forms, including an attachment and actual receipt in Cindy's inbox. Server-side length, product, format/signature, file/request-size validation, fixed-recipient email, origin checks, Turnstile verification and abuse counters are implemented; these do not replace operational checks or final privacy review.
 
 ## File rules presented in the interface
 

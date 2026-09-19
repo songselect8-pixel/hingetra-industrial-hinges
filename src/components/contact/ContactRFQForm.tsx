@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Arrow } from "@/components/ui/Arrow";
+import { InquiryPrivacy, InquirySecurity } from "@/components/inquiry/InquirySecurity";
+import { postInquiry } from "@/lib/rfq-delivery";
 import { contactProductOptions } from "@/data/contact";
 import {
   contactDrawingAccept,
@@ -26,12 +28,18 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
   const resultRef = useRef<HTMLDivElement>(null);
   const drawingRef = useRef<HTMLInputElement>(null);
   const imageRef = useRef<HTMLInputElement>(null);
+  const requestId = useRef<string | null>(null);
+  const sending = useRef(false);
+  const [receipt, setReceipt] = useState("");
+  const [attempt, setAttempt] = useState(0);
+  const configured = Boolean(submissionEndpoint && process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim());
 
   useEffect(() => {
     if (delivery !== "idle" && delivery !== "submitting") resultRef.current?.focus({ preventScroll: false });
   }, [delivery, errors]);
 
   function clearErrors(...names: (keyof ContactRFQErrors)[]) {
+    requestId.current = null;
     setDelivery("idle");
     setErrors((current) => {
       const next = { ...current };
@@ -64,6 +72,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (sending.current || delivery === "sent") return;
     const form = event.currentTarget;
     const nextErrors = validateContactRFQ(fields, files);
     setErrors(nextErrors);
@@ -72,19 +81,33 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
       return;
     }
 
-    if (!submissionEndpoint) {
+    if (!configured || !submissionEndpoint) {
       setDelivery("not-configured");
       return;
     }
 
+    const body = new FormData(form);
+    if (!body.get("cf-turnstile-response")) {
+      setErrors({ delivery: "Complete the security check below before submitting." });
+      setDelivery("failed");
+      return;
+    }
+    requestId.current ??= crypto.randomUUID();
+    body.set("requestId", requestId.current);
+    body.set("formKind", "contact");
+    body.set("sourcePath", window.location.pathname);
+    sending.current = true;
     setDelivery("submitting");
     try {
-      const response = await fetch(submissionEndpoint, { method: "POST", body: new FormData(form) });
-      if (!response.ok) throw new Error(`RFQ endpoint returned ${response.status}`);
+      const result = await postInquiry(submissionEndpoint, body);
+      setReceipt(result.inquiryId);
       setDelivery("sent");
-    } catch {
-      setErrors((current) => ({ ...current, delivery: "The RFQ could not be delivered. Your entries are still available below." }));
+    } catch (error) {
+      setErrors((current) => ({ ...current, delivery: error instanceof Error ? error.message : "No confirmation was received. Your entries are still available below." }));
       setDelivery("failed");
+    } finally {
+      sending.current = false;
+      setAttempt((current) => current + 1);
     }
   }
 
@@ -105,7 +128,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
   const notice = delivery === "not-configured"
     ? { title: "Request checked, not sent.", text: "Inquiry delivery is not configured. Your entries and selected files remain in this browser tab; nothing has been transmitted." }
     : delivery === "sent"
-      ? { title: "RFQ submitted.", text: "The configured inquiry endpoint accepted your request. Your entries remain visible for reference." }
+      ? { title: "Inquiry received.", text: `Your inquiry and selected files have been saved. Reference: ${receipt}. Your entries remain visible for reference.` }
       : delivery === "failed"
         ? { title: "RFQ delivery failed.", text: "No confirmation was received. Review the message below or contact the company directly." }
         : null;
@@ -113,7 +136,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
   return (
     <form className="contact-rfq-form rfq-form" noValidate method="post" onSubmit={submit} aria-busy={delivery === "submitting"}>
       <div className="form-heading"><h3>Request a Quote</h3><span>* Required fields</span></div>
-      <p className="form-preview-note"><span aria-hidden="true" />{submissionEndpoint ? "RFQ delivery endpoint configured." : "Preview · RFQs and files are not sent."}</p>
+      <p className="form-preview-note"><span aria-hidden="true" />{configured ? "Submit your requirement securely to HINGETRA." : "Preview · RFQs and files are not sent."}</p>
 
       {(delivery === "invalid" || notice) && (
         <div id="contact-form-result" ref={resultRef} tabIndex={-1} className={delivery === "invalid" || delivery === "failed" ? "form-error-summary" : "form-notice"} role={delivery === "invalid" || delivery === "failed" ? "alert" : "status"}>
@@ -124,7 +147,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
         </div>
       )}
 
-      <fieldset className="contact-form-group">
+      <fieldset className="contact-form-group" disabled={delivery === "submitting"}>
         <legend><span>01</span> Contact Information</legend>
         <div className="contact-form-grid">
           <div className="field"><label htmlFor="contact-name">Name <span>*</span></label><input id="contact-name" name="name" required autoComplete="name" maxLength={120} value={fields.name} onChange={(event) => changeField("name", event.target.value)} placeholder="Your name" {...fieldProps("name")} />{fieldError("name")}</div>
@@ -135,7 +158,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
         </div>
       </fieldset>
 
-      <fieldset className="contact-form-group">
+      <fieldset className="contact-form-group" disabled={delivery === "submitting"}>
         <legend><span>02</span> Product Requirement</legend>
         <div className="contact-form-grid">
           <div className="field"><label htmlFor="contact-product-type">Product Type</label><select id="contact-product-type" name="productType" value={fields.productType} onChange={(event) => changeField("productType", event.target.value)} {...fieldProps("requirement")}><option value="">Select a hinge type</option>{contactProductOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select>{fieldError("requirement")}</div>
@@ -146,7 +169,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
         </div>
       </fieldset>
 
-      <fieldset className="contact-form-group contact-choice-group">
+      <fieldset className="contact-form-group contact-choice-group" disabled={delivery === "submitting"}>
         <legend><span>03</span> Requirement Type</legend>
         <div className="contact-radio-grid">
           {["Standard Product", "Custom Requirement", "Not Sure / Need Selection Help"].map((label) => {
@@ -156,7 +179,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
         </div>
       </fieldset>
 
-      <fieldset className="contact-form-group">
+      <fieldset className="contact-form-group" disabled={delivery === "submitting"}>
         <legend><span>04</span> Technical Information</legend>
         <div className="contact-form-grid">
           <div className="field field-full"><label htmlFor="contact-technicalRequirements">Technical Requirements</label><textarea id="contact-technicalRequirements" name="technicalRequirements" rows={4} maxLength={4000} value={fields.technicalRequirements} onChange={(event) => changeField("technicalRequirements", event.target.value)} placeholder="Describe required structure, dimensions or other technical points" /></div>
@@ -165,7 +188,7 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
         </div>
       </fieldset>
 
-      <fieldset className="contact-form-group contact-file-group">
+      <fieldset className="contact-form-group contact-file-group" disabled={delivery === "submitting"}>
         <legend><span>05</span> File Upload</legend>
         <div className="contact-file-grid">
           <div className="field contact-file-field">
@@ -183,10 +206,11 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
         </div>
       </fieldset>
 
+      {configured && <><InquirySecurity attempt={attempt} /><InquiryPrivacy /></>}
       {errors.delivery && <p id="contact-error-delivery" className="contact-delivery-error" role="alert">{errors.delivery}</p>}
       <div className="contact-form-bottom form-bottom">
-        <p>{submissionEndpoint ? "Your submitted information is used to understand and respond to your inquiry." : "Inquiry delivery is not configured in this preview. Nothing is transmitted or uploaded."}</p>
-        <button id="contact-submit" className="button button-primary" type="submit" disabled={delivery === "submitting"}>{delivery === "submitting" ? "Submitting RFQ" : "Submit RFQ"} <Arrow /></button>
+        <p>{configured ? "Submitting shares your details and chosen files with HINGETRA as described above." : "Inquiry delivery is not configured in this preview. Nothing is transmitted or uploaded."}</p>
+        <button id="contact-submit" className="button button-primary" type="submit" disabled={delivery === "submitting" || delivery === "sent"}>{delivery === "submitting" ? "Submitting RFQ" : delivery === "sent" ? "Inquiry received" : "Submit RFQ"} <Arrow /></button>
       </div>
       <p className="contact-privacy-note">Your submitted information is intended to help understand and respond to your inquiry. No account registration is required.</p>
       <noscript><p className="contact-noscript">JavaScript is required to validate this form. Use the direct email or phone contact shown on this page.</p></noscript>

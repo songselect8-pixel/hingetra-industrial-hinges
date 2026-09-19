@@ -114,7 +114,8 @@ test("Contact route implements the approved hierarchy, SEO, exact links, and con
   assert.match(content, /href=\{`tel:\$\{contactDetails\.phoneHref\}`\}/);
   assert.match(form, /NEXT_PUBLIC_RFQ_ENDPOINT|submissionEndpoint/);
   assert.match(form, /Request checked, not sent\./);
-  assert.match(form, /fetch\(submissionEndpoint/);
+  assert.match(form, /postInquiry\(submissionEndpoint/);
+  assert.match(requireFile(resolve("src/lib/rfq-delivery.ts")), /readInquiryReceipt\(response\)/);
   assert.doesNotMatch(form, /\.reset\(\)|setFields\(initialContactRFQFields\)/);
 });
 

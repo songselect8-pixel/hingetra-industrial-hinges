@@ -14,6 +14,8 @@ This preview is not ready for public production traffic until every blocking ite
 **CRITICAL BEFORE PRODUCTION:**  
 Connect the RFQ form to a real server-side delivery system and perform a real submission test to the configured inquiry recipient.
 
+- **2026-09-19 progress, not completion:** user authorized delivery and inquiry storage. The two RFQ components now support a gated Pages Function with D1 records, private R2 attachments, Turnstile and Resend notifications. Follow `docs/inquiry-storage-setup.md`; cloud resources/secrets, production activation, owner privacy/retention review and actual submission/inbox tests remain outstanding. An API saved receipt is not inbox-delivery proof.
+
 - Keep the current **“Request checked, not sent.”** behavior until that server-side system is configured and verified.
 - Do not simulate a successful submission or silently discard an inquiry.
 - Confirm that the receiving system processes every text field and the optional drawing and reference-image files.
@@ -57,7 +59,7 @@ Connect the RFQ form to a real server-side delivery system and perform a real su
 - Confirm the production company name, recipient, contact name, email and phone environment values.
 - The user explicitly confirmed HINGETRA / Hingetra Industrial Hinges as the public website brand on 2026-09-18. The supplied logo's English-only adaptation is used across the site. Confirm the registered legal entity before production; a brand change does not change the original catalog identity or verify a new legal company name.
 - The approved HINGETRA factory exterior remains an AI-generated concept, not photographic evidence. Keep its disclosure visible.
-- `hingetra.com` is a proposed domain only. Connect it and update the canonical origin only after ownership and deployment configuration are confirmed; the current GitHub Pages preview URL is unchanged.
+- `hingetra.com` and `www.hingetra.com` are connected to the Cloudflare Pages project with SSL (user confirmed on 2026-09-19). Keep canonical origin `https://hingetra.com`; the separate GitHub Pages preview URL is unchanged. Successful domain setup alone does not resolve inquiry and publication blockers.
 - Keep unverified street addresses, maps, additional channels, timing promises and commercial claims unpublished.
 - Confirm that the production recipient can receive the advertised PDF, DWG, DXF, JPG and PNG attachments within the configured limit.
 - Follow `docs/seo-geo-operations.md` for source-backed content, search measurement and qualified-RFQ operations. Do not count local validation as a delivered inquiry or add tracking before privacy/measurement setup is confirmed.

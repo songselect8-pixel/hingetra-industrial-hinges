@@ -27,7 +27,7 @@
     "Preserve the current RFQ form, validation, file-upload interface, responsive layout, product selector, contact information and configuration architecture.",
     "Keep the honest unconfigured behavior and exact visible status: Request checked, not sent.",
     "Do not simulate a successful submission, silently discard an RFQ or clear buyer input after validation or delivery failure.",
-    "Do not implement SMTP, email APIs, Resend, SendGrid or another external email service at this stage.",
+    "Do not implement SMTP, email APIs or another external email service without explicit user authorization. Cloudflare inquiry storage and Resend notification were authorized on 2026-09-19 as recorded in productionDeliveryUpdate.",
     "Before production, connect the RFQ form to a real server-side delivery system and perform a real submission test to the configured inquiry recipient.",
     "Keep product options derived from the existing catalog family data rather than maintaining a second product taxonomy.",
     "Keep the user-approved business display name and catalog-confirmed Eric Huang, email and phone values configurable through the recorded environment variables; the brand update does not verify a new registered legal entity.",
@@ -40,10 +40,10 @@
     { "path": "src/app/contact/page.tsx", "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db" },
     { "path": "src/app/contact/contact.css", "sha256": "70074204caf5609a24fcc4b71744b6f234d623c39271a35e19b512d4e16a77ac" },
     { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "aecacdcea2806ef9c82f340e2d8a4a54abee7ef12c7d8966427eba1be71cc1d6" },
-    { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "5754cc122e53ec2b632f4e1c642d2c902fb63fadb94f671a7ab62416a6780f2d" },
+    { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "2c5ca8107be93a93693de8ce8718ca5631cbc2aec3050b746aaae276fefe7850" },
     { "path": "src/data/contact.ts", "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8" },
     { "path": "src/data/contact-rfq.ts", "sha256": "ab3e6de2bd73a57c6565016673db0882a60ddd9e9592ea2c916a26c03eaccea5" },
-    { "path": "docs/contact-rfq-configuration.md", "sha256": "f0d0e45b6f9bc547c34e0030e88346da58580e355662d122b2fb1f730dd3d426" }
+    { "path": "docs/contact-rfq-configuration.md", "sha256": "6646e75378a7dd563fea0b5d8920bc0782bb806ecf3b74749f1976bf0d0cae0c" }
   ],
   "brandIdentityUpdate": {
     "requestedAt": "2026-09-18",
@@ -71,5 +71,11 @@
     "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
     "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
     "record": "docs/2026-09-19-readability-contact-factory-update.md"
+  },
+  "productionDeliveryUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User agreed to connect production inquiry delivery and asked how to store inquiry data",
+    "scope": "Connect existing Contact and shared RFQ forms to gated same-origin Cloudflare Pages Functions with D1 records, private R2 attachments, Turnstile and fixed-recipient Resend notifications. Preserve page layouts, catalog data, honest unconfigured states, failure input retention and disabled indexing. Real resources, activation and inbox tests are pending.",
+    "record": "docs/inquiry-storage-setup.md"
   }
 }
