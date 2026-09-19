@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { site } from "@/data/site";
 import { joinSiteUrl } from "@/lib/site-url";
 import { getSearchPolicy } from "@/lib/search-policy";
+import { FloatingActions } from "@/components/navigation/FloatingActions";
 import "./globals.css";
 
 const plex = localFont({
@@ -59,5 +60,5 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#0D2238" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={plex.variable}><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema).replace(/</g, "\\u003c") }} /></body></html>;
+  return <html lang="en" className={plex.variable}><body id="site-top">{children}<FloatingActions /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema).replace(/</g, "\\u003c") }} /></body></html>;
 }

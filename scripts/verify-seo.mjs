@@ -37,6 +37,7 @@ for (const file of content) {
   assert.equal(meta["og:url"], url, fail("Open Graph URL must match canonical"));
   for (const key of ["og:title", "og:description", "og:image", "og:image:alt"]) assert.ok(meta[key], fail(`missing ${key}`));
   assert.equal(/\bnoindex\b/.test(meta.robots || ""), !indexable, fail("indexing policy drift"));
+  if (indexable) assert.ok(!html.includes('data-contact-mode="demo"'), fail("replace demo contact details before enabling indexing"));
   assert.ok(indexable ? /\bindex\b/.test(meta.robots || "") : /\bnofollow\b/.test(meta.robots || ""), fail("missing search policy"));
   for (const tag of html.matchAll(/<img\b[^>]*>/g)) assert.ok("alt" in attrs(tag[0]), fail("image missing ALT"));
 

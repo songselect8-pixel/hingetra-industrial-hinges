@@ -28,7 +28,7 @@
 .contact-page .contact-details-grid dt { color: var(--steel); font-size: 9px; letter-spacing: 1.1px; text-transform: uppercase; }
 .contact-page .contact-details-grid dd { margin: 31px 0 0; font-size: 16px; line-height: 1.55; overflow-wrap: anywhere; }
 .contact-page .contact-company-detail dd { max-width: 390px; font-size: 18px; }
-.contact-page .contact-details-grid small { display: block; margin-top: 12px; color: #71808a; font-size: 9px; }
+.contact-page .contact-details-grid small { display: block; margin-top: 12px; color: var(--steel); font-size: 9px; }
 .contact-page .contact-details-grid a { display: inline-flex; align-items: center; gap: 10px; border-bottom: 1px solid transparent; }
 .contact-page .contact-details-grid a:hover { border-bottom-color: var(--orange); }
 .contact-page .contact-details-grid a svg { width: 15px; color: var(--orange); }

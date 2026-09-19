@@ -1,3 +1,13 @@
+import { site } from "./site.ts";
+
+export const manufacturingIntroduction = {
+  paragraphs: [
+    `${site.companyName} operates a self-owned factory focused on weld-on hinge production. Our manufacturing capabilities include lathe processing, automatic punching, mass assembly and standardized packaging for the hinge structures and series shown in our catalog.`,
+    "For standard models, catalog dimensions and original drawings provide the technical reference. For custom requirements, we review the proposed structure and dimensions before confirming a production specification. Production checks and the applicable packing method are discussed for the selected hinge family.",
+  ],
+  sourcePages: [3, 5, 7, 12, 16, 17, 18],
+} as const;
+
 export type ManufacturingSourceRecord = {
   title: string;
   description: string;

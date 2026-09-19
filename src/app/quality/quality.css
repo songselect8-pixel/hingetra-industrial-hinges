@@ -26,7 +26,7 @@
 .quality-page .quality-approach-ledger article > span { color: var(--orange); font-size: 10px; font-variant-numeric: tabular-nums; }
 .quality-page .quality-approach-ledger h3 { margin-top: 28px; font-size: 18px; line-height: 1.35; letter-spacing: -.3px; }
 .quality-page .quality-approach-ledger p { margin-top: 10px; color: var(--steel); font-size: 12px; line-height: 1.75; }
-.quality-page .quality-approach-ledger small { margin-top: auto; padding-top: 17px; color: #71808a; font-size: 9px; letter-spacing: .4px; }
+.quality-page .quality-approach-ledger small { margin-top: auto; padding-top: 17px; color: var(--steel); font-size: 9px; letter-spacing: .4px; }
 
 .quality-page .quality-dimensions { background: var(--paper); padding-block: 82px; border-block: 1px solid #d9dfe3; }
 .quality-page .quality-dimensions-grid { display: grid; grid-template-columns: .76fr 1.24fr; align-items: start; gap: 95px; }
@@ -47,7 +47,7 @@
 .quality-page .quality-dimension-ledger article > span { padding-top: 3px; color: var(--orange); font-size: 10px; }
 .quality-page .quality-dimension-ledger h3 { font-size: 17px; line-height: 1.4; }
 .quality-page .quality-dimension-ledger p { max-width: 590px; margin-top: 6px; color: var(--steel); font-size: 12px; line-height: 1.75; }
-.quality-page .quality-dimension-ledger small { align-self: end; color: #71808a; font-size: 9px; white-space: nowrap; }
+.quality-page .quality-dimension-ledger small { align-self: end; color: var(--steel); font-size: 9px; white-space: nowrap; }
 
 .quality-page .quality-drawings { padding-block: 88px 90px; }
 .quality-page .quality-drawing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px; }
@@ -81,7 +81,7 @@
 .quality-page .quality-consistency-grid article > span { color: var(--orange); font-size: 10px; }
 .quality-page .quality-consistency-grid h3 { margin-top: 30px; font-size: 20px; line-height: 1.35; letter-spacing: -.3px; }
 .quality-page .quality-consistency-grid p { margin-top: 10px; color: var(--steel); font-size: 12px; line-height: 1.75; }
-.quality-page .quality-consistency-grid small { margin-top: auto; padding-top: 16px; color: #71808a; font-size: 9px; }
+.quality-page .quality-consistency-grid small { margin-top: auto; padding-top: 16px; color: var(--steel); font-size: 9px; }
 
 .quality-page .quality-products { background: var(--paper); padding-block: 88px 90px; border-block: 1px solid #d9dfe3; }
 .quality-page .quality-product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 29px; }
@@ -142,7 +142,7 @@
 .quality-page .quality-comparison-grid article > span { color: var(--orange); font-size: 9px; letter-spacing: .55px; text-transform: uppercase; }
 .quality-page .quality-comparison-grid h3 { margin-top: 22px; font-size: 18px; line-height: 1.4; }
 .quality-page .quality-comparison-grid p { margin-top: 9px; color: var(--steel); font-size: 11px; line-height: 1.75; }
-.quality-page .quality-comparison-grid small { display: block; margin-top: 16px; color: #71808a; font-size: 9px; }
+.quality-page .quality-comparison-grid small { display: block; margin-top: 16px; color: var(--steel); font-size: 9px; }
 
 .quality-page .quality-faq { padding-block: 84px 90px; }
 .quality-page .quality-faq-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 90px; align-items: start; }

@@ -55,7 +55,7 @@
     },
     {
       "path": "src/app/manufacturing/manufacturing.css",
-      "sha256": "25b22ca86cc749b82d0ba226bdd70148db87631462a22ce8d3b9e88c50488f2b"
+      "sha256": "a69e6f0a422065df330087c133bfb56001bcc46342a238a3f8fa815451f07c90"
     },
     {
       "path": "src/components/manufacturing/ManufacturingPageContent.tsx",
@@ -63,7 +63,7 @@
     },
     {
       "path": "src/components/manufacturing/ManufacturingCapabilities.tsx",
-      "sha256": "ad0398c1a6a18f6d54a9b2cb345fee81dc3271d4dc07680bd5ba30bc24e1a71a"
+      "sha256": "452eba670791e4d6ab96f7f6f50431ba9b9659b320a173c38bab46bf2c2ea639"
     },
     {
       "path": "src/components/manufacturing/ManufacturingEvidence.tsx",
@@ -75,7 +75,7 @@
     },
     {
       "path": "src/data/manufacturing.ts",
-      "sha256": "125696a8cc97703c7cfa0b9968ecd6ef57297d7fd8799adbdafb5c8e8beeb200"
+      "sha256": "a26346efe400056d3f9ae79388423c3ac05745d0d98a7af87e5ada88e3cd797b"
     },
     {
       "path": "src/data/illustrations.ts",
@@ -102,5 +102,11 @@
       "/images/illustrations/quality-control-cn.png"
     ],
     "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
+  },
+  "readabilityContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
+    "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   }
 }

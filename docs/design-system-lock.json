@@ -47,9 +47,11 @@
     390
   ],
   "files": [
+    {"path":"src/components/navigation/FloatingActions.tsx","sha256":"b6c5fdb16cf0ea59548335f638b15a17d34722ddb66807fbe25bffd430593c40"},
+    {"path":"src/data/quick-contact.ts","sha256":"4b5f5807a17078027a3f781091e5586a74099a127253027516eb5f804ed88d94"},
     {
       "path": "src/app/globals.css",
-      "sha256": "4b89075dfdb1b681ee82901e6be19370da6b132fbfd96a62fa21d58397d89c17"
+      "sha256": "6c88fd7c0e77b024819505be108afa7e534a302b377a8191333655e8bead7d7d"
     },
     {
       "path": "src/components/sections/Applications.tsx",
@@ -149,7 +151,7 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "1340194b757d80a828e445c68aaa251795fcf8b6cb4bb45740ddb3af1a6460ac"
+      "sha256": "873a1e48963a0fb93926994e86def917cd88f362c524661cd7fc0d8902d0c4ad"
     },
     {
       "path": "src/data/catalog-overview.ts",
@@ -306,5 +308,11 @@
     "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
     "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
     "research": "docs/seo-geo-operations.md"
+  },
+  "readabilityContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
+    "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   }
 }

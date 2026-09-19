@@ -52,6 +52,8 @@ Connect the RFQ form to a real server-side delivery system and perform a real su
 
 ## Business and configuration review
 
+- **Blocking placeholder contacts:** replace the WhatsApp number and mailbox in `src/data/quick-contact.ts`, confirm they are active, set `isPlaceholder=false`, and align them with the Contact-page configuration. The current reserved demo number and `.example` mailbox are not working inquiry channels. The SEO deployment check rejects indexed builds that retain demo contacts.
+
 - Confirm the production company name, recipient, contact name, email and phone environment values.
 - The user explicitly confirmed HINGETRA / Hingetra Industrial Hinges as the public website brand on 2026-09-18. The supplied logo's English-only adaptation is used across the site. Confirm the registered legal entity before production; a brand change does not change the original catalog identity or verify a new legal company name.
 - The approved HINGETRA factory exterior remains an AI-generated concept, not photographic evidence. Keep its disclosure visible.

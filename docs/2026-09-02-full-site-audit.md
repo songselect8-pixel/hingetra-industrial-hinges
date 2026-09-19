@@ -1,5 +1,13 @@
 # Final Full-Site Audit
 
+## User-requested readability, floating contacts and factory copy — 2026-09-19
+
+The user explicitly requested stronger text readability, shared WhatsApp/email/back-to-top controls, and HINGETRA factory introductions in About Us and Manufacturing. The scoped change increases body/navigation weight, strengthens text gray and table headers, and improves footer small print without changing the font family, main layout or product data. A server-rendered shared control uses native links and one real `site-top` anchor. Mobile styles reserve footer space and hide the controls while a form, navigation or modal is active.
+
+At the user's request, only the new floating contact channels use reserved demo details, with a visible Demo contacts label; previous approved Contact-page data remains unchanged. Do not enable indexing until these new placeholders, the existing RFQ delivery blocker and other launch requirements are resolved. The two new factory descriptions use existing catalog facts, retain neutral illustration labels and do not add numerical or certification claims. Scope, sources and future configuration: `docs/2026-09-19-readability-contact-factory-update.md`.
+
+Release checks: 79 existing tests, TypeScript and production export pass; 28 HTML files pass the local link/asset check; SEO verifies 25 content pages, six articles and 929 fragment links. All 147 recorded lock entries match. No screenshot or expanded viewport audit was performed and no contact message was sent.
+
 ## User-requested SEO / AI-search foundation update — 2026-09-18
 
 The user requested current official SEO/GEO research and practical improvements. This scoped update preserves layouts, CSS, article text, verified specifications, source images, contact fields and the honest RFQ preview. It expands the sitemap to all 25 content routes, aligns canonical / RSS / structured URLs, adds shared Organization / WebSite identity and a product CollectionPage, completes Contact share metadata, and corrects Resources links to `contact-rfq`. Homepage image loading priority and accessible card labels change without visual changes.

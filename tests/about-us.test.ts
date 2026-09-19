@@ -85,7 +85,7 @@ test("About route implements the requested hierarchy, SEO, and internal navigati
   for (const heading of [
     "About {site.brand}",
     "Industrial Hinge Manufacturing Built Around Practical Requirements",
-    "Focused on Industrial Hinges",
+    "About the {site.brand} Factory",
     "A Focused Hinge Product Range",
     "Manufacturing Behind the Product",
     "Standard Products. Custom Requirements.",

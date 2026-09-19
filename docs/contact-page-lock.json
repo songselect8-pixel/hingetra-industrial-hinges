@@ -38,7 +38,7 @@
   ],
   "files": [
     { "path": "src/app/contact/page.tsx", "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db" },
-    { "path": "src/app/contact/contact.css", "sha256": "2f85385859991205439261cc6fbfb020e27456146e29fba28a5376431485d27f" },
+    { "path": "src/app/contact/contact.css", "sha256": "70074204caf5609a24fcc4b71744b6f234d623c39271a35e19b512d4e16a77ac" },
     { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "27a74429c014cbc110252ce7070c44045d22576121691a38fec61a9f3f618433" },
     { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "5754cc122e53ec2b632f4e1c642d2c902fb63fadb94f671a7ab62416a6780f2d" },
     { "path": "src/data/contact.ts", "sha256": "34023f289f38b84e56d085f6e3f61a6abdbd142e8d11114701945c43f9c3969e" },
@@ -59,5 +59,11 @@
     "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
     "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
     "research": "docs/seo-geo-operations.md"
+  },
+  "readabilityContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
+    "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   }
 }

@@ -55,7 +55,7 @@
     },
     {
       "path": "src/app/quality/quality.css",
-      "sha256": "943ab80f37cbf9d8f758b0518dd96baadadc50946cd23e4dd795aae9c2225028"
+      "sha256": "b6865c5a44ecae409445aa51cdf12ada521dd410fb49ea51f976d625030e34b1"
     },
     {
       "path": "src/components/quality/QualityPageContent.tsx",
@@ -110,5 +110,11 @@
       "/images/illustrations/quality-control-cn.png"
     ],
     "compatibilityNote": "Asset, ALT and share-image update only. Illustrative-scene captions, page composition/CSS, catalog-backed facts and original product images/drawings remain unchanged. Fictional people and equipment are not company evidence."
+  },
+  "readabilityContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
+    "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   }
 }

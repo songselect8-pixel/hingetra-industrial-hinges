@@ -21,12 +21,14 @@
 .manufacturing-page .manufacturing-factory-grid figure figcaption span:first-child { color: var(--navy); font-weight: 500; }
 
 .manufacturing-page .manufacturing-overview { padding-block: 88px 83px; }
+.manufacturing-page .manufacturing-introduction { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 56px; margin-bottom: 36px; color: var(--steel); font-size: 15px; line-height: 1.8; }
+@media (max-width: 767px) { .manufacturing-page .manufacturing-introduction { grid-template-columns: 1fr; gap: 18px; font-size: 14px; } }
 .manufacturing-page .manufacturing-capability-ledger { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 56px; border-top: 1px solid #bac6ce; }
 .manufacturing-page .manufacturing-capability-ledger article { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 14px; min-height: 138px; padding-block: 25px; border-bottom: 1px solid var(--line); }
 .manufacturing-page .manufacturing-ledger-number { color: var(--orange); font-size: 10px; font-variant-numeric: tabular-nums; }
 .manufacturing-page .manufacturing-capability-ledger h3 { font-size: 18px; line-height: 1.35; letter-spacing: -.25px; }
 .manufacturing-page .manufacturing-capability-ledger p { max-width: 390px; margin-top: 8px; color: var(--steel); font-size: 12px; line-height: 1.75; }
-.manufacturing-page .manufacturing-source-tag { align-self: end; color: #71808a; font-size: 9px; letter-spacing: .45px; white-space: nowrap; }
+.manufacturing-page .manufacturing-source-tag { align-self: end; color: var(--steel); font-size: 9px; letter-spacing: .45px; white-space: nowrap; }
 
 .manufacturing-page .manufacturing-processing { background: var(--paper); padding-block: 82px; }
 .manufacturing-page .manufacturing-processing-stack { display: grid; gap: 60px; }
@@ -59,7 +61,7 @@
 .manufacturing-page .manufacturing-organization-grid > article > span { color: var(--orange); font-size: 10px; }
 .manufacturing-page .manufacturing-organization-grid h3 { margin-top: 35px; font-size: 22px; line-height: 1.3; letter-spacing: -.45px; }
 .manufacturing-page .manufacturing-organization-grid p { max-width: 330px; margin-top: 12px; color: var(--steel); font-size: 13px; line-height: 1.8; }
-.manufacturing-page .manufacturing-organization-grid small { display: block; margin-top: 18px; color: #71808a; font-size: 9px; letter-spacing: .5px; }
+.manufacturing-page .manufacturing-organization-grid small { display: block; margin-top: 18px; color: var(--steel); font-size: 9px; letter-spacing: .5px; }
 
 .manufacturing-page .manufacturing-custom-bridge { background: var(--paper); padding-block: 76px; }
 .manufacturing-page .manufacturing-custom-grid,
@@ -124,7 +126,7 @@
 .manufacturing-page .manufacturing-summary-table-wrap thead th { color: var(--steel); font-size: 8px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
 .manufacturing-page .manufacturing-summary-table-wrap tbody th { width: 34%; font-size: 12px; font-weight: 500; }
 .manufacturing-page .manufacturing-summary-table-wrap tbody td:nth-child(2) { color: var(--steel); }
-.manufacturing-page .manufacturing-summary-table-wrap tbody td:last-child { width: 75px; color: #71808a; white-space: nowrap; }
+.manufacturing-page .manufacturing-summary-table-wrap tbody td:last-child { width: 75px; color: var(--steel); white-space: nowrap; }
 .manufacturing-page .manufacturing-summary-table-wrap tr:last-child > * { border-bottom: 0; }
 .manufacturing-page .manufacturing-faq-list { margin-top: 28px; border-top: 1px solid #bdc8d0; }
 .manufacturing-page .manufacturing-faq-list details { border-bottom: 1px solid var(--line); }

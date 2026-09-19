@@ -30,7 +30,7 @@
 .about-page .about-profile-source { display: grid; grid-template-columns: 130px 1fr auto; gap: 22px; align-items: baseline; margin-top: 31px; padding-block: 14px; border-block: 1px solid #cbd4da; }
 .about-page .about-profile-source span { color: var(--steel); font-size: 9px; letter-spacing: .75px; text-transform: uppercase; }
 .about-page .about-profile-source strong { font-size: 13px; font-weight: 500; }
-.about-page .about-profile-source small { color: #71808a; font-size: 9px; white-space: nowrap; }
+.about-page .about-profile-source small { color: var(--steel); font-size: 9px; white-space: nowrap; }
 
 .about-page .about-products { padding-bottom: 82px; }
 .about-page .about-product-grid { margin-top: 4px; }
@@ -51,7 +51,7 @@
 .about-page .about-capability-ledger article > span { padding-top: 3px; color: var(--orange); font-size: 9px; }
 .about-page .about-capability-ledger h3 { font-size: 17px; line-height: 1.4; }
 .about-page .about-capability-ledger p { margin-top: 7px; color: var(--steel); font-size: 11px; line-height: 1.75; }
-.about-page .about-capability-ledger small { grid-column: 2; align-self: end; color: #71808a; font-size: 9px; }
+.about-page .about-capability-ledger small { grid-column: 2; align-self: end; color: var(--steel); font-size: 9px; }
 .about-page .about-manufacturing-cta { margin-top: 30px; }
 
 .about-page .about-standard-custom { padding-block: 76px; border-block: 1px solid var(--line); }
@@ -65,7 +65,7 @@
 .about-page .about-standard-grid h3 { margin-top: 31px; font-size: 20px; line-height: 1.35; letter-spacing: -.35px; }
 .about-page .about-standard-grid p { margin-top: 12px; color: var(--steel); font-size: 12px; line-height: 1.8; }
 .about-page .about-standard-grid .text-link { margin-top: auto; padding-top: 22px; }
-.about-page .about-standard-grid small { margin-top: 13px; color: #71808a; font-size: 8px; line-height: 1.6; }
+.about-page .about-standard-grid small { margin-top: 13px; color: var(--steel); font-size: 8px; line-height: 1.6; }
 
 .about-page .about-applications { background: var(--paper); }
 .about-page .about-application-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
@@ -87,7 +87,7 @@
 .about-page .about-quality-points article > span { padding-top: 3px; color: var(--orange); font-size: 9px; }
 .about-page .about-quality-points h3 { font-size: 17px; line-height: 1.4; }
 .about-page .about-quality-points p { margin-top: 6px; color: var(--steel); font-size: 12px; line-height: 1.75; }
-.about-page .about-quality-points small { display: block; margin-top: 8px; color: #71808a; font-size: 9px; }
+.about-page .about-quality-points small { display: block; margin-top: 8px; color: var(--steel); font-size: 9px; }
 
 .about-page .about-reasons { background: var(--paper); }
 .about-page .about-reason-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #bdc8d0; }
@@ -97,7 +97,7 @@
 .about-page .about-reason-grid article > span { color: var(--orange); font-size: 9px; }
 .about-page .about-reason-grid h3 { margin-top: 29px; font-size: 19px; line-height: 1.38; }
 .about-page .about-reason-grid p { margin-top: 10px; color: var(--steel); font-size: 12px; line-height: 1.8; }
-.about-page .about-reason-grid small { display: block; margin-top: 17px; color: #71808a; font-size: 9px; }
+.about-page .about-reason-grid small { display: block; margin-top: 17px; color: var(--steel); font-size: 9px; }
 
 .about-page .about-logistics { padding-block: 76px; border-block: 1px solid var(--line); }
 .about-page .about-logistics-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: 86px; align-items: start; }
@@ -106,7 +106,7 @@
 .about-page .about-location-line { display: grid; grid-template-columns: auto 1fr auto 1fr auto; align-items: center; gap: 11px; margin-top: 29px; padding-block: 17px; border-block: 1px solid #c7d1d7; font-size: 10px; letter-spacing: .5px; text-transform: uppercase; }
 .about-page .about-location-line i { height: 1px; background: #aebbc4; }
 .about-page .about-location-line strong { color: var(--orange); font-size: 11px; font-weight: 500; }
-.about-page .about-logistics-copy > small { display: block; margin-top: 10px; color: #71808a; font-size: 9px; }
+.about-page .about-logistics-copy > small { display: block; margin-top: 10px; color: var(--steel); font-size: 9px; }
 .about-page .about-logistics-points { border-top: 1px solid #bdc8d0; }
 .about-page .about-logistics-points article { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 15px; padding-block: 20px; border-bottom: 1px solid var(--line); }
 .about-page .about-logistics-points article > span { padding-top: 3px; color: var(--orange); font-size: 9px; }
@@ -121,7 +121,7 @@
 .about-page .about-approach-list li > span { color: var(--orange); font-size: 9px; }
 .about-page .about-approach-list h3 { margin-top: 31px; font-size: 17px; line-height: 1.4; }
 .about-page .about-approach-list p { margin-top: 10px; color: var(--steel); font-size: 11px; line-height: 1.78; }
-.about-page .about-approach-list small { margin-top: auto; padding-top: 18px; color: #71808a; font-size: 9px; }
+.about-page .about-approach-list small { margin-top: auto; padding-top: 18px; color: var(--steel); font-size: 9px; }
 
 .about-page .about-continue { padding-block: 41px; border-block: 1px solid var(--line); }
 .about-page .about-continue-row { display: flex; justify-content: space-between; align-items: center; gap: 48px; }

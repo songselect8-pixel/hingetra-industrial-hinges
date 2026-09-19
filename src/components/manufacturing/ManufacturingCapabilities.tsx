@@ -2,19 +2,23 @@ import Link from "next/link";
 import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
 import { SupportingVisual } from "@/components/ui/SupportingVisual";
-import { manufacturingCapabilities, manufacturingOrganization } from "@/data/manufacturing";
+import { manufacturingCapabilities, manufacturingIntroduction, manufacturingOrganization } from "@/data/manufacturing";
+import { site } from "@/data/site";
 
 function CapabilityOverview() {
   return (
     <section id="capabilities" className="section manufacturing-overview" aria-labelledby="manufacturing-overview-title">
       <div className="shell">
         <SectionHeading
-          eyebrow="Manufacturing overview"
+          eyebrow={`${site.brand} factory overview`}
           title={<span id="manufacturing-overview-title">Manufacturing Capabilities from Processing to Assembly</span>}
-          description="The catalog identifies these factory capabilities. They are presented as capability areas rather than a claimed chronological process."
+          description="A focused manufacturing base for standard hinge products and confirmed custom requirements."
         >
           <Link href="#capability-summary" className="text-link section-heading-link">Review the technical summary <Arrow diagonal /></Link>
         </SectionHeading>
+        <div className="manufacturing-introduction" aria-label={`${site.brand} factory introduction`}>
+          {manufacturingIntroduction.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
         <div className="manufacturing-capability-ledger">
           {manufacturingCapabilities.map((capability, index) => (
             <article key={capability.id}>

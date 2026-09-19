@@ -179,7 +179,7 @@
     },
     {
       "path": "src/app/globals.css",
-      "sha256": "4b89075dfdb1b681ee82901e6be19370da6b132fbfd96a62fa21d58397d89c17"
+      "sha256": "6c88fd7c0e77b024819505be108afa7e534a302b377a8191333655e8bead7d7d"
     },
     {
       "path": "src/app/products/page.tsx",
@@ -203,7 +203,7 @@
     },
     {
       "path": "src/app/quality/quality.css",
-      "sha256": "943ab80f37cbf9d8f758b0518dd96baadadc50946cd23e4dd795aae9c2225028"
+      "sha256": "b6865c5a44ecae409445aa51cdf12ada521dd410fb49ea51f976d625030e34b1"
     },
     {
       "path": "src/components/products/detail/ProductRelatedGuides.tsx",
@@ -257,5 +257,11 @@
     "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
     "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
     "research": "docs/seo-geo-operations.md"
+  },
+  "readabilityContactUpdate": {
+    "requestedAt": "2026-09-19",
+    "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
+    "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
+    "record": "docs/2026-09-19-readability-contact-factory-update.md"
   }
 }

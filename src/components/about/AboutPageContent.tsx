@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ProductCard } from "@/components/products/ProductCard";
 import { Arrow } from "@/components/ui/Arrow";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
-import { aboutCompany, aboutProducts } from "@/data/about";
+import { aboutCompany, aboutFactoryIntroduction, aboutProducts } from "@/data/about";
 import { productHref } from "@/data/products";
 import { illustrations } from "@/data/illustrations";
 import { site } from "@/data/site";
@@ -52,14 +52,13 @@ function CompanyProfile() {
       <div className="shell">
         <SectionHeading
           eyebrow="Who we are"
-          title={<span id="about-profile-title">Focused on Industrial Hinges</span>}
-          description="A concise manufacturer profile based on the supplied company catalog."
+          title={<span id="about-profile-title">About the {site.brand} Factory</span>}
+          description="Industrial hinge manufacturing built around the product and your requirements."
         />
         <div className="about-profile-grid">
-          <p className="about-profile-statement">{site.brand} focuses on industrial weld-on hinges for supported steel-door, cabinet, gate, trailer-door and ramp applications.</p>
+          <p className="about-profile-statement">{aboutFactoryIntroduction.statement}</p>
           <div className="about-profile-copy">
-            <p>The product range covers several weld-on hinge structures, including bearing, pin, grease-nipple, adjustable and numbered-series configurations.</p>
-            <p>The catalog describes support from design through production and sales, together with the ability to develop and produce products according to client requirements. It also describes many years of manufacturing experience without publishing a founding date.</p>
+            {aboutFactoryIntroduction.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             <div className="about-profile-source"><span>Brand &amp; business name</span><strong>{aboutCompany.name}</strong><small>Capability references · catalog p3 / p18</small></div>
           </div>
         </div>

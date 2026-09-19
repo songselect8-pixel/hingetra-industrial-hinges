@@ -14,6 +14,16 @@ export const aboutCompany = {
   sourcePages: [1, 3, 18],
 } as const;
 
+export const aboutFactoryIntroduction = {
+  statement: "Factory-direct weld-on hinge manufacturing, from catalog models to confirmed custom requirements.",
+  paragraphs: [
+    `${site.companyName} manufactures industrial weld-on hinges for steel-door, cabinet, gate and trailer-door applications. Our range includes bearing, pin, gasket, grease-nipple, round, adjustable, square and flag structures, alongside the 20 Type and 12 / 14 / 16 Type series.`,
+    "Our self-owned factory and equipment support lathe processing, automatic punching, mass assembly and standardized packaging. Product checking tools support inspection during production, with the hinge specification providing the reference for requirement discussions.",
+    "For OEM, fabrication and distributor inquiries, we start with the required hinge structure, dimensions, quantity and application. Drawings and specifications help us review custom requirements. The proposed configuration and applicable packaging need to be confirmed for the selected product family.",
+  ],
+  sourcePages: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+} as const;
+
 export const aboutProductIds = [
   "bearing",
   "pin",
