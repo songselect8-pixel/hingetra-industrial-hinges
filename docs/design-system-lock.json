@@ -47,11 +47,11 @@
     390
   ],
   "files": [
-    {"path":"src/components/navigation/FloatingActions.tsx","sha256":"b6c5fdb16cf0ea59548335f638b15a17d34722ddb66807fbe25bffd430593c40"},
+    {"path":"src/components/navigation/FloatingActions.tsx","sha256":"92704c5ccaba361bd1e8bd57d5edfa45c080a2b9672266d102f891a03a3e02d2"},
     {"path":"src/data/quick-contact.ts","sha256":"4b5f5807a17078027a3f781091e5586a74099a127253027516eb5f804ed88d94"},
     {
       "path": "src/app/globals.css",
-      "sha256": "6c88fd7c0e77b024819505be108afa7e534a302b377a8191333655e8bead7d7d"
+      "sha256": "ee43d38ae41aa31ecaf1f06ff498cb6106c859ba055a33b8acbcfffc81a9aa00"
     },
     {
       "path": "src/components/sections/Applications.tsx",
@@ -313,6 +313,7 @@
     "requestedAt": "2026-09-19",
     "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
     "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
-    "record": "docs/2026-09-19-readability-contact-factory-update.md"
+    "record": "docs/2026-09-19-readability-contact-factory-update.md",
+    "backToTopVisibility": "User-requested refinement: hide at the top and on initial render; show after scrolling down. Shared component uses a passive scroll listener and page-restoration refresh, without changing contact links or styling."
   }
 }

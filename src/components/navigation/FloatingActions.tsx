@@ -1,6 +1,22 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { quickContact, quickContactLinks } from "@/data/quick-contact";
 
 export function FloatingActions() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => setShowBackToTop(window.scrollY > 1);
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    window.addEventListener("pageshow", updateVisibility);
+    return () => {
+      window.removeEventListener("scroll", updateVisibility);
+      window.removeEventListener("pageshow", updateVisibility);
+    };
+  }, []);
+
   const demo = quickContact.isPlaceholder;
   return (
     <nav className="floating-actions" aria-label="Quick contact and page navigation" data-contact-mode={demo ? "demo" : "live"}>
@@ -13,10 +29,10 @@ export function FloatingActions() {
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z" /><path d="m4 6 8 7 8-7" /></svg>
         <span className="floating-action-label">Email{demo && <small>Demo address · not active</small>}</span>
       </a>
-      <a className="floating-action floating-action-top" href="#site-top" aria-label="Back to top">
+      {showBackToTop && <a className="floating-action floating-action-top" href="#site-top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" /></svg>
         <span className="floating-action-label">Back to top</span>
-      </a>
+      </a>}
     </nav>
   );
 }

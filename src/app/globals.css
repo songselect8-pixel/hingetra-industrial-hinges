@@ -725,7 +725,7 @@ section, [id^="range-"], #about-us, #rfq, #main-content { scroll-margin-top: 0; 
   .packaging-context-copy > p:not(.eyebrow) { font-size: 14px; }
 }
 
-/* Native links: no chat widget, tracking script or extra client-side bundle. */
+/* Native links: no chat widget, tracking script or third-party dependency. */
 .floating-actions { position: fixed; z-index: 40; right: max(20px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 10px; }
 .floating-actions-status { position: absolute; right: 0; bottom: calc(100% + 10px); padding: 3px 7px; border: 1px solid var(--line); background: #fff; color: var(--navy); font-size: 11px; font-weight: 600; white-space: nowrap; }
 .floating-action { position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid transparent; border-radius: 50%; box-shadow: 0 3px 12px rgb(13 34 56 / .14); }

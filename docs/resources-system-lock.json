@@ -179,7 +179,7 @@
     },
     {
       "path": "src/app/globals.css",
-      "sha256": "6c88fd7c0e77b024819505be108afa7e534a302b377a8191333655e8bead7d7d"
+      "sha256": "ee43d38ae41aa31ecaf1f06ff498cb6106c859ba055a33b8acbcfffc81a9aa00"
     },
     {
       "path": "src/app/products/page.tsx",

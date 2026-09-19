@@ -2,11 +2,11 @@
 
 ## User-requested readability, floating contacts and factory copy — 2026-09-19
 
-The user explicitly requested stronger text readability, shared WhatsApp/email/back-to-top controls, and HINGETRA factory introductions in About Us and Manufacturing. The scoped change increases body/navigation weight, strengthens text gray and table headers, and improves footer small print without changing the font family, main layout or product data. A server-rendered shared control uses native links and one real `site-top` anchor. Mobile styles reserve footer space and hide the controls while a form, navigation or modal is active.
+The user explicitly requested stronger text readability, shared WhatsApp/email/back-to-top controls, and HINGETRA factory introductions in About Us and Manufacturing. The scoped change increases body/navigation weight, strengthens text gray and table headers, and improves footer small print without changing the font family, main layout or product data. The shared control uses native links and one real `site-top` anchor. A subsequent user-requested scroll-state refinement hides Back to top initially and whenever the page is at the top, showing it after scrolling; contact links remain rendered. A passive listener is cleaned up on unmount and page restoration also refreshes visibility. Mobile styles reserve footer space and hide the controls while a form, navigation or modal is active.
 
 At the user's request, only the new floating contact channels use reserved demo details, with a visible Demo contacts label; previous approved Contact-page data remains unchanged. Do not enable indexing until these new placeholders, the existing RFQ delivery blocker and other launch requirements are resolved. The two new factory descriptions use existing catalog facts, retain neutral illustration labels and do not add numerical or certification claims. Scope, sources and future configuration: `docs/2026-09-19-readability-contact-factory-update.md`.
 
-Release checks: 79 existing tests, TypeScript and production export pass; 28 HTML files pass the local link/asset check; SEO verifies 25 content pages, six articles and 929 fragment links. All 147 recorded lock entries match. No screenshot or expanded viewport audit was performed and no contact message was sent.
+Release checks: 79 existing tests, TypeScript and production export pass; 28 HTML files pass the local link/asset check; after the Back to top refinement, SEO verifies 25 content pages, six articles and 904 initial HTML fragment links (the top link is rendered after scrolling). All 147 recorded lock entries match. No screenshot or expanded viewport audit was performed and no contact message was sent.
 
 ## User-requested SEO / AI-search foundation update — 2026-09-18
 
