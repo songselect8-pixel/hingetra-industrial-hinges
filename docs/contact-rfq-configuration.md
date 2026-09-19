@@ -18,6 +18,16 @@ Do not add a street address, map or another contact channel without verified sou
 
 The user separately supplied WhatsApp `+86 15584143652` and its QR image on 2026-09-19. Shared floating links use `src/data/quick-contact.ts`; `/contact/whatsapp-qr.png` is the unmodified supplied image. It is a WhatsApp contact, not a replacement for the catalog voice-phone number. If overriding `CONTACT_EMAIL`, keep it aligned with the floating mailbox. Direct email links open the visitor's mail client and do not enable RFQ delivery.
 
+## Compact Contact form — 2026-09-19
+
+The user requested a shorter Contact form so visitors can reach submission without reading a long technical questionnaire. The default view now contains name, email and one requirement message. Company and country are optional for **Contact** on both client and server; the shared catalog RFQ still requires them.
+
+Native, initially collapsed sections retain drawing/image uploads, catalog-derived product selection and optional company/phone details. Their fields stay mounted and remain in the submitted multipart data when collapsed. Attachment errors open the upload section. The three former description boxes are presented as one `message` field; the endpoint continues accepting older field names for compatibility.
+
+Name, a valid email and at least one useful requirement remain mandatory. A product detail or valid drawing/image may replace the message; quantity alone is insufficient. The endpoint stores missing optional values as empty strings in the existing D1 schema, so this change needs **no new migration, binding or environment variable**. File limits, anti-abuse checks, private storage, error input retention and honest unconfigured states remain unchanged. No other page or shared RFQ layout is redesigned.
+
+Validation: 93 automated tests passed, including minimal Contact submissions with a message or drawing and unchanged catalog identity requirements. TypeScript, the production static build, 28-page link/asset checks and SEO checks passed. Exported HTML contains three primary fields, one textarea and three initially closed optional sections. No browser screenshot review or real email submission was performed for this change.
+
 ## RFQ delivery endpoint
 
 Production delivery and storage were authorized by the user on 2026-09-19. Follow `docs/inquiry-storage-setup.md` for the Cloudflare D1 / private R2 / Turnstile / Resend setup. Real cloud configuration and inbox verification are still pending.

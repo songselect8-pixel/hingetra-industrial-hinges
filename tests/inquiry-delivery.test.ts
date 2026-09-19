@@ -90,6 +90,35 @@ test("contact and catalog submissions save records before notifying a fixed reci
   }
 });
 
+test("compact Contact submissions save a message or drawing without optional business fields", async () => {
+  for (const detail of ["message", "drawing"]) {
+    const f = fixture();
+    const data = form();
+    for (const key of ["company", "country", "productType"]) data.delete(key);
+    if (detail === "message") data.set("message", "I need hinges for a steel door.");
+    else data.set("drawing", pdf());
+    const response = await f.send(data);
+    assert.equal(response.status, 201);
+    const receipt = await readInquiryReceipt(response);
+    const row = f.sqlite.prepare("SELECT * FROM inquiries WHERE id = ?").get(receipt.inquiryId)!;
+    assert.equal(row.company, ""); assert.equal(row.country, ""); assert.equal(row.product, "");
+    assert.equal(row.notification_status, "accepted");
+    if (detail === "message") assert.equal(JSON.parse(String(row.fields_json)).message, "I need hinges for a steel door.");
+    else assert.equal(f.objects.size, 1);
+    f.sqlite.close();
+  }
+});
+
+test("catalog submissions still require company and country on the server", async () => {
+  for (const missing of ["company", "country"]) {
+    const f = fixture(); const data = form("catalog"); data.delete(missing);
+    assert.equal((await f.send(data)).status, 400);
+    assert.equal(f.sqlite.prepare("SELECT COUNT(*) AS count FROM inquiries").get()?.count, 0);
+    assert.equal(f.emails.length, 0);
+    f.sqlite.close();
+  }
+});
+
 test("email failure retains the inquiry and private attachment without claiming inbox delivery", async () => {
   const f = fixture({ mailFails: true });
   const data = form(); data.set("drawing", pdf());
@@ -181,7 +210,8 @@ test("activation, origin and Turnstile all fail closed", async () => {
 
 test("server rejects bypassed validation, header injection, unknown fields and disguised files", async () => {
   const mutations = [
-    (data: FormData) => data.set("company", ""),
+    (data: FormData) => data.set("name", ""),
+    (data: FormData) => data.delete("productType"),
     (data: FormData) => data.set("name", "x".repeat(121)),
     (data: FormData) => data.set("email", "buyer@example.com\r\nBcc: attacker@example.com"),
     (data: FormData) => data.set("to", "attacker@example.com"),

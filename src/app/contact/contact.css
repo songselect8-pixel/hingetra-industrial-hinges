@@ -50,14 +50,26 @@
 .contact-page .contact-rfq-direct a:hover { color: #fff; border-bottom-color: var(--orange); }
 
 .contact-page .contact-rfq-form { padding: 40px 42px 35px; }
+.contact-page .contact-form-controls { min-width: 0; margin: 0; padding: 0; border: 0; }
+.contact-page .contact-form-core { margin-bottom: 22px; }
+.contact-page .contact-form-core textarea { min-height: 104px; }
+.contact-page .contact-field-help { margin-top: 8px; color: var(--steel); font-size: 11px; line-height: 1.6; }
+.contact-page .contact-form-extra { border-top: 1px solid var(--line); }
+.contact-page .contact-form-extra > summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 52px; padding-block: 12px; list-style: none; color: var(--navy); font-size: 13px; line-height: 1.5; cursor: pointer; }
+.contact-page .contact-form-extra > summary::-webkit-details-marker { display: none; }
+.contact-page .contact-form-extra > summary small { display: inline-block; margin-left: 8px; color: var(--steel); font-size: 10px; font-weight: 400; }
+.contact-page .contact-form-extra > summary svg { flex: 0 0 auto; width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.4; }
+.contact-page .contact-form-extra[open] > summary svg { transform: rotate(45deg); }
+.contact-page .contact-form-extra > summary:hover { color: #50697b; }
+.contact-page .contact-form-extra > summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+.contact-page .contact-extra-body { padding-block: 5px 22px; }
 .contact-page .contact-form-group { min-width: 0; margin: 0; padding: 0; border: 0; }
-.contact-page .contact-form-group + .contact-form-group { margin-top: 34px; padding-top: 30px; border-top: 1px solid var(--line); }
 .contact-page .contact-form-group legend { display: flex; align-items: center; gap: 12px; width: 100%; margin-bottom: 21px; padding: 0; color: var(--navy); font-size: 13px; font-weight: 500; line-height: 1.5; }
-.contact-page .contact-form-group legend span { color: var(--orange); font-size: 9px; }
 .contact-page .contact-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .contact-page .contact-form-grid .field-full { grid-column: 1 / -1; }
 .contact-page .contact-rfq-form .field textarea[aria-invalid="true"] { border-color: #ad3526; }
-.contact-page .contact-choice-group legend { margin-bottom: 17px; }
+.contact-page .contact-choice-group { margin-top: 20px; }
+.contact-page .contact-choice-group legend { margin-bottom: 12px; font-size: 11px; }
 .contact-page .contact-radio-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid #aeb9c0; }
 .contact-page .contact-radio { position: relative; display: flex; align-items: center; min-height: 70px; padding: 13px 15px; border-right: 1px solid #cbd3d8; font-size: 11px; line-height: 1.55; cursor: pointer; }
 .contact-page .contact-radio:last-child { border-right: 0; }
@@ -75,7 +87,7 @@
 .contact-page .contact-file-selection button { flex: 0 0 auto; padding: 2px 0; border: 0; border-bottom: 1px solid #9caab4; background: transparent; color: var(--steel); font-size: 9px; }
 .contact-page .contact-file-selection button:hover { color: var(--navy); border-bottom-color: var(--orange); }
 .contact-page .contact-delivery-error { margin-top: 20px; padding: 12px 14px; border-left: 3px solid #a63a2c; background: #fff1ed; color: #842b1f; font-size: 11px; }
-.contact-page .contact-form-bottom { padding-top: 23px; border-top: 1px solid var(--line); }
+.contact-page .contact-form-bottom { margin-top: 12px; padding-top: 23px; border-top: 1px solid var(--line); }
 .contact-page .contact-form-bottom .button { flex: 0 0 auto; }
 .contact-page .contact-privacy-note { margin-top: 14px; color: var(--steel); font-size: 9px; line-height: 1.7; }
 .contact-page .contact-noscript { margin-top: 12px; color: #842b1f; font-size: 11px; }
@@ -215,8 +227,6 @@
   .contact-page .contact-rfq-copy > p { margin-top: 18px; font-size: 13px; }
   .contact-page .contact-rfq-form { padding: 25px 20px 23px; }
   .contact-page .contact-rfq-form .form-heading { align-items: flex-start; flex-direction: column; gap: 7px; }
-  .contact-page .contact-form-group + .contact-form-group { margin-top: 27px; padding-top: 25px; }
-  .contact-page .contact-form-group legend { margin-bottom: 17px; font-size: 12px; }
   .contact-page .contact-form-grid,
   .contact-page .contact-file-grid,
   .contact-page .contact-radio-grid { grid-template-columns: 1fr; }

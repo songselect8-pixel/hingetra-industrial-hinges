@@ -44,30 +44,30 @@ test("Contact data uses the approved brand, updated email, catalog phone and exi
   assert.equal("businessHours" in contactDetails, false);
 });
 
-test("Contact RFQ validation requires buyer identity, a valid email, and one useful requirement", async () => {
+test("Contact RFQ accepts name, email and one useful requirement without company or country", async () => {
   requireFile(validationPath);
   const { initialContactRFQFields, validateContactRFQ } = await import("../src/data/contact-rfq.ts");
 
   const emptyErrors = validateContactRFQ(initialContactRFQFields, { drawing: null, referenceImage: null });
   assert.equal(emptyErrors.name, "Please enter your name.");
-  assert.equal(emptyErrors.company, "Please enter your company.");
-  assert.equal(emptyErrors.email, "Please enter a valid business email address.");
-  assert.equal(emptyErrors.country, "Please enter your country or region.");
-  assert.equal(emptyErrors.requirement, "Add at least one product or requirement detail.");
+  assert.equal(emptyErrors.company, undefined);
+  assert.equal(emptyErrors.email, "Please enter a valid email address.");
+  assert.equal(emptyErrors.country, undefined);
+  assert.equal(emptyErrors.requirement, "Describe your requirement, select a product or attach a drawing / image.");
 
   const identity = {
     ...initialContactRFQFields,
     name: "A Buyer",
-    company: "Example Fabrication",
     email: "buyer@example.com",
-    country: "Germany",
   };
   assert.equal(validateContactRFQ({ ...identity, quantity: "500" }, { drawing: null, referenceImage: null }).requirement,
-    "Add at least one product or requirement detail.");
+    "Describe your requirement, select a product or attach a drawing / image.");
+  assert.deepEqual(validateContactRFQ({ ...identity, message: "I need hinges for a steel door." }, { drawing: null, referenceImage: null }), {});
+  assert.deepEqual(validateContactRFQ(identity, { drawing: { name: "hinge.pdf", size: 1024 }, referenceImage: null }), {});
   assert.deepEqual(validateContactRFQ({ ...identity, productType: "bearing" }, { drawing: null, referenceImage: null }), {});
   assert.deepEqual(validateContactRFQ({ ...identity, application: "Industrial steel door" }, { drawing: null, referenceImage: null }), {});
   assert.equal(validateContactRFQ({ ...identity, email: "buyer-at-example" }, { drawing: null, referenceImage: null }).email,
-    "Please enter a valid business email address.");
+    "Please enter a valid email address.");
 });
 
 test("Contact file validation advertises and accepts only implemented drawing and image formats", async () => {

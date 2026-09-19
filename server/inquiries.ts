@@ -166,6 +166,7 @@ export async function receiveInquiry(request: Request, env: InquiryEnvironment, 
     // Header-safe email, independently checked on the server.
     if (!/^[A-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9](?:[A-Z0-9-]*[A-Z0-9])?(?:\.[A-Z0-9](?:[A-Z0-9-]*[A-Z0-9])?)+$/i.test(fields.email)) throw new Rejected(400, "Enter a valid email address.");
     const product = fields.formKind === "contact" ? fields.productType : fields.product;
+    if (fields.formKind === "catalog" && (!fields.company || !fields.country)) throw new Rejected(400, "Enter your company and country or region.");
     const products = new Set([...families.map((family) => family.id), "custom", "other-custom", "not-sure"]);
     if ((product && !products.has(product)) || (fields.formKind === "catalog" && !product)) throw new Rejected(400, "Choose a listed product or a custom requirement.");
     if (fields.requirementPath && !["standard", "custom", "not-sure"].includes(fields.requirementPath)) throw new Rejected(400, "Choose a listed requirement type.");

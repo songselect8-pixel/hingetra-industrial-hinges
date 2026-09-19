@@ -73,12 +73,10 @@ function RFQSection({ submissionEndpoint }: { submissionEndpoint: string | null 
         <div className="contact-rfq-copy">
           <Eyebrow light>Request an industrial hinge quote</Eyebrow>
           <h2 id="contact-rfq-title">Request a Quote</h2>
-          <p>Share the information you already have. Required identity fields and one useful requirement detail are enough to start.</p>
+          <p>Your name, email and a brief requirement are enough to start. Add specifications or a drawing only if you have them.</p>
           <ol>
-            <li><span>01</span><p>Identify your company and contact details.</p></li>
-            <li><span>02</span><p>Choose a catalog family or select “Not Sure.”</p></li>
-            <li><span>03</span><p>Add dimensions, application or a technical reference.</p></li>
-            <li><span>04</span><p>Attach a drawing or reference image where available.</p></li>
+            <li><span>01</span><p>Tell us how to reach you.</p></li>
+            <li><span>02</span><p>Describe the hinge or application you have in mind.</p></li>
           </ol>
           <div className="contact-rfq-direct">
             <span>Direct inquiry</span>

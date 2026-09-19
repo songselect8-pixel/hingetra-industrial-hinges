@@ -81,10 +81,8 @@ function hasUsefulRequirement(fields: ContactRFQFields, files: ContactRFQFiles) 
 export function validateContactRFQ(fields: ContactRFQFields, files: ContactRFQFiles): ContactRFQErrors {
   const errors: ContactRFQErrors = {};
   if (!fields.name.trim()) errors.name = "Please enter your name.";
-  if (!fields.company.trim()) errors.company = "Please enter your company.";
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email.trim())) errors.email = "Please enter a valid business email address.";
-  if (!fields.country.trim()) errors.country = "Please enter your country or region.";
-  if (!hasUsefulRequirement(fields, files)) errors.requirement = "Add at least one product or requirement detail.";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email.trim())) errors.email = "Please enter a valid email address.";
+  if (!hasUsefulRequirement(fields, files)) errors.requirement = "Describe your requirement, select a product or attach a drawing / image.";
 
   const drawingIssue = validateContactFile(files.drawing, "drawing");
   const referenceImageIssue = validateContactFile(files.referenceImage, "referenceImage");
