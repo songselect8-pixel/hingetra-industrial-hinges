@@ -109,6 +109,33 @@ test("compact Contact submissions save a message or drawing without optional bus
   }
 });
 
+test("browser forms ignore unselected upload controls and preserve selected attachments", async () => {
+  for (const [kind, selected] of [
+    ["contact", "drawing"], ["contact", "referenceImage"], ["contact", null], ["catalog", null],
+  ] as const) {
+    const f = fixture();
+    const data = form(kind);
+    data.set("message", "Test inquiry with optional uploads.");
+    for (const field of kind === "contact" ? ["drawing", "referenceImage"] : ["drawing"]) {
+      // Browsers include an empty, unnamed file for every unselected file input.
+      data.set(field, new File([], "", { type: "application/octet-stream" }));
+    }
+    const bytes = new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10, 0]);
+    if (selected) data.set(selected, new File([bytes], "test.png", { type: "image/png" }));
+    const response = await f.send(data);
+    assert.equal(response.status, 201, JSON.stringify({ kind, selected, body: await response.clone().json() }));
+    const receipt = await readInquiryReceipt(response);
+    const row = f.sqlite.prepare("SELECT attachments_json, notification_status FROM inquiries WHERE id = ?").get(receipt.inquiryId)!;
+    const attachments = JSON.parse(String(row.attachments_json));
+    assert.deepEqual(attachments.map((file: { field: string }) => file.field), selected ? [selected] : []);
+    assert.equal(f.objects.size, selected ? 1 : 0);
+    if (selected) assert.deepEqual(new Uint8Array(f.objects.get(attachments[0].key)!), bytes);
+    assert.equal(row.notification_status, "accepted");
+    assert.equal(f.emails.length, 1);
+    f.sqlite.close();
+  }
+});
+
 test("catalog submissions still require company and country on the server", async () => {
   for (const missing of ["company", "country"]) {
     const f = fixture(); const data = form("catalog"); data.delete(missing);
@@ -217,6 +244,9 @@ test("server rejects bypassed validation, header injection, unknown fields and d
     (data: FormData) => data.set("to", "attacker@example.com"),
     (data: FormData) => data.append("email", "other@example.com"),
     (data: FormData) => data.set("productType", "invented"),
+    (data: FormData) => data.set("drawing", "not a file"),
+    (data: FormData) => data.set("referenceImage", "not a file"),
+    (data: FormData) => data.set("drawing", new File([], "empty.png")),
     (data: FormData) => data.set("drawing", new File(["<script>no</script>"], "drawing.pdf")),
     (data: FormData) => data.set("drawing", new File(["%PDF-1.7"], "../drawing.pdf")),
     (data: FormData) => data.set("referenceImage", new File(["%PDF-1.7"], "image.png")),

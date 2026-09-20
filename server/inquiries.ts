@@ -77,7 +77,8 @@ async function validateFiles(form: FormData, kind: string) {
   const files: { field: "drawing" | "referenceImage"; file: File; hash: string }[] = [];
   for (const field of ["drawing", "referenceImage"] as const) {
     const value = form.get(field);
-    if (value === null || (value instanceof File && !value.name && !value.size)) continue;
+    // Multipart parsers may represent an unselected file input as an empty string.
+    if (value === null || value === "" || (value instanceof File && !value.name && !value.size)) continue;
     if (!(value instanceof File) || (kind !== "contact" && field === "referenceImage")) throw new Rejected(400, "Invalid attachment field.");
     const error = kind === "contact" ? validateContactFile(value, field) : validateDrawingFile(value);
     if (error) throw new Rejected(400, error);
