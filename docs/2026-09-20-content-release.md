@@ -26,9 +26,11 @@
 
 ## 部署与账号事项
 
-代码经现有 main 自动部署路径发布，线上结果待部署完成后记录。Cloudflare Production 的 `SEARCH_INDEXING_ENABLED` 仍需实际改为 `true` 并重新部署；本地 index 构建不会改变云端变量。
+内容提交 `b4f89cb` 已推送 main；GitHub build/deploy 与 Cloudflare Pages 均成功。线上 29 内容页均为 200、标题和描述独立、canonical/H1 正确；四篇新文、修正后的十个产品 FAQ、主体与保留文字、安全响应头均已发布。生产与部署 pages.dev 别名均有响应头 noindex。证据：`output/playwright/live-content-release.json`。
 
-本机 Wrangler 未登录；浏览器库存工具返回连接失败。因此没有声称完成 Cloudflare 账号设置、R2 生命周期审查、Search Console / Bing 所有权验证或地图提交。
+用户随后确认已将 Cloudflare Production 的 `SEARCH_INDEXING_ENABLED` 改为 `true` 并重新部署。初次复查仍返回 noindex，因此搜索开放尚不能据用户操作就判定完成；收尾提交将触发使用当前云端配置的新构建，需继续实测。
+
+本机 Wrangler 未登录；浏览器库存工具返回连接失败。Cloudflare 变量由用户亲自调整；R2 生命周期审查、Search Console / Bing 所有权验证和地图提交尚未完成。用户表示站长平台还未添加或不确定，已请求其 Google 账号生成的公开 HTML 验证标记。
 
 具体操作见 [上线清单](pre-launch-checklist.md)。正式地图为 `https://hingetra.com/sitemap.xml`，仅在确认真实索引策略后提交。代码和文件保留策略不代表已建立自动备份或故障告警，日常检查查询见 [询盘存储说明](inquiry-storage-setup.md)。
 

@@ -26,7 +26,7 @@
 - [x] Update the existing publication tests for ten articles and real update dates. Remove the obsolete four-minute minimum; retain meaningful source/metadata/link checks. Test draft exclusion through the existing publishing API.
 - [x] Update affected lock hashes only for changed authorized files. Record this approval and publication scope. Refresh the outdated operational checklist and SEO manual with verified versus pending items.
 - [x] Run `npm test`, `npm run typecheck`, static production build, `verify:static`, `verify:seo`, and Functions compilation if API code changes. Review articles and FAQ at 1440/1024/768/390px and inspect browser errors.
-- [ ] Commit and push verified content changes through the existing main deployment path. Check Cloudflare status and live routes/headers. Keep a clear handoff for account-owned or missing-information work.
+- [x] Commit and push verified content changes through the existing main deployment path. Check Cloudflare status and live routes/headers. Keep a clear handoff for account-owned or missing-information work.
 
 ## Publication checks
 
@@ -35,3 +35,5 @@ Expected public content: 29 sitemap routes, ten articles, no new public draft ro
 ## Execution evidence
 
 97 tests passed, TypeScript passed, indexed static build passed; 32 HTML files, 29 content routes, ten articles and 1,053 fragments verified. Responsive checks: 13 routes at four widths, no H1/overflow/fragment/image failures. Expected local limitations and deployment evidence are recorded in docs/2026-09-20-content-release.md. Installed four skills; eight drafts remain unpublished. No email sent or new production dependency added.
+
+Deployment: b4f89cb passed GitHub build/deploy and Cloudflare Pages. Live 29-route and response-header checks passed. Owner reports Production indexing variable changed; final live indexing verification and Google/Bing ownership are pending external state.
