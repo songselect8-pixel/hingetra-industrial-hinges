@@ -30,9 +30,15 @@
 
 用户随后确认已将 Cloudflare Production 的 `SEARCH_INDEXING_ENABLED` 改为 `true` 并重新部署。提交 `6bb2071` 的 GitHub 与 Cloudflare 部署成功后，线上重新核验：29 个内容页均为 `index, follow`，`robots.txt` 为 `Allow: /` 并声明正式地图，所有 pages.dev 别名仍为响应头 noindex。抓取入口已开放；这不表示搜索引擎已收录或获得排名。
 
-本机 Wrangler 未登录，用户浏览器标签连接不可用。Cloudflare 变量由用户亲自调整；R2 生命周期审查、Search Console / Bing 所有权验证和地图提交尚未完成。用户已提供 Google 公开 HTML 标记；按其最终提供的标记，在生产域名的 Next metadata 中设置默认验证值，仍允许环境变量覆盖。没有另外发布先前提供的 HTML 验证文件。上线后检查实际 head 标记，由用户在自己的 Google 账号中点击“验证”。本地生产构建、TypeScript、32 HTML 静态检查及 29 页 SEO 检查再次通过，导出首页的验证值与用户提供的标记完全一致。
+收尾提交 `a96cba3` 的 GitHub build/deploy 与 Cloudflare Pages 均成功；CI 97 项测试通过，独立 GitHub 预览仍禁止索引。本地生产构建、TypeScript、32 HTML 静态检查及 29 页 SEO 检查再次通过。首页与 Contact 的线上 Google 标记和用户提供的值完全一致，生产返回 index/follow，部署别名保持响应头 noindex。
 
-具体操作见 [上线清单](pre-launch-checklist.md)。正式地图为 `https://hingetra.com/sitemap.xml`，仅在确认真实索引策略后提交。代码和文件保留策略不代表已建立自动备份或故障告警，日常检查查询见 [询盘存储说明](inquiry-storage-setup.md)。
+线上浏览器回归：Cloudflare Web Analytics 脚本返回 200，Turnstile API 返回 200 且挑战 frame 已加载；首页和 Contact 无捕获到的 CSP 拦截或本站控制台错误。主动切页产生的四条 ERR_ABORTED 预加载请求单独记录，未把挑战资源加载称为验证码通过，也未发送真实邮件。证据：`output/playwright/live-verification-qa.txt`。
+
+Google：用户于 2026-09-20 确认所有权验证成功，网站地图提交成功。使用其最终提供的 HTML 标记作为生产域名默认 metadata 验证值，保留环境覆盖；没有发布先前提供的 HTML 验证文件。Bing：用户同日确认从 Google Search Console 导入成功，网站地图也已存在。两项账号状态来自用户的实际操作确认；公开页面检测本身不能证明后台账号状态。
+
+本机 Wrangler 未登录，用户浏览器标签连接不可用，账号操作由用户完成。用户随后提供 R2 的 `Default Multipart Abort Rule`：7 天后中止上传，已启用。该规则只清理未完成的分段上传，没有对已完成对象执行到期删除；保持该规则即可，与应用不自动过期保存询盘/图纸的决定一致。此项依据用户提供的规则内容，未声称已通过认证 API 审查整个云账户。
+
+具体操作见 [上线清单](pre-launch-checklist.md)。正式地图为 `https://hingetra.com/sitemap.xml`。代码和文件保留策略不代表已建立自动备份或故障告警，日常检查查询见 [询盘存储说明](inquiry-storage-setup.md)。
 
 ## 资料依据
 

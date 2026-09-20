@@ -9,12 +9,12 @@
 | 主域 | https://hingetra.com，www/HTTP 统一到 HTTPS 主域 |
 | 品牌与主体 | HINGETRA；经营主体为用户确认的铰拓五金有限公司 |
 | 询盘与回复 | 已接通 D1、私有 R2、Turnstile、Resend；用户确认 Cindy 收件、附件和直接回复正常 |
-| 保留政策 | 询盘与图纸不自动过期；保留访问、更正、删除请求渠道 |
+| 保留政策 | 询盘与图纸不自动过期；用户提供的 R2 规则仅在七天后中止未完成上传；保留访问、更正、删除请求渠道 |
 | 正式内容 | 六篇旧文改写、四篇新指南，共 29 内容页 / 10 篇文章；另外八篇留作未发布草稿 |
 | 关键词 | 188 候选词 / 21 组，搜索量和难度未测，不能称为全部可能词 |
 | 编辑技能 | seo-audit、content-strategy、copy-editing、humanizer 已安装并读取使用 |
-| 收录开关 | 用户已授权；本地 index 构建验证通过，Cloudflare 实际 Production 变量仍需账号访问 |
-| 站长平台 | 账号所有权验证和 sitemap 提交尚未核实；不能从缺少 meta 标记推断没有 DNS 验证 |
+| 收录开关 | 线上 29 个内容页已实测为 index/follow，robots 允许抓取并声明地图；预览别名仍 noindex |
+| 站长平台 | Google 标记已线上核验，用户确认所有权验证和 sitemap 提交成功；用户也确认 Bing 导入成功且已有网站地图 |
 
 执行详情见 [本次发布记录](2026-09-20-content-release.md)、[上线清单](pre-launch-checklist.md)、[文章工作流](content-editorial-workflow.md) 和 [研究报告](research/2026-09-20-hingetra-seo-content-research.md)。原始参数与已锁定页面设计继续保留。
 
@@ -83,7 +83,7 @@ Bing Webmaster Tools 的 AI Performance 可观察引用次数、被引用页面�
 
 ## 测量与询盘运营
 
-上线后先验证 Search Console 和 Bing Webmaster Tools，配置已预留但账号尚未绑定。本轮没有安装 GA、录屏或新的统计工具；线上浏览器已观察到 Cloudflare 后台注入的 Web Analytics 脚本，安全策略保留其脚本加载和数据采集端点。
+用户已确认 Google Search Console 验证及地图提交成功，以及 Bing 导入和地图存在。本轮没有安装 GA、录屏或新的统计工具；线上浏览器已观察到 Cloudflare 后台注入的 Web Analytics 脚本，安全策略保留其脚本加载和数据采集端点。
 
 | 指标 | 口径 |
 | --- | --- |

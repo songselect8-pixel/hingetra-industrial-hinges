@@ -12,7 +12,7 @@ Updated 2026-09-20. This replaces the earlier preview-only checklist. A local te
 - [x] Real server delivery: Cloudflare Pages Function, D1, private R2, Turnstile and Resend are active. Public and fixed notification recipient: `cindy@hingetra.com`.
 - [x] The owner confirmed Cindy receives the revised notification and attachments and can reply directly to the customer. This is owner-confirmed acceptance, not an independently inspected mail-header audit.
 - [x] Retention decision: keep inquiry records and uploaded files indefinitely without automatic expiry. The form names the legal entity, use, processors, email copies and access/correction/deletion contact.
-- [ ] Keep the R2 bucket private and confirm no object-expiration rule is configured. The application does not expire inquiry records or drawings. Account settings need account access to verify.
+- [x] Retain the private R2 configuration. The owner supplied the enabled `Default Multipart Abort Rule`: abort uploads after seven days. This aborts incomplete multipart uploads, rather than expiring completed customer files. Keep that rule. The application does not expire inquiry records or drawings; this rule review is based on owner-supplied account text, not an authenticated API audit.
 - [ ] Assign a person to review D1 `pending` / `failed` notifications and mailbox bounces. See `docs/inquiry-storage-setup.md` for queries. There is no automatic retry or monitoring service in this release.
 - [ ] Production large-file and recovery checks remain operational follow-up unless separately evidenced. Existing automated tests cover both form schemas, two 10 MiB files and byte preservation; do not describe those as real remote delivery tests.
 
@@ -37,7 +37,7 @@ The owner authorized execution of the research plan and confirmed the business/r
 6. Keep Cloudflare branch-preview environment indexing false. `public/_headers` also sends `noindex,nofollow` on production/deployment `pages.dev` aliases. Keep the separate GitHub Pages repository indexing variable false or unset.
 7. Verify domain ownership in the owner's Google Search Console and Bing Webmaster Tools and submit `https://hingetra.com/sitemap.xml`. Use genuine account-issued verification values; do not invent tokens. Missing meta tags do not prove DNS verification is absent.
 
-Production indexing was verified after deployment `6bb2071`: all 29 content pages return `index, follow`; robots permits crawling and lists the canonical sitemap; pages.dev aliases retain noindex. The owner supplied a Google HTML verification tag, now configured for the production domain in root metadata, with an optional environment override. Account verification and sitemap submission remain pending. Wrangler is unauthenticated and the user's browser tabs are inaccessible from this machine. Record subsequent account status in `docs/2026-09-20-content-release.md`.
+Production indexing was verified after deployments `6bb2071` and `a96cba3`: all 29 content pages return `index, follow`; robots permits crawling and lists the canonical sitemap; pages.dev aliases retain noindex. The owner's Google HTML tag was verified on the live homepage and Contact page. The owner confirmed successful Google ownership verification and sitemap submission on 2026-09-20. The owner also confirmed successful Bing import and sitemap presence on the same date. Wrangler is unauthenticated and the user's browser tabs are inaccessible from this machine. Record subsequent account status in `docs/2026-09-20-content-release.md`.
 
 ## Deployment headers and regression
 

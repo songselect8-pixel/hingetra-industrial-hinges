@@ -12,7 +12,7 @@
 
 - Existing research and editorial brief are the design specification. Old routes, verified tables, photograph provenance, navigation and page layouts remain the base.
 - Owner confirmed 铰拓五金有限公司, indefinite retention, global English procurement audience, and Cindy receipt/attachments/direct replies. These factual dependencies are resolved.
-- The owner authorized indexing and changed Cloudflare Production to true. Live indexing is verified. The remaining account dependency is Google/Bing ownership verification and sitemap submission.
+- The owner authorized indexing and changed Cloudflare Production to true. Live indexing and the Google tag are verified; the owner confirmed Google ownership verification and sitemap submission. The owner also confirmed successful Bing import and sitemap presence.
 - Do not send messages or fabricate inbox results. Do not install a full WordPress automation stack or publish topics with missing technical evidence.
 
 ## Work
@@ -36,4 +36,6 @@ Expected public content: 29 sitemap routes, ten articles, no new public draft ro
 
 97 tests passed, TypeScript passed, indexed static build passed; 32 HTML files, 29 content routes, ten articles and 1,053 fragments verified. Responsive checks: 13 routes at four widths, no H1/overflow/fragment/image failures. Expected local limitations and deployment evidence are recorded in docs/2026-09-20-content-release.md. Installed four skills; eight drafts remain unpublished. No email sent or new production dependency added.
 
-Deployment: b4f89cb and 6bb2071 passed GitHub build/deploy and Cloudflare Pages. Live 29-route and response-header checks passed. Production pages now allow indexing, robots permits crawling and lists the sitemap, and pages.dev aliases retain noindex. The owner supplied the Google meta verification token for deployment; Google/Bing account verification remains pending.
+Deployment: b4f89cb, 6bb2071 and a96cba3 passed GitHub build/deploy and Cloudflare Pages. Live 29-route, response-header, Google-tag and CSP compatibility checks passed. Production pages allow indexing, robots permits crawling and lists the sitemap, and pages.dev aliases retain noindex. Google account verification and sitemap submission were confirmed by the owner; Bing import and sitemap presence were also confirmed by the owner.
+
+Retention: the owner supplied the enabled R2 Default Multipart Abort Rule (seven days), which affects incomplete multipart uploads, not completed files. No lifecycle change is required for that rule. Long-term backups and notification monitoring are documented operational follow-up, not implemented services in this content release.
