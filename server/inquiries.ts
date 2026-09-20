@@ -21,7 +21,8 @@ export type InquiryEnvironment = {
 };
 type Attachment = { field: string; name: string; size: number; sha256: string; key: string };
 type StoredInquiry = { id: string; request_hash: string };
-const recipient = "cindy@hingetra.com"; // Never accept a recipient supplied by a visitor.
+// Temporary test inbox requested by the owner on 2026-09-20.
+const recipient = "sales@hingetra.com"; // Never accept a recipient supplied by a visitor.
 const allowedHosts = new Set(["hingetra.com", "www.hingetra.com"]);
 const maxBodyBytes = 21 * 1024 * 1024; // Two 10 MiB files plus bounded text/multipart overhead.
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;

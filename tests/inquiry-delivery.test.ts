@@ -83,7 +83,7 @@ test("contact and catalog submissions save records before notifying a fixed reci
     const files = JSON.parse(String(row.attachments_json));
     assert.equal(files[0].name, "drawing.pdf");
     assert.ok(f.objects.has(files[0].key));
-    assert.deepEqual(f.emails[0].to, ["cindy@hingetra.com"]);
+    assert.deepEqual(f.emails[0].to, ["sales@hingetra.com"]);
     assert.equal(f.emails[0].reply_to, "buyer@example.com");
     assert.ok(String(f.emails[0].text).includes(files[0].key));
     f.sqlite.close();
