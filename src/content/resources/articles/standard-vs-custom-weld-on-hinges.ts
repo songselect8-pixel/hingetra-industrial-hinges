@@ -1,71 +1,218 @@
 import { resourcePublisher } from "../publishing.ts";
-import { resourceLink, type ResourceArticle } from "../types.ts";
-import { illustrations } from "../../../data/illustrations.ts";
+import type { ResourceArticle } from "../types.ts";
 
 export const standardVsCustomHinges = {
-  slug: "standard-vs-custom-weld-on-hinges",
-  order: 5,
-  title: "Standard vs Custom Weld-On Hinges: What Information Should Buyers Provide?",
-  description: "Understand when to reference a standard catalog hinge and how to prepare a clear custom requirement with dimensions, drawings and application context.",
-  category: "custom-manufacturing",
-  publishedAt: "2026-09-02",
-  updatedAt: null,
-  author: resourcePublisher.name,
-  featuredImage: illustrations.engineering.src,
-  featuredImageAlt: illustrations.engineering.alt,
-  featuredImageWidth: illustrations.engineering.width,
-  featuredImageHeight: illustrations.engineering.height,
-  keywords: ["custom weld-on hinges", "standard industrial hinges", "custom hinge drawing", "hinge specification request"],
-  relatedProducts: ["round", "pin", "gasket", "grease-nipple", "adjustable", "square", "flag"],
-  relatedApplications: [],
-  relatedArticles: ["prepare-hinge-drawing-dimension-request", "how-to-choose-weld-on-hinges", "weld-on-hinge-sizes"],
-  draft: false,
-  noindex: false,
-  featured: false,
-  introduction: "A standard request points to an exact catalog record. A custom request begins with buyer requirements that differ from, or cannot yet be matched to, that record. Keeping those two paths distinct protects the accuracy of the technical discussion.",
-  content: [
-    { type: "heading", level: 2, id: "standard-catalog-request", title: "What makes a request a standard catalog inquiry?" },
-    { type: "paragraph", content: ["A standard inquiry identifies a product family and an existing published entry without changing its notation. The buyer can name the family, model when present, exact size or parameters, application and estimated quantity. A link to the product detail page or the catalog source page gives the supplier a clear record to check."] },
-    { type: "paragraph", content: ["The word standard should not imply unpublished characteristics. It only means the request corresponds to a listed catalog entry. Materials, project suitability and any other unprinted facts remain subjects for confirmation. Similar-looking products should not be treated as interchangeable, because their family, construction and dimension tables may differ."] },
-    { type: "callout", label: "Standard request", content: ["Reference the family and exact published entry. Do not alter a model name, decimal value, compound size string or drawing symbol to describe a different requirement."] },
-
-    { type: "heading", level: 2, id: "custom-review-boundary", title: "When does a requirement need custom review?" },
-    { type: "paragraph", content: ["Custom review is appropriate when the requested dimension, profile or construction does not correspond to the chosen catalog entry, or when the buyer is working from its own drawing. The source explicitly states product customization support for seven families: round, pin, gasket, grease-nipple, adjustable, square and flag hinges. Those are the families that can carry a source-backed customization label on this website."] },
-    { type: "paragraph", content: ["The source statement supports a requirements discussion. It does not define every available change, a development sequence or a delivery commitment. The responsible next step is requirement and specification confirmation. If another family lacks an explicit customization statement, a buyer may still send a requirement for review, but the site should not present that family as confirmed for customization."] },
-    { type: "product-table", productIds: ["round", "pin", "gasket", "grease-nipple", "adjustable", "square", "flag"], title: "Catalog-backed customization families", description: "These seven families have explicit product customization wording on their catalog source pages. Exact feasibility remains subject to requirement review.", display: "catalog-examples" },
-
-    { type: "heading", level: 2, id: "information-buyers-provide", title: "Information buyers should provide" },
-    { type: "paragraph", content: ["A custom inquiry should make the difference from the catalog visible. If the buyer wants a different length, show the catalog reference and the required length in separate labeled fields. If the structure changes, provide a drawing with enough views to understand that change. Do not overwrite the catalog table and do not describe a custom value as an available catalog size."] },
-    { type: "list", items: [
-      ["Product family or closest catalog reference, including a page or product link."],
-      ["Required dimensions with arrows, symbols, decimal places and confirmed units."],
-      ["Front, side and section views where one view cannot explain the construction."],
-      ["Application description and the fixed and moving fabricated parts."],
-      ["Estimated quantity, destination country or region and buyer drawing reference."],
-      ["Clearly marked open questions that require specification confirmation."],
-    ] },
-    { type: "paragraph", content: ["Reference photographs can be useful when they show an existing hinge or installation, but they should be paired with a drawing. Add a scale or measurement annotation instead of expecting dimensions to be estimated from the image. If the desired part is based on a physical sample, state which values were measured and where."] },
-    { type: "image", src: illustrations.engineering.src, alt: illustrations.engineering.alt, width: illustrations.engineering.width, height: illustrations.engineering.height, caption: "Custom engineering support illustration for requirement and specification review.", evidence: "supporting-illustration" },
-
-    { type: "heading", level: 2, id: "confirmation-workflow", title: "Use a conservative confirmation workflow" },
-    { type: "paragraph", content: ["The website uses a simple sequence: requirement, drawing or specification, requirement and specification confirmation, manufacturing, inspection, packaging and shipment. This sequence communicates the information flow without promising a prototype stage or a particular timetable. Any manufacturing step remains tied to a confirmed requirement."] },
-    { type: "comparison-table", caption: "Standard and custom request paths", columns: ["Area", "Standard catalog request", "Custom requirement"], rows: [
-      ["Starting point", "Exact listed family and entry", "Closest reference plus buyer requirement"],
-      ["Dimensions", "Copied from one source record", "Buyer values shown separately on a drawing"],
-      ["Images", "Correct family photograph and source page", "Reference photos plus measurement views"],
-      ["Decision step", "Confirm the requested record", "Requirement and specification confirmation"],
-      ["Unknown facts", "Leave open for review", "Leave open for review"],
-    ], note: "Neither path should be filled with assumptions where the catalog or buyer drawing is silent." },
-    { type: "paragraph", content: ["The review may identify an existing catalog entry that already matches the request, or it may show that further technical information is needed. The result should be recorded against the buyer’s drawing revision so that later communication refers to the same requirement."] },
-
-    { type: "heading", level: 2, id: "avoid-common-ambiguity", title: "Avoid common sources of ambiguity" },
-    { type: "paragraph", content: ["Do not send only a generic family name such as weld-on hinge. Do not infer dimensions from a product photograph, combine records from different families or round a decimal value. Keep a model such as 12-A separate from its drawing parameter D. When a compound size string is used, retain its order and show how it maps to the drawing."] },
-    { type: "paragraph", content: ["A concise, labeled request is more useful than a large unstructured file bundle. Put the current drawing revision first, identify the catalog reference and list open points. For a practical document checklist, see ", resourceLink("how to prepare a hinge drawing or dimension request", "/resources/prepare-hinge-drawing-dimension-request"), ". For catalog notation, review the ", resourceLink("weld-on hinge size guide", "/resources/weld-on-hinge-sizes"), "."] },
+  "slug": "standard-vs-custom-weld-on-hinges",
+  "order": 5,
+  "title": "Standard vs Custom Weld-On Hinges: How to Specify Your Request",
+  "description": "Decide whether to reference a listed weld-on hinge or request a change. Includes a comparison table and drawing checklist for custom hinge inquiries.",
+  "category": "custom-manufacturing",
+  "publishedAt": "2026-09-02",
+  "updatedAt": "2026-09-20",
+  "author": resourcePublisher.name,
+  "featuredImage": "/images/illustrations/custom-engineering-cn.png",
+  "featuredImageAlt": "AI-generated scene of a worker reviewing a requirement sketch beside water-drop weld-on hinges at a workshop office desk",
+  "featuredImageWidth": 1448,
+  "featuredImageHeight": 1086,
+  "keywords": [
+    "custom weld-on hinges",
+    "standard industrial hinges",
+    "custom hinge drawing",
+    "hinge specification request"
   ],
-  keyTakeaways: [
-    "A standard inquiry references one exact catalog family and published entry without changing its data.",
-    "Explicit customization wording applies to round, pin, gasket, grease-nipple, adjustable, square and flag families.",
-    "Customization support starts a requirement review; it does not define every possible change or a timetable.",
-    "Show buyer-required dimensions separately and use requirement and specification confirmation language.",
+  "relatedProducts": [
+    "round",
+    "pin",
+    "gasket",
+    "grease-nipple",
+    "adjustable",
+    "square",
+    "flag"
   ],
+  "relatedApplications": [],
+  "relatedArticles": [
+    "prepare-hinge-drawing-dimension-request",
+    "how-to-choose-weld-on-hinges",
+    "weld-on-hinge-sizes"
+  ],
+  "draft": false,
+  "noindex": false,
+  "featured": false,
+  "introduction": "If a listed hinge matches your drawing, send the exact family and size. If it does not, show the difference. A marked change to one dimension is much clearer than asking for a “similar custom hinge.”",
+  "content": [
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "standard-catalog-request",
+      "title": "When the listed entry matches"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A standard inquiry identifies one product family and a published size or model. Include a link to the product page, the quantity and the intended application. Attach your installation drawing if fit still needs review."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A listed entry is a product reference, not a statement of stock availability or an approval for your assembly. Ask about any purchasing or technical detail that is not shown on the page."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "custom-review-boundary",
+      "title": "When you need a change"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Start with the closest reference and label the requested difference: overall length, a pin detail, a profile feature or another dimension. Keep the original reference visible alongside the requested value so the reviewer can see what changed."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "HINGETRA lists customization for seven families: round, pin, gasket, grease-nipple, adjustable, square and flag. The exact change still needs Requirement / Specification Confirmation. Do not assume that a change offered for one family is available across every other family."
+      ]
+    },
+    {
+      "type": "product-table",
+      "productIds": [
+        "round",
+        "pin",
+        "gasket",
+        "grease-nipple",
+        "adjustable",
+        "square",
+        "flag"
+      ],
+      "title": "Catalog-backed customization families",
+      "description": "These seven families have explicit product customization wording on their catalog source pages. Exact feasibility remains subject to requirement review.",
+      "display": "catalog-examples"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "information-buyers-provide",
+      "title": "Put fixed requirements and open questions on one drawing"
+    },
+    {
+      "type": "list",
+      "items": [
+        [
+          "Closest product reference and the feature you want to change."
+        ],
+        [
+          "Required dimensions and units, with measurement positions marked."
+        ],
+        [
+          "Drawing number and revision."
+        ],
+        [
+          "A view of the installation when surrounding parts affect the design."
+        ],
+        [
+          "Quantity and destination."
+        ],
+        [
+          "Any dimensions or details that remain open for discussion."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "If a dimension must stay fixed to fit an existing assembly, label it. If you are open to a supplier suggestion, say which part of the design can change. This avoids spending time reviewing an option that cannot fit the frame or door."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/illustrations/custom-engineering-cn.png",
+      "alt": "AI-generated scene of a worker reviewing a requirement sketch beside water-drop weld-on hinges at a workshop office desk",
+      "width": 1448,
+      "height": 1086,
+      "caption": "Custom engineering support illustration for requirement and specification review.",
+      "evidence": "supporting-illustration"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "confirmation-workflow",
+      "title": "Record what has been agreed"
+    },
+    {
+      "type": "comparison-table",
+      "caption": "Standard and custom inquiries",
+      "columns": [
+        "Item",
+        "Listed entry",
+        "Requested change"
+      ],
+      "rows": [
+        [
+          "Reference",
+          "Family and exact model or size",
+          "Closest entry plus buyer drawing"
+        ],
+        [
+          "Dimensions",
+          "Published values",
+          "Requested values clearly marked"
+        ],
+        [
+          "Files",
+          "Installation drawing where needed",
+          "Current drawing revision with changed features"
+        ],
+        [
+          "Next step",
+          "Confirm the entry and order requirements",
+          "Requirement / Specification Confirmation"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Keep the reviewed drawing revision with the quotation. If a dimension changes later, identify the revision and the affected feature in the next message. Do not leave two competing drawings attached without saying which is current."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "avoid-common-ambiguity",
+      "title": "Avoid three common gaps"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "First, a photograph does not define dimensions. Add a sketch or marked measurements. Second, “same as last time” needs a drawing or order reference. Third, a proposed change needs an explicit answer before it can be treated as agreed."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "The ",
+        {
+          "type": "link",
+          "text": "drawing and dimension checklist",
+          "href": "/resources/prepare-hinge-drawing-dimension-request"
+        },
+        " includes an inquiry outline. Use the ",
+        {
+          "type": "link",
+          "text": "size guide",
+          "href": "/resources/weld-on-hinge-sizes"
+        },
+        " when the question concerns a model number, compound size string or missing unit."
+      ]
+    }
+  ],
+  "keyTakeaways": [
+    "Use an exact product reference when a listed entry matches.",
+    "Show requested changes beside the original reference.",
+    "Customization is listed for seven named families; the proposed change still needs review.",
+    "Keep the agreed drawing revision with the quotation."
+  ]
 } satisfies ResourceArticle;

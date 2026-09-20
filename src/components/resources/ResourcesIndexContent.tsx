@@ -16,7 +16,8 @@ const productTopics = [
 export function ResourcesIndexContent() {
   const articles = getPublishedResources();
   const featured = articles.find((article) => article.featured) ?? articles[0];
-  const latest = articles.filter((article) => article.slug !== featured?.slug);
+  const latest = articles.filter((article) => article.slug !== featured?.slug).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.order - b.order);
+  const featuredDate = featured?.updatedAt ?? featured?.publishedAt;
   const categories = getVisibleResourceCategories();
 
   return <>
@@ -29,16 +30,16 @@ export function ResourcesIndexContent() {
 
     {featured && <section className="section resource-featured" aria-labelledby="featured-resource-title"><div className="shell">
       <SectionHeading eyebrow="Featured guide" title={<span id="featured-resource-title">A practical starting point.</span>}><Link href="#selection-guides" className="text-link section-heading-link">View selection guides <Arrow /></Link></SectionHeading>
-      <article className="resource-featured-card"><Link href={`/resources/${featured.slug}`} className="resource-featured-image"><Image src={featured.featuredImage} alt={featured.featuredImageAlt} width={featured.featuredImageWidth} height={featured.featuredImageHeight} sizes="(max-width: 899px) 100vw, 52vw" /></Link><div className="resource-featured-copy"><span className="micro-label">{getResourceCategory(featured.category)?.name}</span><h2><Link href={`/resources/${featured.slug}`}>{featured.title}</Link></h2><p>{featured.description}</p><div className="resource-featured-meta"><time dateTime={featured.publishedAt}>Published Sep 2, 2026</time><span>·</span><span>{getResourceReadingTime(featured)} min read</span></div><Link href={`/resources/${featured.slug}`} className="button button-primary">Read Featured Guide <Arrow /></Link></div></article>
+      <article className="resource-featured-card"><Link href={`/resources/${featured.slug}`} className="resource-featured-image"><Image src={featured.featuredImage} alt={featured.featuredImageAlt} width={featured.featuredImageWidth} height={featured.featuredImageHeight} sizes="(max-width: 899px) 100vw, 52vw" /></Link><div className="resource-featured-copy"><span className="micro-label">{getResourceCategory(featured.category)?.name}</span><h2><Link href={`/resources/${featured.slug}`}>{featured.title}</Link></h2><p>{featured.description}</p><div className="resource-featured-meta"><time dateTime={featuredDate}>{featured.updatedAt ? "Updated" : "Published"} {new Intl.DateTimeFormat("en", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${featuredDate}T00:00:00Z`))}</time><span>·</span><span>{getResourceReadingTime(featured)} min read</span></div><Link href={`/resources/${featured.slug}`} className="button button-primary">Read Featured Guide <Arrow /></Link></div></article>
     </div></section>}
 
     <section id="latest-resources" className="section resources-latest" aria-labelledby="latest-resources-title"><div className="shell">
-      <SectionHeading eyebrow="Published resources" title={<span id="latest-resources-title">Latest Resources</span>} description="Source-backed guidance for comparing hinge families, reading catalog data and preparing an RFQ." />
+      <SectionHeading eyebrow="Published resources" title={<span id="latest-resources-title">Latest Resources</span>} description="Compare hinge constructions, check dimensions and prepare a clear inquiry." />
       <div className="resource-card-grid">{latest.map((article) => <ResourceCard article={article} key={article.slug} />)}</div>
     </div></section>
 
     <section className="section resources-categories" aria-labelledby="resource-categories-title"><div className="shell">
-      <SectionHeading eyebrow="Topic architecture" title={<span id="resource-categories-title">Browse by Category</span>} description="Choose a published topic group. Empty future categories remain hidden until a guide is ready." />
+      <SectionHeading eyebrow="Find a guide" title={<span id="resource-categories-title">Browse by Category</span>} description="Find help with product selection, installation questions, dimensions and custom requirements." />
       <div className="resource-category-grid">{categories.map((category, index) => {
         const categoryArticles = articles.filter((article) => article.category === category.id);
         return <article id={category.id} key={category.id}><span className="micro-label">0{index + 1} / {categoryArticles.length} {categoryArticles.length === 1 ? "guide" : "guides"}</span><h3>{category.name}</h3><p>{category.description}</p><nav aria-label={`${category.name} articles`}>{categoryArticles.map((article) => <Link href={`/resources/${article.slug}`} key={article.slug}>{article.title}<Arrow /></Link>)}</nav></article>;
@@ -52,7 +53,7 @@ export function ResourcesIndexContent() {
 
     <section className="section resource-pathways" aria-labelledby="resource-pathways-title"><div className="shell">
       <SectionHeading eyebrow="Continue your research" title={<span id="resource-pathways-title">Product and application pathways.</span>} />
-      <div className="resource-pathway-grid"><Link href="/products"><span className="micro-label">Product range</span><h3>Compare Weld-On Hinge Families</h3><p>Review real product images, exact catalog entries and family-specific technical pages.</p><span className="text-link">Explore Products <Arrow /></span></Link><Link href="/applications"><span className="micro-label">Application context</span><h3>Explore Industrial Applications</h3><p>Start with steel doors, cabinets, gates, trailer doors or ramps supported by the catalog.</p><span className="text-link">Explore Applications <Arrow /></span></Link><Link href="/custom-hinges"><span className="micro-label">Requirement review</span><h3>Prepare a Custom Hinge Request</h3><p>See which families carry source-backed customization wording and what information to send.</p><span className="text-link">Custom Hinge Guides <Arrow /></span></Link></div>
+      <div className="resource-pathway-grid"><Link href="/products"><span className="micro-label">Product range</span><h3>Compare Weld-On Hinge Families</h3><p>Review real product images, exact catalog entries and family-specific technical pages.</p><span className="text-link">Explore Products <Arrow /></span></Link><Link href="/applications"><span className="micro-label">Application context</span><h3>Explore Industrial Applications</h3><p>Start with steel doors, cabinets, gates, trailer doors or ramps supported by the catalog.</p><span className="text-link">Explore Applications <Arrow /></span></Link><Link href="/custom-hinges"><span className="micro-label">Requirement review</span><h3>Prepare a Custom Hinge Request</h3><p>Check the listed customization families and prepare your drawing for review.</p><span className="text-link">Custom Hinge Guides <Arrow /></span></Link></div>
     </div></section>
 
     <section className="section rfq-section resource-rfq" aria-labelledby="resource-rfq-title"><div className="shell resource-rfq-layout"><div><Eyebrow light>Selection support</Eyebrow><h2 id="resource-rfq-title">Need help connecting a guide to your requirement?</h2><p>Send the hinge type, required dimensions, quantity and application for review.</p></div><Link href="/contact#contact-rfq" className="button button-primary">Get Selection Support <Arrow /></Link></div></section>

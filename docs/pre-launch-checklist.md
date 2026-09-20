@@ -1,72 +1,55 @@
-# Pre-Launch Checklist
+# HINGETRA launch and operations checklist
 
-This preview is not ready for public production traffic until every blocking item below is complete.
+Updated 2026-09-20. This replaces the earlier preview-only checklist. A local test, successful build or API receipt is not evidence of inbox delivery or search indexing.
 
-## Hosted preview
+## Confirmed business and inquiry facts
 
-- GitHub Pages preview: `https://songselect8-pixel.github.io/hingetra-industrial-hinges/`
-- Keep this deployment under the existing global `noindex` and robots gate until the production blockers are complete.
-- A push to `main` must pass the GitHub Pages build, static route/link verification and `npm run verify:seo` before it is published.
-- The hosted preview does not change the RFQ delivery blocker below.
+**CRITICAL BEFORE PRODUCTION:** Connect the RFQ form to a real server-side delivery system and perform a real submission test to the configured inquiry recipient. This requirement is retained; the owner-confirmed results below record its current status rather than treating an API response as delivery evidence.
 
-## RFQ delivery — blocking
+- [x] Public brand: HINGETRA / Hingetra Industrial Hinges. The owner confirmed the operating legal entity **铰拓五金有限公司** on 2026-09-20. No English registered-name translation or street address is invented.
+- [x] Audience: worldwide English-speaking procurement customers, with no country restriction specified.
+- [x] Production domain: `https://hingetra.com`; www and HTTP redirect to the HTTPS root domain.
+- [x] Real server delivery: Cloudflare Pages Function, D1, private R2, Turnstile and Resend are active. Public and fixed notification recipient: `cindy@hingetra.com`.
+- [x] The owner confirmed Cindy receives the revised notification and attachments and can reply directly to the customer. This is owner-confirmed acceptance, not an independently inspected mail-header audit.
+- [x] Retention decision: keep inquiry records and uploaded files indefinitely without automatic expiry. The form names the legal entity, use, processors, email copies and access/correction/deletion contact.
+- [ ] Keep the R2 bucket private and confirm no object-expiration rule is configured. The application does not expire inquiry records or drawings. Account settings need account access to verify.
+- [ ] Assign a person to review D1 `pending` / `failed` notifications and mailbox bounces. See `docs/inquiry-storage-setup.md` for queries. There is no automatic retry or monitoring service in this release.
+- [ ] Production large-file and recovery checks remain operational follow-up unless separately evidenced. Existing automated tests cover both form schemas, two 10 MiB files and byte preservation; do not describe those as real remote delivery tests.
 
-**CRITICAL BEFORE PRODUCTION:**  
-Connect the RFQ form to a real server-side delivery system and perform a real submission test to the configured inquiry recipient.
+## Content release
 
-- **2026-09-19 progress, not completion:** user authorized delivery and inquiry storage. The two RFQ components now support a gated Pages Function with D1 records, private R2 attachments, Turnstile and Resend notifications. Follow `docs/inquiry-storage-setup.md`; cloud resources/secrets, production activation, owner privacy/retention review and actual submission/inbox tests remain outstanding. An API saved receipt is not inbox-delivery proof.
+- [x] Correct obsolete drawing/upload FAQ text shared by all ten product details.
+- [x] Rewrite six approved guides, preserving original publication dates, routes and product data; record the actual update date.
+- [x] Add four guides on product names, bearing/pin/washer comparison, grease-fitting access, and alignment/removal clearance.
+- [x] Keep eight further topics in `docs/content-drafts/` outside the public registry. Missing evidence is listed per draft.
+- [x] The intended sitemap contains **29 content routes: nine main pages, ten product details and ten articles**. No draft, error or test routes belong in it.
+- [x] Preserve the locked templates, factual tables, original drawing values, explicit related-content mapping and illustration disclosures.
 
-- Keep the current **“Request checked, not sent.”** behavior until that server-side system is configured and verified.
-- Do not simulate a successful submission or silently discard an inquiry.
-- Confirm that the receiving system processes every text field and the optional drawing and reference-image files.
-- Repeat server-side file type and size validation; client-side checks are not a security boundary.
-- Verify successful delivery, failure handling, recipient routing and operational monitoring with real test submissions.
+## Search activation
 
-## Domain and search visibility
+The owner authorized execution of the research plan and confirmed the business/recipient facts on 2026-09-20. Enabling production search is authorized; it still requires an actual environment change and deployment verification.
 
-- Set `SITE_URL` to the final HTTPS origin and verify every canonical URL and Open Graph URL.
-- Keep the current global `noindex` preview policy until the production domain, content and inquiry delivery are ready.
-- Before launch, intentionally set `SEARCH_INDEXING_ENABLED=true` only after all blockers are resolved, rebuild, and recheck `robots.txt`, `sitemap.xml`, canonicals and structured data on the deployed origin. The unset/default state remains false.
-- GitHub Actions reads the same repository variable and the actual Pages `base_url` for `SITE_URL`. Optional `GOOGLE_SITE_VERIFICATION` / `BING_SITE_VERIFICATION` values must come from the owner's accounts; empty configuration does not connect an account.
-- Verify robots at the host root. A project-subdirectory `/hingetra-industrial-hinges/robots.txt` does not control the entire host. Page-level noindex is retained; neither noindex nor robots makes a public preview private.
-- Confirm `/resources`, all published resource articles and `/feed.xml` use the final HTTPS origin.
-- Verify that every intended public guide has `draft: false` and `noindex: false`; draft or noindex content must remain absent from the Resources index, related-guide modules and sitemap.
-- Validate every article canonical, Open Graph payload, `BlogPosting` and `BreadcrumbList` on the deployed origin.
-- Confirm the production sitemap contains all 25 currently published content routes: nine main pages, ten product details and six approved articles. It must contain no drafts, error pages, test records, `localhost` URLs or `127.0.0.1` URLs. Use actual article modification dates; do not mark unchanged pages as updated on every build.
-- Verify the Organization / WebSite IDs, article publisher, canonical, breadcrumb, RSS and sitemap URLs agree on the final origin and trailing-slash convention.
-- After readiness and ownership verification, submit the final sitemap through Search Console / Bing Webmaster Tools. Review search access separately from optional AI-training access; do not promise indexing or AI citations.
+1. In Cloudflare **Workers & Pages → hingetra-industrial-hinges → Settings → Variables and Secrets → Production**, set the existing text variable `SEARCH_INDEXING_ENABLED` to `true`.
+2. Keep `STATIC_EXPORT=true`, `SITE_URL=https://hingetra.com`, the existing public RFQ variables, bindings and secrets. Do not expose or copy secret values.
+3. Redeploy the latest verified `main` commit. Public variables are fixed at build time.
+4. Verify root `robots.txt` allows crawling and declares the production sitemap. Inspect rendered page meta for `index,follow` and absence of a conflicting production `X-Robots-Tag`.
+5. Verify all 29 canonical URLs, title/description uniqueness, one H1 per page, JSON-LD, RSS and sitemap URLs.
+6. Keep Cloudflare branch-preview environment indexing false. `public/_headers` also sends `noindex,nofollow` on production/deployment `pages.dev` aliases. Keep the separate GitHub Pages repository indexing variable false or unset.
+7. Verify domain ownership in the owner's Google Search Console and Bing Webmaster Tools and submit `https://hingetra.com/sitemap.xml`. Use genuine account-issued verification values; do not invent tokens. Missing meta tags do not prove DNS verification is absent.
 
-## Resources publishing and navigation
+Current execution limitation: Wrangler is unauthenticated and browser inventory access failed on this machine. A local indexed build is verified, but it does not alter Cloudflare Production. Record actual deployment status in `docs/2026-09-20-content-release.md`.
 
-- Keep the initial release limited to the six approved seed guides recorded in `docs/resources-system-lock.json`.
-- Verify every Resources card and “Read Guide” action opens its registered `/resources/[slug]` page, with no placeholder or date-based routes.
-- Check the Resources navigation entry at 1440, 1024, 768 and 390px after any future header-label or navigation change.
-- Follow `docs/resources-publishing-guide.md` for future articles. Add content through the typed registry, reuse verified product data and map related products, applications and guides explicitly.
-- Keep `draft: true` or `noindex: true` guides out of public listings, static parameters, RSS and sitemap until they complete source, editorial and SEO review.
-- For every future publication, rerun tests, TypeScript, the production build, route/link checks, metadata and structured-data validation, TOC checks, table overflow checks and the four-width reading audit.
+## Deployment headers and regression
 
-## Inquiry privacy and security
+- Static Pages responses use `public/_headers`: CSP, nosniff, framing restriction, Referrer-Policy and Permissions-Policy; production-only short HSTS without includeSubDomains/preload.
+- CSP allows Next's static inline scripts/styles and Cloudflare Turnstile. It is a compatibility baseline, not a claim of full XSS prevention. API response headers remain owned by the existing Function.
+- Validate with `npm test`, `npm run typecheck`, static production build, `verify:static` and `verify:seo` using identical build/check environment.
+- Check updated pages at 1440, 1024, 768 and 390px, including title wrapping, tables, TOC targets, images and contact links.
+- Check the actual deployment headers and Turnstile resource loading after release. A production key on localhost can reject the hostname; do not label that as a successful challenge test.
+- Do not replace actual mail or browser verification with a green deployment status.
 
-- Publish the final privacy information appropriate to the deployed inquiry workflow before collecting personal or technical files.
-- Add server-side input validation, abuse protection, secure transport, file handling and retention rules to the delivery implementation.
-- Confirm that endpoint logs and error messages do not expose submitted drawings, contact details or infrastructure secrets.
-- Configure and verify deployment security headers, including a Content Security Policy, MIME sniffing protection, framing restrictions, Referrer Policy and Permissions Policy. Enable HSTS only on the final HTTPS deployment.
+## Ongoing work
 
-## Business and configuration review
+Use actual search queries and qualified inquiries to choose the next article. Collect owner-approved product photographs, annotated drawings, material/finish records and technical review before publishing claims beyond the current catalog. No fabricated credentials, ratings, availability, delivery promises or customer cases.
 
-- **Contact delivery verification:** the user supplied `cindy@hingetra.com`, WhatsApp `+86 15584143652` and its QR image on 2026-09-19. These replace the floating placeholders (`isPlaceholder=false`); the Contact-page email shares the same default. Verify actual email delivery and the WhatsApp destination before promotion; user-supplied contact details alone do not prove delivery. The catalog voice-phone number remains unchanged. The SEO deployment check still rejects indexed builds that retain demo contacts.
-
-- Confirm the production company name, recipient, contact name, email and phone environment values.
-- The user explicitly confirmed HINGETRA / Hingetra Industrial Hinges as the public website brand on 2026-09-18. The supplied logo's English-only adaptation is used across the site. Confirm the registered legal entity before production; a brand change does not change the original catalog identity or verify a new legal company name.
-- The approved HINGETRA factory exterior remains an AI-generated concept, not photographic evidence. Keep its disclosure visible.
-- `hingetra.com` and `www.hingetra.com` are connected to the Cloudflare Pages project with SSL (user confirmed on 2026-09-19). Keep canonical origin `https://hingetra.com`; the separate GitHub Pages preview URL is unchanged. Successful domain setup alone does not resolve inquiry and publication blockers.
-- Keep unverified street addresses, maps, additional channels, timing promises and commercial claims unpublished.
-- Confirm that the production recipient can receive the advertised PDF, DWG, DXF, JPG and PNG attachments within the configured limit.
-- Follow `docs/seo-geo-operations.md` for source-backed content, search measurement and qualified-RFQ operations. Do not count local validation as a delivered inquiry or add tracking before privacy/measurement setup is confirmed.
-
-## Final deployed regression
-
-- Run the complete automated test suite, TypeScript check and production build from the release source.
-- Recheck every public route at 1440, 1024, 768 and 390px on the deployed origin.
-- Test navigation, product filters, technical-table overflow, drawing views, all RFQ validation states, file upload and direct contact links.
-- Confirm there are no console errors, failed required assets, broken internal links or unexpected horizontal overflow.
+Retention is a storage policy, not a backup guarantee. Keep access limited, review provider billing/storage usage, and handle deletion requests across D1, R2, mailbox copies and applicable backups. Never publish inquiry data or customer drawings in the website repository.

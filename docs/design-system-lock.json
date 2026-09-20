@@ -47,10 +47,22 @@
     390
   ],
   "files": [
-    {"path":"src/components/navigation/floating-actions.css","sha256":"e260a2173412b346b38503b653ac966ced38b25bde478fe934eb9c008cfa8f56"},
-    {"path":"public/contact/whatsapp-qr.png","sha256":"bd8bbfa8b89872b272c9071f78b20e02c6596285396c1511ee33acb2a3703697"},
-    {"path":"src/components/navigation/FloatingActions.tsx","sha256":"23a118ca1d0585c2b55963c5835aeb15682ea3ba7f33e6e41c99b178e4940266"},
-    {"path":"src/data/quick-contact.ts","sha256":"efd9adecde854da55e37eece89519a1f3f5698e94f89e62074bbe45d8aba25d1"},
+    {
+      "path": "src/components/navigation/floating-actions.css",
+      "sha256": "e260a2173412b346b38503b653ac966ced38b25bde478fe934eb9c008cfa8f56"
+    },
+    {
+      "path": "public/contact/whatsapp-qr.png",
+      "sha256": "bd8bbfa8b89872b272c9071f78b20e02c6596285396c1511ee33acb2a3703697"
+    },
+    {
+      "path": "src/components/navigation/FloatingActions.tsx",
+      "sha256": "23a118ca1d0585c2b55963c5835aeb15682ea3ba7f33e6e41c99b178e4940266"
+    },
+    {
+      "path": "src/data/quick-contact.ts",
+      "sha256": "efd9adecde854da55e37eece89519a1f3f5698e94f89e62074bbe45d8aba25d1"
+    },
     {
       "path": "src/app/globals.css",
       "sha256": "ee43d38ae41aa31ecaf1f06ff498cb6106c859ba055a33b8acbcfffc81a9aa00"
@@ -137,7 +149,7 @@
     },
     {
       "path": "src/data/catalog-variants.ts",
-      "sha256": "aef85ae14074f6fa4224eb956408323ab1193bbde0e63f8e596d7354686d07f3"
+      "sha256": "c778eb2f5f1166d079bc98acef203fbe4f2ecb873190ce52cf4bc6000b20cd52"
     },
     {
       "path": "src/data/illustrations.ts",
@@ -145,7 +157,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "477e27c9fdca0e6b0d18f30e850899b39e600a75e3d18a284f4f7743d34a8c50"
+      "sha256": "bca0a3492d15504a85f82030dee05828800428a59f0bbd57036b5b3dc988c383"
     },
     {
       "path": "src/app/page.tsx",
@@ -153,7 +165,7 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "873a1e48963a0fb93926994e86def917cd88f362c524661cd7fc0d8902d0c4ad"
+      "sha256": "d652cdaca2988393ccc324cd832397ba7ab623eba05a43b7a8dd4bdf548b90e4"
     },
     {
       "path": "src/data/catalog-overview.ts",
@@ -197,7 +209,7 @@
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "2e2da21a5802f0d303f309bcb238b862652cc083b2bfe3ed6b4d7303659db891"
+      "sha256": "157dd82f9acc445d468c5cd00c82a6b0608db640fbb0ed2461d84faed12786c0"
     },
     {
       "path": "src/data/product-filters.ts",
@@ -335,5 +347,22 @@
     "authorizedBy": "User agreed to connect production inquiry delivery and asked how to store inquiry data",
     "scope": "Connect existing Contact and shared RFQ forms to gated same-origin Cloudflare Pages Functions with D1 records, private R2 attachments, Turnstile and fixed-recipient Resend notifications. Preserve page layouts, catalog data, honest unconfigured states, failure input retention and disabled indexing. Real resources, activation and inbox tests are pending.",
     "record": "docs/inquiry-storage-setup.md"
+  },
+  "contentRelease20260920": {
+    "authorizedBy": "Owner approved the SEO/content plan with 全部开始吧 and confirmed the legal entity, indefinite retention, global English audience and Cindy receipt/attachments/replies.",
+    "scope": "Six article refreshes and four new guides; obsolete product FAQ correction; legal identity and privacy copy; Resources editorial labels and dates. Layouts and technical records remain locked.",
+    "changedFiles": [
+      "src/data/site.ts",
+      "src/app/layout.tsx",
+      "src/data/product-details.ts"
+    ],
+    "validation": "97 automated tests, TypeScript, indexed static build, 29-route SEO/link checks; responsive results recorded in docs/2026-09-20-content-release.md."
+  },
+  "preExistingCatalogHashCorrection": {
+    "recordedAt": "2026-09-20",
+    "path": "src/data/catalog-variants.ts",
+    "previousHash": "aef85ae14074f6fa4224eb956408323ab1193bbde0e63f8e596d7354686d07f3",
+    "verifiedHash": "c778eb2f5f1166d079bc98acef203fbe4f2ecb873190ce52cf4bc6000b20cd52",
+    "reason": "The tracked HEAD and working file already matched before this release; the old lock entry was stale. No catalog data was edited. Existing catalog/source tests pass."
   }
 }

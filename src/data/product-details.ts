@@ -96,7 +96,7 @@ function productSafeFaqs(productId: string, selectionGuidance: string) {
   return [
     { question: `Which ${product.name.toLowerCase()} are listed?`, answer: `${selectionGuidance} Only the individual published records shown in the table are presented as catalog options.`, sourcePages: technicalPages },
     { question: "Can I request a custom configuration?", answer: customizationAnswer, sourcePages: customizationPages },
-    { question: "Can I send a technical drawing?", answer: "A drawing can communicate dimensions, installation details and requested changes. The file field in this local preview prepares the inquiry but does not upload or send the file.", sourcePages: customizationPages },
+    { question: "Can I send a technical drawing?", answer: "Use the file fields in the inquiry form to attach a drawing or reference image. Include the dimensions, installation details and any requested changes. Check the form's submission result after sending.", sourcePages: customizationPages },
     { question: "What information should I provide for a quotation?", answer: "Include the hinge family, exact catalog notation or required dimensions, estimated quantity, application and company contact details. Add your drawing and packing requirements where available.", sourcePages: [] },
   ] as const;
 }
@@ -141,7 +141,7 @@ export const bearingDetail: ProductDetail = {
   },
   faqs: [
     { question: "Can I request a different hinge size?", answer: "Send the required dimensions and application for review. The catalog describes custom product development and production; your requested configuration needs to be reviewed before it is confirmed.", sourcePages: [18] },
-    { question: "Can I send a technical drawing?", answer: "A drawing can help explain dimensions, installation and any changes you need. Use the drawing field in the inquiry form. This local preview lets you select a file but does not upload or send it.", sourcePages: [18] },
+    { question: "Can I send a technical drawing?", answer: "Use the file fields in the inquiry form to attach a drawing or reference image. Include the dimensions, installation details and any requested changes. Check the form's submission result after sending.", sourcePages: [18] },
     { question: "How do I select a suitable weld-on hinge?", answer: "Start with a published catalog size, compare the reference drawing with your installation, and provide the door or cabinet details for review. The listed weight is the product’s mass; it is not a load rating.", sourcePages: [4, 7] },
     { question: "What information should I provide for a quotation?", answer: "Include the hinge type, required size, estimated quantity, application and company contact details. Add your drawing, custom requirement and packing requirements where available.", sourcePages: [] },
   ],

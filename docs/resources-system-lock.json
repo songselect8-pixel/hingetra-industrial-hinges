@@ -87,31 +87,31 @@
     },
     {
       "path": "src/content/resources/index.ts",
-      "sha256": "45da43159275f6b2223ad16440964db9afdec72abee1e02054c66f4865b9d814"
+      "sha256": "e0ac2ffe9596fb45ed4d349728dafda1634cee55063a2b8e98d76484fc55cc30"
     },
     {
       "path": "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
-      "sha256": "84fae727d65c001247afd77b9b32000b9914e4d38745ff9a7c945de2c268f99a"
+      "sha256": "707c813b082c47dd85f37d946e7efd30d49c959f57a9e7e33a2c20378d083db9"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-sizes.ts",
-      "sha256": "4839a990e95ac7374b3efcea5bed252a74214a8e8bc87cb782d4aa87195f0bef"
+      "sha256": "8106d2ab03837706064ddc1c7d65d4248e2baa9fa9144344e2c1ee3f9ddea244"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-gates-trailer-doors-and-ramps.ts",
-      "sha256": "a151e191c91979d9d11cddbdf0b6dd8cf7fdec0ee548d50ea27e8c80b3ed3738"
+      "sha256": "bdb1c4e6206ac9e62610a0070c4db70a09d8e7215d52d814f574254a3eab6737"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-electrical-control-cabinets.ts",
-      "sha256": "cd8d40f2dc89862d3d362e528096530418eae9d0565e8c40e716bb8fcc8245fb"
+      "sha256": "0056db1527876ebdd914047a5cf92df412c321a0603beac10e201a91dbac3b87"
     },
     {
       "path": "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
-      "sha256": "c493d31b20f3fc50693f977b459c27036c940f56444567f07b99bbc883fcc988"
+      "sha256": "94f36b25d4eeeac737adf0c710f620065e19a20b9ac5febefe70bcf10422c98d"
     },
     {
       "path": "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
-      "sha256": "97a280358a10494c8055d54770900f403589dd730b0cdbc927d5ea5ddd1b9cc7"
+      "sha256": "8af38af3dc1a3bcc5dac1761317c82f89a2dcace56d98db3a66a44a823b88ebe"
     },
     {
       "path": "src/components/resources/ResourceRichText.tsx",
@@ -135,7 +135,7 @@
     },
     {
       "path": "src/components/resources/ResourcesIndexContent.tsx",
-      "sha256": "7f4ff835d59731cd16fba25b906ee57139c8eb795bbf47961fc48511f4c88579"
+      "sha256": "4aadd14f11d0b3b0ca45a97e8047aa25e64a75394245980fced5414423312ecc"
     },
     {
       "path": "src/components/resources/ResourceArticleTemplate.tsx",
@@ -167,7 +167,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "477e27c9fdca0e6b0d18f30e850899b39e600a75e3d18a284f4f7743d34a8c50"
+      "sha256": "bca0a3492d15504a85f82030dee05828800428a59f0bbd57036b5b3dc988c383"
     },
     {
       "path": "src/components/navigation/Header.tsx",
@@ -219,11 +219,27 @@
     },
     {
       "path": "tests/resources.test.ts",
-      "sha256": "5eb5d8af6708eb397fd10a1dda020bcfc665f55bcfd4a67557a70f46988fd2d1"
+      "sha256": "0ccaf3838adbeb70b9ca375be6307221d51d4a469bb2d64744535191fb954c95"
     },
     {
       "path": "docs/resources-publishing-guide.md",
-      "sha256": "a8725c94788929a28739cac6fb78c7941d8e2689aeef2e1eb7f024509d26324f"
+      "sha256": "c09b17910024d6dd8da8679a126aa7349579557677d1b1a19ca197d69e714bd3"
+    },
+    {
+      "path": "src/content/resources/articles/bullet-barrel-weld-on-hinge-names.ts",
+      "sha256": "848fa2d502ba4bd4e8751b222133ba1fa5b24ef374c2397798b627a5bd72d604"
+    },
+    {
+      "path": "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
+      "sha256": "d2bfcd964b71038879e1e5e4a235b442d1c48cfa977f86c0853442d3334c1a9e"
+    },
+    {
+      "path": "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
+      "sha256": "77260652ff12e4cb23901ea7ade94dba749637441177cc5b6dc0b7f17abd85b4"
+    },
+    {
+      "path": "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts",
+      "sha256": "c727995a33151a3febb9830ee5f4ecb3cc0339f7b450e12881d10b6726af5487"
     }
   ],
   "factoryExteriorUpdate": {
@@ -263,5 +279,39 @@
     "authorizedBy": "User request to improve thin text, add floating WhatsApp/email/back-to-top links and write HINGETRA factory introductions; user explicitly requested temporary contact placeholders",
     "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
     "record": "docs/2026-09-19-readability-contact-factory-update.md"
+  },
+  "publicArticles": [
+    "how-to-choose-weld-on-hinges",
+    "weld-on-hinge-sizes",
+    "weld-on-hinges-for-gates-trailer-doors-and-ramps",
+    "weld-on-hinges-for-electrical-control-cabinets",
+    "standard-vs-custom-weld-on-hinges",
+    "prepare-hinge-drawing-dimension-request",
+    "bullet-barrel-weld-on-hinge-names",
+    "bearing-pin-washer-weld-on-hinges",
+    "grease-fitting-weld-on-hinges",
+    "weld-on-hinge-alignment-and-removal-clearance"
+  ],
+  "contentRelease20260920": {
+    "authorizedBy": "Owner approved the SEO/content plan with 全部开始吧 and confirmed the legal entity, indefinite retention, global English audience and Cindy receipt/attachments/replies.",
+    "scope": "Six article refreshes and four new guides; obsolete product FAQ correction; legal identity and privacy copy; Resources editorial labels and dates. Layouts and technical records remain locked.",
+    "changedFiles": [
+      "src/content/resources/index.ts",
+      "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
+      "src/content/resources/articles/weld-on-hinge-sizes.ts",
+      "src/content/resources/articles/weld-on-hinges-for-gates-trailer-doors-and-ramps.ts",
+      "src/content/resources/articles/weld-on-hinges-for-electrical-control-cabinets.ts",
+      "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
+      "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
+      "src/components/resources/ResourcesIndexContent.tsx",
+      "src/data/site.ts",
+      "tests/resources.test.ts",
+      "docs/resources-publishing-guide.md",
+      "src/content/resources/articles/bullet-barrel-weld-on-hinge-names.ts",
+      "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
+      "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
+      "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts"
+    ],
+    "validation": "97 automated tests, TypeScript, indexed static build, 29-route SEO/link checks; responsive results recorded in docs/2026-09-20-content-release.md."
   }
 }

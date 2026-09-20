@@ -1,76 +1,219 @@
 import { resourcePublisher } from "../publishing.ts";
-import { resourceLink, type ResourceArticle } from "../types.ts";
+import type { ResourceArticle } from "../types.ts";
 
 export const prepareHingeDrawing = {
-  slug: "prepare-hinge-drawing-dimension-request",
-  order: 6,
-  title: "How to Prepare a Technical Drawing or Dimension Request for a Hinge Quote",
-  description: "A practical checklist for preparing hinge views, dimensions, source references and application information for an industrial RFQ.",
-  category: "technical-guides",
-  publishedAt: "2026-09-02",
-  updatedAt: null,
-  author: resourcePublisher.name,
-  featuredImage: "/images/drawing-12-14-16-type.png",
-  featuredImageAlt: "Original catalog photograph and dimensional drawing for the 12-A, 14-A and 16-A hinge series",
-  featuredImageWidth: 546,
-  featuredImageHeight: 958,
-  keywords: ["hinge technical drawing", "hinge dimension request", "industrial hinge RFQ", "custom hinge drawing checklist"],
-  relatedProducts: ["bearing", "pin", "gasket", "grease-nipple", "20-type", "12-14-16-type", "round", "adjustable", "square", "flag"],
-  relatedApplications: ["steel-doors", "control-cabinets", "gates", "trailer-doors", "ramps"],
-  relatedArticles: ["standard-vs-custom-weld-on-hinges", "weld-on-hinge-sizes", "how-to-choose-weld-on-hinges"],
-  draft: false,
-  noindex: false,
-  featured: false,
-  introduction: "A useful hinge drawing shows what is being measured, where each value applies and whether the value comes from the catalog or the buyer’s requirement. The goal is a reviewable RFQ, not a polished engineering document.",
-  content: [
-    { type: "heading", level: 2, id: "identify-reference", title: "Identify the catalog or buyer reference first" },
-    { type: "paragraph", content: ["Place the product family, catalog model and source page near the drawing title when the request relates to an existing product. If the buyer does not know the family, label the document as a buyer requirement and include clear photographs. Never choose a family from appearance alone; similar weld-on profiles may have different internal structures or size tables."] },
-    { type: "paragraph", content: ["Give the drawing a reference number and revision. This helps everyone discuss the same version when a dimension is updated. Mark whether the values are copied from the catalog, measured from an existing component or required for a new design. Keeping the source of each value visible prevents an old catalog value from being mistaken for a new buyer requirement."] },
-    { type: "callout", label: "Drawing title block", content: ["Include the product family or closest reference, buyer drawing number, revision, application and date. Leave any unconfirmed item clearly marked for review."] },
-
-    { type: "heading", level: 2, id: "show-enough-views", title: "Show enough views to explain the geometry" },
-    { type: "paragraph", content: ["A front view can show overall length and body arrangement, while a side or section view can show profile dimensions, pin position or the relationship between hinge parts. Use more than one view when a dimension cannot be located unambiguously. For an installation request, add a simplified section of the fixed frame and moving door, gate, ramp or cabinet panel."] },
-    { type: "paragraph", content: ["Mark the intended welding surfaces and opening direction when they affect how the hinge sits in the structure. Reference photos can show access and surroundings, but perspective can distort apparent size. Put dimensions on the drawing rather than asking the supplier to scale them from an image."] },
-    { type: "image", src: "/images/drawing-bearing-reference.png", alt: "Original bearing hinge catalog reference drawing with multiple section views and dimension symbols", width: 825, height: 864, caption: "Original catalog reference drawing. Keep its symbols and values unchanged when citing the source record.", evidence: "catalog-drawing" },
-
-    { type: "heading", level: 2, id: "dimension-clearly", title: "Dimension the request clearly and consistently" },
-    { type: "paragraph", content: ["Use arrows or extension lines that point to the exact measured positions. Write the confirmed unit once in the title block or beside each value. If the catalog does not print a unit for a table, do not add one without confirmation. Keep every published decimal place and do not normalize compound notation into a different order."] },
-    { type: "paragraph", content: ["Separate overall dimensions from local features. For a numbered catalog family, preserve symbols such as D, D-1, L, d, L-1, c and L-2. A model name is not a measurement: 12-A remains the model, while 11.80 remains its printed D value. See the ", resourceLink("size and notation guide", "/resources/weld-on-hinge-sizes"), " for additional examples."] },
-    { type: "list", items: [
-      ["Overall hinge length and the main profile dimension at labeled positions."],
-      ["Pin, body or section dimensions that are necessary to distinguish the structure."],
-      ["Buyer-required changes shown separately from catalog values."],
-      ["Confirmed units and all original decimal places."],
-      ["A note beside any value that remains open for specification confirmation."],
-    ] },
-
-    { type: "heading", level: 2, id: "add-application-context", title: "Add the application and inquiry context" },
-    { type: "paragraph", content: ["Technical dimensions identify the part, while application context explains the installation. State whether the hinge is being considered for an industrial steel door, cabinet, gate, trailer door or ramp when that relationship is supported by the catalog. If the application is outside the named catalog scope, describe it without claiming that the product has already been established for that use."] },
-    { type: "paragraph", content: ["Include the company, business email, country or region, estimated quantity and product family. State whether the inquiry is for a catalog entry, a replacement or a separate custom requirement. If files are attached, use descriptive names that include the drawing number and revision. A short message can then point directly to the open technical questions."] },
-    { type: "comparison-table", caption: "Drawing and RFQ file checklist", columns: ["Item", "Recommended content", "Common ambiguity to avoid"], rows: [
-      ["Reference", "Family, model, source page or closest product", "Unlabeled product photo"],
-      ["Views", "Front, side and section where needed", "One view hiding the measured feature"],
-      ["Dimensions", "Labeled positions, decimals and confirmed unit", "Values without measurement locations"],
-      ["Application", "Structure and hinge position", "Generic use description with no installation view"],
-      ["File control", "Drawing number and revision", "Multiple files with no current version"],
-      ["RFQ context", "Quantity, region and questions", "Technical file without inquiry details"],
-    ] },
-
-    { type: "heading", level: 2, id: "final-review", title: "Run a final source and completeness check" },
-    { type: "paragraph", content: ["Before submitting, compare every catalog value against its original family page. Confirm that the photograph, drawing and technical table all belong to the same product. Check that no value has been rounded, reordered or moved from another family. If a field is unknown, leave it open instead of filling it from visual similarity."] },
-    { type: "list", ordered: true, items: [
-      ["Confirm the product family and source page."],
-      ["Check model labels, symbols, values, decimal places and units."],
-      ["Verify that every dimension has a visible measurement position."],
-      ["Separate catalog data from buyer-required values."],
-      ["Attach the current drawing revision and complete RFQ fields."],
-    ] },
-    { type: "paragraph", content: ["If the required dimensions do not match the catalog, use the ", resourceLink("standard versus custom request guide", "/resources/standard-vs-custom-weld-on-hinges"), " to structure the next step. Requirement and specification confirmation should happen before a custom description is treated as a defined product."] },
+  "slug": "prepare-hinge-drawing-dimension-request",
+  "order": 6,
+  "title": "What to Include in a Hinge Drawing and RFQ",
+  "description": "Prepare a hinge quote request with the right views, dimensions, revision and installation details. Includes a short RFQ outline and file checklist.",
+  "category": "technical-guides",
+  "publishedAt": "2026-09-02",
+  "updatedAt": "2026-09-20",
+  "author": resourcePublisher.name,
+  "featuredImage": "/images/drawing-12-14-16-type.png",
+  "featuredImageAlt": "Original catalog photograph and dimensional drawing for the 12-A, 14-A and 16-A hinge series",
+  "featuredImageWidth": 546,
+  "featuredImageHeight": 958,
+  "keywords": [
+    "hinge technical drawing",
+    "hinge dimension request",
+    "industrial hinge RFQ",
+    "custom hinge drawing checklist"
   ],
-  keyTakeaways: [
-    "Identify the source record or clearly label the document as a buyer requirement.",
-    "Use enough views to locate every dimension and explain the installation geometry.",
-    "Separate model names, catalog values, physical measurements and requested changes.",
-    "Finish with a same-family source check and submit the current drawing revision with the RFQ.",
+  "relatedProducts": [
+    "bearing",
+    "pin",
+    "gasket",
+    "grease-nipple",
+    "20-type",
+    "12-14-16-type",
+    "round",
+    "adjustable",
+    "square",
+    "flag"
   ],
+  "relatedApplications": [
+    "steel-doors",
+    "control-cabinets",
+    "gates",
+    "trailer-doors",
+    "ramps"
+  ],
+  "relatedArticles": [
+    "standard-vs-custom-weld-on-hinges",
+    "weld-on-hinge-sizes",
+    "weld-on-hinge-alignment-and-removal-clearance"
+  ],
+  "draft": false,
+  "noindex": false,
+  "featured": false,
+  "introduction": "A clearly labeled sketch can start the discussion. It should identify the part, locate each measurement and explain how the hinge fits the assembly. A polished drawing with missing units is less useful than a simple sketch with those details.",
+  "content": [
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "identify-reference",
+      "title": "Name the part and drawing revision"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Put the product family and exact model or size at the top when referring to a listed hinge. If you do not know the family, label the drawing as a buyer requirement and include photographs. Do not select a family solely because its photograph looks similar."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Give the drawing a reference and revision, even for a simple sketch. State whether dimensions are measured from an existing part or required for a new design. If the part is worn, mark that rather than treating every measured value as a new-part requirement."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "show-enough-views",
+      "title": "Show the hinge and the installation"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Use an overall view for length and body arrangement, and a side or section view for the profile and pin position. Add a section through the door and frame when their relationship affects the fit. Mark opening direction, intended mounting surfaces and nearby obstructions."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/drawing-bearing-reference.png",
+      "alt": "Original bearing hinge catalog reference drawing with multiple section views and dimension symbols",
+      "width": 825,
+      "height": 864,
+      "caption": "Original catalog reference drawing. Keep its symbols and values unchanged when citing the source record.",
+      "evidence": "catalog-drawing"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Photographs help explain access and condition. They cannot reliably supply dimensions from perspective alone. Keep measurements on the sketch and use the photograph to show where the part sits."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "dimension-clearly",
+      "title": "Locate each dimension and state its unit"
+    },
+    {
+      "type": "list",
+      "items": [
+        [
+          "Overall length and body dimensions, with arrows showing the endpoints."
+        ],
+        [
+          "Pin or section details needed to distinguish the part."
+        ],
+        [
+          "Required changes marked separately from the product reference."
+        ],
+        [
+          "Units and the current drawing revision."
+        ],
+        [
+          "Any missing measurement clearly labeled as needing confirmation."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Preserve the original symbols when quoting a product drawing. For example, 12-A is the model and 11.80 is its printed D value. The source table does not print a unit, so ask for confirmation. The ",
+        {
+          "type": "link",
+          "text": "size guide",
+          "href": "/resources/weld-on-hinge-sizes"
+        },
+        " covers this and other notation differences."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "add-application-context",
+      "title": "Use this short inquiry outline"
+    },
+    {
+      "type": "list",
+      "items": [
+        [
+          "Product reference: [product link, family and size, or buyer drawing reference]."
+        ],
+        [
+          "Application: [door, cabinet, gate or other assembly; include the installation sketch]."
+        ],
+        [
+          "Required change or question: [identify the feature or dimension]."
+        ],
+        [
+          "Quantity and destination: [estimated quantity; country or region]."
+        ],
+        [
+          "Attached drawing: [file name, drawing number and revision]."
+        ],
+        [
+          "Open points: [information that still needs confirmation]."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A short message with these details is enough to start. Avoid sending several nearly identical files named “final” without marking the current one. If you revise a drawing, state what changed in the message."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "final-review",
+      "title": "Check the files before submitting"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Open the file once before uploading it. Check that the dimensions are legible, the correct revision is visible and the image is not cropped through a needed feature. Attach only files relevant to the inquiry and identify any photograph that shows a different reference part."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "On the ",
+        {
+          "type": "link",
+          "text": "inquiry form",
+          "href": "/contact#contact-rfq"
+        },
+        ", use Technical Drawing for a PDF, DWG, DXF, JPG or PNG, and Reference Image for a JPG or PNG. Each file field accepts a file up to 10 MB. After submitting, check the form’s result before assuming the inquiry has been received."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "If the request changes a listed hinge, the ",
+        {
+          "type": "link",
+          "text": "standard versus custom guide",
+          "href": "/resources/standard-vs-custom-weld-on-hinges"
+        },
+        " explains the confirmation step. If the part fits but the movement is uncertain, include the details from the ",
+        {
+          "type": "link",
+          "text": "alignment and clearance guide",
+          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance"
+        },
+        "."
+      ]
+    }
+  ],
+  "keyTakeaways": [
+    "Identify the part and current drawing revision.",
+    "Show measurement positions and units, plus the door and frame when relevant.",
+    "Separate existing measurements from required new dimensions.",
+    "Attach the current files and check the submission result."
+  ]
 } satisfies ResourceArticle;

@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
+import { site } from "@/data/site";
 
 type Turnstile = {
   render: (element: HTMLElement, options: Record<string, unknown>) => string;
@@ -36,8 +37,8 @@ export function InquirySecurity({ attempt }: { attempt: number }) {
 export function InquiryPrivacy() {
   return <details className="contact-privacy-note">
     <summary>How your inquiry data is used</summary>
-    <p>HINGETRA uses your contact details, requirements and chosen files to respond to this inquiry and keep a record of the discussion. Please send only information needed for your request and files you are authorized to share.</p>
+    <p>HINGETRA is operated by {site.legalName}. We use your contact details, requirements and chosen files to respond to your inquiry and keep a record of the discussion. Please send only information needed for your request and files you are authorized to share.</p>
     <p>Cloudflare processes and stores submissions and private attachments; Resend sends your inquiry details and copies of your chosen files to our sales mailbox, hosted by Alibaba Mail. These providers may process data outside your country. No public attachment link is created.</p>
-    <p>We retain inquiries for handling and follow-up, with access limited to authorized account users. To request access, correction or deletion, email <a href="mailto:cindy@hingetra.com">cindy@hingetra.com</a>. Retention and deletion requests are handled by the site owner, including copies in the sales mailbox. This form does not subscribe you to marketing emails.</p>
+    <p>We retain inquiry records and uploaded files indefinitely, without automatic expiry, for future quotations and customer follow-up. Access is limited to authorized account users. To request access, correction or deletion, email <a href="mailto:cindy@hingetra.com">cindy@hingetra.com</a>. We handle these requests across our inquiry records, file storage and sales mailbox. This form does not subscribe you to marketing emails.</p>
   </details>;
 }

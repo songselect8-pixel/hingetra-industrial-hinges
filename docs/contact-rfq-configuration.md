@@ -4,7 +4,7 @@ The `/contact` page is implemented as a validated RFQ interface. It does not tra
 
 ## Contact values
 
-The user-approved business display name and contact fallback values live in `src/data/contact.ts`. The email was updated by the user on 2026-09-19; the contact name and voice-phone number still follow catalog page 19. The business name defaults to the shared HINGETRA identity in `src/data/site.ts`; this is not a verified registered legal-entity change. They can be updated before deployment with these server environment variables:
+The user-approved business display name and contact fallback values live in `src/data/contact.ts`. The email was updated by the user on 2026-09-19; the contact name and voice-phone number still follow catalog page 19. The business name defaults to the shared HINGETRA identity in `src/data/site.ts`; the owner separately confirmed the operating legal entity 铰拓五金有限公司 on 2026-09-20. They can be updated before deployment with these server environment variables:
 
 | Variable | Current fallback |
 | --- | --- |
@@ -40,7 +40,7 @@ Private R2 attachments are stored before the D1 record. A successful response me
 
 On 2026-09-20 the user requested one-line submission results for Contact and the shared RFQ: a green check with **Sent successfully**, or a red cross with **Send failed**. The common result component keeps focus and screen-reader announcements while removing visible receipt IDs, long explanations and duplicate delivery-error text. Success still requires the validated saved-inquiry acknowledgment; it does not assert mailbox delivery. Field validation, retry IDs, preserved entries/uploads and the honest unconfigured preview remain intact.
 
-Before collecting live inquiries, finish the documented cloud setup, owner review of privacy/retention practices and real submission tests for both forms, including an attachment and actual receipt in Cindy's inbox. Server-side length, product, format/signature, file/request-size validation, fixed-recipient email, origin checks, Turnstile verification and abuse counters are implemented; these do not replace operational checks or final privacy review.
+On 2026-09-20 the owner confirmed Cindy notification receipt, attachments and direct replies; confirmed the legal entity; and chose indefinite retention without automatic expiry. The privacy text reflects these facts. Separately record any remaining production large-file, recovery and per-form checks. Server-side length, product, format/signature, file/request-size validation, fixed-recipient email, origin checks, Turnstile verification and abuse counters are implemented; these do not replace operational checks or final privacy review.
 
 ## File rules presented in the interface
 

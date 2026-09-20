@@ -4,6 +4,8 @@ Resources use typed structured content. No CMS or MDX runtime is required. The r
 
 Brand update, 2026-09-18: the user confirmed **HINGETRA** / **Hingetra Industrial Hinges** as the public identity. Use `resourcePublisher` from `publishing.ts`, which reads the shared business name from `src/data/site.ts`; do not hardcode another publisher or invent a legal entity or author credentials. Article structured data uses the same supplied English logo as the website. Original catalog identity and technical provenance remain unchanged.
 
+2026-09-20 update: the owner approved the six refreshes and first four new guides. There are now ten public guides, with eight further drafts held outside the registry. The operating legal entity is owner-confirmed as 铰拓五金有限公司; the shared public publisher remains Hingetra Industrial Hinges. Follow `docs/content-editorial-workflow.md` and the current launch checklist.
+
 ## Add a guide
 
 1. Create one file in `src/content/resources/articles/` that exports a `ResourceArticle`.

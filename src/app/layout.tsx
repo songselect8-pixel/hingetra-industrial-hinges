@@ -24,7 +24,7 @@ const siteSchema = {
   "@graph": [
     {
       "@type": "Organization", "@id": organizationId,
-      name: site.companyName, alternateName: site.brand, url: homeUrl,
+      name: site.companyName, legalName: site.legalName, alternateName: site.brand, url: homeUrl,
       logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo), width: 960, height: 155 },
     },
     {

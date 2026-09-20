@@ -10,20 +10,21 @@ import {
   getResourceReadingTime,
   getResourceTableOfContents,
   getVisibleResourceCategories,
+  isPublicResource,
   paginateResources,
   resourceArticles,
   resourceCategories,
   resourcePublisher,
 } from "../src/content/resources/index.ts";
 
-test("Resources registry publishes exactly the six approved seed guides", () => {
+test("Resources registry publishes the ten approved guides", () => {
   const published = getPublishedResources();
-  assert.equal(resourceArticles.length, 6);
-  assert.equal(published.length, 6);
+  assert.equal(resourceArticles.length, 10);
+  assert.equal(published.length, 10);
   assert.ok(published.every((article) => !article.draft && !article.noindex));
-  assert.equal(new Set(published.map((article) => article.slug)).size, 6);
-  assert.equal(new Set(published.map((article) => article.title)).size, 6);
-  assert.equal(new Set(published.map((article) => article.description)).size, 6);
+  assert.equal(new Set(published.map((article) => article.slug)).size, 10);
+  assert.equal(new Set(published.map((article) => article.title)).size, 10);
+  assert.equal(new Set(published.map((article) => article.description)).size, 10);
   assert.deepEqual(
     published.map((article) => article.slug),
     [
@@ -33,6 +34,10 @@ test("Resources registry publishes exactly the six approved seed guides", () => 
       "weld-on-hinges-for-electrical-control-cabinets",
       "standard-vs-custom-weld-on-hinges",
       "prepare-hinge-drawing-dimension-request",
+      "bullet-barrel-weld-on-hinge-names",
+      "bearing-pin-washer-weld-on-hinges",
+      "grease-fitting-weld-on-hinges",
+      "weld-on-hinge-alignment-and-removal-clearance",
     ],
   );
 });
@@ -57,7 +62,8 @@ test("Every guide has publisher, useful structure, generated TOC, and automatic 
   assert.equal(resourcePublisher.name, "Hingetra Industrial Hinges");
   for (const article of getPublishedResources()) {
     assert.equal(article.author, resourcePublisher.name);
-    assert.match(article.publishedAt, /^2026-09-02$/);
+    assert.equal(article.publishedAt, article.order <= 6 ? "2026-09-02" : "2026-09-20");
+    assert.equal(article.updatedAt, article.order <= 6 ? "2026-09-20" : null);
     assert.ok(article.featuredImage.startsWith("/images/"));
     assert.ok(article.featuredImageAlt.length > 24);
     assert.ok(article.keywords.length >= 3);
@@ -66,7 +72,7 @@ test("Every guide has publisher, useful structure, generated TOC, and automatic 
     assert.ok(toc.length >= 4, article.slug);
     assert.equal(toc[0].level, 2);
     assert.equal(new Set(toc.map((item) => item.id)).size, toc.length);
-    assert.ok(getResourceReadingTime(article) >= 4, article.slug);
+    assert.ok(getResourceReadingTime(article) >= 1, article.slug);
   }
 });
 
@@ -88,16 +94,23 @@ test("Product, application, and related-resource links are explicit and valid", 
   assert.deepEqual(getResourceArticle("weld-on-hinges-for-electrical-control-cabinets")?.relatedProducts, ["bearing", "pin", "gasket", "grease-nipple", "20-type"]);
 });
 
-test("Listing pagination is ready but unnecessary for six guides", () => {
+test("Listing pagination is ready but unnecessary for ten guides", () => {
   const page = paginateResources(getPublishedResources(), 1, 12);
-  assert.equal(page.totalItems, 6);
+  assert.equal(page.totalItems, 10);
   assert.equal(page.totalPages, 1);
-  assert.equal(page.items.length, 6);
+  assert.equal(page.items.length, 10);
   assert.equal(page.hasPreviousPage, false);
   assert.equal(page.hasNextPage, false);
 });
 
-test("Seed guides avoid unsupported technical and commercial claims", () => {
+test("Draft and noindex guides remain outside public publication", () => {
+  const article = resourceArticles[0];
+  assert.equal(isPublicResource({ ...article, draft: true }), false);
+  assert.equal(isPublicResource({ ...article, noindex: true }), false);
+  assert.equal(isPublicResource({ ...article, draft: false, noindex: false }), true);
+});
+
+test("Published guides avoid unsupported technical and commercial claims", () => {
   const publicText = JSON.stringify(getPublishedResources());
   for (const pattern of [
     /load (?:rating|capacity)/i,

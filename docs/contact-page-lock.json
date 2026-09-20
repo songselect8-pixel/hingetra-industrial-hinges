@@ -6,8 +6,15 @@
   "contract": "docs/design-system.md",
   "sourceCatalog": "铰链/Products show 2026(1).pdf",
   "sourceCatalogSha256": "35f4881a70cf94c4a4e98e58755a668f5bcaad5b020c10140e05879813aedc33",
-  "sourcePages": [19],
-  "viewportWidths": [1440, 1024, 768, 390],
+  "sourcePages": [
+    19
+  ],
+  "viewportWidths": [
+    1440,
+    1024,
+    768,
+    390
+  ],
   "qaEvidence": "output/qa/contact/verification.json",
   "preLaunchChecklist": "docs/pre-launch-checklist.md",
   "sectionOrder": [
@@ -37,13 +44,34 @@
     "A future server-side delivery connection may replace only the configured delivery boundary and must preserve this locked page composition and failure honesty."
   ],
   "files": [
-    { "path": "src/app/contact/page.tsx", "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db" },
-    { "path": "src/app/contact/contact.css", "sha256": "e874d8cd80d31b47aa0ab9ceb5fc5812545a69b07e57ef4cd909debfc3515945" },
-    { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "34a8abd6b96f31739fe3c1d1750b4d0fa407051965660856062e8403d936c7d2" },
-    { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "dd5e14b6a59191958d87bc5e8eb794b7388eec3f33b91ca0b4bc8f95de8252ea" },
-    { "path": "src/data/contact.ts", "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8" },
-    { "path": "src/data/contact-rfq.ts", "sha256": "a71ba3b1c40c3320c0e329f4555eb068c9f34b7a1dcd9a9f73216fae09e98986" },
-    { "path": "docs/contact-rfq-configuration.md", "sha256": "8a490b270120b56cee375df83a11f29d716db3c05ccce007adc22116ad728e4a" }
+    {
+      "path": "src/app/contact/page.tsx",
+      "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db"
+    },
+    {
+      "path": "src/app/contact/contact.css",
+      "sha256": "e874d8cd80d31b47aa0ab9ceb5fc5812545a69b07e57ef4cd909debfc3515945"
+    },
+    {
+      "path": "src/components/contact/ContactPageContent.tsx",
+      "sha256": "34a8abd6b96f31739fe3c1d1750b4d0fa407051965660856062e8403d936c7d2"
+    },
+    {
+      "path": "src/components/contact/ContactRFQForm.tsx",
+      "sha256": "dd5e14b6a59191958d87bc5e8eb794b7388eec3f33b91ca0b4bc8f95de8252ea"
+    },
+    {
+      "path": "src/data/contact.ts",
+      "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8"
+    },
+    {
+      "path": "src/data/contact-rfq.ts",
+      "sha256": "a71ba3b1c40c3320c0e329f4555eb068c9f34b7a1dcd9a9f73216fae09e98986"
+    },
+    {
+      "path": "docs/contact-rfq-configuration.md",
+      "sha256": "84eb2d4bc08580711774568945b2ba4a3675233b78f2725402c34371193e3a79"
+    }
   ],
   "brandIdentityUpdate": {
     "requestedAt": "2026-09-18",
@@ -95,5 +123,13 @@
     "authorizedBy": "User agreed to connect production inquiry delivery and asked how to store inquiry data",
     "scope": "Connect existing Contact and shared RFQ forms to gated same-origin Cloudflare Pages Functions with D1 records, private R2 attachments, Turnstile and fixed-recipient Resend notifications. Preserve page layouts, catalog data, honest unconfigured states, failure input retention and disabled indexing. Real resources, activation and inbox tests are pending.",
     "record": "docs/inquiry-storage-setup.md"
+  },
+  "contentRelease20260920": {
+    "authorizedBy": "Owner approved the SEO/content plan with 全部开始吧 and confirmed the legal entity, indefinite retention, global English audience and Cindy receipt/attachments/replies.",
+    "scope": "Six article refreshes and four new guides; obsolete product FAQ correction; legal identity and privacy copy; Resources editorial labels and dates. Layouts and technical records remain locked.",
+    "changedFiles": [
+      "docs/contact-rfq-configuration.md"
+    ],
+    "validation": "97 automated tests, TypeScript, indexed static build, 29-route SEO/link checks; responsive results recorded in docs/2026-09-20-content-release.md."
   }
 }

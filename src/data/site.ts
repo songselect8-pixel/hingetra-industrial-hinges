@@ -1,10 +1,11 @@
 export const site = {
   brand: "HINGETRA",
   companyName: "Hingetra Industrial Hinges",
+  legalName: "铰拓五金有限公司",
   descriptor: "INDUSTRIAL HINGES",
   logo: "/images/brand/hingetra-logo.png",
   isPreview: true,
-  identityPublicationConfirmed: false,
+  identityPublicationConfirmed: true,
   publicEmail: "TBD",
   publicPhone: "TBD",
   publicAddress: "TBD",

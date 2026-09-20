@@ -5,6 +5,10 @@ import { gateTrailerRampHinges } from "./articles/weld-on-hinges-for-gates-trail
 import { cabinetHinges } from "./articles/weld-on-hinges-for-electrical-control-cabinets.ts";
 import { standardVsCustomHinges } from "./articles/standard-vs-custom-weld-on-hinges.ts";
 import { prepareHingeDrawing } from "./articles/prepare-hinge-drawing-dimension-request.ts";
+import { bulletBarrelNames } from "./articles/bullet-barrel-weld-on-hinge-names.ts";
+import { bearingPinWasher } from "./articles/bearing-pin-washer-weld-on-hinges.ts";
+import { greaseFittingHinges } from "./articles/grease-fitting-weld-on-hinges.ts";
+import { alignmentClearance } from "./articles/weld-on-hinge-alignment-and-removal-clearance.ts";
 import { getResourceReadingTime, getResourceTableOfContents, isPublicResource, paginateResources, resourcePublisher } from "./publishing.ts";
 import type { ResourceArticle, ResourceCategoryId } from "./types.ts";
 
@@ -15,6 +19,10 @@ export const resourceArticles: readonly ResourceArticle[] = [
   cabinetHinges,
   standardVsCustomHinges,
   prepareHingeDrawing,
+  bulletBarrelNames,
+  bearingPinWasher,
+  greaseFittingHinges,
+  alignmentClearance,
 ] as const;
 
 export function getPublishedResources() {
