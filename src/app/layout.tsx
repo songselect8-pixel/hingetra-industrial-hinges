@@ -29,7 +29,7 @@ const siteSchema = {
     },
     {
       "@type": "WebSite", "@id": `${homeUrl}#website`,
-      name: site.companyName, alternateName: site.brand, url: homeUrl,
+      name: site.brand, alternateName: site.companyName, url: homeUrl,
       inLanguage: "en", publisher: { "@id": organizationId },
     },
   ],
