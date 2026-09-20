@@ -46,6 +46,18 @@ export const bearingPinWasher = {
       "title": "Identify the detail being described"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "bearing-pin-washer-difference",
+      "title": "What is the difference between bearing, pin and washer hinges?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "These names highlight different components. A pin forms the pivot; a washer sits between parts of the assembly; a bearing is part of the pivot arrangement. A bearing hinge can also contain a pin, so the names are not mutually exclusive descriptions of every component. Use the section view or assembly photograph to identify what is included."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "Hinge suppliers distinguish products using construction details as well as overall shape. ",
@@ -60,7 +72,7 @@ export const bearingPinWasher = {
     {
       "type": "paragraph",
       "content": [
-        "For a HINGETRA inquiry, start with the bearing, pin or gasket family page and its drawing. The English catalog uses “gasket” for the named family. If your requirement calls for a washer, show the component you mean on the drawing so both sides are discussing the same detail."
+        "For a HINGETRA inquiry, use the named bearing, pin or gasket family and its own size table. Compare the photographs on those product pages. The catalog does not specify the bearing design or washer material; identify any required construction on your drawing."
       ]
     },
     {
@@ -77,7 +89,7 @@ export const bearingPinWasher = {
         "gasket"
       ],
       "title": "Bearing, pin and gasket family references",
-      "description": "Exact examples from each product family. Open the product page for its full drawing and size table.",
+      "description": "Compare the exact size examples with each family’s own photograph. The bearing page also includes an original reference drawing.",
       "display": "catalog-examples"
     },
     {
@@ -103,9 +115,15 @@ export const bearingPinWasher = {
       ]
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "gasket-hinge-waterproof",
+      "title": "Does a gasket or washer hinge make the door waterproof?"
+    },
+    {
       "type": "paragraph",
       "content": [
-        "A label such as bearing does not tell you every internal detail. Do not add “ball bearing” to an order unless that construction is confirmed. Likewise, the gasket family name does not establish a weather seal for the door or enclosure."
+        "No. The gasket family name refers to the component shown between the hinge bodies. It does not establish a weather seal or an enclosure IP rating. If sealing is required, identify it as a separate requirement for the complete door and frame assembly."
       ]
     },
     {

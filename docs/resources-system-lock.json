@@ -91,11 +91,11 @@
     },
     {
       "path": "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
-      "sha256": "707c813b082c47dd85f37d946e7efd30d49c959f57a9e7e33a2c20378d083db9"
+      "sha256": "4b945bc015b6fddb3015796b4bfaad989dd87807640ff169e77aa26083be2c52"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-sizes.ts",
-      "sha256": "8106d2ab03837706064ddc1c7d65d4248e2baa9fa9144344e2c1ee3f9ddea244"
+      "sha256": "ae0a05f2b2cbc8666166923175173d402aab56ca001bc1447c9675eef6a4aa55"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-gates-trailer-doors-and-ramps.ts",
@@ -107,11 +107,11 @@
     },
     {
       "path": "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
-      "sha256": "94f36b25d4eeeac737adf0c710f620065e19a20b9ac5febefe70bcf10422c98d"
+      "sha256": "a533e61fa69c410dff7c181deca19d4784eb0d377d7ee51255f853e26f1e56bd"
     },
     {
       "path": "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
-      "sha256": "8af38af3dc1a3bcc5dac1761317c82f89a2dcace56d98db3a66a44a823b88ebe"
+      "sha256": "1157b9b936f4753ad1c03e7f895391cb9ee6d7c4da1bccdb7e761961101b3de5"
     },
     {
       "path": "src/components/resources/ResourceRichText.tsx",
@@ -219,7 +219,7 @@
     },
     {
       "path": "tests/resources.test.ts",
-      "sha256": "0ccaf3838adbeb70b9ca375be6307221d51d4a469bb2d64744535191fb954c95"
+      "sha256": "bd1bdd6beea4ad17d12620eb5ce160e1245a7f98e7dea845d693b57dcfff4206"
     },
     {
       "path": "docs/resources-publishing-guide.md",
@@ -227,19 +227,19 @@
     },
     {
       "path": "src/content/resources/articles/bullet-barrel-weld-on-hinge-names.ts",
-      "sha256": "848fa2d502ba4bd4e8751b222133ba1fa5b24ef374c2397798b627a5bd72d604"
+      "sha256": "9f75ef06290bd888c0c98ad5dd3b1ed01db4e08b605bbb2e6252a54f3b24e02b"
     },
     {
       "path": "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
-      "sha256": "d2bfcd964b71038879e1e5e4a235b442d1c48cfa977f86c0853442d3334c1a9e"
+      "sha256": "1b526cab399dc7278da9237624b2e83f05551c02133ce275d42fd16cd2442fd3"
     },
     {
       "path": "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
-      "sha256": "77260652ff12e4cb23901ea7ade94dba749637441177cc5b6dc0b7f17abd85b4"
+      "sha256": "cd1aee5fdab753cc9a06b4bb0941fff356f83dd74ee39822bf1568bf37c499c1"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts",
-      "sha256": "c727995a33151a3febb9830ee5f4ecb3cc0339f7b450e12881d10b6726af5487"
+      "sha256": "19478341097f031ef1335c755072144301353ed999699e324d302daa0dc7aa9e"
     }
   ],
   "factoryExteriorUpdate": {
@@ -313,5 +313,21 @@
       "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts"
     ],
     "validation": "97 automated tests, TypeScript, indexed static build, 29-route SEO/link checks; responsive results recorded in docs/2026-09-20-content-release.md."
+  },
+  "faqProductUpdate20260920": {
+    "authorizedBy": "Owner requested immediate implementation after the proposal for 12 researched FAQs and three product-page improvements.",
+    "scope": "Contextual question-and-answer copy in eight existing guides; Bearing, Pin and Grease Nipple introductions, selection guidance, metadata and family-specific FAQs. Reuse the verified pin photograph in the removal guide. Layouts, catalog records, application mappings, customization scope and inquiry behavior are unchanged.",
+    "record": "docs/2026-09-20-faq-product-update.md",
+    "updatedBaselineFiles": [
+      "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
+      "src/content/resources/articles/weld-on-hinge-sizes.ts",
+      "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
+      "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
+      "tests/resources.test.ts",
+      "src/content/resources/articles/bullet-barrel-weld-on-hinge-names.ts",
+      "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
+      "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
+      "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts"
+    ]
   }
 }

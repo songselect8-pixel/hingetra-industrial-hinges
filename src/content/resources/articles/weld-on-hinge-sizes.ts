@@ -68,9 +68,15 @@ export const weldOnHingeSizes = {
       "title": "Show where diameter and length are measured"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "measure-weld-on-hinge",
+      "title": "How do I measure a weld-on hinge?"
+    },
+    {
       "type": "paragraph",
       "content": [
-        "On your own sketch, put arrows at the ends of each measurement. State whether length means the complete assembled hinge or one section. Identify body and pin measurements separately. If the existing part is worn, record that alongside the measurement rather than treating it as the required new-part dimension."
+        "Record the assembled length, body profile and pin dimensions, with arrows showing the measurement endpoints on a sketch. Distinguish the complete hinge from an individual section. Use the drawing for the selected family to identify each feature; the same letter or model number need not mean the same dimension in another range."
       ]
     },
     {
@@ -167,6 +173,24 @@ export const weldOnHingeSizes = {
       "level": 2,
       "id": "submit-size-request",
       "title": "Resolve a size mismatch before ordering"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "replace-existing-hinge",
+      "title": "What should I measure when replacing an existing hinge?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Measure the assembled hinge and show where its axis sits relative to the door and frame. Include the body profile, pin dimensions where accessible, and the space available for opening and removal. Add a whole-door photograph and a close-up. Matching length and diameter alone does not establish that two hinges are interchangeable."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Mark wear or damage on the old part. A worn pin measurement may differ from the dimension required for its replacement. If only one hinge half will be replaced, identify the half being retained and ask for the mating fit to be checked."
+      ]
     },
     {
       "type": "list",

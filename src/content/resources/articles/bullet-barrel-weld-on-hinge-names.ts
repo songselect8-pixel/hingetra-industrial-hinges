@@ -42,6 +42,18 @@ export const bulletBarrelNames = {
       "title": "Why the names overlap"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "bullet-barrel-same-hinge",
+      "title": "Are bullet hinges and barrel hinges the same?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "The names can overlap, but they do not guarantee the same part. Compare the body profile, pin arrangement, assembled dimensions and mounting method. Two hinges with the same trade name may need different space at the door edge."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "Some manufacturers use several names for the same compact weld-on product group. ",
@@ -115,8 +127,8 @@ export const bulletBarrelNames = {
         "round",
         "pin"
       ],
-      "title": "Two families to identify by their own drawings",
-      "description": "Exact examples from each product family. Open the product page for its full drawing and size table.",
+      "title": "Round and pin family references",
+      "description": "Compare the separate product photographs and exact size entries on each family page.",
       "display": "catalog-examples"
     },
     {

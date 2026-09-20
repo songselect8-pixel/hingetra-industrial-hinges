@@ -72,7 +72,7 @@
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "157dd82f9acc445d468c5cd00c82a6b0608db640fbb0ed2461d84faed12786c0"
+      "sha256": "9a488550daad7c2d3e53ea968750962ccf6d32493b476977c78b6f0a6654846a"
     },
     {
       "path": "src/data/products.ts",
@@ -125,5 +125,13 @@
     "authorizedBy": "Owner approved the researched SEO/content rollout and confirmed live inquiry delivery.",
     "scope": "Correct the obsolete preview-only upload FAQ shared by ten product details. Preserve all layouts, source-backed product data and technical tables.",
     "record": "docs/2026-09-20-content-release.md"
+  },
+  "faqProductUpdate20260920": {
+    "authorizedBy": "Owner requested immediate implementation after the proposal for 12 researched FAQs and three product-page improvements.",
+    "scope": "Contextual question-and-answer copy in eight existing guides; Bearing, Pin and Grease Nipple introductions, selection guidance, metadata and family-specific FAQs. Reuse the verified pin photograph in the removal guide. Layouts, catalog records, application mappings, customization scope and inquiry behavior are unchanged.",
+    "record": "docs/2026-09-20-faq-product-update.md",
+    "updatedBaselineFiles": [
+      "src/data/product-details.ts"
+    ]
   }
 }

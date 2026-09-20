@@ -43,6 +43,12 @@ export const greaseFittingHinges = {
       "title": "What the fitting tells you"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "grease-nipple-purpose",
+      "title": "What does the grease nipple on a hinge do?"
+    },
+    {
       "type": "paragraph",
       "content": [
         "A grease fitting provides a point for adding lubricant. It does not, by itself, specify the lubricant, amount or maintenance interval. Those details need to be confirmed for the actual hinge and application."
@@ -66,7 +72,7 @@ export const greaseFittingHinges = {
         "grease-nipple"
       ],
       "title": "Grease-nipple family reference",
-      "description": "Exact examples from each product family. Open the product page for its full drawing and size table.",
+      "description": "Compare the fitting shown in the product photograph with the six complete size entries on the product page.",
       "display": "catalog-examples"
     },
     {
@@ -76,9 +82,15 @@ export const greaseFittingHinges = {
       "title": "Draw the space around the fitting"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "grease-fitting-tool-clearance",
+      "title": "How much space should I leave around the grease fitting?"
+    },
+    {
       "type": "paragraph",
       "content": [
-        "Show the fitting relative to the door, frame and any adjacent panel. Include both the position used to access it and obstructions in that position. A photograph taken square to the hinge can help explain the available space, but label important dimensions on the drawing."
+        "Leave enough room for the intended tool to reach, connect and disconnect in the maintenance position. There is no universal gap: it depends on the fitting, tool and surrounding parts. Show the fitting relative to the door, frame and adjacent panels, and mark the available space on the drawing."
       ]
     },
     {

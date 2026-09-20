@@ -94,9 +94,36 @@ export const alignmentClearance = {
       "title": "Check how a separable hinge comes apart"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "remove-door-after-welding",
+      "title": "Can the door still be removed after the hinges are welded on?"
+    },
+    {
       "type": "paragraph",
       "content": [
-        "First confirm that the chosen construction is intended to separate in the way you need. For a design in which one half slides off a pin, the free path must allow the engaged parts to disengage. Base that distance on the actual hinge drawing rather than the overall body length."
+        "Yes, if the selected hinge has a separable construction and the installed arrangement allows it to disengage. Welding the hinge bodies to the door and frame does not by itself answer that question. Confirm the pin arrangement, removal direction and any retention features for the exact part."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/hinge-pin.jpg",
+      "alt": "Catalog photograph showing assembled and separated views of a pin-type weld-on hinge",
+      "width": 800,
+      "height": 800,
+      "caption": "Pin Type reference, catalog page 9. The separated view shows the construction; removal space depends on the installation.",
+      "evidence": "product-photograph"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "lift-off-removal-space",
+      "title": "How much clearance does a lift-off hinge need for removal?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "There must be enough travel for the engaged pin to clear the mating half, plus room to move and handle the door. Check this along the actual removal direction. Overall hinge length alone is not the required clearance; use the engagement dimensions of the selected assembly."
       ]
     },
     {

@@ -139,6 +139,18 @@ export const prepareHingeDrawing = {
       "title": "Use this short inquiry outline"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "hinge-quotation-details",
+      "title": "What details should I include in a hinge quotation request?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Include the hinge reference or a marked sketch, quantity, intended use, and any material or finish requirements. Put units and a drawing revision on the sketch. For a replacement, add photographs of the existing part and its mounting position. List unknown details as questions so they can be resolved before ordering."
+      ]
+    },
+    {
       "type": "list",
       "items": [
         [
@@ -149,6 +161,9 @@ export const prepareHingeDrawing = {
         ],
         [
           "Required change or question: [identify the feature or dimension]."
+        ],
+        [
+          "Material or finish requirement: [state the required specification, or ask for confirmation]."
         ],
         [
           "Quantity and destination: [estimated quantity; country or region]."

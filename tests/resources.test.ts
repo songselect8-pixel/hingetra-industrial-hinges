@@ -113,7 +113,10 @@ test("Draft and noindex guides remain outside public publication", () => {
 test("Published guides avoid unsupported technical and commercial claims", () => {
   const publicText = JSON.stringify(getPublishedResources());
   for (const pattern of [
-    /load (?:rating|capacity)/i,
+    // Buyer guidance can explain that product mass is not a load rating.
+    // Numeric load claims still require new, model-specific evidence.
+    /\b(?:load (?:rating|capacity)|rated load)\s*(?:of|:|=|up to)?\s*\d/i,
+    /\b\d+(?:\.\d+)?\s*(?:kg|lbs?|kilograms?|pounds?)\s+(?:load|capacity)/i,
     /material grade/i,
     /\b(?:ISO|AQL)\b/i,
     /certif(?:ied|ication)/i,

@@ -65,9 +65,15 @@ export const standardVsCustomHinges = {
       "title": "When you need a change"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "custom-hinge-changes",
+      "title": "Can I request a different hinge size, pin or material?"
+    },
+    {
       "type": "paragraph",
       "content": [
-        "Start with the closest reference and label the requested difference: overall length, a pin detail, a profile feature or another dimension. Keep the original reference visible alongside the requested value so the reviewer can see what changed."
+        "Yes, you can submit a change for review. Mark the required size, pin detail or material beside the closest product reference. Include quantity and installation details. A customization label is not a promise that every dimension, material or tolerance can be supplied."
       ]
     },
     {

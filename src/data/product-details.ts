@@ -112,12 +112,13 @@ export const bearingDetail: ProductDetail = {
   productId: "bearing",
   title: "Bearing Type Weld-On Hinges",
   seoTitle: "Bearing Type Weld-On Hinges | Sizes & Drawings",
-  seoDescription: "View bearing type weld-on hinge photographs, 18 published sizes and weights, and the original catalog drawing. Send your dimensions or drawing with an RFQ.",
-  description: "Water-drop shaped weld-on hinges with a bearing assembly. Explore the published sizes for industrial steel door and cabinet requirements.",
+  seoDescription: "Compare 18 bearing weld-on hinge sizes, product weights and the original reference drawing. Check construction and installation details before requesting a quote.",
+  description: "Water-drop shaped weld-on hinges with a bearing assembly. Compare 18 listed sizes, product photographs and the original reference drawing for your door or cabinet.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
-    "The bearing type is part of the catalog’s water-drop shaped weld-on hinge family. The product photographs show the assembled hinge and its separated body sections.",
-    "Use the published size and weight table to identify a catalog entry, then send your installation details or technical drawing with the requirement.",
+    "The assembled and separated photographs show the bearing family’s water-drop profile and body arrangement. Compare those details with your installation, especially when an existing hinge has a similar outline but different internal parts.",
+    "Choose one complete entry from the 18-row size table. The reference drawing shows section views and dimension symbols; it is not a dimensioned drawing for every listed size. Send a marked sketch if a pin dimension, mounting position or clearance must match.",
+    "Include the door width, height, weight and hinge positions with your inquiry. The table records each hinge’s own mass, so it cannot be used as a door load rating.",
   ],
   gallery: [
     { ...bearing.images[0], label: "Product view", width: 800, height: 800, caption: "Real product photograph · supplied company assets" },
@@ -140,10 +141,11 @@ export const bearingDetail: ProductDetail = {
     ],
   },
   faqs: [
-    { question: "Can I request a different hinge size?", answer: "Send the required dimensions and application for review. The catalog describes custom product development and production; your requested configuration needs to be reviewed before it is confirmed.", sourcePages: [18] },
-    { question: "Can I send a technical drawing?", answer: "Use the file fields in the inquiry form to attach a drawing or reference image. Include the dimensions, installation details and any requested changes. Check the form's submission result after sending.", sourcePages: [18] },
-    { question: "How do I select a suitable weld-on hinge?", answer: "Start with a published catalog size, compare the reference drawing with your installation, and provide the door or cabinet details for review. The listed weight is the product’s mass; it is not a load rating.", sourcePages: [4, 7] },
-    { question: "What information should I provide for a quotation?", answer: "Include the hinge type, required size, estimated quantity, application and company contact details. Add your drawing, custom requirement and packing requirements where available.", sourcePages: [] },
+    { question: "Are all diameter and length combinations listed?", answer: "No. The table contains 18 specific entries, not every combination between the first and last sizes. Select a complete row. If it does not match your requirement, mark the requested dimensions on a drawing for review.", sourcePages: [7] },
+    { question: "Does Bearing Type mean a particular ball-bearing design?", answer: "The catalog identifies a bearing assembly but does not specify the bearing type, model or material. If your design requires a particular internal arrangement, include a section view or component specification so it can be confirmed.", sourcePages: [7] },
+    { question: "How much door weight can this hinge support?", answer: "A door load rating is not published here. For example, the ф16*100mm entry weighs 142 g; that is the hinge’s own mass. Send the door dimensions and weight, hinge count and positions, and an installation drawing for a suitability review.", sourcePages: [7] },
+    { question: "Can I request a different size or configuration?", answer: "Send the closest listed entry with the requested change marked beside it. Include quantity and installation details. The proposed configuration needs Requirement / Specification Confirmation before it can be treated as an available option.", sourcePages: [18] },
+    { question: "What should I attach to a bearing-hinge inquiry?", answer: "Attach the current drawing or a marked sketch showing the hinge, door and frame. Identify the exact size, fixed dimensions, quantity and any material, finish or bearing requirements. Use the form’s drawing and image fields, then check the submission result.", sourcePages: [] },
   ],
 };
 
@@ -152,12 +154,13 @@ export const pinDetail: ProductDetail = {
   productId: "pin",
   title: "Pin Type Weld-On Hinges",
   seoTitle: "Pin Type Weld-On Hinges | Published Sizes & Weights",
-  seoDescription: "Compare five published Pin Type weld-on hinge sizes and weights, view real product photographs, and send your dimensions or drawing for review.",
-  description: "Water-drop shaped weld-on hinges with a separable pin construction. Review the five published sizes and catalog weights for your requirement.",
+  seoDescription: "Compare five pin weld-on hinge sizes and assembly photographs. Check replacement dimensions and removal clearance, then send your drawing for a quotation.",
+  description: "Water-drop shaped weld-on hinges with a separable pin construction. Compare five listed sizes and the assembly views, then check fit and removal space for your installation.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
-    "The Pin Type family uses the water-drop shaped profile shown in the catalog. The supplied product photographs show both the assembled hinge and the separable pin structure.",
-    "Five discrete size and weight records are published. Select the exact catalog notation rather than forming unlisted diameter and length combinations.",
+    "The product photographs show the assembled water-drop hinge and its separated pin construction. For a door that must come off for service, show the intended removal direction and the space around the installed hinge.",
+    "The five rows below are individual size options. For example, Φ20*110mm, Φ20*120mm and Φ20*140mm are separate entries. Keep the complete size notation with your request; it does not define every pin or mounting dimension.",
+    "For a replacement, send both a close-up of the old hinge and a view of the door and frame. Mark the dimensions that must stay fixed and any wear on the existing part. The photographs identify the construction, but they do not establish that two parts will mate.",
   ],
   gallery: [
     { src: "/images/hinge-pin-hero.jpg", alt: "Pin Type water-drop weld-on hinge assembled beside its separated hinge pin", sourcePage: 9, kind: "photograph", label: "Product view", width: 5252, height: 3505, caption: "Real product photograph · supplied company assets" },
@@ -171,20 +174,27 @@ export const pinDetail: ProductDetail = {
   customRequirement: explicitCustomRequirement([9]),
   manufacturing: manufacturingSummary,
   packaging: null,
-  faqs: productSafeFaqs("pin", "The catalog publishes five exact size and product-weight pairs for the Pin Type family."),
+  faqs: [
+    { question: "Will a pin hinge fit if its overall size matches?", answer: "Matching length and diameter alone is not enough. Compare the body profile, pin dimensions and hinge-axis position against the door and frame. This page has product photographs and a size table; include a dimensioned sketch for any feature the table does not define.", sourcePages: [9] },
+    { question: "Can the door lift off after the hinge is welded on?", answer: "The product photograph shows a separable pin construction. Removal after installation also depends on orientation, retention and clearance. Show enough travel for the engaged parts to separate, and include nearby covers or frame members on the drawing.", sourcePages: [9] },
+    { question: "Can I replace only one half of an existing hinge?", answer: "The mating fit needs to be checked first. Identify the half you intend to retain and send its dimensions and photographs. A similar appearance or nominal size does not confirm compatibility between parts.", sourcePages: [] },
+    { question: "Can I request a different pin or body dimension?", answer: "Customization is listed for the Pin Type family. Mark the required dimension beside the closest listed entry, state the unit and quantity, and show how the hinge fits the assembly. The specific change remains subject to Requirement / Specification Confirmation.", sourcePages: [9] },
+    { question: "What should I send for a pin-hinge quotation?", answer: "Send the exact size or marked sketch, quantity, door-and-frame view and any material or finish requirements. Include removal space if the door must detach. For a replacement, distinguish worn measurements from required new-part dimensions.", sourcePages: [] },
+  ],
 };
 
 const greaseNipple = getProduct("grease-nipple")!;
 export const greaseNippleDetail: ProductDetail = {
   productId: "grease-nipple",
   title: "Grease Nipple Type Weld-On Hinges",
-  seoTitle: "Grease Nipple Type Weld-On Hinges | Sizes & Weights",
-  seoDescription: "View Grease Nipple Type weld-on hinge photographs and six exact catalog size and weight records. Discuss a custom hinge requirement with an RFQ.",
-  description: "Water-drop shaped weld-on hinges with a visible grease nipple fitting. Six size and product-weight records are published in the catalog.",
+  seoTitle: "Grease Nipple Type Weld-On Hinges | Sizes & Fitting Access",
+  seoDescription: "View six grease-nipple weld-on hinge sizes and the product photograph. Check fitting access and installation requirements before requesting a quote.",
+  description: "Water-drop shaped weld-on hinges with a grease fitting. Compare six listed sizes and check room for the lubrication tool in the installed position.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
-    "This family combines the catalog’s water-drop shaped hinge profile with a visible grease nipple fitting. The description is limited to the structure shown in the source product image.",
-    "The catalog does not state a lubrication interval or grease specification. Use the six published size and weight pairs when preparing the requirement.",
+    "The grease nipple is the lubrication point shown on the water-drop hinge body. Check which way it will face once the hinge is fitted to the door and frame. A visible fitting can still be difficult to reach if a panel blocks the tool connection.",
+    "Keep each size string complete. For example, Φ14x16x100mm identifies one listed entry; shortening it to 100 mm loses part of that reference. The catalog does not label every feature in the compound notation, so mark critical dimensions on your own sketch for confirmation.",
+    "Send the installation view, intended tool connection and operating environment with your inquiry. Lubricant, fitting specification and maintenance interval need confirmation for the selected product and use.",
   ],
   gallery: [
     { ...greaseNipple.images[0], label: "Product view", width: 800, height: 800, caption: "Real product photograph · supplied company assets" },
@@ -197,7 +207,13 @@ export const greaseNippleDetail: ProductDetail = {
   customRequirement: explicitCustomRequirement([11]),
   manufacturing: manufacturingSummary,
   packaging: null,
-  faqs: productSafeFaqs("grease-nipple", "The source lists six exact compound size strings with product weights; no maintenance interval is published."),
+  faqs: [
+    { question: "What does the grease nipple do?", answer: "It provides a point for adding lubricant to the hinge. The fitting alone does not specify a lubricant, maintenance interval or load rating. Confirm those requirements for the selected hinge and application.", sourcePages: [11] },
+    { question: "How should I specify one of the six sizes?", answer: "Copy the complete size string from one table row, including its symbols and unit. If a particular body, pin or fitting dimension must match your assembly, mark it on a sketch. The compound size entry does not label every measurement position.", sourcePages: [11] },
+    { question: "How much room does the lubrication tool need?", answer: "Show enough space for the intended tool to reach, connect and disconnect in the maintenance position. Include the frame, door edge and any adjacent panel. The required space depends on the actual fitting and tool; no universal gap is given here.", sourcePages: [] },
+    { question: "Which grease should I use, and how often?", answer: "No grease specification or maintenance interval is published for this family. State the selected size, operating environment and expected use, and request the applicable instructions before setting a maintenance schedule.", sourcePages: [11] },
+    { question: "Can I request a change to the fitting or hinge dimensions?", answer: "Customization is listed for this family. Send the closest size, quantity and a drawing marking the requested change and available tool space. Fitting location, interface and dimensional changes require Requirement / Specification Confirmation.", sourcePages: [11] },
+  ],
 };
 
 const round = getProduct("round")!;

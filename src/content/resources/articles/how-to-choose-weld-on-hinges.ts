@@ -154,6 +154,30 @@ export const chooseWeldOnHinges = {
     {
       "type": "heading",
       "level": 2,
+      "id": "door-load-requirement",
+      "title": "Keep the door load separate from hinge size"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "weld-on-hinge-load-capacity",
+      "title": "How much door weight can a weld-on hinge support?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "There is no single load rating for all weld-on hinges. The weight shown in HINGETRA’s product tables is the hinge’s own mass. For example, the bearing entry ф16*100mm is listed at 142 g; that is not a door load rating."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Provide the exact hinge reference, door width and height, door weight, and hinge positions on an installation drawing. Ask for load suitability to be confirmed for that arrangement. A larger hinge or an additional hinge does not establish a capacity without that review."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
       "id": "prepare-rfq",
       "title": "Send one clear inquiry package"
     },
