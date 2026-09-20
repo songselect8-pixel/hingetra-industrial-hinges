@@ -40,10 +40,10 @@
     { "path": "src/app/contact/page.tsx", "sha256": "a0d7f20da214dd7ecfbc77f12ade72ec46dbac24ae102df8b3d04bebc777b5db" },
     { "path": "src/app/contact/contact.css", "sha256": "e874d8cd80d31b47aa0ab9ceb5fc5812545a69b07e57ef4cd909debfc3515945" },
     { "path": "src/components/contact/ContactPageContent.tsx", "sha256": "34a8abd6b96f31739fe3c1d1750b4d0fa407051965660856062e8403d936c7d2" },
-    { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "122a0b87faa6776d0e70c0342086b4c9c1feec8864ed42bc39815e346ac54734" },
+    { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "dd5e14b6a59191958d87bc5e8eb794b7388eec3f33b91ca0b4bc8f95de8252ea" },
     { "path": "src/data/contact.ts", "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8" },
     { "path": "src/data/contact-rfq.ts", "sha256": "a71ba3b1c40c3320c0e329f4555eb068c9f34b7a1dcd9a9f73216fae09e98986" },
-    { "path": "docs/contact-rfq-configuration.md", "sha256": "e840009a70ee1e18f9fcd27614e26e4188fe4c8596a8e83ce546599651acee8d" }
+    { "path": "docs/contact-rfq-configuration.md", "sha256": "8a490b270120b56cee375df83a11f29d716db3c05ccce007adc22116ad728e4a" }
   ],
   "brandIdentityUpdate": {
     "requestedAt": "2026-09-18",
@@ -76,6 +76,12 @@
     "requestedAt": "2026-09-19",
     "authorizedBy": "User requested shortening the Contact form while configuring the database",
     "scope": "Show name, email and a single requirement message by default. Keep optional uploads, product selection/specifications and business details in accessible native disclosure sections; make Contact company/country optional on client and server. Preserve surrounding page sections, shared catalog RFQ requirements, private storage, upload rules, input retention, anti-abuse controls and honest unconfigured delivery. No database migration changes.",
+    "record": "docs/contact-rfq-configuration.md"
+  },
+  "submissionResultUpdate": {
+    "requestedAt": "2026-09-20",
+    "authorizedBy": "User approved the new email notifications, requested restoring Cindy as recipient and replacing long submission messages with a success/failure icon and one short label",
+    "scope": "Use one-line Sent successfully / Send failed results, preserve accessible focus and announcements, field validation and real receipt checks, and remove visible receipt IDs and duplicate delivery-error paragraphs. Restore cindy@hingetra.com as the fixed notification recipient. Other page composition remains locked.",
     "record": "docs/contact-rfq-configuration.md"
   },
   "notificationEmailUpdate": {

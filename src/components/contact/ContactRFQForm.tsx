@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Arrow, Plus } from "@/components/ui/Arrow";
 import { InquiryPrivacy, InquirySecurity } from "@/components/inquiry/InquirySecurity";
+import { InquiryResult } from "@/components/inquiry/InquiryResult";
 import { postInquiry } from "@/lib/rfq-delivery";
 import { contactProductOptions } from "@/data/contact";
 import {
@@ -31,7 +32,6 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
   const attachmentsRef = useRef<HTMLDetailsElement>(null);
   const requestId = useRef<string | null>(null);
   const sending = useRef(false);
-  const [receipt, setReceipt] = useState("");
   const [attempt, setAttempt] = useState(0);
   const configured = Boolean(submissionEndpoint && process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim());
 
@@ -90,7 +90,6 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
 
     const body = new FormData(form);
     if (!body.get("cf-turnstile-response")) {
-      setErrors({ delivery: "Complete the security check below before submitting." });
       setDelivery("failed");
       return;
     }
@@ -101,11 +100,9 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
     sending.current = true;
     setDelivery("submitting");
     try {
-      const result = await postInquiry(submissionEndpoint, body);
-      setReceipt(result.inquiryId);
+      await postInquiry(submissionEndpoint, body);
       setDelivery("sent");
-    } catch (error) {
-      setErrors((current) => ({ ...current, delivery: error instanceof Error ? error.message : "No confirmation was received. Your entries are still available below." }));
+    } catch {
       setDelivery("failed");
     } finally {
       sending.current = false;
@@ -127,25 +124,18 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
     delivery: "contact-submit",
   })[name] ?? `contact-${name}`;
 
-  const notice = delivery === "not-configured"
-    ? { title: "Request checked, not sent.", text: "Inquiry delivery is not configured. Your entries and selected files remain in this browser tab; nothing has been transmitted." }
-    : delivery === "sent"
-      ? { title: "Inquiry received.", text: `Your inquiry and selected files have been saved. Reference: ${receipt}. Your entries remain visible for reference.` }
-      : delivery === "failed"
-        ? { title: "RFQ delivery failed.", text: "No confirmation was received. Review the message below or contact the company directly." }
-        : null;
-
   return (
     <form className="contact-rfq-form rfq-form" noValidate method="post" onSubmit={submit} aria-busy={delivery === "submitting"}>
       <div className="form-heading"><h3>Request a Quote</h3><span>* Required contact details</span></div>
       <p className="form-preview-note"><span aria-hidden="true" />{configured ? "Submit your requirement securely to HINGETRA." : "Preview · RFQs and files are not sent."}</p>
 
-      {(delivery === "invalid" || notice) && (
-        <div id="contact-form-result" ref={resultRef} tabIndex={-1} className={delivery === "invalid" || delivery === "failed" ? "form-error-summary" : "form-notice"} role={delivery === "invalid" || delivery === "failed" ? "alert" : "status"}>
-          <strong>{delivery === "invalid" ? "Please check the highlighted fields." : notice?.title}</strong>
+      {(delivery === "sent" || delivery === "failed") && <InquiryResult id="contact-form-result" resultRef={resultRef} success={delivery === "sent"} />}
+      {(delivery === "invalid" || delivery === "not-configured") && (
+        <div id="contact-form-result" ref={resultRef} tabIndex={-1} className={delivery === "invalid" ? "form-error-summary" : "form-notice"} role={delivery === "invalid" ? "alert" : "status"}>
+          <strong>{delivery === "invalid" ? "Please check the highlighted fields." : "Request checked, not sent."}</strong>
           {delivery === "invalid"
             ? <ul>{Object.entries(errors).map(([name, message]) => <li key={name}><Link href={`#${summaryTarget(name)}`}>{message}</Link></li>)}</ul>
-            : <p>{notice?.text}</p>}
+            : <p>Inquiry delivery is not configured. Your entries and selected files remain in this browser tab; nothing has been transmitted.</p>}
         </div>
       )}
 
@@ -212,10 +202,9 @@ export function ContactRFQForm({ submissionEndpoint }: { submissionEndpoint: str
       </fieldset>
 
       {configured && <><InquirySecurity attempt={attempt} /><InquiryPrivacy /></>}
-      {errors.delivery && <p id="contact-error-delivery" className="contact-delivery-error" role="alert">{errors.delivery}</p>}
       <div className="contact-form-bottom form-bottom">
         <p>{configured ? "Submitting shares your details and chosen files with HINGETRA as described above." : "Inquiry delivery is not configured in this preview. Nothing is transmitted or uploaded."}</p>
-        <button id="contact-submit" className="button button-primary" type="submit" disabled={delivery === "submitting" || delivery === "sent"}>{delivery === "submitting" ? "Sending inquiry" : delivery === "sent" ? "Inquiry received" : "Send inquiry"} <Arrow /></button>
+        <button id="contact-submit" className="button button-primary" type="submit" disabled={delivery === "submitting" || delivery === "sent"}>{delivery === "submitting" ? "Sending inquiry" : "Send inquiry"} <Arrow /></button>
       </div>
       <p className="contact-privacy-note">Your submitted information is intended to help understand and respond to your inquiry. No account registration is required.</p>
       <noscript><p className="contact-noscript">JavaScript is required to validate this form. Use the direct email or phone contact shown on this page.</p></noscript>

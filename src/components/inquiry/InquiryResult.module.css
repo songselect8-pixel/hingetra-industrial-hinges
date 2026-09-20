@@ -1,0 +1,11 @@
+.result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result.success {
+  border-color: #24834b;
+  background: #edf8f0;
+  color: #166534;
+}

@@ -117,7 +117,7 @@
     },
     {
       "path": "src/components/inquiry/RFQForm.tsx",
-      "sha256": "85cdaf06077e2b471d90ca6885585dcf2181a6e2c506867aa6caf830589e32a2"
+      "sha256": "481210692bb3b42a8e517d56f09208b53a4b298923e1f13e975da7cbad6c2817"
     },
     {
       "path": "src/components/ui/SupportingVisual.tsx",
@@ -323,6 +323,12 @@
     "scope": "Readability weights/text contrast and footer small print; shared native contact controls with visible demo disclosure; catalog-backed copy in existing About/Manufacturing overview sections. Preserve layouts, product data, imagery provenance, RFQ non-delivery and noindex policy.",
     "record": "docs/2026-09-19-readability-contact-factory-update.md",
     "backToTopVisibility": "User-requested refinement: hide at the top and on initial render; show after scrolling down. Shared component uses a passive scroll listener and page-restoration refresh, without changing contact links or styling."
+  },
+  "submissionResultUpdate": {
+    "requestedAt": "2026-09-20",
+    "authorizedBy": "User requested success/failure icons with short submission labels and restoration of Cindy as notification recipient",
+    "scope": "Simplify only the shared RFQ result messages using a scoped result component; preserve field order, existing form styling, validation, accessibility, real receipt checks and noindex policy.",
+    "record": "docs/contact-rfq-configuration.md"
   },
   "productionDeliveryUpdate": {
     "requestedAt": "2026-09-19",

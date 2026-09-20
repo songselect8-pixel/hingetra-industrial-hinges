@@ -64,7 +64,7 @@
     },
     {
       "path": "src/components/inquiry/RFQForm.tsx",
-      "sha256": "85cdaf06077e2b471d90ca6885585dcf2181a6e2c506867aa6caf830589e32a2"
+      "sha256": "481210692bb3b42a8e517d56f09208b53a4b298923e1f13e975da7cbad6c2817"
     },
     {
       "path": "src/components/sections/RFQSection.tsx",
@@ -108,6 +108,12 @@
     "authorizedBy": "User request for researched full-site SEO / AI-search improvements",
     "scope": "Nonvisual search metadata, canonical and sitemap/RSS consistency, default-off launch settings, RFQ fragment links, image loading priority and accessible names. Preserve approved layouts, technical data, source evidence, article text and checked-not-sent RFQ behavior.",
     "research": "docs/seo-geo-operations.md"
+  },
+  "submissionResultUpdate": {
+    "requestedAt": "2026-09-20",
+    "authorizedBy": "User requested success/failure icons with short submission labels and restoration of Cindy as notification recipient",
+    "scope": "Simplify shared RFQ result messages only; preserve the locked product detail composition, form fields, validation, accessibility and real receipt checks.",
+    "record": "docs/contact-rfq-configuration.md"
   },
   "productionDeliveryUpdate": {
     "requestedAt": "2026-09-19",
