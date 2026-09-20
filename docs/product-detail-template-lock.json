@@ -72,7 +72,7 @@
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "2e2da21a5802f0d303f309bcb238b862652cc083b2bfe3ed6b4d7303659db891"
+      "sha256": "157dd82f9acc445d468c5cd00c82a6b0608db640fbb0ed2461d84faed12786c0"
     },
     {
       "path": "src/data/products.ts",
@@ -120,5 +120,10 @@
     "authorizedBy": "User agreed to connect production inquiry delivery and asked how to store inquiry data",
     "scope": "Connect existing Contact and shared RFQ forms to gated same-origin Cloudflare Pages Functions with D1 records, private R2 attachments, Turnstile and fixed-recipient Resend notifications. Preserve page layouts, catalog data, honest unconfigured states, failure input retention and disabled indexing. Real resources, activation and inbox tests are pending.",
     "record": "docs/inquiry-storage-setup.md"
+  },
+  "contentRelease20260920": {
+    "authorizedBy": "Owner approved the researched SEO/content rollout and confirmed live inquiry delivery.",
+    "scope": "Correct the obsolete preview-only upload FAQ shared by ten product details. Preserve all layouts, source-backed product data and technical tables.",
+    "record": "docs/2026-09-20-content-release.md"
   }
 }

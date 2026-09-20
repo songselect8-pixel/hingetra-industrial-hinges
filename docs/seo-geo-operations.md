@@ -83,7 +83,7 @@ Bing Webmaster Tools 的 AI Performance 可观察引用次数、被引用页面�
 
 ## 测量与询盘运营
 
-上线后先验证 Search Console 和 Bing Webmaster Tools，配置已预留但账号尚未绑定。统计实施需与隐私方案一起确认，本轮没有植入 GA、录屏、Cookie 或第三方跟踪脚本。
+上线后先验证 Search Console 和 Bing Webmaster Tools，配置已预留但账号尚未绑定。本轮没有安装 GA、录屏或新的统计工具；线上浏览器已观察到 Cloudflare 后台注入的 Web Analytics 脚本，安全策略保留其脚本加载和数据采集端点。
 
 | 指标 | 口径 |
 | --- | --- |
@@ -110,7 +110,7 @@ Bing Webmaster Tools 的 AI Performance 可观察引用次数、被引用页面�
 
 按 [上线清单](pre-launch-checklist.md) 将 **Cloudflare Production** 的 `SEARCH_INDEXING_ENABLED` 设为 `true` 并重新部署。不要改变 GitHub Pages 的同名变量；它是另外一个静态预览。随后检查正式主域 robots、29 个内容页、sitemap、canonical 和响应头。
 
-在所有者 Google Search Console / Bing Webmaster Tools 账号完成验证，提交 `https://hingetra.com/sitemap.xml`。若采用 meta 验证，使用账号提供的公开值配置 `GOOGLE_SITE_VERIFICATION` / `BING_SITE_VERIFICATION`，不要使用 API 密钥。
+在所有者 Google Search Console / Bing Webmaster Tools 账号完成验证，提交 `https://hingetra.com/sitemap.xml`。用户于 2026-09-20 提供的 Google HTML 标记已作为正式域名的默认 metadata 验证值；如需替换，仍可使用 `GOOGLE_SITE_VERIFICATION` 覆盖。Bing 可使用 `BING_SITE_VERIFICATION` 配置账号提供的公开值；这些均不是 API 密钥。
 
 根路径 robots 必须实测；不能长期禁止抓取又期待爬虫读到页面 noindex。预览 noindex 不提供保密能力，客户图纸继续使用私有存储。[Google robots 指南](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt)
 

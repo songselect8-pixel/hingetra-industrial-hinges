@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   robots: { index: indexable, follow: indexable },
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION?.trim() || undefined,
+    google: process.env.GOOGLE_SITE_VERIFICATION?.trim() || (homeUrl === "https://hingetra.com/"
+      ? "v2F_jvW_aAyE1mwr_Z_cdxZK_1p_LXG7Sacd5ueE0jM" : undefined),
     other: process.env.BING_SITE_VERIFICATION?.trim()
       ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION.trim() } : undefined,
   },

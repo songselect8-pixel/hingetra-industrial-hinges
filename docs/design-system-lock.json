@@ -165,7 +165,7 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "d652cdaca2988393ccc324cd832397ba7ab623eba05a43b7a8dd4bdf548b90e4"
+      "sha256": "43cd680fc7f80f5eb4bf9aab119a95426c8098d23412e39d48f5350cf723ba82"
     },
     {
       "path": "src/data/catalog-overview.ts",
@@ -364,5 +364,10 @@
     "previousHash": "aef85ae14074f6fa4224eb956408323ab1193bbde0e63f8e596d7354686d07f3",
     "verifiedHash": "c778eb2f5f1166d079bc98acef203fbe4f2ecb873190ce52cf4bc6000b20cd52",
     "reason": "The tracked HEAD and working file already matched before this release; the old lock entry was stale. No catalog data was edited. Existing catalog/source tests pass."
+  },
+  "googleVerificationUpdate": {
+    "requestedAt": "2026-09-20",
+    "authorizedBy": "Owner supplied the Google Search Console HTML verification tag during the authorized SEO launch.",
+    "scope": "Set the owner-provided public token for the production origin in root metadata, retaining the environment override. No visible layout or content changes."
   }
 }

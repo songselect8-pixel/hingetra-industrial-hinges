@@ -37,12 +37,12 @@ The owner authorized execution of the research plan and confirmed the business/r
 6. Keep Cloudflare branch-preview environment indexing false. `public/_headers` also sends `noindex,nofollow` on production/deployment `pages.dev` aliases. Keep the separate GitHub Pages repository indexing variable false or unset.
 7. Verify domain ownership in the owner's Google Search Console and Bing Webmaster Tools and submit `https://hingetra.com/sitemap.xml`. Use genuine account-issued verification values; do not invent tokens. Missing meta tags do not prove DNS verification is absent.
 
-Current execution limitation: Wrangler is unauthenticated and browser inventory access failed on this machine. A local indexed build is verified, but it does not alter Cloudflare Production. Record actual deployment status in `docs/2026-09-20-content-release.md`.
+Production indexing was verified after deployment `6bb2071`: all 29 content pages return `index, follow`; robots permits crawling and lists the canonical sitemap; pages.dev aliases retain noindex. The owner supplied a Google HTML verification tag, now configured for the production domain in root metadata, with an optional environment override. Account verification and sitemap submission remain pending. Wrangler is unauthenticated and the user's browser tabs are inaccessible from this machine. Record subsequent account status in `docs/2026-09-20-content-release.md`.
 
 ## Deployment headers and regression
 
 - Static Pages responses use `public/_headers`: CSP, nosniff, framing restriction, Referrer-Policy and Permissions-Policy; production-only short HSTS without includeSubDomains/preload.
-- CSP allows Next's static inline scripts/styles and Cloudflare Turnstile. It is a compatibility baseline, not a claim of full XSS prevention. API response headers remain owned by the existing Function.
+- CSP allows Next's static inline scripts/styles, Cloudflare Turnstile, and the existing Cloudflare Web Analytics script/collection endpoints observed on production. It is a compatibility baseline, not a claim of full XSS prevention. API response headers remain owned by the existing Function.
 - Validate with `npm test`, `npm run typecheck`, static production build, `verify:static` and `verify:seo` using identical build/check environment.
 - Check updated pages at 1440, 1024, 768 and 390px, including title wrapping, tables, TOC targets, images and contact links.
 - Check the actual deployment headers and Turnstile resource loading after release. A production key on localhost can reject the hostname; do not label that as a successful challenge test.

@@ -12,7 +12,7 @@
 
 - Existing research and editorial brief are the design specification. Old routes, verified tables, photograph provenance, navigation and page layouts remain the base.
 - Owner confirmed 铰拓五金有限公司, indefinite retention, global English procurement audience, and Cindy receipt/attachments/direct replies. These factual dependencies are resolved.
-- Search configuration is prepared and checked, but the earlier launch gates require real recipient confirmation and business readiness. The owner authorized indexing. The remaining dependency is access to the Cloudflare Production variable, plus owner-account search verification.
+- The owner authorized indexing and changed Cloudflare Production to true. Live indexing is verified. The remaining account dependency is Google/Bing ownership verification and sitemap submission.
 - Do not send messages or fabricate inbox results. Do not install a full WordPress automation stack or publish topics with missing technical evidence.
 
 ## Work
@@ -36,4 +36,4 @@ Expected public content: 29 sitemap routes, ten articles, no new public draft ro
 
 97 tests passed, TypeScript passed, indexed static build passed; 32 HTML files, 29 content routes, ten articles and 1,053 fragments verified. Responsive checks: 13 routes at four widths, no H1/overflow/fragment/image failures. Expected local limitations and deployment evidence are recorded in docs/2026-09-20-content-release.md. Installed four skills; eight drafts remain unpublished. No email sent or new production dependency added.
 
-Deployment: b4f89cb passed GitHub build/deploy and Cloudflare Pages. Live 29-route and response-header checks passed. Owner reports Production indexing variable changed; final live indexing verification and Google/Bing ownership are pending external state.
+Deployment: b4f89cb and 6bb2071 passed GitHub build/deploy and Cloudflare Pages. Live 29-route and response-header checks passed. Production pages now allow indexing, robots permits crawling and lists the sitemap, and pages.dev aliases retain noindex. The owner supplied the Google meta verification token for deployment; Google/Bing account verification remains pending.

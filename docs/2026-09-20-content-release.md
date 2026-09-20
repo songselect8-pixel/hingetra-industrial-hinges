@@ -20,17 +20,17 @@
 - 开启搜索的静态生产构建通过，32 个 HTML 无坏链接/资源/开发地址；SEO 检查通过：29 内容页、10 文章、1,053 锚点链接。
 - 四宽度浏览器检查：1440、1024、768、390px，Resources 列表、全部十篇文章、两个共享/独立 FAQ 产品页，共 52 组合；状态 200、单 H1、无页面横向溢出、缺失本页锚点或已加载坏图片。
 - 证据：`output/playwright/seo-review.json` 和 `seo-*.png`。这些是本地忽略的 QA 输出，不是新增公开页面。
-- 本地浏览器限制：Next 16.3.3 在 Windows 导出部分 RSC 预加载文件时保留了 OS 路径分隔符，临时 review server 针对该路径映射；已独立确认 Linux 构建的生产同一请求为 200，没有修改网站框架来绕过本地问题。正式 Turnstile 密钥在 localhost 返回主机验证错误，不能把此检查称为真实验证码通过。
-- 临时服务修正 Windows 预加载路径后，桌面/手机目录点击、技术表格滚动及资源加载复查通过，无本地请求错误或页面异常；手机表格在容器内滚动，页面本身不溢出。136 个锁文件条目已复核，纠正一条早已过期的目录数据哈希，目录数据本身没有修改。
+- 本地浏览器限制：Next 16.3.3 在 Windows 导出部分 RSC 预加载文件时保留了 OS 路径分隔符，临时 review server 针对该路径映射；已独立确认 Linux 构建的生产同一请求为 200，没有修改网站框架来绕过本地问题。本地诊断使用的公开密钥及主机名配置不是正式验证码验收；生产收件、附件和回复仍以用户的实际验收为依据。
+- 临时服务修正 Windows 预加载路径后，桌面/手机目录点击、技术表格滚动及资源加载复查通过，无本地请求错误或页面异常；手机表格在容器内滚动，页面本身不溢出。收尾时全部 153 个锁文件条目已复核，纠正一条早已过期的目录数据哈希，目录数据本身没有修改。
 - 没有发送测试邮件；邮件、附件和回复结果来自用户的真实验收。API 保存回执依然不等同邮箱送达。
 
 ## 部署与账号事项
 
 内容提交 `b4f89cb` 已推送 main；GitHub build/deploy 与 Cloudflare Pages 均成功。线上 29 内容页均为 200、标题和描述独立、canonical/H1 正确；四篇新文、修正后的十个产品 FAQ、主体与保留文字、安全响应头均已发布。生产与部署 pages.dev 别名均有响应头 noindex。证据：`output/playwright/live-content-release.json`。
 
-用户随后确认已将 Cloudflare Production 的 `SEARCH_INDEXING_ENABLED` 改为 `true` 并重新部署。初次复查仍返回 noindex，因此搜索开放尚不能据用户操作就判定完成；收尾提交将触发使用当前云端配置的新构建，需继续实测。
+用户随后确认已将 Cloudflare Production 的 `SEARCH_INDEXING_ENABLED` 改为 `true` 并重新部署。提交 `6bb2071` 的 GitHub 与 Cloudflare 部署成功后，线上重新核验：29 个内容页均为 `index, follow`，`robots.txt` 为 `Allow: /` 并声明正式地图，所有 pages.dev 别名仍为响应头 noindex。抓取入口已开放；这不表示搜索引擎已收录或获得排名。
 
-本机 Wrangler 未登录；浏览器库存工具返回连接失败。Cloudflare 变量由用户亲自调整；R2 生命周期审查、Search Console / Bing 所有权验证和地图提交尚未完成。用户表示站长平台还未添加或不确定，已请求其 Google 账号生成的公开 HTML 验证标记。
+本机 Wrangler 未登录，用户浏览器标签连接不可用。Cloudflare 变量由用户亲自调整；R2 生命周期审查、Search Console / Bing 所有权验证和地图提交尚未完成。用户已提供 Google 公开 HTML 标记；按其最终提供的标记，在生产域名的 Next metadata 中设置默认验证值，仍允许环境变量覆盖。没有另外发布先前提供的 HTML 验证文件。上线后检查实际 head 标记，由用户在自己的 Google 账号中点击“验证”。本地生产构建、TypeScript、32 HTML 静态检查及 29 页 SEO 检查再次通过，导出首页的验证值与用户提供的标记完全一致。
 
 具体操作见 [上线清单](pre-launch-checklist.md)。正式地图为 `https://hingetra.com/sitemap.xml`，仅在确认真实索引策略后提交。代码和文件保留策略不代表已建立自动备份或故障告警，日常检查查询见 [询盘存储说明](inquiry-storage-setup.md)。
 
@@ -38,4 +38,4 @@
 
 产品技术参数来自仓库已审核的原始目录和结构化数据。新文的通用术语/安装讨论参考 [Guden bullet hinge listing](https://www.guden.com/catsearch/123/weld-on-bullet-hinges/1)、[Guden selection guide](https://www.guden.com/selection-guides/weld-on-hinges)、[Guden removable guide](https://www.guden.com/selection-guides/removable-hinges)、[PINET weld-on range](https://www.pinet-industrie.com/en/products/24875-weld-on-hinges-and-others)。正文已就具体引用设置链接，未移植同行的材料、库存、承重、定制范围或交期。
 
-响应头参考 [Cloudflare Pages headers](https://developers.cloudflare.com/pages/configuration/headers/) 与 [Turnstile CSP](https://developers.cloudflare.com/turnstile/reference/content-security-policy/)。静态 CSP 保留 Next 必需的 inline 许可，不作“彻底防止 XSS”的声明。
+响应头参考 [Cloudflare Pages headers](https://developers.cloudflare.com/pages/configuration/headers/)、[Turnstile CSP](https://developers.cloudflare.com/turnstile/reference/content-security-policy/) 与 [Cloudflare Web Analytics CSP](https://developers.cloudflare.com/fundamentals/reference/policies-compliances/content-security-policies/)。线上浏览器发现 Cloudflare 已注入访问统计脚本，因此 CSP 允许其脚本和采集端点；没有新增 GA 或其他分析工具。静态 CSP 保留 Next 必需的 inline 许可，不作“彻底防止 XSS”的声明。
