@@ -43,7 +43,7 @@
     { "path": "src/components/contact/ContactRFQForm.tsx", "sha256": "122a0b87faa6776d0e70c0342086b4c9c1feec8864ed42bc39815e346ac54734" },
     { "path": "src/data/contact.ts", "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8" },
     { "path": "src/data/contact-rfq.ts", "sha256": "a71ba3b1c40c3320c0e329f4555eb068c9f34b7a1dcd9a9f73216fae09e98986" },
-    { "path": "docs/contact-rfq-configuration.md", "sha256": "4281b5bb7b907118b3abf7952042cf7ca74147fd1c02cac8ffa2fd513c1a9aa2" }
+    { "path": "docs/contact-rfq-configuration.md", "sha256": "e840009a70ee1e18f9fcd27614e26e4188fe4c8596a8e83ce546599651acee8d" }
   ],
   "brandIdentityUpdate": {
     "requestedAt": "2026-09-18",
@@ -77,6 +77,12 @@
     "authorizedBy": "User requested shortening the Contact form while configuring the database",
     "scope": "Show name, email and a single requirement message by default. Keep optional uploads, product selection/specifications and business details in accessible native disclosure sections; make Contact company/country optional on client and server. Preserve surrounding page sections, shared catalog RFQ requirements, private storage, upload rules, input retention, anti-abuse controls and honest unconfigured delivery. No database migration changes.",
     "record": "docs/contact-rfq-configuration.md"
+  },
+  "notificationEmailUpdate": {
+    "requestedAt": "2026-09-20",
+    "authorizedBy": "User confirmed Contact notification receipt and R2 image storage, requested compact emails without empty fields, and explicitly chose original files attached to email with a private R2 copy retained",
+    "scope": "Format populated buyer details as readable plain text and attach validated original uploads to fixed-recipient notifications. Update the shared privacy disclosure to cover emailed file copies. Preserve form layouts, validation, private storage, failure handling, public Cindy contact and noindex policy; continue the previously authorized sales test recipient.",
+    "record": "docs/inquiry-storage-setup.md"
   },
   "productionDeliveryUpdate": {
     "requestedAt": "2026-09-19",

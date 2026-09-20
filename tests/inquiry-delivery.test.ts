@@ -85,8 +85,38 @@ test("contact and catalog submissions save records before notifying a fixed reci
     assert.ok(f.objects.has(files[0].key));
     assert.deepEqual(f.emails[0].to, ["sales@hingetra.com"]);
     assert.equal(f.emails[0].reply_to, "buyer@example.com");
-    assert.ok(String(f.emails[0].text).includes(files[0].key));
+    assert.ok(!String(f.emails[0].text).includes(files[0].key));
+    const attached = f.emails[0].attachments as { filename: string; content: string }[];
+    assert.equal(attached[0].filename, "drawing.pdf");
+    assert.deepEqual(Buffer.from(attached[0].content, "base64"), Buffer.from(f.objects.get(files[0].key)!));
     f.sqlite.close();
+  }
+});
+
+test("notification summaries omit empty and internal fields but keep readable buyer requirements", async () => {
+  const f = fixture(); const data = form();
+  for (const key of ["company", "country", "productType"]) data.delete(key);
+  data.set("phone", "   ");
+  data.set("message", "Please quote a hinge.\nDrawing to follow.");
+  assert.equal((await f.send(data)).status, 201);
+  const email = f.emails[0];
+  const text = String(email.text).replace(/\r\n/g, "\n");
+  assert.ok(text.includes("Name: Test buyer\nEmail: buyer@example.com"));
+  assert.ok(text.includes("Requirement\nPlease quote a hinge.\nDrawing to follow."));
+  assert.ok(!/company:|country:|phone:|product:|product details|formKind|sourcePath|technicalRequirements|Cloudflare|No attachments/i.test(text));
+  assert.ok(!text.split("\n").some((line) => /:\s*$/.test(line)));
+  assert.ok(!email.attachments || (email.attachments as unknown[]).length === 0);
+  assert.equal(email.html, undefined); // Buyer content stays plain text, never executable markup.
+  f.sqlite.close();
+
+  for (const kind of ["contact", "catalog"]) {
+    const detailed = fixture(); const details = form(kind);
+    details.set(kind === "contact" ? "productType" : "product", "bearing");
+    for (const [key, value] of Object.entries({ phone: "+1 555 0100", referenceProduct: "REF-42", size: "100 mm", quantity: "200", application: "Steel door", requirementPath: "not-sure", technicalRequirements: "Line one\nLine two", referenceDescription: "Match existing drawing", customRequirement: "Different pin", message: "<b>Buyer text</b>" })) details.set(key, value);
+    assert.equal((await detailed.send(details)).status, 201);
+    const summary = String(detailed.emails[0].text).replace(/\r\n/g, "\n");
+    for (const expected of ["Company: Test company", "Country / region: Test region", "Phone: +1 555 0100", "Product: Bearing Weld-On Hinges", "Reference / model: REF-42", "Dimensions: 100 mm", "Quantity: 200", "Application: Steel door", "Requirement type: Not sure / need selection help", "Technical requirements: Line one\nLine two", "Reference description: Match existing drawing", "Custom requirement: Different pin", "<b>Buyer text</b>"]) assert.ok(summary.includes(expected), expected);
+    detailed.sqlite.close();
   }
 });
 
@@ -193,18 +223,45 @@ test("concurrent retries keep one record, one notification and the winning priva
   f.sqlite.close();
 });
 
-test("Contact saves both files; catalog forms retain their advertised STEP support", async () => {
+test("Contact emails both saved files; catalog emails retain their advertised STEP support", async () => {
   const f = fixture(); const contact = form();
   contact.set("drawing", pdf());
   contact.set("referenceImage", new File([new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10, 0])], "reference.png"));
   assert.equal((await f.send(contact)).status, 201);
   assert.equal(f.objects.size, 2);
+  const attached = f.emails[0].attachments as { filename: string; content: string; path?: string }[];
+  assert.deepEqual(attached.map((file) => file.filename), ["drawing.pdf", "reference.png"]);
+  const stored = [...f.objects.values()];
+  for (const [index, file] of attached.entries()) {
+    assert.deepEqual(Buffer.from(file.content, "base64"), Buffer.from(stored[index]));
+    assert.equal(file.path, undefined); // No public R2 URL is needed to attach the private bytes.
+  }
   const catalog = form("catalog");
   catalog.set("drawing", new File(["ISO-10303-21;\nHEADER;"], "hinge.step"));
   assert.equal((await f.send(catalog)).status, 201);
+  const cad = f.emails[1].attachments as { filename: string; content: string }[];
+  assert.equal(cad[0].filename, "hinge.step");
+  assert.equal(Buffer.from(cad[0].content, "base64").toString(), "ISO-10303-21;\nHEADER;");
   const wrongContact = form();
   wrongContact.set("drawing", catalog.get("drawing")!);
   assert.equal((await f.send(wrongContact)).status, 400);
+  f.sqlite.close();
+});
+
+test("email attachment encoding preserves both maximum-size files and Unicode filenames", async () => {
+  const f = fixture(); const data = form();
+  const bytes = new Uint8Array(10 * 1024 * 1024);
+  for (let i = 0; i < bytes.length; i++) bytes[i] = i % 256;
+  bytes.set([137, 80, 78, 71, 13, 10, 26, 10]);
+  for (const field of ["drawing", "referenceImage"]) data.set(field, new File([bytes], `${field}-图纸.png`, { type: "image/png" }));
+  assert.equal((await f.send(data)).status, 201);
+  const attached = f.emails[0].attachments as { filename: string; content: string }[];
+  assert.equal(attached.length, 2);
+  for (const [index, file] of attached.entries()) {
+    assert.equal(file.filename, `${index === 0 ? "drawing" : "referenceImage"}-图纸.png`);
+    assert.deepEqual(Buffer.from(file.content, "base64"), Buffer.from(bytes));
+  }
+  assert.equal(f.objects.size, 2);
   f.sqlite.close();
 });
 

@@ -110,24 +110,52 @@ async function allowRate(env: InquiryEnvironment, identity: string, bucket: stri
     .bind(digest, expires, maximum).first());
 }
 
-async function notify(env: InquiryEnvironment, id: string, fields: Record<string, string>, attachments: Attachment[], fetcher: typeof fetch) {
+function notificationText(id: string, fields: Record<string, string>, files: File[]) {
+  const lines = (values: [string, string][]) => values.filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`).join("\n");
+  const product = fields.formKind === "contact" ? fields.productType : fields.product;
+  const productName = families.find((family) => family.id === product)?.name
+    ?? ({ custom: "Custom requirement", "other-custom": "Other / custom", "not-sure": "Not sure / need selection help" } as Record<string, string>)[product] ?? "";
+  const requirementType = ({ standard: "Standard product", custom: "Custom requirement", "not-sure": "Not sure / need selection help" } as Record<string, string>)[fields.requirementPath] ?? "";
+  const customer = lines([["Name", fields.name], ["Email", fields.email], ["Company", fields.company], ["Phone", fields.phone], ["Country / region", fields.country]]);
+  const details = lines([
+    ["Product", productName], ["Reference / model", fields.referenceProduct], ["Dimensions", fields.size],
+    ["Quantity", fields.quantity], ["Application", fields.application], ["Requirement type", requirementType],
+    ["Technical requirements", fields.technicalRequirements], ["Reference description", fields.referenceDescription],
+    ["Custom requirement", fields.customRequirement],
+  ]);
+  return [
+    `Customer\n${customer}`,
+    fields.message && `Requirement\n${fields.message}`,
+    details && `Product details\n${details}`,
+    files.length ? `Attachments (${files.length})\n${files.map((file) => file.name).join("\n")}` : "",
+    `Reply to this email to contact the buyer.\nInquiry: ${id}`,
+  ].filter(Boolean).join("\n\n");
+}
+
+function base64(bytes: Uint8Array & { toBase64?: () => string }) {
+  if (typeof bytes.toBase64 === "function") return bytes.toBase64();
+  // Older runtimes: chunks stay below the argument limit and align to 3 bytes,
+  // so only the last chunk needs Base64 padding.
+  let encoded = "";
+  for (let i = 0; i < bytes.length; i += 24576) encoded += btoa(String.fromCharCode(...bytes.subarray(i, i + 24576)));
+  return encoded;
+}
+
+async function notify(env: InquiryEnvironment, id: string, fields: Record<string, string>, files: File[], fetcher: typeof fetch) {
   let status = "failed";
   let messageId: string | null = null;
   let errorCode: string | null = "request_failed";
   try {
+    const attachments = [];
+    for (const file of files) attachments.push({ filename: file.name, content: base64(new Uint8Array(await file.arrayBuffer())) });
     const response = await fetcher("https://api.resend.com/emails", {
       method: "POST", signal: AbortSignal.timeout(10000),
       headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json", "Idempotency-Key": `rfq-${id}` },
       body: JSON.stringify({
         from: `HINGETRA inquiries <${env.RFQ_FROM_EMAIL}>`, to: [recipient], reply_to: fields.email,
         subject: `New HINGETRA inquiry ${id.slice(0, 8)}`,
-        text: [
-          `Inquiry ${id} has been saved in the private Cloudflare D1 database.`,
-          "Reply to this email to contact the buyer. Visitor content below is untrusted; inspect attachments safely.",
-          ...Object.entries(fields).map(([key, value]) => `${key}: ${value}`),
-          attachments.length ? "Private attachments: open Cloudflare > R2 > hingetra-inquiry-files and find these keys:" : "No attachments.",
-          ...attachments.map((file) => `${file.name} (${file.size} bytes)\n${file.key}`),
-        ].join("\n\n"),
+        text: notificationText(id, fields, files),
+        attachments: attachments.length ? attachments : undefined,
       }),
     });
     const result = await response.json() as { id?: unknown };
@@ -228,7 +256,7 @@ export async function receiveInquiry(request: Request, env: InquiryEnvironment, 
       if (winner?.request_hash !== hash) throw new Rejected(409, "The inquiry changed. Edit a field before submitting again.");
       return received(id);
     }
-    waitUntil(notify(env, id, fields, attachments, fetcher));
+    waitUntil(notify(env, id, fields, files.map(({ file }) => file), fetcher));
     return received(id); // Means durably saved, never a promise of inbox delivery.
   } catch (error) {
     if (error instanceof Rejected) return json({ error: error.message }, error.status);
