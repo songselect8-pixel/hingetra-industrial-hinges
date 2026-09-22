@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { bearingDetail } from "@/data/product-details";
 import { getProduct } from "@/data/products";
 import { site } from "@/data/site";
+import { buildFaqSchema, buildProductSchema } from "@/lib/product-schema";
 import { ProductDetailTemplate } from "@/components/products/detail/ProductDetailTemplate";
 import "../products.css";
 import "./product-detail.css";
@@ -27,6 +28,13 @@ export default function BearingWeldOnHingesPage() {
       { "@type": "ListItem", position: 3, name: bearingDetail.title, item: joinSiteUrl(baseUrl, product.detailPath) },
     ],
   };
+  const productSchema = buildProductSchema(baseUrl, bearingDetail, product);
+  const faqSchema = buildFaqSchema(bearingDetail);
 
-  return <><ProductDetailTemplate detail={bearingDetail} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} /></>;
+  return <>
+    <ProductDetailTemplate detail={bearingDetail} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }} />
+  </>;
 }

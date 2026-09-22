@@ -5,6 +5,7 @@ import { ProductDetailTemplate } from "@/components/products/detail/ProductDetai
 import { getProductDetailBySlug } from "@/data/product-details";
 import { getProduct, products } from "@/data/products";
 import { site } from "@/data/site";
+import { buildFaqSchema, buildProductSchema } from "@/lib/product-schema";
 import "../products.css";
 import "../bearing-weld-on-hinges/product-detail.css";
 
@@ -55,6 +56,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
       { "@type": "ListItem", position: 3, name: detail.title, item: joinSiteUrl(baseUrl, product.detailPath) },
     ],
   };
+  const productSchema = buildProductSchema(baseUrl, detail, product);
+  const faqSchema = buildFaqSchema(detail);
 
-  return <><ProductDetailTemplate detail={detail} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} /></>;
+  return <>
+    <ProductDetailTemplate detail={detail} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }} />
+  </>;
 }
