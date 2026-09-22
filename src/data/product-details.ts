@@ -306,7 +306,14 @@ export const flagDetail: ProductDetail = {
   customRequirement: explicitCustomRequirement([14, 15]),
   manufacturing: manufacturingSummary,
   packaging: null,
-  faqs: productSafeFaqs("flag", "The catalog contains two separate Flag Type structures with five and four published size-and-weight records respectively."),
+  faqs: [
+    ...productSafeFaqs("flag", "The catalog contains two separate Flag Type structures with five and four published size-and-weight records respectively."),
+    {
+      question: "Are the two Flag Type structures interchangeable?",
+      answer: "The catalog presents them as two separate structures: the cylindrical-body design has five published records and the rectangular-leaf design has four. Their values are not merged, so select the structure and complete record that match your installation.",
+      sourcePages: [14, 15],
+    },
+  ],
 };
 
 const gasket = getProduct("gasket")!;
@@ -424,7 +431,14 @@ export const squareDetail: ProductDetail = {
   customRequirement: explicitCustomRequirement([13]),
   manufacturing: manufacturingSummary,
   packaging: null,
-  faqs: productSafeFaqs("square", "The catalog publishes one Square Type size and product weight. Its complete notation, including Φ, is preserved."),
+  faqs: [
+    ...productSafeFaqs("square", "The catalog publishes one Square Type size and product weight. Its complete notation, including Φ, is preserved."),
+    {
+      question: "How should I reference the Square Type size in an inquiry?",
+      answer: "Copy the complete published Square Type size notation, including the Φ symbol, and include the product weight record. The dimension order is retained exactly as printed, without interpretation.",
+      sourcePages: [13],
+    },
+  ],
 };
 
 export const productDetails: readonly ProductDetail[] = [
