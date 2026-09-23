@@ -27,6 +27,8 @@ The route reuses the approved header, footer, IBM Plex Sans hierarchy, navy / wh
 
 Catalog page 19 supports Eric Huang, Pinghu Yipinxiang Machinery Technology Co., Ltd., `hjhuman0205@gmail.com` and `+86 18767359360`. These values live in `src/data/contact.ts` with optional environment overrides so they can be updated without editing UI components. The route publishes no street address, map, business hours, WhatsApp number, branch, office or response-time promise.
 
+**Change record — 2026-09-23:** The owner authorized replacing the public website contact set with Cindy, `cindy@hingetra.com`, and `+86 15584143652` (phone href `+8615584143652`). The catalog p19 contact values above remain historical source evidence; they are no longer used as the website's public contact values.
+
 Product options are derived from `families` in `src/data/catalog.ts`, followed by Other / Custom Requirement and Not Sure. Application entry points reuse the existing Applications route and its approved anchors; they do not recommend a definitive hinge family.
 
 ## Form architecture

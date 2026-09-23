@@ -4,15 +4,15 @@ The `/contact` page is implemented as a validated RFQ interface. It does not tra
 
 ## Contact values
 
-The user-approved business display name and contact fallback values live in `src/data/contact.ts`. The email was updated by the user on 2026-09-19; the contact name and voice-phone number still follow catalog page 19. The business name defaults to the shared HINGETRA identity in `src/data/site.ts`; the owner separately confirmed the operating legal entity 铰拓五金有限公司 on 2026-09-20. They can be updated before deployment with these server environment variables:
+The user-approved business display name and contact fallback values live in `src/data/contact.ts`. On 2026-09-23, the owner authorized the site-wide public contact set: Cindy, `cindy@hingetra.com`, and `+86 15584143652` (phone href `+8615584143652`). The business name defaults to the shared HINGETRA identity in `src/data/site.ts`; the owner separately confirmed the operating legal entity 铰拓五金有限公司 on 2026-09-20. They can be updated before deployment with these server environment variables:
 
 | Variable | Current fallback |
 | --- | --- |
 | `CONTACT_COMPANY_NAME` | `Hingetra Industrial Hinges` (user-approved business display name) |
-| `CONTACT_PERSON_NAME` | `Eric Huang` |
+| `CONTACT_PERSON_NAME` | `Cindy` |
 | `CONTACT_EMAIL` | `cindy@hingetra.com` (shared with the floating email link) |
-| `CONTACT_PHONE_DISPLAY` | `+86 18767359360` |
-| `CONTACT_PHONE_HREF` | `+8618767359360` |
+| `CONTACT_PHONE_DISPLAY` | `+86 15584143652` |
+| `CONTACT_PHONE_HREF` | `+8615584143652` |
 
 Do not add a street address, map or another contact channel without verified source information.
 

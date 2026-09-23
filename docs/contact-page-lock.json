@@ -37,7 +37,7 @@
     "Do not implement SMTP, email APIs or another external email service without explicit user authorization. Cloudflare inquiry storage and Resend notification were authorized on 2026-09-19 as recorded in productionDeliveryUpdate.",
     "Before production, connect the RFQ form to a real server-side delivery system and perform a real submission test to the configured inquiry recipient.",
     "Keep product options derived from the existing catalog family data rather than maintaining a second product taxonomy.",
-    "Keep the user-approved business display name and catalog-confirmed Eric Huang, email and phone values configurable through the recorded environment variables; the brand update does not verify a new registered legal entity.",
+    "Keep the user-approved business display name and the owner-authorized public contact values Cindy, cindy@hingetra.com and +86 15584143652 configurable through the recorded environment variables; the brand update does not verify a new registered legal entity.",
     "Do not add an unverified address, map, contact channel, office, branch, business hour or response-time promise.",
     "Do not add MOQ, lead-time, sample-time, load, tolerance, certification, payment, shipping-time or other unsupported technical or commercial claims.",
     "Keep the current accepted file formats and 10 MB client limit aligned with the future receiving endpoint; narrow both together if production support differs.",
@@ -54,7 +54,7 @@
     },
     {
       "path": "src/components/contact/ContactPageContent.tsx",
-      "sha256": "34a8abd6b96f31739fe3c1d1750b4d0fa407051965660856062e8403d936c7d2"
+      "sha256": "b17ef1a96fbf709253e817172dcb2b08eeda9b502fbd12c88b2cf421252b4827"
     },
     {
       "path": "src/components/contact/ContactRFQForm.tsx",
@@ -62,7 +62,7 @@
     },
     {
       "path": "src/data/contact.ts",
-      "sha256": "d14e0f0de6db59e2cb5a2f24c68387505c38c852088c5c5b0a7ac54978d04aa8"
+      "sha256": "36a28da6899305060c2c72b1ed2091cfd5f932ea66bffa0f5190919a829308dd"
     },
     {
       "path": "src/data/contact-rfq.ts",
@@ -70,7 +70,7 @@
     },
     {
       "path": "docs/contact-rfq-configuration.md",
-      "sha256": "84eb2d4bc08580711774568945b2ba4a3675233b78f2725402c34371193e3a79"
+      "sha256": "1413ff7a92ba323fd6b8064700e88677f2c8cbf726e22b3bbca5373f38941122"
     }
   ],
   "brandIdentityUpdate": {
@@ -131,5 +131,19 @@
       "docs/contact-rfq-configuration.md"
     ],
     "validation": "97 automated tests, TypeScript, indexed static build, 29-route SEO/link checks; responsive results recorded in docs/2026-09-20-content-release.md."
+  },
+  "publicContactUpdate20260923": {
+    "requestedAt": "2026-09-23",
+    "authorizedBy": "User authorized site-wide public contact values: Cindy, cindy@hingetra.com and +86 15584143652.",
+    "scope": "Replace the public contact fallback and visible Contact-page phone values previously associated with catalog Eric Huang / +86 18767359360. Remove the invalid catalog p19 phone attribution. Preserve the RFQ form, page composition, verified business identity, no-address rule and source archive; catalog-data-draft.json remains unchanged as historical evidence.",
+    "changedFiles": [
+      "src/data/contact.ts",
+      "src/components/contact/ContactPageContent.tsx",
+      "tests/contact.test.ts",
+      "docs/contact-rfq-configuration.md",
+      "docs/superpowers/specs/2026-09-02-contact-rfq-page-design.md",
+      "docs/contact-page-lock.json"
+    ],
+    "validation": "TypeScript, project tests, static build and out/contact/index.html contact-value checks are required after this change."
   }
 }

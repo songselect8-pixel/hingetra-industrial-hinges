@@ -25,11 +25,10 @@ test("Contact data uses the approved brand, updated email, catalog phone and exi
 
   assert.deepEqual(contactDetails, {
     company: "Hingetra Industrial Hinges",
-    contact: "Eric Huang",
+    contact: "Cindy",
     email: "cindy@hingetra.com",
-    phoneDisplay: "+86 18767359360",
-    phoneHref: "+8618767359360",
-    sourcePage: 19,
+    phoneDisplay: "+86 15584143652",
+    phoneHref: "+8615584143652",
   });
   assert.deepEqual(
     contactProductOptions.slice(0, families.length),

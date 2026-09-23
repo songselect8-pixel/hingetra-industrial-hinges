@@ -8,11 +8,10 @@ function configured(name: string, fallback: string) {
 
 export const contactDetails = {
   company: configured("CONTACT_COMPANY_NAME", site.companyName),
-  contact: configured("CONTACT_PERSON_NAME", "Eric Huang"),
+  contact: configured("CONTACT_PERSON_NAME", "Cindy"),
   email: configured("CONTACT_EMAIL", quickContact.email),
-  phoneDisplay: configured("CONTACT_PHONE_DISPLAY", "+86 18767359360"),
-  phoneHref: configured("CONTACT_PHONE_HREF", "+8618767359360"),
-  sourcePage: 19,
+  phoneDisplay: configured("CONTACT_PHONE_DISPLAY", "+86 15584143652"),
+  phoneHref: configured("CONTACT_PHONE_HREF", "+8615584143652"),
 } as const;
 
 export const contactProductOptions = [
