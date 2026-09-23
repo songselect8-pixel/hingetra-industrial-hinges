@@ -1,0 +1,53 @@
+# HINGETRA
+
+> HINGETRA (operated by 铰拓五金有限公司) is a factory-direct manufacturer of industrial weld-on hinges for steel doors, gates, trailer doors, ramps, electrical cabinets and control cabinets. Standard catalog profiles plus custom hinges made to drawing.
+
+Core facts: weld-on (weldable) hinges only, carbon steel, factory-direct supply, custom manufacturing to customer drawing, published catalog sizes with weights, RFQ-based quotation (no public price list).
+
+## Product range
+
+- [Bearing Type Weld-On Hinges](https://hingetra.com/products/bearing-weld-on-hinges/): 18 published catalog size/weight entries, drawings and RFQ.
+- [Pin Type Weld-On Hinges](https://hingetra.com/products/pin-weld-on-hinges/): 5 published catalog size/weight entries, drawings and RFQ.
+- [Grease Nipple Type Weld-On Hinges](https://hingetra.com/products/grease-nipple-weld-on-hinges/): 6 published catalog size/weight entries, drawings and RFQ.
+- [Round Type Weld-On Hinges](https://hingetra.com/products/round-weld-on-hinges/): 6 published catalog size/weight entries, drawings and RFQ.
+- [Adjustable Weld-On Hinges](https://hingetra.com/products/adjustable-weld-on-hinges/): 3 published catalog size/weight entries, drawings and RFQ.
+- [Flag Type Weld-On Hinges](https://hingetra.com/products/flag-weld-on-hinges/): 9 published catalog size/weight entries, drawings and RFQ.
+- [Gasket Type Weld-On Hinges](https://hingetra.com/products/gasket-weld-on-hinges/): 7 published catalog size/weight entries, drawings and RFQ.
+- [20 Type Weld-On Hinges](https://hingetra.com/products/20-type-weld-on-hinges/): 2 published catalog size/weight entries, drawings and RFQ.
+- [12 / 14 / 16 Type Weld-On Hinges](https://hingetra.com/products/12-14-16-type-weld-on-hinges/): 3 published catalog size/weight entries, drawings and RFQ.
+- [Square Type Weld-On Hinges](https://hingetra.com/products/square-weld-on-hinges/): 1 published catalog size/weight entries, drawings and RFQ.
+
+## Applications
+
+- Industrial steel doors: https://hingetra.com/applications/#industrial-steel-doors
+- Gates, trailer doors and ramps: https://hingetra.com/applications/#gates-trailers-ramps
+- Electrical and control cabinets: https://hingetra.com/applications/#electrical-control-cabinets
+
+## Guides
+
+- [How to Choose a Weld-On Hinge for an Industrial Application](https://hingetra.com/resources/how-to-choose-weld-on-hinges/)
+- [Weld-On Hinge Sizes](https://hingetra.com/resources/weld-on-hinge-sizes/)
+- [Weld-On Hinges for Gates, Trailer Doors and Ramps](https://hingetra.com/resources/weld-on-hinges-for-gates-trailer-doors-and-ramps/)
+- [Weld-On Hinges for Electrical and Control Cabinets](https://hingetra.com/resources/weld-on-hinges-for-electrical-control-cabinets/)
+- [Standard vs Custom Weld-On Hinges](https://hingetra.com/resources/standard-vs-custom-weld-on-hinges/)
+- [How to Prepare a Hinge Drawing and Dimension Request](https://hingetra.com/resources/prepare-hinge-drawing-dimension-request/)
+- [Bullet and Barrel Weld-On Hinge Names](https://hingetra.com/resources/bullet-barrel-weld-on-hinge-names/)
+- [Bearing, Pin and Washer Weld-On Hinges](https://hingetra.com/resources/bearing-pin-washer-weld-on-hinges/)
+- [Grease Fitting Weld-On Hinges](https://hingetra.com/resources/grease-fitting-weld-on-hinges/)
+- [Weld-On Hinge Alignment and Removal Clearance](https://hingetra.com/resources/weld-on-hinge-alignment-and-removal-clearance/)
+
+## Company and capability
+
+- Custom hinges made to drawing: https://hingetra.com/custom-hinges/
+- Manufacturing capability (lathe, punching, assembly): https://hingetra.com/manufacturing/
+- Quality control and inspection: https://hingetra.com/quality/
+- About HINGETRA: https://hingetra.com/about-us/
+- Contact and RFQ: https://hingetra.com/contact/
+
+## How to specify a weld-on hinge enquiry
+
+Send: hinge type or closest catalog size, pin/barrel diameter and length, leaf dimensions, door weight and dimensions, number of hinges and positions, quantity, material/finish requirement, and a drawing or marked sketch.
+
+Optional:
+
+- Full sitemap: https://hingetra.com/sitemap.xml

@@ -1,4 +1,4 @@
-import { joinSiteUrl } from "@/lib/site-url";
+﻿import { joinSiteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ResourceArticleTemplate } from "@/components/resources/ResourceArticleTemplate";
@@ -67,6 +67,7 @@ export default async function ResourceArticlePage({ params }: ResourcePageProps)
     dateModified: article.updatedAt ?? article.publishedAt,
     image: joinSiteUrl(baseUrl, article.featuredImage),
     mainEntityOfPage: url,
+    author: { "@type": "Organization", "@id": `${joinSiteUrl(baseUrl, "/")}#organization`, name: resourcePublisher.name },
     publisher: { "@type": "Organization", "@id": `${joinSiteUrl(baseUrl, "/")}#organization`, name: resourcePublisher.name, logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo) } },
   };
   const faqSchema = buildResourceFaqSchema(article, url);

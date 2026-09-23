@@ -18,7 +18,7 @@ const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 export const metadata: Metadata = {
   title, description,
   alternates: { canonical: "/products" },
-  openGraph: { title, description, url: "/products", type: "website", locale: "en_US", siteName: site.brand, images: [{ url: "/images/hinge-pin-hero.jpg", width: 5252, height: 3505, alt: "Pin-type water-drop weld-on hinge, assembled body and separated pin" }] },
+  openGraph: { title, description, url: "/products", type: "website", locale: "en_US", siteName: site.brand, images: [{ url: "/images/og/hingetra-og.jpg", width: 1200, height: 630, alt: "HINGETRA industrial weld-on hinge product range" }] },
 };
 
 export default function ProductsPage() {

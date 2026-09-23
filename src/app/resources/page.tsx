@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/resources" },
-  openGraph: { title, description, url: "/resources", type: "website", locale: "en_US", siteName: site.brand, images: [{ url: "/images/hinge-pin-hero.jpg", width: 5252, height: 3505, alt: "Industrial pin-type weld-on hinge product photograph" }] },
+  openGraph: { title, description, url: "/resources", type: "website", locale: "en_US", siteName: site.brand, images: [{ url: "/images/og/hingetra-og.jpg", width: 1200, height: 630, alt: "HINGETRA industrial weld-on hinge technical resources" }] },
 };
 
 export default function ResourcesPage() {

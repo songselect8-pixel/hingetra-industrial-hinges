@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 const baseUrl = (process.env.SITE_URL || "http://127.0.0.1:3000").replace(/\/$/, "");
 
 // This launch-ready inventory does not override the global preview noindex gate.
-// Unknown modification dates are omitted rather than fabricated on each build.
+// Modification dates are emitted only where the content source provides a verifiable date.
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["/", "/products", ...navigation.filter((item) => item.href.startsWith("/")).map((item) => item.href)];
   const productPages = products.filter((product) => product.detailPagePublished).map((product) => product.detailPath);
