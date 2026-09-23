@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ResourceArticleTemplate } from "@/components/resources/ResourceArticleTemplate";
 import { getPublishedResources, getResourceArticle, isPublicResource, resourcePublisher } from "@/content/resources";
 import { site } from "@/data/site";
+import { buildResourceFaqSchema } from "@/lib/resource-schema";
 import "../resources.css";
 import "./article.css";
 
@@ -68,5 +69,11 @@ export default async function ResourceArticlePage({ params }: ResourcePageProps)
     mainEntityOfPage: url,
     publisher: { "@type": "Organization", "@id": `${joinSiteUrl(baseUrl, "/")}#organization`, name: resourcePublisher.name, logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo) } },
   };
-  return <><ResourceArticleTemplate article={article} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} /></>;
+  const faqSchema = buildResourceFaqSchema(article, url);
+  return <>
+    <ResourceArticleTemplate article={article} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} />
+    {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }} />}
+  </>;
 }
