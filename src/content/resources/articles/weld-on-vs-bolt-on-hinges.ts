@@ -1,0 +1,86 @@
+import { resourcePublisher } from "../publishing.ts";
+import { resourceLink, type ResourceArticle } from "../types.ts";
+
+export const weldOnVsBoltOn = {
+  slug: "weld-on-vs-bolt-on-hinges",
+  order: 11,
+  title: "Weld-On vs Bolt-On Hinges: Installation, Removal and Selection",
+  description: "Compare welded and bolted hinge mounting, access for replacement, finishing and quotation requirements. Check the complete assembly before comparing load claims.",
+  category: "selection-guides",
+  publishedAt: "2026-10-12",
+  updatedAt: null,
+  author: resourcePublisher.name,
+  featuredImage: "/images/hinge-pin-hero.jpg",
+  featuredImageAlt: "Assembled and separated HINGETRA pin-type weld-on hinge; a weld-on product reference",
+  featuredImageWidth: 5252,
+  featuredImageHeight: 3505,
+  keywords: ["weld-on vs bolt-on hinges", "weldable hinges", "industrial hinge mounting", "removable weld-on hinges"],
+  relatedProducts: ["pin", "round", "12-14-16-type"],
+  relatedApplications: [],
+  relatedArticles: ["weld-on-hinge-alignment-and-removal-clearance", "weld-on-hinge-materials-and-finishes", "prepare-hinge-drawing-dimension-request"],
+  draft: false,
+  noindex: false,
+  featured: false,
+  introduction: "Start with the joint between the hinge and the frame. A weld-on hinge needs a compatible welded connection; a bolt-on hinge needs a defined fastener and mounting arrangement. Either choice also has to leave room for the door to move and for the work needed later. The attachment method alone does not tell you how much the door can weigh.",
+  content: [
+    { type: "heading", level: 2, id: "mounting-comparison", title: "Compare the work each mounting method needs" },
+    { type: "paragraph", content: [
+      "A useful comparison starts with two proposed installation drawings, not two loose hinges. ",
+      resourceLink("OneMonroe’s weld-on overview", "https://monroeengineering.com/blog/the-pros-and-cons-of-weld-on-hinges/"),
+      " explains the basic distinction: a welded attachment avoids mounting holes for threaded fasteners but introduces heat during fabrication. The table below turns that distinction into checks for a door or enclosure drawing.",
+    ] },
+    { type: "comparison-table", caption: "Mounting questions for a fabricated door or enclosure", columns: ["Decision", "Weld-on arrangement", "Bolt-on arrangement"], rows: [
+      ["Mounting surface", "Identify the hinge and frame materials, wall thickness and proposed weld location.", "Identify the hole pattern, supporting thickness and fastener arrangement."],
+      ["Assembly access", "Show where the fabricator can position, align and weld the hinge.", "Show tool access and, where used, access to nuts or backing plates."],
+      ["Finishing sequence", "Agree how welding, cleaning and the final surface treatment fit together.", "Agree when holes are made and how exposed edges and fasteners are protected."],
+      ["Replacing the attached hinge", "Plan how the welded component would be removed and the surface restored.", "Check whether the fasteners remain accessible after surrounding equipment is fitted."],
+      ["Drawing information", "Hinge position, pivot axis, joint detail and required removal path.", "Hinge position, pivot axis, holes, fasteners and required removal path."],
+    ], note: "These are comparison questions, not a welding procedure, fastener specification or load rating." },
+
+    { type: "heading", level: 2, id: "load-and-security", title: "Ask for evidence behind load and security claims" },
+    { type: "heading", level: 3, id: "welded-hinge-stronger", title: "Is a weld-on hinge always stronger than a bolt-on hinge?" },
+    { type: "paragraph", content: ["No. The hinge, joint and surrounding structure must be assessed together. Door dimensions and weight, the position of the load, hinge spacing, material and mounting details all belong in that assessment. A product’s shipping weight or a description such as heavy duty cannot replace a rating for the proposed assembly."] },
+    { type: "paragraph", content: [
+      "Load figures also need their test conditions. ",
+      resourceLink("JW Winco’s multiple-joint hinge technical notes", "https://www.jwwinco.com/fileadmin/user_upload_jwwinco/downloads/Multiple-Joint_Hinges_2022_SR.pdf"),
+      " describe the installation, load distribution and test setup behind that manufacturer’s figures. Those values apply to its products; they are not transferable to the HINGETRA catalog. When comparing quotations, ask whether the stated conditions match your door and hinge layout.",
+    ] },
+    { type: "paragraph", content: ["For a tamper-sensitive installation, show which side of the hinge an outside user can reach. Include the pin, exposed fasteners and any retention feature in the review. A welded joint is not, by itself, a security rating for the whole door."] },
+
+    { type: "heading", level: 2, id: "door-removal", title: "Separate door removal from hinge replacement" },
+    { type: "heading", level: 3, id: "remove-welded-door", title: "Can a door be removed when its hinges are welded on?" },
+    { type: "paragraph", content: ["Yes, if the selected hinge is separable and the installed assembly allows the parts to disengage. Removing the door from a hinge and removing a welded hinge half from the frame are different operations. Check the actual construction, retention and travel before specifying a lift-off door."] },
+    { type: "paragraph", content: [
+      resourceLink("Guden’s weld-on selection guide", "https://www.guden.com/selection-guides/weld-on-hinges"),
+      " highlights pin alignment and the clearance needed for separation. For a HINGETRA reference, the ",
+      resourceLink("Pin Type weld-on hinge page", "/products/pin-weld-on-hinges"),
+      " shows assembled and separated views. Use those to identify the construction, then mark the required removal direction on your own installation drawing.",
+    ] },
+    { type: "paragraph", content: ["For example, a cabinet door may swing open normally yet hit an overhead cover when lifted. Include that cover in the drawing. For a bolted hinge, check the equivalent service problem: can a tool still reach the fastener after the cabinet is wired or fitted with equipment?"] },
+
+    { type: "heading", level: 2, id: "quote-complete-job", title: "Compare the complete job in the quotation" },
+    { type: "paragraph", content: ["A lower hinge unit price may leave more work elsewhere. Put mounting hardware, fabrication, finishing and the intended replacement operation alongside the part price. Ask each supplier to identify what is included and what the buyer must provide. Neither mounting method has one universal installed cost."] },
+    { type: "list", items: [
+      ["Send the door and frame section, dimensions and weight, with hinge positions marked."],
+      ["Identify the fabrication or fastening method already required by the project."],
+      ["State whether maintenance requires removing only the door or the entire hinge."],
+      ["List the finish, operating environment, quantity and any documentation needed."],
+      ["Keep open technical and commercial points with the quotation until agreed."],
+    ] },
+    { type: "paragraph", content: [
+      "HINGETRA’s published range covers weld-on hinges. It does not establish an available bolt-on equivalent. Browse the ",
+      resourceLink("weld-on product families", "/products"),
+      " for the closest construction and ",
+      resourceLink("send the assembly drawing with your inquiry", "/contact#contact-rfq"),
+      ". A ",
+      resourceLink("material and finish requirement", "/resources/weld-on-hinge-materials-and-finishes"),
+      " should identify the hinge and the structure it will join.",
+    ] },
+  ],
+  keyTakeaways: [
+    "Compare complete mounting arrangements, including the supporting door and frame.",
+    "A separable welded hinge may allow door removal while its welded halves remain attached.",
+    "Load and security claims need evidence for the specific installation.",
+    "Include fabrication, finishing and service access when comparing quotations.",
+  ],
+} satisfies ResourceArticle;

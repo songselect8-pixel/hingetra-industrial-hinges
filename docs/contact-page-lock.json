@@ -54,7 +54,7 @@
     },
     {
       "path": "src/components/contact/ContactPageContent.tsx",
-      "sha256": "b17ef1a96fbf709253e817172dcb2b08eeda9b502fbd12c88b2cf421252b4827"
+      "sha256": "e3a3a057f63e4f37067329a2461ec81181cca7119cea5086b4309da32f0eec74"
     },
     {
       "path": "src/components/contact/ContactRFQForm.tsx",
@@ -62,7 +62,7 @@
     },
     {
       "path": "src/data/contact.ts",
-      "sha256": "36a28da6899305060c2c72b1ed2091cfd5f932ea66bffa0f5190919a829308dd"
+      "sha256": "4b59c9d1902bfddb8302ecc06cf6cfe8f45f5d4ceb6cd6facb98215b4b7af171"
     },
     {
       "path": "src/data/contact-rfq.ts",
@@ -145,5 +145,14 @@
       "docs/contact-page-lock.json"
     ],
     "validation": "TypeScript, project tests, static build and out/contact/index.html contact-value checks are required after this change."
+  },
+  "websiteOptimization20261012": {
+    "authorizedBy": "Owner asked to apply the supplied optimization plan and confirmed case-by-case commercial terms and the absence of new photographs, CAD files or reports.",
+    "scope": "Search metadata, factual terminology, contact schema, removal of unqualified Product snippets, sourced comparison guides and contextual links, and quotation-confirmation copy. Preserve existing layouts, imagery disclosures, technical data and inquiry delivery.",
+    "record": "docs/2026-10-12-website-optimization.md",
+    "updatedBaselineFiles": [
+      "src/components/contact/ContactPageContent.tsx",
+      "src/data/contact.ts"
+    ]
   }
 }

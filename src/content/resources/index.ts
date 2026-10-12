@@ -9,6 +9,8 @@ import { bulletBarrelNames } from "./articles/bullet-barrel-weld-on-hinge-names.
 import { bearingPinWasher } from "./articles/bearing-pin-washer-weld-on-hinges.ts";
 import { greaseFittingHinges } from "./articles/grease-fitting-weld-on-hinges.ts";
 import { alignmentClearance } from "./articles/weld-on-hinge-alignment-and-removal-clearance.ts";
+import { weldOnVsBoltOn } from "./articles/weld-on-vs-bolt-on-hinges.ts";
+import { hingeMaterials } from "./articles/weld-on-hinge-materials-and-finishes.ts";
 import { getResourceReadingTime, getResourceTableOfContents, isPublicResource, paginateResources, resourcePublisher } from "./publishing.ts";
 import type { ResourceArticle, ResourceCategoryId } from "./types.ts";
 
@@ -23,6 +25,8 @@ export const resourceArticles: readonly ResourceArticle[] = [
   bearingPinWasher,
   greaseFittingHinges,
   alignmentClearance,
+  weldOnVsBoltOn,
+  hingeMaterials,
 ] as const;
 
 export function getPublishedResources() {
@@ -53,8 +57,25 @@ export function getRelatedResources(article: ResourceArticle) {
     .slice(0, 4);
 }
 
+const productGuideSlugs: Record<string, readonly string[]> = {
+  bearing: [bearingPinWasher.slug, cabinetHinges.slug, weldOnHingeSizes.slug],
+  pin: [alignmentClearance.slug, weldOnVsBoltOn.slug, bearingPinWasher.slug],
+  "grease-nipple": [greaseFittingHinges.slug, hingeMaterials.slug, cabinetHinges.slug],
+  round: [bulletBarrelNames.slug, weldOnVsBoltOn.slug, hingeMaterials.slug],
+  adjustable: [prepareHingeDrawing.slug, standardVsCustomHinges.slug, weldOnHingeSizes.slug],
+  flag: [weldOnHingeSizes.slug, standardVsCustomHinges.slug, prepareHingeDrawing.slug],
+  gasket: [bearingPinWasher.slug, cabinetHinges.slug, weldOnHingeSizes.slug],
+  "20-type": [cabinetHinges.slug, weldOnHingeSizes.slug, prepareHingeDrawing.slug],
+  "12-14-16-type": [gateTrailerRampHinges.slug, weldOnVsBoltOn.slug, weldOnHingeSizes.slug],
+  square: [weldOnHingeSizes.slug, standardVsCustomHinges.slug, prepareHingeDrawing.slug],
+};
+
 export function getResourcesForProduct(productId: string, limit = 3) {
-  return getPublishedResources().filter((article) => article.relatedProducts.includes(productId)).slice(0, limit);
+  const slugs = Object.hasOwn(productGuideSlugs, productId) ? productGuideSlugs[productId] : [];
+  return slugs
+    .map(getResourceArticle)
+    .filter((article): article is ResourceArticle => Boolean(article && isPublicResource(article) && article.relatedProducts.includes(productId)))
+    .slice(0, Math.max(0, limit));
 }
 
 export {

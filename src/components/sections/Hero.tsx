@@ -11,7 +11,7 @@ export function Hero() {
           <Eyebrow>Made for industry</Eyebrow>
           <h1 id="hero-title">Industrial <br /><span className="hero-title-line">weld-on hinges.</span></h1>
           <p className="hero-lead">Built for heavy-duty applications.</p>
-          <p className="hero-description">Factory-direct hinges for steel doors, gates, trailers and industrial cabinets. Standard profiles and custom manufacturing, built around your requirements.</p>
+          <p className="hero-description">Factory-direct weld-on hinges, including bullet and barrel profiles, for steel doors, gates and industrial cabinets. Discuss standard sizes or a custom requirement.</p>
           <div className="hero-actions">
             <Link className="button button-primary" href="#rfq">Get a Quote <Arrow /></Link>
             <Link className="button button-outline" href="#products">Explore Hinges <Arrow diagonal /></Link>

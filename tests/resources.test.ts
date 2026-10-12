@@ -9,6 +9,7 @@ import {
   getResourceArticle,
   getResourceReadingTime,
   getResourceTableOfContents,
+  getResourcesForProduct,
   getVisibleResourceCategories,
   isPublicResource,
   paginateResources,
@@ -16,15 +17,16 @@ import {
   resourceCategories,
   resourcePublisher,
 } from "../src/content/resources/index.ts";
+import { buildResourceFaqSchema, getResourceFaqs } from "../src/lib/resource-schema.ts";
 
-test("Resources registry publishes the ten approved guides", () => {
+test("Resources registry publishes the twelve approved guides", () => {
   const published = getPublishedResources();
-  assert.equal(resourceArticles.length, 10);
-  assert.equal(published.length, 10);
+  assert.equal(resourceArticles.length, 12);
+  assert.equal(published.length, 12);
   assert.ok(published.every((article) => !article.draft && !article.noindex));
-  assert.equal(new Set(published.map((article) => article.slug)).size, 10);
-  assert.equal(new Set(published.map((article) => article.title)).size, 10);
-  assert.equal(new Set(published.map((article) => article.description)).size, 10);
+  assert.equal(new Set(published.map((article) => article.slug)).size, 12);
+  assert.equal(new Set(published.map((article) => article.title)).size, 12);
+  assert.equal(new Set(published.map((article) => article.description)).size, 12);
   assert.deepEqual(
     published.map((article) => article.slug),
     [
@@ -38,6 +40,8 @@ test("Resources registry publishes the ten approved guides", () => {
       "bearing-pin-washer-weld-on-hinges",
       "grease-fitting-weld-on-hinges",
       "weld-on-hinge-alignment-and-removal-clearance",
+      "weld-on-vs-bolt-on-hinges",
+      "weld-on-hinge-materials-and-finishes",
     ],
   );
 });
@@ -62,8 +66,8 @@ test("Every guide has publisher, useful structure, generated TOC, and automatic 
   assert.equal(resourcePublisher.name, "Hingetra Industrial Hinges");
   for (const article of getPublishedResources()) {
     assert.equal(article.author, resourcePublisher.name);
-    assert.equal(article.publishedAt, article.order <= 6 ? "2026-09-02" : "2026-09-20");
-    assert.equal(article.updatedAt, article.order <= 6 ? "2026-09-20" : null);
+    assert.equal(article.publishedAt, article.order <= 6 ? "2026-09-02" : article.order <= 10 ? "2026-09-20" : "2026-10-12");
+    assert.equal(article.updatedAt, article.slug === "bearing-pin-washer-weld-on-hinges" ? "2026-10-12" : article.order <= 6 ? "2026-09-20" : null);
     assert.ok(article.featuredImage.startsWith("/images/"));
     assert.ok(article.featuredImageAlt.length > 24);
     assert.ok(article.keywords.length >= 3);
@@ -94,11 +98,11 @@ test("Product, application, and related-resource links are explicit and valid", 
   assert.deepEqual(getResourceArticle("weld-on-hinges-for-electrical-control-cabinets")?.relatedProducts, ["bearing", "pin", "gasket", "grease-nipple", "20-type"]);
 });
 
-test("Listing pagination is ready but unnecessary for ten guides", () => {
+test("Listing pagination is ready but unnecessary for twelve guides", () => {
   const page = paginateResources(getPublishedResources(), 1, 12);
-  assert.equal(page.totalItems, 10);
+  assert.equal(page.totalItems, 12);
   assert.equal(page.totalPages, 1);
-  assert.equal(page.items.length, 10);
+  assert.equal(page.items.length, 12);
   assert.equal(page.hasPreviousPage, false);
   assert.equal(page.hasNextPage, false);
 });
@@ -117,7 +121,7 @@ test("Published guides avoid unsupported technical and commercial claims", () =>
     // Numeric load claims still require new, model-specific evidence.
     /\b(?:load (?:rating|capacity)|rated load)\s*(?:of|:|=|up to)?\s*\d/i,
     /\b\d+(?:\.\d+)?\s*(?:kg|lbs?|kilograms?|pounds?)\s+(?:load|capacity)/i,
-    /material grade/i,
+    /(?:we (?:supply|stock|offer)|our hinges (?:use|are made from))[^.]*\b(?:304|316|Q235B|1020)\b/i,
     /\b(?:ISO|AQL)\b/i,
     /certif(?:ied|ication)/i,
     /\bMOQ\b/i,
@@ -126,6 +130,39 @@ test("Published guides avoid unsupported technical and commercial claims", () =>
     /tolerance (?:value|of|±)/i,
     /world(?:'s|s) best|number one manufacturer|top quality/i,
   ]) assert.doesNotMatch(publicText, pattern);
+});
+
+test("Product guide choices are relevant, public and prioritize the family question", () => {
+  for (const product of products) {
+    const guides = getResourcesForProduct(product.id);
+    assert.equal(guides.length, 3, product.id);
+    assert.equal(new Set(guides.map((guide) => guide.slug)).size, guides.length);
+    assert.ok(guides.every((guide) => isPublicResource(guide) && guide.relatedProducts.includes(product.id)));
+    assert.deepEqual(getResourcesForProduct(product.id, 1), guides.slice(0, 1));
+    assert.deepEqual(getResourcesForProduct(product.id, 0), []);
+  }
+  assert.equal(getResourcesForProduct("bearing")[0].slug, "bearing-pin-washer-weld-on-hinges");
+  assert.equal(getResourcesForProduct("grease-nipple")[0].slug, "grease-fitting-weld-on-hinges");
+  assert.equal(getResourcesForProduct("12-14-16-type")[0].slug, "weld-on-hinges-for-gates-trailer-doors-and-ramps");
+  for (const unknown of ["not-a-product", "toString", "__proto__"]) assert.deepEqual(getResourcesForProduct(unknown), []);
+});
+
+test("Article FAQ schema includes only visible question-and-answer pairs", () => {
+  const article = {
+    ...resourceArticles[0],
+    content: [
+      { type: "heading" as const, level: 3 as const, id: "context", title: "Material context" },
+      { type: "paragraph" as const, content: ["This section is not a question."] },
+      { type: "heading" as const, level: 3 as const, id: "question", title: "What should I check?" },
+      { type: "paragraph" as const, content: ["Compare the ", { type: "link" as const, text: "drawing", href: "/products" }, "."] },
+      { type: "heading" as const, level: 3 as const, id: "unanswered", title: "An unanswered question?" },
+    ],
+  };
+  assert.deepEqual(getResourceFaqs(article), [{ question: "What should I check?", answer: "Compare the drawing." }]);
+  const schema = buildResourceFaqSchema(article, "https://hingetra.com/resources/example/");
+  assert.equal(schema?.mainEntity.length, 1);
+  assert.equal(schema?.mainEntity[0].acceptedAnswer.text, "Compare the drawing.");
+  assert.equal(buildResourceFaqSchema({ ...article, content: [] }, "https://hingetra.com/resources/example/"), null);
 });
 
 test("Resources routes use the shared design system and reusable article template", () => {

@@ -44,6 +44,18 @@ for (const file of content) {
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap((match) => { const data = JSON.parse(match[1]); return data["@graph"] || [data]; });
   assert.ok(schemas.some((schema) => schema["@type"] === "Organization" && schema["@id"] === `${base}/#organization`), fail("missing shared brand entity"));
   assert.ok(schemas.some((schema) => schema["@type"] === "WebSite" && schema["@id"] === `${base}/#website`), fail("missing website entity"));
+  if (path.startsWith("products/") && path !== "products/") {
+    // RFQ family pages do not publish priced offers or reviews. Keep them out
+    // of Product snippets rather than masking missing data with a zero price.
+    assert.ok(!schemas.some((schema) => schema["@type"] === "Product"), fail("unqualified Product snippet on RFQ page"));
+    const faq = schemas.find((schema) => schema["@type"] === "FAQPage");
+    const visibleHtml = decode(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, ""));
+    assert.ok(faq?.mainEntity.length > 0, fail("missing product FAQ"));
+    for (const question of faq.mainEntity) {
+      assert.ok(visibleHtml.includes(question.name), fail("FAQ question is not visible"));
+      assert.ok(visibleHtml.includes(question.acceptedAnswer.text), fail("FAQ answer is not visible"));
+    }
+  }
   if (url !== `${base}/`) {
     const breadcrumb = schemas.find((schema) => schema["@type"] === "BreadcrumbList");
     assert.equal(breadcrumb?.itemListElement.at(-1)?.item, url, fail("breadcrumb does not match canonical"));

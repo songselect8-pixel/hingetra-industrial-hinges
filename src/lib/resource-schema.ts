@@ -1,4 +1,4 @@
-import type { ResourceArticle, ResourceParagraphBlock } from "@/content/resources/types";
+import type { ResourceArticle, ResourceParagraphBlock } from "../content/resources/types.ts";
 
 function paragraphText(block: ResourceParagraphBlock) {
   return block.content.map((item) => typeof item === "string" ? item : item.text).join("");
@@ -9,7 +9,7 @@ export function getResourceFaqs(article: ResourceArticle) {
   for (let index = 0; index < article.content.length - 1; index += 1) {
     const heading = article.content[index];
     const answer = article.content[index + 1];
-    if (heading.type !== "heading" || heading.level !== 3 || answer.type !== "paragraph") continue;
+    if (heading.type !== "heading" || heading.level !== 3 || !heading.title.endsWith("?") || answer.type !== "paragraph") continue;
     faqs.push({ question: heading.title, answer: paragraphText(answer) });
   }
   return faqs;

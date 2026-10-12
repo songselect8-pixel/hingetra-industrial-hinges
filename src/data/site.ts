@@ -9,9 +9,9 @@ export const site = {
   publicEmail: "TBD",
   publicPhone: "TBD",
   publicAddress: "TBD",
-  title: "Industrial Weld-On Hinge Manufacturer | HINGETRA",
+  title: "Weld-On Hinge Manufacturer | Bullet & Barrel Hinges | HINGETRA",
   description:
-    "Explore weld-on hinge types and catalog sizes for steel doors, gates and industrial cabinets. Discuss custom hinge requirements and request a quote.",
+    "Compare industrial weld-on hinges, including bullet and barrel profiles, with catalog dimensions for your door or cabinet. Send a drawing for a quotation.",
 } as const;
 
 export const navigation = [

@@ -45,7 +45,7 @@ export const contactFaq = [
   },
   {
     question: "Can I upload a technical drawing?",
-    answer: "Yes. The form accepts PDF, DWG, DXF, JPG and PNG files up to 10 MB. Files are transmitted only after an RFQ endpoint is configured.",
+    answer: "Yes. Attach PDF, DWG, DXF, JPG or PNG files up to 10 MB each. Include a drawing revision where available, and check the submission result after sending.",
   },
   {
     question: "What if I do not know the hinge model?",
@@ -58,6 +58,10 @@ export const contactFaq = [
   {
     question: "Can I send a reference product photo?",
     answer: "Yes. A JPG or PNG reference image can be attached to help describe the product or installation context.",
+  },
+  {
+    question: "How are order quantity, samples and delivery dates agreed?",
+    answer: "Minimum order quantity, sample availability and any charges, production lead time, packing and marking are confirmed for the specific hinge, quantity and destination. Include what you need in the inquiry so these points can be addressed in the quotation.",
   },
   {
     question: "How can I contact the company directly?",

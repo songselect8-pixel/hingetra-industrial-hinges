@@ -3,7 +3,7 @@ import type { ResourceArticle } from "../types.ts";
 
 export const bearingPinWasher = {
   "publishedAt": "2026-09-20",
-  "updatedAt": null,
+  "updatedAt": "2026-10-12",
   "author": resourcePublisher.name,
   "featuredImageWidth": 800,
   "featuredImageHeight": 800,
@@ -18,14 +18,15 @@ export const bearingPinWasher = {
   "order": 8,
   "category": "selection-guides",
   "title": "Bearing, Pin and Washer Weld-On Hinges: What to Compare",
-  "description": "Compare bearing, pin and gasket / washer weld-on hinge references by construction, dimensions and installation details, without assuming a performance ranking.",
+  "description": "Compare bearing, pin and washer weld-on hinges, including ball-bearing and brass-washer terminology, operating conditions and the details needed for a quotation.",
   "featuredImage": "/images/hinge-bearing.jpg",
   "featuredImageAlt": "Catalog product photograph of the HINGETRA bearing weld-on hinge family",
   "keywords": [
     "bearing weld-on hinges",
     "pin weld-on hinges",
     "washer weld-on hinges",
-    "gasket hinge"
+    "gasket hinge",
+    "ball bearing vs brass washer bullet hinges"
   ],
   "relatedProducts": [
     "bearing",
@@ -33,7 +34,7 @@ export const bearingPinWasher = {
     "gasket"
   ],
   "relatedArticles": [
-    "how-to-choose-weld-on-hinges",
+    "weld-on-hinge-materials-and-finishes",
     "weld-on-hinge-sizes",
     "grease-fitting-weld-on-hinges"
   ],
@@ -73,6 +74,45 @@ export const bearingPinWasher = {
       "type": "paragraph",
       "content": [
         "For a HINGETRA inquiry, use the named bearing, pin or gasket family and its own size table. Compare the photographs on those product pages. The catalog does not specify the bearing design or washer material; identify any required construction on your drawing."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "ball-bearing-brass-washer",
+      "title": "Ball bearing vs brass washer: what changes in the comparison?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A ball-bearing description identifies rolling elements, while a brass-washer description identifies a component and its material. Neither name defines the whole hinge. PINET, for example, lists separate ball-bearing and brass-washer weld-on products in the range linked above. For HINGETRA, the published names remain Bearing Type and Gasket Type; the catalog does not confirm a ball-bearing design or a brass washer."
+      ]
+    },
+    {
+      "type": "comparison-table",
+      "caption": "Checks for a ball-bearing or brass-washer proposal",
+      "columns": ["Requirement", "Ball-bearing proposal", "Brass-washer proposal"],
+      "rows": [
+        ["Construction", "Ask for the bearing arrangement, retention and component specification.", "Ask for washer dimensions, material specification and the mating surfaces."],
+        ["Frequent opening", "Define the intended duty and ask for relevant operating or test information.", "Use the same duty and acceptance criteria when comparing the proposed hinge."],
+        ["Dust and moisture", "Check protection of the bearing and the applicable lubrication instructions.", "Check exposed contact surfaces, cleaning access and lubrication instructions."],
+        ["Door movement or sag", "Assess the complete hinge, mounting joint and frame under the specified conditions.", "Use the same installation and measurement conditions; the washer name supplies no sag limit."],
+        ["Maintenance", "Confirm which components can be serviced or replaced and how they are reached.", "Confirm washer retention, access and the agreed replacement arrangement."]
+      ],
+      "note": "This is a specification checklist. No comparative torque, cycle-life or sag test has been published for these HINGETRA families."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Rolling elements can reduce friction, but their operating conditions still matter. ",
+        { "type": "link", "text": "SKF’s lubrication and contamination explanation", "href": "https://evolution.skf.com/wp-content/uploads/2013/02/EN_lubrication0.pdf" },
+        " describes why lubricant quality and contamination affect rolling-bearing life. That supports asking about protection and maintenance; it does not establish that an unspecified bearing hinge will outlast a washer hinge."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "For a frequently opened access door, give the expected opening pattern and acceptable operating effort. For a dusty installation, describe the contamination and cleaning access. If door sag is the concern, define where it is measured and under what load. Ask for evidence against those requirements rather than treating the component name as the result."
       ]
     },
     {
@@ -154,6 +194,18 @@ export const bearingPinWasher = {
           "href": "/resources/weld-on-hinge-sizes"
         },
         " covers these checks."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Open the ",
+        { "type": "link", "text": "Bearing Type weld-on hinge drawing", "href": "/products/bearing-weld-on-hinges#detail-drawing-title" },
+        " and the ",
+        { "type": "link", "text": "Gasket / Washer Type product record", "href": "/products/gasket-weld-on-hinges" },
+        " when identifying a candidate. If washer or pin material is part of your specification, include it separately using the ",
+        { "type": "link", "text": "material and finish checklist", "href": "/resources/weld-on-hinge-materials-and-finishes" },
+        "."
       ]
     },
     {

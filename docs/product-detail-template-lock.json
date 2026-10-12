@@ -68,11 +68,11 @@
     },
     {
       "path": "src/components/sections/RFQSection.tsx",
-      "sha256": "6922eb89cf9aadc60ae570c3ff56fcf51cbde1503d36eff64b0c785754651a6e"
+      "sha256": "dd59a0241c593f7b36d68b9c5849073994a9db1002222b29fee0bf7c7d0f4775"
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "9a488550daad7c2d3e53ea968750962ccf6d32493b476977c78b6f0a6654846a"
+      "sha256": "26f023777dcd1a913b6ffa9f91819af036184f76d9c8d9e7245e90c6925c2269"
     },
     {
       "path": "src/data/products.ts",
@@ -80,11 +80,11 @@
     },
     {
       "path": "src/app/products/[slug]/page.tsx",
-      "sha256": "6a49ff3c9343579c5de615ab5f9e46e874082656c313f9e1fb3747804f922c82"
+      "sha256": "2f9e921f09fd3d5dc18c63f35ba78a42179262981ef3c6cd9045c0afeaab82a3"
     },
     {
       "path": "src/app/products/bearing-weld-on-hinges/page.tsx",
-      "sha256": "62e674910aa63bb1030fbf8820e8a98fa34f774501a3e706612198136f60232b"
+      "sha256": "0dc6fce562222e6dec6e3c894b278f086fc54f8d5b0f871a809ebf7ccf7d64ec"
     },
     {
       "path": "src/components/products/detail/ProductRelatedGuides.tsx",
@@ -132,6 +132,17 @@
     "record": "docs/2026-09-20-faq-product-update.md",
     "updatedBaselineFiles": [
       "src/data/product-details.ts"
+    ]
+  },
+  "websiteOptimization20261012": {
+    "authorizedBy": "Owner asked to apply the supplied optimization plan and confirmed case-by-case commercial terms and the absence of new photographs, CAD files or reports.",
+    "scope": "Search metadata, factual terminology, contact schema, removal of unqualified Product snippets, sourced comparison guides and contextual links, and quotation-confirmation copy. Preserve existing layouts, imagery disclosures, technical data and inquiry delivery.",
+    "record": "docs/2026-10-12-website-optimization.md",
+    "updatedBaselineFiles": [
+      "src/components/sections/RFQSection.tsx",
+      "src/data/product-details.ts",
+      "src/app/products/[slug]/page.tsx",
+      "src/app/products/bearing-weld-on-hinges/page.tsx"
     ]
   }
 }

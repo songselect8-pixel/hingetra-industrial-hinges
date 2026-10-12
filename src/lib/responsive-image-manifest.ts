@@ -776,6 +776,32 @@ export const responsiveImageManifest: Readonly<Record<string, ResponsiveImageEnt
       "1448": "/images/optimized/illustrations/quality-control-1448.webp"
     }
   },
+  "/images/og/hingetra-og.jpg": {
+    "widths": [
+      64,
+      96,
+      128,
+      256,
+      384,
+      390,
+      640,
+      768,
+      1024,
+      1200
+    ],
+    "variants": {
+      "64": "/images/optimized/og/hingetra-og-64.webp",
+      "96": "/images/optimized/og/hingetra-og-96.webp",
+      "128": "/images/optimized/og/hingetra-og-128.webp",
+      "256": "/images/optimized/og/hingetra-og-256.webp",
+      "384": "/images/optimized/og/hingetra-og-384.webp",
+      "390": "/images/optimized/og/hingetra-og-390.webp",
+      "640": "/images/optimized/og/hingetra-og-640.webp",
+      "768": "/images/optimized/og/hingetra-og-768.webp",
+      "1024": "/images/optimized/og/hingetra-og-1024.webp",
+      "1200": "/images/optimized/og/hingetra-og-1200.webp"
+    }
+  },
   "/images/packaging-12-14-16-type.jpg": {
     "widths": [
       64,

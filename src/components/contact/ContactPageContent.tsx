@@ -163,7 +163,7 @@ function ApplicationEntry() {
         <nav className="contact-application-links" aria-label="Application pages">
           {contactApplicationEntries.map((entry, index) => <Link key={entry.label} href={entry.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{entry.label}</strong><Arrow /></Link>)}
         </nav>
-        <div className="contact-response-note"><span>After submission</span><p>Once your requirement is submitted, the information can be reviewed for further discussion.</p></div>
+        <div className="contact-response-note"><span>Quotation details</span><p>Order quantity, sample availability and charges, production timing, packing and marking are confirmed for your specific requirement.</p></div>
       </div>
     </section>
   );

@@ -1,24 +1,7 @@
 import type { ProductDetail } from "@/data/product-details";
-import type { ProductFamily } from "@/data/products";
-import { joinSiteUrl } from "@/lib/site-url";
 
-export function buildProductSchema(baseUrl: string, detail: ProductDetail, product: ProductFamily) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: detail.title,
-    description: detail.description,
-    image: detail.gallery.map((image) => joinSiteUrl(baseUrl, image.src)),
-    category: product.category,
-    brand: { "@type": "Brand", name: "HINGETRA" },
-    manufacturer: {
-      "@type": "Organization",
-      name: "HINGETRA",
-      url: joinSiteUrl(baseUrl, "/"),
-    },
-    url: joinSiteUrl(baseUrl, product.detailPath),
-  };
-}
+// These RFQ family pages have no public offers or reviews. Do not emit an
+// incomplete Product snippet or use a zero price to represent a quotation.
 
 export function buildFaqSchema(detail: ProductDetail) {
   return {

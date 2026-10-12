@@ -111,9 +111,9 @@ const bearingDrawing: ProductDetail["drawing"] = {
 export const bearingDetail: ProductDetail = {
   productId: "bearing",
   title: "Bearing Type Weld-On Hinges",
-  seoTitle: "Bearing Type Weld-On Hinges | Sizes & Drawings",
-  seoDescription: "Compare 18 bearing weld-on hinge sizes, product weights and the original reference drawing. Check construction and installation details before requesting a quote.",
-  description: "Water-drop shaped weld-on hinges with a bearing assembly. Compare 18 listed sizes, product photographs and the original reference drawing for your door or cabinet.",
+  seoTitle: "Bearing Type Weld-On Hinges | Teardrop Sizes",
+  seoDescription: "Compare 18 bearing weld-on hinge sizes in a teardrop profile for steel doors and electrical enclosures. Review the drawing and send your installation requirements.",
+  description: "Water-drop (teardrop) weld-on hinges with a bearing assembly. Compare 18 listed sizes, product photographs and the original reference drawing for your door or cabinet.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
     "The assembled and separated photographs show the bearing family’s water-drop profile and body arrangement. Compare those details with your installation, especially when an existing hinge has a similar outline but different internal parts.",
@@ -153,8 +153,8 @@ const pin = getProduct("pin")!;
 export const pinDetail: ProductDetail = {
   productId: "pin",
   title: "Pin Type Weld-On Hinges",
-  seoTitle: "Pin Type Weld-On Hinges | Published Sizes & Weights",
-  seoDescription: "Compare five pin weld-on hinge sizes and assembly photographs. Check replacement dimensions and removal clearance, then send your drawing for a quotation.",
+  seoTitle: "Pin Type Weld-On Hinges | Separable Bullet Profile",
+  seoDescription: "Compare five pin-type weld-on hinge sizes and separable assembly photos. Check lift-off clearance and mounting dimensions for your steel door or cabinet.",
   description: "Water-drop shaped weld-on hinges with a separable pin construction. Compare five listed sizes and the assembly views, then check fit and removal space for your installation.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
@@ -187,8 +187,8 @@ const greaseNipple = getProduct("grease-nipple")!;
 export const greaseNippleDetail: ProductDetail = {
   productId: "grease-nipple",
   title: "Grease Nipple Type Weld-On Hinges",
-  seoTitle: "Grease Nipple Type Weld-On Hinges | Sizes & Fitting Access",
-  seoDescription: "View six grease-nipple weld-on hinge sizes and the product photograph. Check fitting access and installation requirements before requesting a quote.",
+  seoTitle: "Grease Nipple Type Weld-On Hinges | Sizes & Access",
+  seoDescription: "View six teardrop weld-on hinge sizes with grease fittings. Check lubrication access for a steel door or industrial enclosure and request a quotation.",
   description: "Water-drop shaped weld-on hinges with a grease fitting. Compare six listed sizes and check room for the lubrication tool in the installed position.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
@@ -220,9 +220,9 @@ const round = getProduct("round")!;
 export const roundDetail: ProductDetail = {
   productId: "round",
   title: "Round Type Weld-On Hinges",
-  seoTitle: "Round Type Weld-On Hinges | Published Sizes & Weights",
-  seoDescription: "Explore six Round Type weld-on hinge sizes and product weights from the catalog, view the real product image, and discuss custom dimensions.",
-  description: "Cylindrical-profile weld-on hinges with six published size and product-weight combinations. Custom dimensions can be sent for review.",
+  seoTitle: "Round Type Weld-On Hinges | Barrel Profile",
+  seoDescription: "Compare six round barrel weld-on hinge sizes and product weights. View the separated pin and body, check your mounting dimensions, and discuss a custom requirement.",
+  description: "Round barrel-profile weld-on hinges with six published size and product-weight combinations. Custom dimensions can be sent for review.",
   applicationSummary: null,
   overview: [
     "The Round Type family is identified by the cylindrical product profile shown in the source photograph. It is kept separate from the Bearing Type and Pin Type water-drop families.",
@@ -320,8 +320,8 @@ const gasket = getProduct("gasket")!;
 export const gasketDetail: ProductDetail = {
   productId: "gasket",
   title: "Gasket Type Weld-On Hinges",
-  seoTitle: "Gasket Type Weld-On Hinges | Sizes & Weights",
-  seoDescription: "View seven exact Gasket Type weld-on hinge sizes and weights, inspect the correct product photograph, and send custom dimensions for review.",
+  seoTitle: "Gasket Type Weld-On Hinges | Washer Profile",
+  seoDescription: "Compare seven teardrop weld-on hinge sizes with a visible gasket or washer. Review the product photo and send component or mounting requirements for confirmation.",
   description: "Water-drop shaped weld-on hinges with a visible gasket or washer between the hinge bodies. Seven size and weight records are published.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [
@@ -351,7 +351,7 @@ const type20Drawing: ProductDetail["drawing"] = {
 export const type20Detail: ProductDetail = {
   productId: "20-type",
   title: "20 Type Weld-On Hinges",
-  seoTitle: "20 Type Weld-On Hinges | Type A & Type B Dimensions",
+  seoTitle: "20 Type Weld-On Hinges | A & B Enclosure Hinge Sizes",
   seoDescription: "Compare the published 20-A chamfered-end and 20-B right-angle-end weld-on hinge dimensions, original drawing and family-specific packaging.",
   description: "Two catalog variants with the same published dimensions: Type A has chamfered ends, while Type B has right-angle ends.",
   applicationSummary: "Steel doors & industrial cabinets",
@@ -384,8 +384,8 @@ const numberedDrawing: ProductDetail["drawing"] = {
 export const numberedDetail: ProductDetail = {
   productId: "12-14-16-type",
   title: "12 / 14 / 16 Type Weld-On Hinges",
-  seoTitle: "12 / 14 / 16 Type Weld-On Hinges | Dimensions",
-  seoDescription: "Compare exact 12-A, 14-A and 16-A weld-on hinge dimensions, the original catalog drawing, supported applications and family-specific packaging.",
+  seoTitle: "12 / 14 / 16 Type Weld-On Hinges | Gates & Ramps",
+  seoDescription: "Review 12-A, 14-A and 16-A weld-on hinges for industrial gate, trailer-door and ramp requirements. Compare the catalog drawing and exact dimensions before an RFQ.",
   description: "One numbered weld-on hinge family with three published models: 12-A, 14-A and 16-A. Original dimensional values remain unchanged.",
   applicationSummary: "Gates, trailer doors & ramps",
   overview: [

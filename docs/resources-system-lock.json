@@ -87,7 +87,7 @@
     },
     {
       "path": "src/content/resources/index.ts",
-      "sha256": "e0ac2ffe9596fb45ed4d349728dafda1634cee55063a2b8e98d76484fc55cc30"
+      "sha256": "2ed6e6d55d630b04db73767126a9f57a56a788ebaa40459f6785668b9713bef3"
     },
     {
       "path": "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
@@ -167,7 +167,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "bca0a3492d15504a85f82030dee05828800428a59f0bbd57036b5b3dc988c383"
+      "sha256": "976a251c1b2f61ead532011c305d6688ae64d9ae03e80ed5a3574444f01f2252"
     },
     {
       "path": "src/components/navigation/Header.tsx",
@@ -183,7 +183,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "f32bc25c84a5cef53d3aec40dd7e87e3cf3d5cc64d374ba9dda0a8e2cdb19929"
+      "sha256": "860f76b6d5df856514b124b6e1909227bc899f057693b8ad4560a958aea2559b"
     },
     {
       "path": "src/components/applications/ApplicationsPageContent.tsx",
@@ -219,7 +219,7 @@
     },
     {
       "path": "tests/resources.test.ts",
-      "sha256": "bd1bdd6beea4ad17d12620eb5ce160e1245a7f98e7dea845d693b57dcfff4206"
+      "sha256": "d13fed699168538f435a17d45c69a3bc489eb8dfe8f7ff6ce8ec80148f32aa38"
     },
     {
       "path": "docs/resources-publishing-guide.md",
@@ -231,7 +231,7 @@
     },
     {
       "path": "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
-      "sha256": "1b526cab399dc7278da9237624b2e83f05551c02133ce275d42fd16cd2442fd3"
+      "sha256": "92a07d8209a4302703754a626d153b6587a6f7857b2ab0327e937bcb500f2c8d"
     },
     {
       "path": "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
@@ -240,6 +240,14 @@
     {
       "path": "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts",
       "sha256": "19478341097f031ef1335c755072144301353ed999699e324d302daa0dc7aa9e"
+    },
+    {
+      "path": "src/content/resources/articles/weld-on-vs-bolt-on-hinges.ts",
+      "sha256": "be55fa2de61b6d8667825937e96611f16ab11413e8ef91da16e2253bf170d309"
+    },
+    {
+      "path": "src/content/resources/articles/weld-on-hinge-materials-and-finishes.ts",
+      "sha256": "cc2b6b105b83036f288b277bb9e6a655ca6034d54bc8720bf8bbd279c041ab34"
     }
   ],
   "factoryExteriorUpdate": {
@@ -290,7 +298,9 @@
     "bullet-barrel-weld-on-hinge-names",
     "bearing-pin-washer-weld-on-hinges",
     "grease-fitting-weld-on-hinges",
-    "weld-on-hinge-alignment-and-removal-clearance"
+    "weld-on-hinge-alignment-and-removal-clearance",
+    "weld-on-vs-bolt-on-hinges",
+    "weld-on-hinge-materials-and-finishes"
   ],
   "contentRelease20260920": {
     "authorizedBy": "Owner approved the SEO/content plan with 全部开始吧 and confirmed the legal entity, indefinite retention, global English audience and Cindy receipt/attachments/replies.",
@@ -328,6 +338,20 @@
       "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
       "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
       "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts"
+    ]
+  },
+  "websiteOptimization20261012": {
+    "authorizedBy": "Owner asked to apply the supplied optimization plan and confirmed case-by-case commercial terms and the absence of new photographs, CAD files or reports.",
+    "scope": "Search metadata, factual terminology, contact schema, removal of unqualified Product snippets, sourced comparison guides and contextual links, and quotation-confirmation copy. Preserve existing layouts, imagery disclosures, technical data and inquiry delivery.",
+    "record": "docs/2026-10-12-website-optimization.md",
+    "updatedBaselineFiles": [
+      "src/content/resources/index.ts",
+      "src/data/site.ts",
+      "src/app/products/page.tsx",
+      "tests/resources.test.ts",
+      "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
+      "src/content/resources/articles/weld-on-vs-bolt-on-hinges.ts",
+      "src/content/resources/articles/weld-on-hinge-materials-and-finishes.ts"
     ]
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { site } from "@/data/site";
+import { contactDetails } from "@/data/contact";
 import { joinSiteUrl } from "@/lib/site-url";
 import { getSearchPolicy } from "@/lib/search-policy";
 import { FloatingActions } from "@/components/navigation/FloatingActions";
@@ -26,6 +27,11 @@ const siteSchema = {
       "@type": "Organization", "@id": organizationId,
       name: site.companyName, legalName: site.legalName, alternateName: site.brand, url: homeUrl,
       logo: { "@type": "ImageObject", url: joinSiteUrl(baseUrl, site.logo), width: 960, height: 155 },
+      contactPoint: {
+        "@type": "ContactPoint", contactType: "sales",
+        email: contactDetails.email, telephone: contactDetails.phoneHref,
+        url: joinSiteUrl(baseUrl, "/contact"),
+      },
     },
     {
       "@type": "WebSite", "@id": `${homeUrl}#website`,

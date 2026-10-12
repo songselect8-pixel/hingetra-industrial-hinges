@@ -135,9 +135,10 @@ test("Contact public copy contains no invented address, map, channel, timing, or
     /same-day/i,
     /24-hour response/i,
     /shipping time/i,
-    /lead time/i,
+    /lead time[^.]*\b\d+\s*(?:days?|weeks?)\b/i,
     /sample time/i,
-    /minimum order|\bMOQ\b/i,
+    /(?:minimum order|\bMOQ\b)[^.]*\b\d+\s*(?:pcs|pieces|units)/i,
+    /free (?:standard )?samples (?:are )?available/i,
     /payment terms/i,
     /load calculation/i,
   ]) assert.doesNotMatch(combined, prohibited);

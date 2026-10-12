@@ -93,7 +93,7 @@
     },
     {
       "path": "src/components/sections/Hero.tsx",
-      "sha256": "68712febf665c357f2ba9e0135ce60b891fa3a7d3a0f33acdb708ff48ed8d86f"
+      "sha256": "852bdd078674e69900a8d1daf84777cf3b4959aaed17310cb6dc113f9c7e75ef"
     },
     {
       "path": "src/components/sections/ProductGrid.tsx",
@@ -105,7 +105,7 @@
     },
     {
       "path": "src/components/sections/RFQSection.tsx",
-      "sha256": "6922eb89cf9aadc60ae570c3ff56fcf51cbde1503d36eff64b0c785754651a6e"
+      "sha256": "dd59a0241c593f7b36d68b9c5849073994a9db1002222b29fee0bf7c7d0f4775"
     },
     {
       "path": "src/components/products/ProductCard.tsx",
@@ -157,7 +157,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "bca0a3492d15504a85f82030dee05828800428a59f0bbd57036b5b3dc988c383"
+      "sha256": "976a251c1b2f61ead532011c305d6688ae64d9ae03e80ed5a3574444f01f2252"
     },
     {
       "path": "src/app/page.tsx",
@@ -165,7 +165,7 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "c4b092232735bcc532782e6a9c494eb90a9d14bdf88530b98bc216df16948066"
+      "sha256": "10a2650b03eda9eb2a813d19e59bd2c80dcd4a70171247912015b48dfffbf32d"
     },
     {
       "path": "src/data/catalog-overview.ts",
@@ -173,7 +173,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "f32bc25c84a5cef53d3aec40dd7e87e3cf3d5cc64d374ba9dda0a8e2cdb19929"
+      "sha256": "860f76b6d5df856514b124b6e1909227bc899f057693b8ad4560a958aea2559b"
     },
     {
       "path": "src/app/products/products.css",
@@ -209,7 +209,7 @@
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "9a488550daad7c2d3e53ea968750962ccf6d32493b476977c78b6f0a6654846a"
+      "sha256": "26f023777dcd1a913b6ffa9f91819af036184f76d9c8d9e7245e90c6925c2269"
     },
     {
       "path": "src/data/product-filters.ts",
@@ -382,5 +382,18 @@
     "authorizedBy": "Owner reported missing brand name and favicon in Google results; ongoing site SEO fixes authorized.",
     "scope": "Prefer HINGETRA in the existing WebSite name, retaining Hingetra Industrial Hinges as its alternate. Existing valid favicon, Organization identity and page layout are unchanged.",
     "record": "docs/2026-09-20-search-brand-display.md"
+  },
+  "websiteOptimization20261012": {
+    "authorizedBy": "Owner asked to apply the supplied optimization plan and confirmed case-by-case commercial terms and the absence of new photographs, CAD files or reports.",
+    "scope": "Search metadata, factual terminology, contact schema, removal of unqualified Product snippets, sourced comparison guides and contextual links, and quotation-confirmation copy. Preserve existing layouts, imagery disclosures, technical data and inquiry delivery.",
+    "record": "docs/2026-10-12-website-optimization.md",
+    "updatedBaselineFiles": [
+      "src/components/sections/Hero.tsx",
+      "src/components/sections/RFQSection.tsx",
+      "src/data/site.ts",
+      "src/app/layout.tsx",
+      "src/app/products/page.tsx",
+      "src/data/product-details.ts"
+    ]
   }
 }

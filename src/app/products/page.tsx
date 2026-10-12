@@ -11,8 +11,8 @@ import { site } from "@/data/site";
 import { products } from "@/data/products";
 import "./products.css";
 
-const title = `Industrial Weld-On Hinges | Product Range | ${site.brand}`;
-const description = "Explore weld-on hinge families, compare original catalog dimensions and find bearing, pin, round, adjustable and flag hinges for your industrial requirements.";
+const title = `Weld-On Hinges | Bullet, Barrel & Other Profiles | ${site.brand}`;
+const description = "Compare ten weld-on hinge families, including teardrop and round barrel profiles. Check catalog dimensions, drawings and product photos, then request a quote.";
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function ProductsPage() {
         <section className="product-page-hero" aria-labelledby="product-page-title"><div className="shell">
           <nav className="product-breadcrumb" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li><li aria-hidden="true">/</li><li aria-current="page">Products</li></ol></nav>
           <div className="product-page-heading"><div><Eyebrow>Industrial hinge range</Eyebrow><h1 id="product-page-title">Industrial Weld-On Hinges</h1></div><span className="range-edition">PRODUCT CATALOG <strong>2026</strong></span></div>
-          <div className="product-page-summary"><p className="product-page-intro">Explore hinge types for industrial steel doors, gates, trailer doors, cabinets and enclosures.</p>
+          <div className="product-page-summary"><p className="product-page-intro">Compare bullet, barrel and other weld-on hinge profiles by construction and dimensions. Check each family’s application notes for steel doors, gates or enclosures.</p>
           <div className="product-page-actions"><Link href="#product-range" className="button button-primary">View Product Range <Arrow /></Link><Link href="/#rfq" className="button button-outline">Request a Quote <Arrow diagonal /></Link></div></div>
         </div></section>
         <ProductFinder />

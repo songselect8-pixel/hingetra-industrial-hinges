@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import { bearingDetail } from "@/data/product-details";
 import { getProduct } from "@/data/products";
 import { site } from "@/data/site";
-import { buildFaqSchema, buildProductSchema } from "@/lib/product-schema";
+import { buildFaqSchema } from "@/lib/product-schema";
 import { ProductDetailTemplate } from "@/components/products/detail/ProductDetailTemplate";
 import "../products.css";
 import "./product-detail.css";
 
 const product = getProduct(bearingDetail.productId)!;
-const title = `Bearing Type Weld-On Hinges | Sizes & Drawings | ${site.brand}`;
-const description = "View bearing type weld-on hinge photographs, 18 published sizes and weights, and the original catalog drawing. Send your dimensions or drawing with an RFQ.";
+const title = `${bearingDetail.seoTitle} | ${site.brand}`;
+const description = bearingDetail.seoDescription;
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {
@@ -28,13 +28,11 @@ export default function BearingWeldOnHingesPage() {
       { "@type": "ListItem", position: 3, name: bearingDetail.title, item: joinSiteUrl(baseUrl, product.detailPath) },
     ],
   };
-  const productSchema = buildProductSchema(baseUrl, bearingDetail, product);
   const faqSchema = buildFaqSchema(bearingDetail);
 
   return <>
     <ProductDetailTemplate detail={bearingDetail} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema).replace(/</g, "\\u003c") }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }} />
   </>;
 }
