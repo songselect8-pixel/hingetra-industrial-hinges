@@ -191,7 +191,7 @@ export const bearingPinWasher = {
         {
           "type": "link",
           "text": "hinge size guide",
-          "href": "/resources/weld-on-hinge-sizes"
+          "href": "/resources/weld-on-hinge-sizes/"
         },
         " covers these checks."
       ]
@@ -241,7 +241,7 @@ export const bearingPinWasher = {
         {
           "type": "link",
           "text": "grease-fitting guide",
-          "href": "/resources/grease-fitting-weld-on-hinges"
+          "href": "/resources/grease-fitting-weld-on-hinges/"
         },
         ". A fitting on the hinge is useful only if the chosen installation allows the required access."
       ]

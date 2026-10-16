@@ -64,7 +64,7 @@ function ApplicationProductNavigation() {
   return (
     <section className="section application-product-navigation" aria-labelledby="application-product-navigation-title">
       <div className="shell">
-        <SectionHeading eyebrow="Application to product" title={<span id="application-product-navigation-title">Explore Hinges by Application</span>} description="Start with your application, review relevant hinge families, or send us your dimensions for selection support."><Link href="/resources#application-guides" className="text-link section-heading-link">Read Application Guides <Arrow /></Link></SectionHeading>
+        <SectionHeading eyebrow="Application to product" title={<span id="application-product-navigation-title">Explore Hinges by Application</span>} description="Start with your application, review relevant hinge families, or send us your dimensions for selection support."><Link href="/resources/#application-guides" className="text-link section-heading-link">Read Application Guides <Arrow /></Link></SectionHeading>
         <div className="application-navigation-list">
           {applicationGroups.map((group) => (
             <article key={group.id}>
@@ -76,7 +76,7 @@ function ApplicationProductNavigation() {
             </article>
           ))}
         </div>
-        <div className="application-navigation-note"><p>Need to review another hinge structure?</p><Link href="/products" className="button button-outline">Explore all hinge types <Arrow /></Link></div>
+        <div className="application-navigation-note"><p>Need to review another hinge structure?</p><Link href="/products/" className="button button-outline">Explore all hinge types <Arrow /></Link></div>
       </div>
     </section>
   );

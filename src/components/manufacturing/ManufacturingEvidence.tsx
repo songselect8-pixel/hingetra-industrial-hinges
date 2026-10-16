@@ -21,7 +21,7 @@ function CustomManufacturingBridge() {
           <Eyebrow>Custom manufacturing connection</Eyebrow>
           <h2 id="manufacturing-custom-title">Built Around Confirmed Requirements</h2>
           <p>The catalog states an ability to develop and produce products according to client requirements. Send the available dimensions or drawing for review before the requested configuration is confirmed.</p>
-          <Link href="/custom-hinges" className="button button-primary">Explore Custom Hinges <Arrow /></Link>
+          <Link href="/custom-hinges/" className="button button-primary">Explore Custom Hinges <Arrow /></Link>
         </div>
         <SupportingVisual asset="engineering" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
       </div>
@@ -40,7 +40,7 @@ function ProductionChecking() {
           <div className="manufacturing-quality-points">
             {inProcessQuality.map((item) => <div key={item.title}><h3>{item.title}</h3><p>{item.description}</p></div>)}
           </div>
-          <Link href="/quality" className="text-link">Explore Quality Control <Arrow diagonal /></Link>
+          <Link href="/quality/" className="text-link">Explore Quality Control <Arrow diagonal /></Link>
         </div>
         <SupportingVisual asset="quality" sizes="(max-width: 768px) calc(100vw - 40px), 50vw" />
       </div>

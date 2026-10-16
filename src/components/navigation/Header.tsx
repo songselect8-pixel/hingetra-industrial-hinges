@@ -85,7 +85,7 @@ export function Header({ currentPage = "home", rfqHref }: { currentPage?: "home"
         <div className="mega-custom">
           <span className="micro-label">A different requirement?</span>
           <p>Start with <br />your drawing.</p>
-          <Link href="/custom-hinges" onClick={closeMenus}>Explore custom hinges <Arrow /></Link>
+          <Link href="/custom-hinges/" onClick={closeMenus}>Explore custom hinges <Arrow /></Link>
         </div>
       )}
     </>
@@ -111,7 +111,7 @@ export function Header({ currentPage = "home", rfqHref }: { currentPage?: "home"
             <Link href={homeHref("#home")} className={currentPage === "home" ? "nav-home" : undefined} aria-current={currentPage === "home" ? "page" : undefined} onClick={closeMenus}>Home</Link>
             <Link
               ref={productTrigger}
-              href="/products"
+              href="/products/"
               className={`nav-products${currentPage === "products" ? " nav-home" : ""}${productsOpen ? " is-open" : ""}`}
               aria-current={currentPage === "products" ? "page" : undefined}
               aria-haspopup="true"
@@ -156,7 +156,7 @@ export function Header({ currentPage = "home", rfqHref }: { currentPage?: "home"
             }
           }}>
             <div className="shell mega-grid">{menuContent()}</div>
-            <div className="shell mega-bottom"><Link href="/products" onClick={closeMenus}>Explore the complete catalog range <Arrow /></Link><span>Original catalog dimensions. Clear product selection.</span></div>
+            <div className="shell mega-bottom"><Link href="/products/" onClick={closeMenus}>Explore the complete catalog range <Arrow /></Link><span>Original catalog dimensions. Clear product selection.</span></div>
           </nav>
         )}
         {mobileOpen && (
@@ -164,7 +164,7 @@ export function Header({ currentPage = "home", rfqHref }: { currentPage?: "home"
             <div className="shell">
               <Link href={homeHref("#home")} onClick={closeMenus}>Home <Arrow /></Link>
               <button type="button" aria-expanded={productsOpen} aria-controls="mobile-products" onClick={() => setProductsOpen((open) => !open)}>Products <Chevron /></button>
-              {productsOpen && <div className="mobile-products" id="mobile-products"><div className="mega-group"><Link href="/products" onClick={closeMenus}>View all hinge types <Arrow /></Link></div>{menuContent(true)}</div>}
+              {productsOpen && <div className="mobile-products" id="mobile-products"><div className="mega-group"><Link href="/products/" onClick={closeMenus}>View all hinge types <Arrow /></Link></div>{menuContent(true)}</div>}
               {navigation.slice(1).map((item) => {
                 const isCurrent = (currentPage === "applications" && item.label === "Applications") || (currentPage === "custom-hinges" && item.label === "Custom Hinges") || (currentPage === "manufacturing" && item.label === "Manufacturing") || (currentPage === "quality" && item.label === "Quality") || (currentPage === "resources" && item.label === "Resources") || (currentPage === "about-us" && item.label === "About Us") || (currentPage === "contact" && item.label === "Contact");
                 return <Link key={item.label} href={homeHref(item.href)} aria-current={isCurrent ? "page" : undefined} onClick={closeMenus}>{item.label}<Arrow /></Link>;

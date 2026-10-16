@@ -54,7 +54,7 @@
     },
     {
       "path": "src/components/contact/ContactPageContent.tsx",
-      "sha256": "e3a3a057f63e4f37067329a2461ec81181cca7119cea5086b4309da32f0eec74"
+      "sha256": "a3e62b53a05040c8f8c2674f3351dd8d883769dc7d7e50ca52ccfbdd161a67b1"
     },
     {
       "path": "src/components/contact/ContactRFQForm.tsx",
@@ -62,7 +62,7 @@
     },
     {
       "path": "src/data/contact.ts",
-      "sha256": "4b59c9d1902bfddb8302ecc06cf6cfe8f45f5d4ceb6cd6facb98215b4b7af171"
+      "sha256": "c013b8cf108b42a7b2aa19de0b0ef90bea59457007c9579d082840da744f984c"
     },
     {
       "path": "src/data/contact-rfq.ts",

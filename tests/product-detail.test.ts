@@ -47,7 +47,7 @@ test("the approved product-detail section order is recorded as the locked master
 
 test("product RFQs keep the exact bearing size and cannot be changed to another family by a URL", () => {
   const href = productInquiryHref("bearing", "catalog-p07-r18");
-  assert.equal(new URL(href, "http://localhost").pathname, "/products/bearing-weld-on-hinges");
+  assert.equal(new URL(href, "http://localhost").pathname, "/products/bearing-weld-on-hinges/");
   assert.equal(readProductInquiry(new URL(href, "http://localhost").searchParams, "bearing")!.size, "ф32*180mm");
   assert.equal(readProductInquiry(new URLSearchParams("product=pin&variant=catalog-p09-r01"), "bearing")!.product, "bearing");
   assert.equal(readProductInquiry(new URLSearchParams("product=pin&variant=catalog-p07-r01"), "bearing")!.size, "");

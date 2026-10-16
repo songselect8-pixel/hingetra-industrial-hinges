@@ -104,7 +104,7 @@ export const products: readonly ProductFamily[] = families.map((family) => {
     sourcePage: record.page,
   }));
   return {
-    id: family.id, slug: slugs[family.id], detailPath: `/products/${slugs[family.id]}`, detailPagePublished: true,
+    id: family.id, slug: slugs[family.id], detailPath: `/products/${slugs[family.id]}/`, detailPagePublished: true,
     name: family.name,
     category: waterDropIds.has(family.id) ? "Water-drop shaped weld-on hinges" : family.id === "12-14-16-type" ? "Numbered weld-on hinge series" : family.profile,
     structure: productStructures[family.id],
@@ -127,7 +127,7 @@ export function getProductBySlug(slug: string) { return products.find((product) 
 // Preserve bookmarked previews. Only implemented detail pages receive direct links.
 export function productPreviewHref(id: string) {
   const product = getProduct(id);
-  return product ? `/products?view=${product.slug}#product-range` : "/products";
+  return product ? `/products/?view=${product.slug}#product-range` : "/products/";
 }
 
 export function productHref(id: string) {

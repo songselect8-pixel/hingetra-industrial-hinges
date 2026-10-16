@@ -67,7 +67,7 @@
     },
     {
       "path": "src/components/manufacturing/ManufacturingEvidence.tsx",
-      "sha256": "31016e7121cafff5289fb13cab94b98d17c651416b2b6a071ea1da82d0a6fe16"
+      "sha256": "a16b2f0439aecdcf140b7d218d30c01c0dd6730d31597ae9553a74a966551703"
     },
     {
       "path": "src/components/manufacturing/ManufacturingRFQSection.tsx",

@@ -102,7 +102,7 @@ export const applicationGroups: readonly ApplicationGroup[] = [
     characteristics: ["Hinge profile / structure", "Published catalog size", "Weld-on mounting geometry"],
     productIds: waterDropApplicationProductIds,
     inquiryProductId: "custom",
-    filterHref: "/products?application=control-cabinets",
+    filterHref: "/products/?application=control-cabinets",
     detailMedia: {
       image: "/images/hinge-bearing-detail.jpg",
       alt: "Bearing-type weld-on hinge product photograph with assembled and separated body sections",
@@ -123,7 +123,7 @@ export const applicationGroups: readonly ApplicationGroup[] = [
     characteristics: ["12-A / 14-A / 16-A configuration", "Published drawing dimensions", "Required hinge arrangement"],
     productIds: ["12-14-16-type"],
     inquiryProductId: "12-14-16-type",
-    filterHref: "/products?application=trailer-doors",
+    filterHref: "/products/?application=trailer-doors",
     detailMedia: {
       image: "/images/drawing-12-14-16-type.png",
       alt: "Original 12 / 14 / 16 Type catalog product photograph and dimensional drawing",
@@ -144,7 +144,7 @@ export const applicationGroups: readonly ApplicationGroup[] = [
     characteristics: ["Water-drop hinge profile", "Published catalog dimensions", "Weld-on installation arrangement"],
     productIds: waterDropApplicationProductIds,
     inquiryProductId: "custom",
-    filterHref: "/products?application=steel-doors",
+    filterHref: "/products/?application=steel-doors",
     detailMedia: {
       image: "/images/hinge-pin.jpg",
       alt: "Pin-type water-drop weld-on hinge product photograph with separated hinge body and pin",

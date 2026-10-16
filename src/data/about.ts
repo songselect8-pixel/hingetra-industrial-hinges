@@ -72,7 +72,7 @@ export const standardAndCustom = [
     label: "Standard product range",
     title: "Review published families and dimensions",
     description: "Browse catalog product families, listed sizes and original technical references where they are available.",
-    href: "/products",
+    href: "/products/",
     cta: "Browse Products",
     sourcePages: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
   },
@@ -80,7 +80,7 @@ export const standardAndCustom = [
     label: "Custom requirements",
     title: "Start with a drawing or required dimensions",
     description: "Send a drawing, dimensions or product requirement for review where customization is supported. The requested configuration remains subject to confirmation.",
-    href: "/custom-hinges",
+    href: "/custom-hinges/",
     cta: "Explore Custom Hinges",
     sourcePages: [8, 9, 10, 11, 12, 13, 14, 15, 18],
   },
@@ -116,9 +116,9 @@ export const workingApproach = [
 ] as const satisfies readonly AboutSourceRecord[];
 
 export const aboutNavigation = [
-  { label: "Products", href: "/products" },
-  { label: "Applications", href: "/applications" },
-  { label: "Custom Hinges", href: "/custom-hinges" },
-  { label: "Manufacturing", href: "/manufacturing" },
-  { label: "Quality", href: "/quality" },
+  { label: "Products", href: "/products/" },
+  { label: "Applications", href: "/applications/" },
+  { label: "Custom Hinges", href: "/custom-hinges/" },
+  { label: "Manufacturing", href: "/manufacturing/" },
+  { label: "Quality", href: "/quality/" },
 ] as const;

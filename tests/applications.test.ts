@@ -110,7 +110,7 @@ test("shared route extensions keep existing defaults while supporting Applicatio
   const site = readFileSync(resolve("src/data/site.ts"), "utf8");
   assert.match(header, /"home" \| "products" \| "applications"/);
   assert.match(footer, /"home" \| "products" \| "applications"/);
-  assert.match(site, /\{ label: "Applications", href: "\/applications" \}/);
+  assert.match(site, /\{ label: "Applications", href: "\/applications\/" \}/);
   assert.match(form, /submitLabel = "Submit RFQ"/);
   assert.match(form, /productLabel = "Product type"/);
 });

@@ -163,7 +163,7 @@ test("About navigation extension preserves locked defaults", () => {
 
   assert.match(header, /"quality" \| "resources" \| "about-us"/);
   assert.match(footer, /"quality" \| "resources" \| "about-us"/);
-  assert.match(site, /\{ label: "About Us", href: "\/about-us" \}/);
+  assert.match(site, /\{ label: "About Us", href: "\/about-us\/" \}/);
   assert.match(header, /currentPage === "about-us"/);
   assert.match(footer, /#about-us-top/);
 });

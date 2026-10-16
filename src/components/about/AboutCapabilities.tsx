@@ -15,7 +15,7 @@ function ManufacturingFoundation() {
           title={<span id="about-manufacturing-title">Manufacturing Behind the Product</span>}
           description="The capabilities below come from the company catalog. The factory exterior concept and process scene are supporting illustrations, not photographs of company facilities."
         >
-          <Link href="/manufacturing" className="text-link section-heading-link">Explore Manufacturing <Arrow diagonal /></Link>
+          <Link href="/manufacturing/" className="text-link section-heading-link">Explore Manufacturing <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="about-manufacturing-media">
           <figure data-asset-kind="illustration" className="about-factory-evidence">
@@ -40,7 +40,7 @@ function ManufacturingFoundation() {
             </article>
           ))}
         </div>
-        <Link href="/manufacturing" className="button button-outline about-manufacturing-cta">Explore Manufacturing <Arrow /></Link>
+        <Link href="/manufacturing/" className="button button-outline about-manufacturing-cta">Explore Manufacturing <Arrow /></Link>
       </div>
     </section>
   );
@@ -82,7 +82,7 @@ function ApplicationsSummary() {
           title={<span id="about-applications-title">Built for Industrial Applications</span>}
           description="Use the catalog application groups as a starting point, then confirm the hinge family and dimensions for the requirement."
         >
-          <Link href="/applications" className="text-link section-heading-link">Explore Applications <Arrow diagonal /></Link>
+          <Link href="/applications/" className="text-link section-heading-link">Explore Applications <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="about-application-grid">
           <article className="about-application-card">
@@ -94,7 +94,7 @@ function ApplicationsSummary() {
             <div><span>Catalog application group · p6</span><h3>Gates, Trailer Doors & Ramps</h3><p>{gateApplications.map((item) => item.name).join(" · ")}</p></div>
           </article>
         </div>
-        <div className="about-application-footer"><p>Application context supports selection discussion; confirm the product family and dimensions for the requirement.</p><Link href="/applications" className="button button-outline">Explore Applications <Arrow /></Link></div>
+        <div className="about-application-footer"><p>Application context supports selection discussion; confirm the product family and dimensions for the requirement.</p><Link href="/applications/" className="button button-outline">Explore Applications <Arrow /></Link></div>
       </div>
     </section>
   );

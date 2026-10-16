@@ -98,7 +98,7 @@ export const chooseWeldOnHinges = {
         {
           "type": "link",
           "text": "bearing, pin and washer comparison",
-          "href": "/resources/bearing-pin-washer-weld-on-hinges"
+          "href": "/resources/bearing-pin-washer-weld-on-hinges/"
         },
         " explains the differences to discuss."
       ]
@@ -146,7 +146,7 @@ export const chooseWeldOnHinges = {
         {
           "type": "link",
           "text": "hinge size guide",
-          "href": "/resources/weld-on-hinge-sizes"
+          "href": "/resources/weld-on-hinge-sizes/"
         },
         " for the numbered models and compound size formats."
       ]
@@ -218,7 +218,7 @@ export const chooseWeldOnHinges = {
         {
           "type": "link",
           "text": "drawing checklist",
-          "href": "/resources/prepare-hinge-drawing-dimension-request"
+          "href": "/resources/prepare-hinge-drawing-dimension-request/"
         },
         " includes a short inquiry outline you can copy."
       ]
@@ -242,7 +242,7 @@ export const chooseWeldOnHinges = {
         {
           "type": "link",
           "text": "standard versus custom guide",
-          "href": "/resources/standard-vs-custom-weld-on-hinges"
+          "href": "/resources/standard-vs-custom-weld-on-hinges/"
         },
         " explains how to keep that discussion clear."
       ]

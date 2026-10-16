@@ -203,13 +203,13 @@ export const standardVsCustomHinges = {
         {
           "type": "link",
           "text": "drawing and dimension checklist",
-          "href": "/resources/prepare-hinge-drawing-dimension-request"
+          "href": "/resources/prepare-hinge-drawing-dimension-request/"
         },
         " includes an inquiry outline. Use the ",
         {
           "type": "link",
           "text": "size guide",
-          "href": "/resources/weld-on-hinge-sizes"
+          "href": "/resources/weld-on-hinge-sizes/"
         },
         " when the question concerns a model number, compound size string or missing unit."
       ]

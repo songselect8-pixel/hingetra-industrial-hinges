@@ -93,7 +93,7 @@ export const gateTrailerRampHinges = {
         {
           "type": "link",
           "text": "size guide",
-          "href": "/resources/weld-on-hinge-sizes"
+          "href": "/resources/weld-on-hinge-sizes/"
         },
         " explains how to preserve model names and drawing symbols in your request."
       ]
@@ -165,7 +165,7 @@ export const gateTrailerRampHinges = {
         {
           "type": "link",
           "text": "alignment and removal clearance guide",
-          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance"
+          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance/"
         },
         "."
       ]
@@ -189,13 +189,13 @@ export const gateTrailerRampHinges = {
         {
           "type": "link",
           "text": "inquiry form",
-          "href": "/contact#contact-rfq"
+          "href": "/contact/#contact-rfq"
         },
         " for your drawing and reference image. The ",
         {
           "type": "link",
           "text": "RFQ drawing checklist",
-          "href": "/resources/prepare-hinge-drawing-dimension-request"
+          "href": "/resources/prepare-hinge-drawing-dimension-request/"
         },
         " shows what to include."
       ]

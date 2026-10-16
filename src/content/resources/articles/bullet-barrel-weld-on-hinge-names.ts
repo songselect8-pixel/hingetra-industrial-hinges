@@ -173,13 +173,13 @@ export const bulletBarrelNames = {
         {
           "type": "link",
           "text": "bearing, pin and washer constructions",
-          "href": "/resources/bearing-pin-washer-weld-on-hinges"
+          "href": "/resources/bearing-pin-washer-weld-on-hinges/"
         },
         " or check the ",
         {
           "type": "link",
           "text": "size notation guide",
-          "href": "/resources/weld-on-hinge-sizes"
+          "href": "/resources/weld-on-hinge-sizes/"
         },
         " before sending the inquiry."
       ]

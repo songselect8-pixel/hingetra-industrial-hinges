@@ -130,8 +130,8 @@ test("Manufacturing public copy omits unsupported capability and logistics claim
     /export (?:countries|volume)/i,
     /export[ -]?volume/i,
   ]) assert.doesNotMatch(existing, prohibited);
-  assert.match(existing, /href="\/custom-hinges"/);
-  assert.match(existing, /href="\/quality"/);
+  assert.match(existing, /href="\/custom-hinges\/"/);
+  assert.match(existing, /href="\/quality\/"/);
 });
 
 test("Manufacturing navigation extension preserves earlier page defaults and legacy aliases stay absent", () => {
@@ -141,7 +141,7 @@ test("Manufacturing navigation extension preserves earlier page defaults and leg
 
   assert.match(header, /"home" \| "products" \| "applications" \| "custom-hinges" \| "manufacturing" \| "quality"/);
   assert.match(footer, /"home" \| "products" \| "applications" \| "custom-hinges" \| "manufacturing" \| "quality"/);
-  assert.match(site, /\{ label: "Manufacturing", href: "\/manufacturing" \}/);
+  assert.match(site, /\{ label: "Manufacturing", href: "\/manufacturing\/" \}/);
   assert.match(header, /currentPage === "manufacturing"/);
   assert.match(footer, /#manufacturing-top/);
 

@@ -33,7 +33,7 @@ export function ProductDetailTemplate({ detail }: { detail: ProductDetail }) {
       <Header currentPage="products" rfqHref="#rfq" />
       <main id="main-content">
         <section className="detail-hero" aria-labelledby="detail-title"><div className="shell">
-          <nav className="product-breadcrumb" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li><li aria-hidden="true">/</li><li><Link href="/products">Products</Link></li><li aria-hidden="true">/</li><li aria-current="page">{detail.title}</li></ol></nav>
+          <nav className="product-breadcrumb" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li><li aria-hidden="true">/</li><li><Link href="/products/">Products</Link></li><li aria-hidden="true">/</li><li aria-current="page">{detail.title}</li></ol></nav>
           <div className="detail-hero-layout">
             <ProductGallery images={detail.gallery} profileLabel={`${family.shortName} · ${family.profile}`} />
             <div className="detail-hero-copy">
@@ -98,7 +98,7 @@ export function ProductDetailTemplate({ detail }: { detail: ProductDetail }) {
           })}</div>
         </div></section>}
 
-        <section className="section detail-related" aria-labelledby="detail-related-title"><div className="shell"><SectionHeading eyebrow="Other constructions" title={<span id="detail-related-title">Related hinges.</span>}><Link href="/products" className="text-link section-heading-link">View the complete range <Arrow /></Link></SectionHeading>
+        <section className="section detail-related" aria-labelledby="detail-related-title"><div className="shell"><SectionHeading eyebrow="Other constructions" title={<span id="detail-related-title">Related hinges.</span>}><Link href="/products/" className="text-link section-heading-link">View the complete range <Arrow /></Link></SectionHeading>
           <div className="product-grid">{product.relatedProducts.map((id) => { const related = getProduct(id)!; return <ProductCard key={id} family={getFamily(id)!} index={products.indexOf(related)} href={productHref(id)} actionLabel="View Details" quoteHref={productInquiryHref(id)} countLabel={`${related.dimensions.length} ${id.includes("type") ? "catalog models" : "catalog sizes"}`} />; })}</div>
         </div></section>
 

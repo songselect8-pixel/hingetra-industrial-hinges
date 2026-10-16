@@ -59,15 +59,15 @@
     },
     {
       "path": "src/components/quality/QualityPageContent.tsx",
-      "sha256": "e49bf7960fe8badee49bdb08dd8a2570143f05da2aa6e93347521063d7c47c6a"
+      "sha256": "61cc16c8b04c05f37c3d18543a378dc6495dff1780f17f50ea395bdfd01dbd5a"
     },
     {
       "path": "src/components/quality/QualityTechnicalEvidence.tsx",
-      "sha256": "7d355aae57be4b54cb8bf5795db35a53f3480fbc6eacd79fbf9e98c9f1d220c7"
+      "sha256": "69b1b4568e72e729198c907930c092da419baf1cf26beb3726cbe1dfa54d59e3"
     },
     {
       "path": "src/components/quality/QualityProductExamples.tsx",
-      "sha256": "42d8d72300086769d2e51ec6c819bbed2103fd6a7b9876dc4cfa54f78d1fd0e5"
+      "sha256": "e4381a22f6ecaaf1b03a53b5c87bb8fd0bcf8b08e7284e8c800769fbf1db05be"
     },
     {
       "path": "src/components/quality/QualityPreparation.tsx",
@@ -75,7 +75,7 @@
     },
     {
       "path": "src/components/quality/QualityRFQSection.tsx",
-      "sha256": "7a767e456891af931b4dc7f2405fca20528d850be18fd2f70951ff0dc70e7714"
+      "sha256": "931d9c7332a550a56c7073497bc51410d94cc4ad8285c7c8f5145636dd49900b"
     },
     {
       "path": "src/data/quality.ts",

@@ -189,7 +189,7 @@ export const alignmentClearance = {
         {
           "type": "link",
           "text": "drawing and RFQ guide",
-          "href": "/resources/prepare-hinge-drawing-dimension-request"
+          "href": "/resources/prepare-hinge-drawing-dimension-request/"
         },
         " helps organize the request without guessing the missing dimensions."
       ]

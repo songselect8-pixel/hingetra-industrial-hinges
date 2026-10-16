@@ -70,23 +70,23 @@
     },
     {
       "path": "src/components/about/AboutPageContent.tsx",
-      "sha256": "043d3fb6e231cdb472a359d219b2d9383ac72c224c308180bda89bb739ba7a48"
+      "sha256": "34d68421485aa0a9dcfde445e052cfccbdd2c334970a512e4c2effbe6725df31"
     },
     {
       "path": "src/components/about/AboutCapabilities.tsx",
-      "sha256": "4b9e2c78cbcfba9547c4c5f05b2e31efc59223d9f3f0e830d0194641d6d974a7"
+      "sha256": "656c4852c41a6e41c9d1efb40d3ee653131257b8010309abdcd2f4a2aabf5d0f"
     },
     {
       "path": "src/components/about/AboutCompanyEvidence.tsx",
-      "sha256": "048a26959a32bdb22820a91eb04d68fe80aaab12f9a56466578c5d44db62d00f"
+      "sha256": "6af21e1a4647c433b1b51a4e31bd67a704c05c24e8d3984eda851084fce45005"
     },
     {
       "path": "src/components/about/AboutCTASection.tsx",
-      "sha256": "d5388a72e310d98412289391a3a9a95a37af5c15546af69c1d865e5850c250c5"
+      "sha256": "a05127a3ffeede24ad32c7194c7a6e9cca602d8c87f6dac482fd84b7cd323f3f"
     },
     {
       "path": "src/data/about.ts",
-      "sha256": "8d421b882900ac88e5efbd7b0045837aa2031dc3d079078a466c70d7d7ac4d80"
+      "sha256": "ef6cb37e0a21779c0a33401fbb25aeb4fe346bc6a036de53d8311c390648b6a2"
     },
     {
       "path": "src/data/illustrations.ts",

@@ -97,7 +97,7 @@ test("Quality route implements the approved structure, SEO, and RFQ contract", (
   assert.match(rfq, /contextLabel:\s*"Quality page"/);
   assert.match(rfq, /uploadLabel:\s*"Drawing or reference image"/);
   assert.match(rfq, /submitLabel:\s*"Send Your Requirement"/);
-  assert.match(rfq, /href="\/custom-hinges"/);
+  assert.match(rfq, /href="\/custom-hinges\/"/);
 });
 
 test("Quality imagery separates one supporting inspection illustration from source evidence", () => {
@@ -171,7 +171,7 @@ test("Quality navigation extension preserves locked defaults and legacy aliases 
 
   assert.match(header, /"home" \| "products" \| "applications" \| "custom-hinges" \| "manufacturing" \| "quality"/);
   assert.match(footer, /"home" \| "products" \| "applications" \| "custom-hinges" \| "manufacturing" \| "quality"/);
-  assert.match(site, /\{ label: "Quality", href: "\/quality" \}/);
+  assert.match(site, /\{ label: "Quality", href: "\/quality\/" \}/);
   assert.match(header, /currentPage === "quality"/);
   assert.match(footer, /#quality-top/);
   for (const route of ["about"]) {

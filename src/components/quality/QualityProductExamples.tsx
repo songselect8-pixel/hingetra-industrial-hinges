@@ -50,7 +50,7 @@ function CustomRequirementConnection() {
           <Eyebrow>Quality & custom requirements</Eyebrow>
           <h2 id="quality-custom-title">Custom Requirements Start With Confirmed Dimensions</h2>
           <p>For a different size or structure, the available drawing, dimensions and application details help establish a clear requirement for production and checking discussion.</p>
-          <Link href="/custom-hinges" className="button button-primary">Send Your Drawing <Arrow /></Link>
+          <Link href="/custom-hinges/" className="button button-primary">Send Your Drawing <Arrow /></Link>
         </div>
         <div className="quality-custom-requirements">
           <span className="micro-label">Information to provide</span>

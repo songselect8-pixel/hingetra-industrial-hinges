@@ -25,7 +25,7 @@ test("Products data retains every audited dimension and represents unpublished f
     }
     for (const image of product.images) assert.ok(existsSync(resolve("public", image.src.slice(1))));
     assert.equal(product.detailPagePublished, true);
-    assert.ok(productPreviewHref(product.id).startsWith("/products?view="));
+    assert.ok(productPreviewHref(product.id).startsWith("/products/?view="));
     const hasStaticPage = existsSync(resolve("src/app", product.detailPath.slice(1), "page.tsx"));
     const hasDynamicPage = existsSync(resolve("src/app/products/[slug]/page.tsx"));
     assert.equal(hasStaticPage || hasDynamicPage, product.detailPagePublished);

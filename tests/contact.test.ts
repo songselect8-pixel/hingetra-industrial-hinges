@@ -149,7 +149,7 @@ test("Contact navigation is a functional extension of the locked header and foot
   const footer = requireFile(resolve("src/components/navigation/Footer.tsx"));
   const site = requireFile(resolve("src/data/site.ts"));
 
-  assert.match(site, /\{ label: "Contact", href: "\/contact" \}/);
+  assert.match(site, /\{ label: "Contact", href: "\/contact\/" \}/);
   assert.match(header, /"about-us" \| "contact"/);
   assert.match(footer, /"about-us" \| "contact"/);
   assert.match(header, /currentPage === "contact"/);

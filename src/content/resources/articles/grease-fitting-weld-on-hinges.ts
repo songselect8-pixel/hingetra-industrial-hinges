@@ -169,13 +169,13 @@ export const greaseFittingHinges = {
         {
           "type": "link",
           "text": "drawing checklist",
-          "href": "/resources/prepare-hinge-drawing-dimension-request"
+          "href": "/resources/prepare-hinge-drawing-dimension-request/"
         },
         " to organize the files. Also check ",
         {
           "type": "link",
           "text": "alignment and removal clearance",
-          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance"
+          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance/"
         },
         " if the door must detach for service."
       ]

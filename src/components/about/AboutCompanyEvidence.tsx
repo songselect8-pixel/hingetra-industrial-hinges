@@ -11,7 +11,7 @@ function QualitySummary() {
           <Eyebrow>Quality approach</Eyebrow>
           <h2 id="about-quality-title">Checks During Production</h2>
           <p>Published specifications and confirmed requirement dimensions provide the reference. The catalog describes tools developed to support checks during production.</p>
-          <Link href="/quality" className="text-link">Explore Quality Control <Arrow diagonal /></Link>
+          <Link href="/quality/" className="text-link">Explore Quality Control <Arrow diagonal /></Link>
         </div>
         <div className="about-quality-points">
           {aboutQualityPoints.map((item, index) => (

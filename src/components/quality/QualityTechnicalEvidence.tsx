@@ -12,8 +12,8 @@ function DimensionalInspection() {
           <Eyebrow>Dimensional inspection</Eyebrow>
           <h2 id="quality-dimensions-title">Dimensional Checks Against Requirements</h2>
           <p>Published dimensions and confirmed customer requirements can provide the basis for checking dimensional consistency. The relevant reference depends on the hinge family.</p>
-          <Link href="/products" className="text-link">Find a Product Family <Arrow /></Link>
-          <Link href="/resources#technical-guides" className="text-link quality-resource-link">Read Technical Guides <Arrow /></Link>
+          <Link href="/products/" className="text-link">Find a Product Family <Arrow /></Link>
+          <Link href="/resources/#technical-guides" className="text-link quality-resource-link">Read Technical Guides <Arrow /></Link>
         </div>
         <div className="quality-dimension-ledger" aria-label="Dimensional reference points">
           {dimensionalReferences.map((item, index) => (
@@ -38,7 +38,7 @@ function SpecificationReferences() {
           title={<span id="quality-drawings-title">Specifications Provide the Reference</span>}
           description="Original catalog drawings and published dimensions organize the reference for product verification. The images and values below remain unchanged from their source records."
         >
-          <Link href="/products#selection-overview" className="text-link section-heading-link">Explore Product Specifications <Arrow diagonal /></Link>
+          <Link href="/products/#selection-overview" className="text-link section-heading-link">Explore Product Specifications <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="quality-drawing-grid">
           {technicalDrawingReferences.map((item) => {

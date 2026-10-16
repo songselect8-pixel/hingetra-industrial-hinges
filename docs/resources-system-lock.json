@@ -91,27 +91,27 @@
     },
     {
       "path": "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
-      "sha256": "4b945bc015b6fddb3015796b4bfaad989dd87807640ff169e77aa26083be2c52"
+      "sha256": "d50cfaf99377b43fd0b9e02d448c7d0631cbf0cd021b042b5f66ad601128ac8d"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-sizes.ts",
-      "sha256": "ae0a05f2b2cbc8666166923175173d402aab56ca001bc1447c9675eef6a4aa55"
+      "sha256": "19d4b472e323092f84fa21ccea6c8194aeea62e6080fdce75fd61c130013e1b2"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-gates-trailer-doors-and-ramps.ts",
-      "sha256": "bdb1c4e6206ac9e62610a0070c4db70a09d8e7215d52d814f574254a3eab6737"
+      "sha256": "a04e55d2af9097250d689b37f6ae475c7062f131c0ea1fa36635c72d26d03e55"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-electrical-control-cabinets.ts",
-      "sha256": "0056db1527876ebdd914047a5cf92df412c321a0603beac10e201a91dbac3b87"
+      "sha256": "285ab9b512a3d98000d9d8be9c0d275e1a95c5244fa92bb487dfa172ea1ee60a"
     },
     {
       "path": "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
-      "sha256": "a533e61fa69c410dff7c181deca19d4784eb0d377d7ee51255f853e26f1e56bd"
+      "sha256": "1e896f0e42d835b106db2dbeba998cc2c3f3e922f6b460b89b8aa85a8aab130e"
     },
     {
       "path": "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
-      "sha256": "1157b9b936f4753ad1c03e7f895391cb9ee6d7c4da1bccdb7e761961101b3de5"
+      "sha256": "bd109fe150ae390b58bd00e39eead3a4a035e0660d7145c3b71ba7f8af049bb7"
     },
     {
       "path": "src/components/resources/ResourceRichText.tsx",
@@ -135,15 +135,15 @@
     },
     {
       "path": "src/components/resources/ResourcesIndexContent.tsx",
-      "sha256": "4aadd14f11d0b3b0ca45a97e8047aa25e64a75394245980fced5414423312ecc"
+      "sha256": "7ecff09d29e6d4e41746c4ab20c3875b440a2aaa05b3bfedc2ae2c32f587a0ff"
     },
     {
       "path": "src/components/resources/ResourceArticleTemplate.tsx",
-      "sha256": "e7b3b02744dae773377e5512162e66263b7d2ebee367cc35f579f4cdf34c834b"
+      "sha256": "ade7072c94ea5a2c3f58353945af30b26c9e7f331e18d7f5d4033e9d0dccce2e"
     },
     {
       "path": "src/app/resources/page.tsx",
-      "sha256": "ce78e6529a0b3c206938bb12e5e1ff98d83daacd80f9363c22065e551e4169ee"
+      "sha256": "0e0b5fda7e4329c15133c2e74a91bc4e065cbaefbdfa60dd4824e6fdf99a5675"
     },
     {
       "path": "src/app/resources/resources.css",
@@ -151,7 +151,7 @@
     },
     {
       "path": "src/app/resources/[slug]/page.tsx",
-      "sha256": "ed07a93deff59a6eddba130181c40874cd3f40205f7c93f2d755c0dfaecf9f45"
+      "sha256": "0dbad0eb3965f9008bfa2e1a27f65778372fd8df0fbb2ef74cf26b7fd897e1ff"
     },
     {
       "path": "src/app/resources/[slug]/article.css",
@@ -163,19 +163,19 @@
     },
     {
       "path": "src/app/sitemap.ts",
-      "sha256": "ed5da2d35e0839a44642baf02a57130dca4171d61db2cb750b1aa3dadd8a233b"
+      "sha256": "26e5b195c475afdd533202ddbfc710260bcb86b1e9565bb12fa987d1cbf8ca72"
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "976a251c1b2f61ead532011c305d6688ae64d9ae03e80ed5a3574444f01f2252"
+      "sha256": "c612426598944988ccaadf4c277ef908959711204df886f042e586683a39be1a"
     },
     {
       "path": "src/components/navigation/Header.tsx",
-      "sha256": "2589e211ae11a4fa1c74696eea6b56f2c8f7a70ddd2af0a713ce044ab39beb37"
+      "sha256": "7e05b06b9d94a5dc35e69c809cccb99661e8a1d3ce1272c50b6b9644eba007c4"
     },
     {
       "path": "src/components/navigation/Footer.tsx",
-      "sha256": "85aafba0776476b339e984c1dbc0154eb73f207cac04b688ee834a527c206ef5"
+      "sha256": "5f5681193af2b901ae18c5fad1d7bb5a977b0a2def77af1d16df41637c35e456"
     },
     {
       "path": "src/app/globals.css",
@@ -183,15 +183,15 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "860f76b6d5df856514b124b6e1909227bc899f057693b8ad4560a958aea2559b"
+      "sha256": "1a63d2c1a6456ebdc1e87d4936b47c5a87219fdcf305d9011212cee8672005a6"
     },
     {
       "path": "src/components/applications/ApplicationsPageContent.tsx",
-      "sha256": "4c4a14d85ca09c2d881843268cb8fd6f8744223ef9cc2aeb3168425e994fc4d5"
+      "sha256": "8bb9e9425284ece74aa6e4a34b5dcc698d8273f08ffedc5e4d79033e9531bca5"
     },
     {
       "path": "src/components/custom-hinges/CustomHingesPageContent.tsx",
-      "sha256": "daa10739315c9f915b9c58fd0b25b5d44079a74801b95ff6cf3a978ff7d91077"
+      "sha256": "19dd370eb402f5a6a3ccf77ff2b8b7acf07eb458b0746b72229898c7bdecba5b"
     },
     {
       "path": "src/app/custom-hinges/custom-hinges.css",
@@ -199,7 +199,7 @@
     },
     {
       "path": "src/components/quality/QualityTechnicalEvidence.tsx",
-      "sha256": "7d355aae57be4b54cb8bf5795db35a53f3480fbc6eacd79fbf9e98c9f1d220c7"
+      "sha256": "69b1b4568e72e729198c907930c092da419baf1cf26beb3726cbe1dfa54d59e3"
     },
     {
       "path": "src/app/quality/quality.css",
@@ -207,11 +207,11 @@
     },
     {
       "path": "src/components/products/detail/ProductRelatedGuides.tsx",
-      "sha256": "31f1e096757ee95628670199b90db96ae19582beda8978cdec6525c6509cce06"
+      "sha256": "f5df9dc105eda4c43b98bd2f32616cefef44a23104c131aad8ffd905c5d1048c"
     },
     {
       "path": "src/components/products/detail/ProductDetailTemplate.tsx",
-      "sha256": "ecf94860b95b47941a5acaf48c0b69f4b02e8f28c2df545db392ab58fbcca38d"
+      "sha256": "0036b98ddc506a3489fdcef04f0fbad761dab9224007f1ddb9e608b24f30eb2b"
     },
     {
       "path": "src/app/products/bearing-weld-on-hinges/product-detail.css",
@@ -227,19 +227,19 @@
     },
     {
       "path": "src/content/resources/articles/bullet-barrel-weld-on-hinge-names.ts",
-      "sha256": "9f75ef06290bd888c0c98ad5dd3b1ed01db4e08b605bbb2e6252a54f3b24e02b"
+      "sha256": "c5f87904c596f93f336b5f9c8fca932f1b6b888532f68bcf50eeeacc05277f40"
     },
     {
       "path": "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
-      "sha256": "92a07d8209a4302703754a626d153b6587a6f7857b2ab0327e937bcb500f2c8d"
+      "sha256": "93042bfb8c23787112c54166ddd1a4deb965e4ce4cb53c2147387f3fc0aca237"
     },
     {
       "path": "src/content/resources/articles/grease-fitting-weld-on-hinges.ts",
-      "sha256": "cd1aee5fdab753cc9a06b4bb0941fff356f83dd74ee39822bf1568bf37c499c1"
+      "sha256": "b3f3cfb761e62bc86f63a72ba9b7600854b92b2d0c05d8bd43476c5e0e3f23ac"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts",
-      "sha256": "19478341097f031ef1335c755072144301353ed999699e324d302daa0dc7aa9e"
+      "sha256": "0d2854111c8924a97b5c98524fd90b7054914f4513c17745ac14b74564aca1c5"
     },
     {
       "path": "src/content/resources/articles/weld-on-vs-bolt-on-hinges.ts",

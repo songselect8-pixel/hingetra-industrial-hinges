@@ -127,7 +127,7 @@ export const prepareHingeDrawing = {
         {
           "type": "link",
           "text": "size guide",
-          "href": "/resources/weld-on-hinge-sizes"
+          "href": "/resources/weld-on-hinge-sizes/"
         },
         " covers this and other notation differences."
       ]
@@ -201,7 +201,7 @@ export const prepareHingeDrawing = {
         {
           "type": "link",
           "text": "inquiry form",
-          "href": "/contact#contact-rfq"
+          "href": "/contact/#contact-rfq"
         },
         ", use Technical Drawing for a PDF, DWG, DXF, JPG or PNG, and Reference Image for a JPG or PNG. Each file field accepts a file up to 10 MB. After submitting, check the form’s result before assuming the inquiry has been received."
       ]
@@ -213,13 +213,13 @@ export const prepareHingeDrawing = {
         {
           "type": "link",
           "text": "standard versus custom guide",
-          "href": "/resources/standard-vs-custom-weld-on-hinges"
+          "href": "/resources/standard-vs-custom-weld-on-hinges/"
         },
         " explains the confirmation step. If the part fits but the movement is uncertain, include the details from the ",
         {
           "type": "link",
           "text": "alignment and clearance guide",
-          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance"
+          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance/"
         },
         "."
       ]

@@ -216,7 +216,7 @@ export const weldOnHingeSizes = {
         {
           "type": "link",
           "text": "custom request checklist",
-          "href": "/resources/standard-vs-custom-weld-on-hinges"
+          "href": "/resources/standard-vs-custom-weld-on-hinges/"
         },
         " rather than editing a product table and presenting it as an existing option."
       ]

@@ -31,7 +31,7 @@ function ContactHero() {
             <p>Send us your hinge type, dimensions, quantity, application or technical drawing. The more information you provide, the easier it is to understand your requirement.</p>
             <div className="contact-hero-actions">
               <Link className="button button-primary" href="#contact-rfq">Start Your RFQ <Arrow /></Link>
-              <Link className="button button-outline" href="/products">Explore Products <Arrow /></Link>
+              <Link className="button button-outline" href="/products/">Explore Products <Arrow /></Link>
             </div>
           </div>
           <aside className="contact-hero-ledger" aria-label="Useful RFQ information">
@@ -135,13 +135,13 @@ function StandardOrCustom() {
             <span>01 · Standard product</span>
             <h3>Already know the hinge type?</h3>
             <p>Review the catalog families and published technical information before sending your inquiry.</p>
-            <Link className="text-link" href="/products">Browse Products <Arrow /></Link>
+            <Link className="text-link" href="/products/">Browse Products <Arrow /></Link>
           </article>
           <article>
             <span>02 · Custom requirement</span>
             <h3>Need a different size or structure?</h3>
             <p>Start with your required dimensions, structural requirement or technical drawing for review.</p>
-            <Link className="text-link" href="/custom-hinges">Explore Custom Hinges <Arrow /></Link>
+            <Link className="text-link" href="/custom-hinges/">Explore Custom Hinges <Arrow /></Link>
           </article>
         </div>
       </div>
@@ -158,7 +158,7 @@ function ApplicationEntry() {
           title={<span id="contact-applications-title">Explore by Application</span>}
           description="Start with the installation context when the hinge family or model is not yet known."
         >
-          <Link className="text-link section-heading-link" href="/applications">Explore Applications <Arrow diagonal /></Link>
+          <Link className="text-link section-heading-link" href="/applications/">Explore Applications <Arrow diagonal /></Link>
         </SectionHeading>
         <nav className="contact-application-links" aria-label="Application pages">
           {contactApplicationEntries.map((entry, index) => <Link key={entry.label} href={entry.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{entry.label}</strong><Arrow /></Link>)}
@@ -198,7 +198,7 @@ function ContactCTA() {
         <div><Eyebrow light>Start the discussion</Eyebrow><h2 id="contact-final-title">Ready to Discuss Your Hinge Requirement?</h2></div>
         <div className="contact-final-copy">
           <p>Send the product reference, dimensions, quantity, application or available technical files.</p>
-          <div><Link className="button button-primary" href="#contact-rfq">Submit Your RFQ <Arrow /></Link><Link className="button contact-final-secondary" href="/products">Browse Hinges <Arrow /></Link></div>
+          <div><Link className="button button-primary" href="#contact-rfq">Submit Your RFQ <Arrow /></Link><Link className="button contact-final-secondary" href="/products/">Browse Hinges <Arrow /></Link></div>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ function QualityHero() {
             <p>Dimensional checks and in-process inspection help support product consistency throughout manufacturing. Published specifications and confirmed requirements provide the reference.</p>
             <div className="quality-hero-actions">
               <Link href="#rfq" className="button button-primary">Discuss Your Requirement <Arrow /></Link>
-              <Link href="/products#selection-overview" className="button button-outline">View Product Specifications <Arrow /></Link>
+              <Link href="/products/#selection-overview" className="button button-outline">View Product Specifications <Arrow /></Link>
             </div>
             <div className="quality-hero-tags" aria-label="Quality reference areas">
               <span>Published dimensions</span><span>Original drawings</span><span>In-process checks</span>

@@ -128,7 +128,7 @@ test("Custom Hinges navigation and RFQ extensions preserve locked defaults", () 
 
   assert.match(header, /"home" \| "products" \| "applications" \| "custom-hinges" \| "manufacturing" \| "quality"/);
   assert.match(footer, /"home" \| "products" \| "applications" \| "custom-hinges" \| "manufacturing" \| "quality"/);
-  assert.match(site, /\{ label: "Custom Hinges", href: "\/custom-hinges" \}/);
+  assert.match(site, /\{ label: "Custom Hinges", href: "\/custom-hinges\/" \}/);
   assert.match(form, /customRequirementLabel = "Custom requirement"/);
   assert.match(form, /uploadLabel = "Drawing upload"/);
   assert.match(form, /submitLabel = "Submit RFQ"/);

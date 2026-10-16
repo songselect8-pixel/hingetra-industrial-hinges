@@ -22,7 +22,7 @@ function AboutHero() {
             <p className="about-hero-headline">Industrial Hinge Manufacturing Built Around Practical Requirements</p>
             <p>{aboutCompany.name} manufactures industrial weld-on hinges and supports published standard products and customer-specific requirements.</p>
             <div className="about-hero-actions">
-              <Link href="/products" className="button button-primary">Explore Products <Arrow /></Link>
+              <Link href="/products/" className="button button-primary">Explore Products <Arrow /></Link>
               <Link href="/#rfq" className="button button-outline">Discuss Your Requirement <Arrow /></Link>
             </div>
             <div className="about-hero-tags" aria-label="Company focus">
@@ -76,7 +76,7 @@ function ProductRange() {
           title={<span id="about-products-title">A Focused Hinge Product Range</span>}
           description="Review representative catalog families below, then continue to the complete product range for published sizes and technical references."
         >
-          <Link href="/products" className="text-link section-heading-link">Explore All Hinges <Arrow diagonal /></Link>
+          <Link href="/products/" className="text-link section-heading-link">Explore All Hinges <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="product-grid about-product-grid">
           {aboutProducts.map((family, index) => (
@@ -91,7 +91,7 @@ function ProductRange() {
         </div>
         <div className="about-products-footer">
           <p>Additional catalog families include Round, Gasket, Square and Flag hinge configurations.</p>
-          <Link href="/products" className="button button-outline">Explore All Hinges <Arrow /></Link>
+          <Link href="/products/" className="button button-outline">Explore All Hinges <Arrow /></Link>
         </div>
       </div>
     </section>

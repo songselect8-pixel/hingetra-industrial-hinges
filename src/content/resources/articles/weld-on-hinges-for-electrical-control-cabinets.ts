@@ -102,7 +102,7 @@ export const cabinetHinges = {
         {
           "type": "link",
           "text": "bearing, pin and washer hinges",
-          "href": "/resources/bearing-pin-washer-weld-on-hinges"
+          "href": "/resources/bearing-pin-washer-weld-on-hinges/"
         },
         ". If a grease fitting is required, check whether the surrounding cabinet permits access to it after assembly."
       ]
@@ -168,7 +168,7 @@ export const cabinetHinges = {
         {
           "type": "link",
           "text": "standard and custom inquiry guide",
-          "href": "/resources/standard-vs-custom-weld-on-hinges"
+          "href": "/resources/standard-vs-custom-weld-on-hinges/"
         },
         " for the information to provide."
       ]
@@ -206,7 +206,7 @@ export const cabinetHinges = {
         {
           "type": "link",
           "text": "alignment guide",
-          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance"
+          "href": "/resources/weld-on-hinge-alignment-and-removal-clearance/"
         },
         " covers the related geometry checks."
       ]

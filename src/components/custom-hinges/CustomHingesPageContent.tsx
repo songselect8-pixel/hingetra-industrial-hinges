@@ -30,7 +30,7 @@ function WhenStandardSizesAreNotEnough() {
           title={<span id="custom-scenarios-title">When Standard Sizes Are Not Enough</span>}
           description="A custom discussion starts when the published size, structure or mounting arrangement does not describe the requirement you need reviewed."
         >
-          <Link href="/products" className="text-link section-heading-link">Browse standard hinges <Arrow diagonal /></Link>
+          <Link href="/products/" className="text-link section-heading-link">Browse standard hinges <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="custom-scenario-grid">
           {customScenarios.map((scenario, index) => <article key={scenario.title}><span>0{index + 1}</span><h3>{scenario.title}</h3><p>{scenario.description}</p></article>)}
@@ -52,7 +52,7 @@ function StartWithWhatYouHave() {
         <div className="custom-input-grid">
           {requirementInputs.map((input, index) => <article key={input.title}><span>0{index + 1}</span><div><h3>{input.title}</h3><p>{input.description}</p></div></article>)}
         </div>
-        <div className="custom-input-note"><p>Available information can be reviewed before quotation. It does not guarantee that an unlisted configuration can be produced. <Link href="/resources#custom-manufacturing">Read the custom hinge guides</Link> before preparing your request.</p><Link href="#rfq" className="text-link">Send what you have <Arrow /></Link></div>
+        <div className="custom-input-note"><p>Available information can be reviewed before quotation. It does not guarantee that an unlisted configuration can be produced. <Link href="/resources/#custom-manufacturing">Read the custom hinge guides</Link> before preparing your request.</p><Link href="#rfq" className="text-link">Send what you have <Arrow /></Link></div>
       </div>
     </section>
   );
@@ -104,7 +104,7 @@ function StandardOrCustom() {
             <tbody>{customComparison.map((row) => <tr key={row.criterion}><th scope="row">{row.criterion}</th><td>{row.standard}</td><td>{row.custom}</td></tr>)}</tbody>
           </table>
         </div>
-        <div className="custom-comparison-actions"><Link href="/products" className="button button-outline">Browse Standard Hinges <Arrow /></Link><Link href="#rfq" className="button button-primary">Send Your Requirement <Arrow /></Link></div>
+        <div className="custom-comparison-actions"><Link href="/products/" className="button button-outline">Browse Standard Hinges <Arrow /></Link><Link href="#rfq" className="button button-primary">Send Your Requirement <Arrow /></Link></div>
       </div>
     </section>
   );
@@ -119,7 +119,7 @@ function CustomProductFamilies() {
           title={<span id="custom-product-families-title">Product Families With Customization Support</span>}
           description="The following catalog families contain an explicit customization statement. The requested dimensions and structure still require review."
         >
-          <Link href="/applications" className="text-link section-heading-link">Review applications <Arrow diagonal /></Link>
+          <Link href="/applications/" className="text-link section-heading-link">Review applications <Arrow diagonal /></Link>
         </SectionHeading>
         <div className="custom-product-grid">
           {customProductIds.map((id, index) => {

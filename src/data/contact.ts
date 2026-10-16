@@ -21,11 +21,11 @@ export const contactProductOptions = [
 ] as const;
 
 export const contactApplicationEntries = [
-  { label: "Industrial Steel Doors", href: "/applications#industrial-steel-doors" },
-  { label: "Gates", href: "/applications#gates-trailers-ramps" },
-  { label: "Trailer Doors / Ramps", href: "/applications#gates-trailers-ramps" },
-  { label: "Electrical & Control Cabinets", href: "/applications#electrical-control-cabinets" },
-  { label: "Industrial Cabinets & Enclosures", href: "/applications#electrical-control-cabinets" },
+  { label: "Industrial Steel Doors", href: "/applications/#industrial-steel-doors" },
+  { label: "Gates", href: "/applications/#gates-trailers-ramps" },
+  { label: "Trailer Doors / Ramps", href: "/applications/#gates-trailers-ramps" },
+  { label: "Electrical & Control Cabinets", href: "/applications/#electrical-control-cabinets" },
+  { label: "Industrial Cabinets & Enclosures", href: "/applications/#electrical-control-cabinets" },
 ] as const;
 
 export const contactChecklist = [

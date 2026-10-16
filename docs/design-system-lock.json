@@ -97,7 +97,7 @@
     },
     {
       "path": "src/components/sections/ProductGrid.tsx",
-      "sha256": "71d6dc0f269f4a5588368ff1a6a698f02e5933171f56f545542c4eb55c27d9b9"
+      "sha256": "682fae95cb62ff5055c1b084cf47bd64d5df962cf731d9f8485280b807cd116e"
     },
     {
       "path": "src/components/sections/WhyChooseUs.tsx",
@@ -117,11 +117,11 @@
     },
     {
       "path": "src/components/navigation/Header.tsx",
-      "sha256": "2589e211ae11a4fa1c74696eea6b56f2c8f7a70ddd2af0a713ce044ab39beb37"
+      "sha256": "7e05b06b9d94a5dc35e69c809cccb99661e8a1d3ce1272c50b6b9644eba007c4"
     },
     {
       "path": "src/components/navigation/Footer.tsx",
-      "sha256": "85aafba0776476b339e984c1dbc0154eb73f207cac04b688ee834a527c206ef5"
+      "sha256": "5f5681193af2b901ae18c5fad1d7bb5a977b0a2def77af1d16df41637c35e456"
     },
     {
       "path": "src/components/inquiry/InquiryProvider.tsx",
@@ -157,7 +157,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "976a251c1b2f61ead532011c305d6688ae64d9ae03e80ed5a3574444f01f2252"
+      "sha256": "c612426598944988ccaadf4c277ef908959711204df886f042e586683a39be1a"
     },
     {
       "path": "src/app/page.tsx",
@@ -173,7 +173,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "860f76b6d5df856514b124b6e1909227bc899f057693b8ad4560a958aea2559b"
+      "sha256": "1a63d2c1a6456ebdc1e87d4936b47c5a87219fdcf305d9011212cee8672005a6"
     },
     {
       "path": "src/app/products/products.css",
@@ -205,7 +205,7 @@
     },
     {
       "path": "src/data/products.ts",
-      "sha256": "c8b402749774b5de98188cfac1f128ed7431907ef1494d4f50c1747fdca9d555"
+      "sha256": "25f75dd682406b53b94a43d1d0a6baabe2037a184868724e2d8a24209753ba50"
     },
     {
       "path": "src/data/product-details.ts",

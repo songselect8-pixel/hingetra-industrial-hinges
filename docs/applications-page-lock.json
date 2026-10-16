@@ -49,7 +49,7 @@
     },
     {
       "path": "src/components/applications/ApplicationsPageContent.tsx",
-      "sha256": "4c4a14d85ca09c2d881843268cb8fd6f8744223ef9cc2aeb3168425e994fc4d5"
+      "sha256": "8bb9e9425284ece74aa6e4a34b5dcc698d8273f08ffedc5e4d79033e9531bca5"
     },
     {
       "path": "src/components/applications/ApplicationDetailSection.tsx",
@@ -61,7 +61,7 @@
     },
     {
       "path": "src/data/applications.ts",
-      "sha256": "8b9c0db8f9af273d7d7ed97c52690b1efe9c814f5618852626ffe98305c6c17d"
+      "sha256": "1a6d40f277d56c36498e072d0c626b0911dfb19cefb8796aef9acef70ae2b866"
     },
     {
       "path": "docs/research/product-family-source-manifest.json",
