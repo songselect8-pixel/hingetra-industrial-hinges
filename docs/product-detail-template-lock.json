@@ -40,7 +40,7 @@
   "baselineFiles": [
     {
       "path": "src/components/products/detail/ProductDetailTemplate.tsx",
-      "sha256": "ecf94860b95b47941a5acaf48c0b69f4b02e8f28c2df545db392ab58fbcca38d"
+      "sha256": "0036b98ddc506a3489fdcef04f0fbad761dab9224007f1ddb9e608b24f30eb2b"
     },
     {
       "path": "src/components/products/detail/ProductGallery.tsx",
@@ -72,11 +72,11 @@
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "26f023777dcd1a913b6ffa9f91819af036184f76d9c8d9e7245e90c6925c2269"
+      "sha256": "4ab4a81a7284bae817d6d587986c1c394cc8355ecf2a771e98d520770dcae1d0"
     },
     {
       "path": "src/data/products.ts",
-      "sha256": "c8b402749774b5de98188cfac1f128ed7431907ef1494d4f50c1747fdca9d555"
+      "sha256": "25f75dd682406b53b94a43d1d0a6baabe2037a184868724e2d8a24209753ba50"
     },
     {
       "path": "src/app/products/[slug]/page.tsx",
@@ -88,7 +88,7 @@
     },
     {
       "path": "src/components/products/detail/ProductRelatedGuides.tsx",
-      "sha256": "31f1e096757ee95628670199b90db96ae19582beda8978cdec6525c6509cce06"
+      "sha256": "f5df9dc105eda4c43b98bd2f32616cefef44a23104c131aad8ffd905c5d1048c"
     }
   ],
   "resourcesExtensionRevalidatedAt": "2026-09-02T22:53:59.6791237+08:00",
@@ -144,5 +144,7 @@
       "src/app/products/[slug]/page.tsx",
       "src/app/products/bearing-weld-on-hinges/page.tsx"
     ]
-  }
+  },
+  "baselineRevalidatedAt": "2026-10-16",
+  "baselineRevalidationNote": "Hashes refreshed after commits 830d32d (internal links to canonical trailing-slash URLs) and 08f5a5d (title and meta rewrite). No contract, rule or section-order change."
 }
