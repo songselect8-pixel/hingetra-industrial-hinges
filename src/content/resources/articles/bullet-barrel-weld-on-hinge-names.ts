@@ -14,8 +14,8 @@ export const bulletBarrelNames = {
   "slug": "bullet-barrel-weld-on-hinge-names",
   "order": 7,
   "category": "selection-guides",
-  "title": "Bullet, Barrel and Weld-On Hinges: What the Names Mean",
-  "description": "Understand how bullet, barrel, cylinder and weld-on hinge names overlap, then use the drawing, mounting method and dimensions to identify the required part.",
+  "title": "Bullet, Barrel & Weld-On Hinges: Types & Dimensions",
+  "description": "Compare weld-on bullet, barrel, and cylinder hinges. View catalog dimensions, mounting styles, and heavy-duty pivot profiles for steel door fabricators.",
   "featuredImage": "/images/hinge-round.jpg",
   "featuredImageAlt": "HINGETRA round weld-on hinge product reference from the supplied catalog",
   "keywords": [

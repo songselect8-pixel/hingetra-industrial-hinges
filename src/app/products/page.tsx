@@ -11,8 +11,8 @@ import { site } from "@/data/site";
 import { products } from "@/data/products";
 import "./products.css";
 
-const title = `Weld-On Hinges | Bullet, Barrel & Other Profiles | ${site.brand}`;
-const description = "Compare ten weld-on hinge families, including teardrop and round barrel profiles. Check catalog dimensions, drawings and product photos, then request a quote.";
+const title = `Industrial Weld-On Hinges Catalog: 10 Product Types | ${site.brand}`;
+const description = "Explore our complete industrial weld-on hinge catalog. Compare bearing, bullet, pin, and flag hinge fittings for heavy-duty metal enclosures and gates.";
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {

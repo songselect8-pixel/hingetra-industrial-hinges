@@ -111,8 +111,8 @@ const bearingDrawing: ProductDetail["drawing"] = {
 export const bearingDetail: ProductDetail = {
   productId: "bearing",
   title: "Bearing Type Weld-On Hinges",
-  seoTitle: "Bearing Type Weld-On Hinges | Teardrop Sizes",
-  seoDescription: "Compare 18 bearing weld-on hinge sizes in a teardrop profile for steel doors and electrical enclosures. Review the drawing and send your installation requirements.",
+  seoTitle: "Bearing Type Weld-On Hinges: 18 Sizes & Drawing",
+  seoDescription: "Heavy-duty water-drop bearing weld-on hinges in 18 catalog sizes. Built for smooth hinged connection and pivot joints on steel doors and heavy enclosures.",
   description: "Water-drop (teardrop) weld-on hinges with a bearing assembly. Compare 18 listed sizes, product photographs and the original reference drawing for your door or cabinet.",
   applicationSummary: "Steel doors & industrial cabinets",
   overview: [

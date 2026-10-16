@@ -157,7 +157,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "c612426598944988ccaadf4c277ef908959711204df886f042e586683a39be1a"
+      "sha256": "72ac64177c374f58f2466ba281ebd3dc09bf631e941bf770884fc85ad24f6ca7"
     },
     {
       "path": "src/app/page.tsx",
@@ -173,7 +173,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "1a63d2c1a6456ebdc1e87d4936b47c5a87219fdcf305d9011212cee8672005a6"
+      "sha256": "50b9a1218b8db49eccf4f4b97c6a5918c626f5993a76ea53d2feb02859974541"
     },
     {
       "path": "src/app/products/products.css",
@@ -209,7 +209,7 @@
     },
     {
       "path": "src/data/product-details.ts",
-      "sha256": "26f023777dcd1a913b6ffa9f91819af036184f76d9c8d9e7245e90c6925c2269"
+      "sha256": "4ab4a81a7284bae817d6d587986c1c394cc8355ecf2a771e98d520770dcae1d0"
     },
     {
       "path": "src/data/product-filters.ts",

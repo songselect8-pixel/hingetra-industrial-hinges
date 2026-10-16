@@ -4,8 +4,8 @@ import type { ResourceArticle } from "../types.ts";
 export const cabinetHinges = {
   "slug": "weld-on-hinges-for-electrical-control-cabinets",
   "order": 4,
-  "title": "Weld-On Hinges for Electrical and Control Cabinets",
-  "description": "Check door-edge geometry, frame clearance and hinge construction when specifying weld-on hinges for electrical control cabinets and industrial enclosures.",
+  "title": "Weld-On Hinges for Electrical & Machine Enclosures",
+  "description": "Industrial weld-on hinges for electrical cabinets, machine enclosures, and railway equipment. Review door-edge clearances and gasket fittings.",
   "category": "application-guides",
   "publishedAt": "2026-09-02",
   "updatedAt": "2026-09-20",

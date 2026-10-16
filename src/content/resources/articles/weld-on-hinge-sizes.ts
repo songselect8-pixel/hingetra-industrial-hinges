@@ -4,8 +4,8 @@ import type { ResourceArticle } from "../types.ts";
 export const weldOnHingeSizes = {
   "slug": "weld-on-hinge-sizes",
   "order": 2,
-  "title": "Weld-On Hinge Sizes: Understanding Diameter and Length",
-  "description": "Read weld-on hinge diameter, length and numbered models correctly, including 12-A, 14-A, 16-A and 20-A / 20-B. Keep units and measurement positions clear.",
+  "title": "Weld-On Hinge Sizes & Dimensions: Complete Size Chart",
+  "description": "Complete weld-on hinge dimension guide. Understand diameter, length, and catalog codes (12-A, 20-A/B) for accurate sheet metal door hinge replacement.",
   "category": "technical-guides",
   "publishedAt": "2026-09-02",
   "updatedAt": "2026-09-20",

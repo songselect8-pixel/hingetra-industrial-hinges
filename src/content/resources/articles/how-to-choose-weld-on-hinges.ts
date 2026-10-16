@@ -4,8 +4,8 @@ import type { ResourceArticle } from "../types.ts";
 export const chooseWeldOnHinges = {
   "slug": "how-to-choose-weld-on-hinges",
   "order": 1,
-  "title": "How to Choose a Weld-On Hinge for an Industrial Application",
-  "description": "Choose a weld-on hinge by checking the door arrangement, hinge structure, dimensions and removal clearance. Includes a practical RFQ checklist.",
+  "title": "How to Choose Weld-On Hinges: Industrial RFQ Guide",
+  "description": "Engineering guide on selecting industrial weld-on hinges. Compare bearing, pin, and bullet fittings by door weight, dimensions, and mounting layout.",
   "category": "selection-guides",
   "publishedAt": "2026-09-02",
   "updatedAt": "2026-09-20",

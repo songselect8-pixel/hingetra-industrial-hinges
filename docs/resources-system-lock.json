@@ -91,11 +91,11 @@
     },
     {
       "path": "src/content/resources/articles/how-to-choose-weld-on-hinges.ts",
-      "sha256": "d50cfaf99377b43fd0b9e02d448c7d0631cbf0cd021b042b5f66ad601128ac8d"
+      "sha256": "726077dcde78aef2c6a80e496320cd787322513b944e2d55f4fe27fd3736bd92"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-sizes.ts",
-      "sha256": "19d4b472e323092f84fa21ccea6c8194aeea62e6080fdce75fd61c130013e1b2"
+      "sha256": "da3d7e146dfd821bc5886edbbacf424b2fd9a3363a31a525c4da4f43d022be74"
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-gates-trailer-doors-and-ramps.ts",
@@ -103,7 +103,7 @@
     },
     {
       "path": "src/content/resources/articles/weld-on-hinges-for-electrical-control-cabinets.ts",
-      "sha256": "285ab9b512a3d98000d9d8be9c0d275e1a95c5244fa92bb487dfa172ea1ee60a"
+      "sha256": "f3e795c7d7ce23af0b2c4be3c4533e2dd375c6cf2417edf86b24682a57141d4c"
     },
     {
       "path": "src/content/resources/articles/standard-vs-custom-weld-on-hinges.ts",
@@ -111,7 +111,7 @@
     },
     {
       "path": "src/content/resources/articles/prepare-hinge-drawing-dimension-request.ts",
-      "sha256": "bd109fe150ae390b58bd00e39eead3a4a035e0660d7145c3b71ba7f8af049bb7"
+      "sha256": "2a8d78bc9196ed7c4daa2ff48b780113c8e2f1b659273aed883c684cb1ddd968"
     },
     {
       "path": "src/components/resources/ResourceRichText.tsx",
@@ -167,7 +167,7 @@
     },
     {
       "path": "src/data/site.ts",
-      "sha256": "c612426598944988ccaadf4c277ef908959711204df886f042e586683a39be1a"
+      "sha256": "72ac64177c374f58f2466ba281ebd3dc09bf631e941bf770884fc85ad24f6ca7"
     },
     {
       "path": "src/components/navigation/Header.tsx",
@@ -183,7 +183,7 @@
     },
     {
       "path": "src/app/products/page.tsx",
-      "sha256": "1a63d2c1a6456ebdc1e87d4936b47c5a87219fdcf305d9011212cee8672005a6"
+      "sha256": "50b9a1218b8db49eccf4f4b97c6a5918c626f5993a76ea53d2feb02859974541"
     },
     {
       "path": "src/components/applications/ApplicationsPageContent.tsx",
@@ -227,7 +227,7 @@
     },
     {
       "path": "src/content/resources/articles/bullet-barrel-weld-on-hinge-names.ts",
-      "sha256": "c5f87904c596f93f336b5f9c8fca932f1b6b888532f68bcf50eeeacc05277f40"
+      "sha256": "2b6d980abb5468e4ddeeb8fef9d196f4fce42398945a2f471675a2407f5b1d26"
     },
     {
       "path": "src/content/resources/articles/bearing-pin-washer-weld-on-hinges.ts",
@@ -239,7 +239,7 @@
     },
     {
       "path": "src/content/resources/articles/weld-on-hinge-alignment-and-removal-clearance.ts",
-      "sha256": "0d2854111c8924a97b5c98524fd90b7054914f4513c17745ac14b74564aca1c5"
+      "sha256": "866e88bc41496c1475ffe2e491b30529bc41aa2c63e672b75bd710f6b7cb06b8"
     },
     {
       "path": "src/content/resources/articles/weld-on-vs-bolt-on-hinges.ts",

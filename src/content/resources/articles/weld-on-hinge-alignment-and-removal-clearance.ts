@@ -14,8 +14,8 @@ export const alignmentClearance = {
   "slug": "weld-on-hinge-alignment-and-removal-clearance",
   "order": 10,
   "category": "technical-guides",
-  "title": "Weld-On Hinge Alignment and Removal Clearance",
-  "description": "Check hinge-axis alignment, opening clearance and the space needed to separate a removable hinge. Prepare a useful door-and-frame drawing for review.",
+  "title": "Weld-On Hinge Alignment & Removal Clearance Guide",
+  "description": "How to align weld-on hinges and calculate lift-off clearance. Prevent door binding, ensure smooth swing, and plan accurate door-to-frame joint drawings.",
   "featuredImage": "/images/hinge-pin.jpg",
   "featuredImageAlt": "HINGETRA pin-type weld-on hinge reference photograph from the product catalog",
   "keywords": [
