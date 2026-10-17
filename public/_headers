@@ -7,7 +7,7 @@
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://challenges.cloudflare.com https://cloudflareinsights.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 https://hingetra.com/*
-  Strict-Transport-Security: max-age=86400
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 # Production aliases and deployment previews must not compete with the canonical domain.
 https://hingetra-industrial-hinges.pages.dev/*
