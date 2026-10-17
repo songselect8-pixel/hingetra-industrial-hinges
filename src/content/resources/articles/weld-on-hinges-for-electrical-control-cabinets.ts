@@ -50,6 +50,18 @@ export const cabinetHinges = {
       "title": "Start with a door-edge section"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "why-door-edge-section-needed",
+      "title": "Why is a door-edge section view necessary for cabinet hinges?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A door-edge section view shows the moving door fold, fixed frame return, and seal position in the closed state. This confirms whether there is adequate clearance for the hinge body and ensures surrounding flanges do not obstruct door swing."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "The HINGETRA water-drop group is listed for switch cabinets, control cabinets, network cabinets and other industrial cabinets. A cabinet label alone does not explain the fit: two enclosures can have quite different door folds, frames and access restrictions."
@@ -75,6 +87,18 @@ export const cabinetHinges = {
       "level": 2,
       "id": "relevant-families",
       "title": "Compare the five relevant families"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "which-hinges-for-control-cabinets",
+      "title": "Which weld-on hinge families are listed for control cabinets?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "HINGETRA lists five water-drop hinge families for electrical and control cabinets: bearing, pin, gasket, grease-nipple, and 20 type. Each construction features distinct dimensions and parameters that must be evaluated against the specific enclosure layout."
+      ]
     },
     {
       "type": "paragraph",
@@ -112,6 +136,18 @@ export const cabinetHinges = {
       "level": 2,
       "id": "cabinet-dimensions",
       "title": "Check the opening and service space"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "how-to-ensure-door-removal-clearance",
+      "title": "How do you verify clearance for cabinet door removal?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "To verify door removal, check the vertical disengagement path and overhead space on the drawing. An overhead cover, adjacent cabinet, or nearby flange can block panel removal even if the door swings open freely."
+      ]
     },
     {
       "type": "comparison-table",
@@ -178,6 +214,18 @@ export const cabinetHinges = {
       "level": 2,
       "id": "cabinet-rfq-checklist",
       "title": "Prepare the cabinet inquiry"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "what-to-include-in-cabinet-hinge-rfq",
+      "title": "What details should be included in an electrical cabinet hinge RFQ?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Include the hinge family and model reference, a door and frame section sketch, opening direction, door dimensions and weight if known, drawing revision, required quantity, and any lift-off clearance or grease-fitting access constraints."
+      ]
     },
     {
       "type": "list",

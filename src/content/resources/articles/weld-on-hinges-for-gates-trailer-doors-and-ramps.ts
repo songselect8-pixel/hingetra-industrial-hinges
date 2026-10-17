@@ -45,6 +45,18 @@ export const gateTrailerRampHinges = {
       "title": "Use the application as a starting point"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "which-hinges-for-gates-trailers-ramps",
+      "title": "Which weld-on hinge series is designed for gates, trailer doors, and ramps?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "HINGETRA’s 12 / 14 / 16 type series (covering models 12-A, 14-A, and 16-A) is the catalog-listed starting point for fabricated gates, trailer side doors, and folding vehicle ramps."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "HINGETRA’s 12 / 14 / 16 type series is listed for gates, trailer doors and ramps. That makes it a relevant family to review. It does not select a model for a particular gate width, trailer or ramp arrangement."
@@ -70,6 +82,18 @@ export const gateTrailerRampHinges = {
       "level": 2,
       "id": "compare-models",
       "title": "Compare all dimensions of the numbered models"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "how-to-choose-numbered-models",
+      "title": "How should you choose between 12-A, 14-A, and 16-A hinge models?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Compare all published dimensional parameters on the technical drawing rather than relying on the model number alone. The published D values are 11.80, 13.80 and 15.80, but the original catalog table does not state a unit, so confirm the unit and full dimensions against the technical drawing before committing to a mounting profile."
+      ]
     },
     {
       "type": "paragraph",
@@ -103,6 +127,18 @@ export const gateTrailerRampHinges = {
       "level": 2,
       "id": "installation-information",
       "title": "Show movement and the surrounding structure"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "folding-ramp-hinge-details",
+      "title": "What structural details are required for folding ramp hinge selection?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A ramp installation requires drawings showing movement direction, travel path, how the ramp is supported when deployed under load, and how it is secured when stored. Hinge dimensions alone cannot establish complete ramp assembly suitability."
+      ]
     },
     {
       "type": "list",
@@ -175,6 +211,18 @@ export const gateTrailerRampHinges = {
       "level": 2,
       "id": "move-to-rfq",
       "title": "Send the drawing with the model reference"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "gate-trailer-hinge-rfq-submission",
+      "title": "What information should you submit for a gate or trailer hinge quote?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Submit the closest model reference (such as 12-A, 14-A, or 16-A), an installation sketch showing hinge positions and travel clearance, current drawing revision, estimated order quantity, and delivery destination."
+      ]
     },
     {
       "type": "paragraph",
