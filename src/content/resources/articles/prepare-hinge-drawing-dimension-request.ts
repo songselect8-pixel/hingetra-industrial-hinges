@@ -4,7 +4,7 @@ import type { ResourceArticle } from "../types.ts";
 export const prepareHingeDrawing = {
   "slug": "prepare-hinge-drawing-dimension-request",
   "order": 6,
-  "title": "Industrial Hinge Drawing & RFQ Guide: Sizing Checklist",
+  "title": "Hinge Drawing & RFQ Guide: Dimension Sizing Checklist",
   "description": "How to prepare an industrial hinge drawing and RFQ. Essential dimension checklist, tolerance specs, and custom joint requirements for fast quotations.",
   "category": "technical-guides",
   "publishedAt": "2026-09-02",

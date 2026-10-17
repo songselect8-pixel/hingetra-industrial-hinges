@@ -9,8 +9,8 @@ import { site } from "@/data/site";
 import { illustrations } from "@/data/illustrations";
 import "./manufacturing.css";
 
-const title = `Industrial Hinge Manufacturing | Factory Capability | ${site.brand}`;
-const description = "Review catalog-supported industrial hinge manufacturing capabilities including lathe processing, automatic punching, mass assembly, production checks, custom support and standardized packaging.";
+const title = `Industrial Hinge Manufacturing & Factory Capabilities | ${site.brand}`;
+const description = "Factory-direct industrial hinge manufacturing: lathe processing, automated punching, batch assembly, in-process inspection, and custom packaging support.";
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {

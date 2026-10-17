@@ -9,8 +9,8 @@ import { site } from "@/data/site";
 import { illustrations } from "@/data/illustrations";
 import "./custom-hinges.css";
 
-const title = `Custom Weld-On Hinges | Made to Drawing | ${site.brand}`;
-const description = "Discuss custom weld-on hinge dimensions, structures and drawings for review before quotation. Explore catalog-supported customizable hinge families.";
+const title = `Custom Industrial Hinged Joint Manufacturer | ${site.brand}`;
+const description = "Custom industrial hinged joint manufacturer: review weld-on hinge drawings, dimensions, and structural options for heavy-duty metal enclosures and doors.";
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {

@@ -8,8 +8,8 @@ import { RFQSection } from "@/components/sections/RFQSection";
 import { site } from "@/data/site";
 import "./applications.css";
 
-const title = `Weld-On Hinge Applications | Industrial Doors, Gates & Cabinets | ${site.brand}`;
-const description = "Explore source-backed weld-on hinge applications for carbon steel doors, gates, trailer doors, ramps, switch cabinets, control cabinets and network cabinets.";
+const title = `Weld-On Hinges for Machine Enclosures & Doors | ${site.brand}`;
+const description = "Explore heavy-duty weld-on hinge applications: machine enclosures, electrical control cabinets, steel doors, security gates, and trailer ramp hinges.";
 const baseUrl = process.env.SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {
