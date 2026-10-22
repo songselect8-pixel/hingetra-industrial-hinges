@@ -47,6 +47,18 @@ export const standardVsCustomHinges = {
       "title": "When the listed entry matches"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "confirming-standard-catalog-fit",
+      "title": "What information confirms a standard catalog hinge fits an assembly?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A standard fit is confirmed by verifying published body diameter, pin height, overall length, and mounting profile against your frame drawing. The door swing radius and surrounding clearances must also align with the listed dimensions."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "A standard inquiry identifies one product family and a published size or model. Include a link to the product page, the quantity and the intended application. Attach your installation drawing if fit still needs review."
@@ -102,6 +114,18 @@ export const standardVsCustomHinges = {
       "level": 2,
       "id": "information-buyers-provide",
       "title": "Put fixed requirements and open questions on one drawing"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "marking-fixed-mounting-constraints",
+      "title": "How should fixed mounting constraints be marked on a custom hinge sketch?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Highlight non-negotiable boundary dimensions with explicit datum callouts, and label features that can accept manufacturer recommendations as flexible. This distinction prevents redesign loops and focuses technical review on critical fitment areas."
+      ]
     },
     {
       "type": "list",
@@ -189,6 +213,18 @@ export const standardVsCustomHinges = {
       "level": 2,
       "id": "avoid-common-ambiguity",
       "title": "Avoid three common gaps"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "why-photographs-alone-insufficient",
+      "title": "Why is a photograph alone insufficient for custom hinge quotation?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Photographs introduce perspective distortion and cannot capture critical internal parameters such as pin clearance, hole depth, or material grade. A marked sketch or vector drawing with explicit dimensions is essential to calculate tooling and material requirements."
+      ]
     },
     {
       "type": "paragraph",

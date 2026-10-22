@@ -57,6 +57,18 @@ export const chooseWeldOnHinges = {
       "title": "Start with the door and its surroundings"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "door-travel-clearance-check",
+      "title": "Why is door travel clearance checked before selecting a hinge?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Door swing path, adjacent flanges, seals, and overhead structures dictate how much clearance is available during opening and closing. Confirming these boundary conditions prevents choosing a hinge body that binds against the frame or blocks required door movement."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "Show the fixed frame, moving panel and proposed hinge positions. Add the opening direction and any nearby return flange, seal, latch or overhead obstruction. For an existing installation, include one photograph of the whole assembly and a closer view of the hinge. A close-up alone leaves the supplier guessing about available space."
@@ -90,6 +102,18 @@ export const chooseWeldOnHinges = {
       "level": 2,
       "id": "compare-structures",
       "title": "Choose the construction before choosing a size"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bearing-vs-washer-weld-on-hinge",
+      "title": "How does a bearing weld-on hinge differ from a washer hinge?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "A bearing hinge uses an internal ball bearing assembly to reduce rotational friction under continuous vertical load. A washer hinge relies on a flat spacer washer between the leaves, which is suitable for basic pivot points with lower cycling frequency."
+      ]
     },
     {
       "type": "paragraph",
@@ -228,6 +252,18 @@ export const chooseWeldOnHinges = {
       "level": 2,
       "id": "when-custom-review",
       "title": "When a listed hinge does not fit"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "when-custom-hinge-review-needed",
+      "title": "When is custom hinge review necessary instead of choosing a catalog size?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Custom review is required whenever your assembly demands a non-standard pin diameter, extended body length, modified weld-on profile, or specific grease fitting orientation. Submitting a dimensioned drawing allows the engineering team to confirm fabrication feasibility before quotation."
+      ]
     },
     {
       "type": "paragraph",

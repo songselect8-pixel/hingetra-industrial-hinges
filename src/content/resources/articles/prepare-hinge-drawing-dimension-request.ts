@@ -56,6 +56,18 @@ export const prepareHingeDrawing = {
       "title": "Name the part and drawing revision"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "why-include-drawing-revision",
+      "title": "Why should drawing revision numbers be included in a hinge RFQ?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Revision numbers prevent confusion between preliminary concept sketches and updated fabrication releases. Stating the active revision ensures both buyer and manufacturer evaluate identical dimensions, tolerances, and structural requirements during technical review."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "Put the product family and exact model or size at the top when referring to a listed hinge. If you do not know the family, label the drawing as a buyer requirement and include photographs. Do not select a family solely because its photograph looks similar."
@@ -72,6 +84,18 @@ export const prepareHingeDrawing = {
       "level": 2,
       "id": "show-enough-views",
       "title": "Show the hinge and the installation"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "why-section-view-needed",
+      "title": "Why is a section view needed alongside an overall hinge drawing?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "An overall view shows external body length and diameter, but only a section view reveals internal pin engagement, bushing location, and weld flange thickness. For tight enclosure joints, the section view verifies whether the hinge body clears adjacent frame returns."
+      ]
     },
     {
       "type": "paragraph",
@@ -187,6 +211,18 @@ export const prepareHingeDrawing = {
       "level": 2,
       "id": "final-review",
       "title": "Check the files before submitting"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "preferred-drawing-formats-review",
+      "title": "Which drawing formats are preferred for industrial hinge technical review?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Vector formats such as PDF, DWG, and DXF are preferred because they preserve exact dimensional lines, datum points, and title block notations. High-resolution raster images are also acceptable provided all dimension callouts and unit labels remain fully legible."
+      ]
     },
     {
       "type": "paragraph",

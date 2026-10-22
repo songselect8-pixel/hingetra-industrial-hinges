@@ -78,6 +78,18 @@ export const bulletBarrelNames = {
       "title": "Use the name to ask the next question"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "why-specify-weld-on-barrel-hinges",
+      "title": "Why should weld-on be specified when searching for barrel hinges?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "The term barrel hinge also appears in non-welded architectural and cabinetry hardware. Specifying weld-on confirms the hinge is designed for direct welding onto fabricated metal assemblies rather than screw-mounted timber or sheet frames."
+      ]
+    },
+    {
       "type": "comparison-table",
       "caption": "From a search term to a useful specification",
       "columns": [
@@ -116,6 +128,18 @@ export const bulletBarrelNames = {
       "title": "How to find the HINGETRA reference"
     },
     {
+      "type": "heading",
+      "level": 3,
+      "id": "round-vs-water-drop-profiles",
+      "title": "How do round weld-on hinges differ from water-drop profiles?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Round hinges have a simple cylindrical outer profile, whereas water-drop profiles include an integrated tear-shaped weld-on flange. The teardrop shape helps position the weld joint away from the central pivot axis and provides a defined welding seam against flat door posts."
+      ]
+    },
+    {
       "type": "paragraph",
       "content": [
         "On this website, use the named family shown on the product page. Round and pin hinges are separate entries, with separate images and size records. The water-drop group also includes bearing, gasket, grease-nipple and 20 type hinges. Keep those distinctions when requesting a quote."
@@ -142,6 +166,18 @@ export const bulletBarrelNames = {
       "level": 2,
       "id": "write-the-request",
       "title": "Write a request that can be checked"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "replacing-unlabeled-bullet-hinge",
+      "title": "What should you send when replacing an unlabeled bullet hinge?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        "Provide an installation sketch indicating where the hinge sits, clear photographs of the existing joint, and marked measurements of the outer diameter, pin diameter, and assembled length. Note whether the door must lift off so the internal pin arrangement can be confirmed."
+      ]
     },
     {
       "type": "list",
