@@ -12,6 +12,7 @@ import { alignmentClearance } from "./articles/weld-on-hinge-alignment-and-remov
 import { weldOnVsBoltOn } from "./articles/weld-on-vs-bolt-on-hinges.ts";
 import { hingeMaterials } from "./articles/weld-on-hinge-materials-and-finishes.ts";
 import { liftOffHingesGuide } from "./articles/lift-off-weld-on-hinges-selection-guide.ts";
+import { loadCapacitySpacing } from "./articles/weld-on-hinge-load-capacity-and-spacing.ts";
 import { getResourceReadingTime, getResourceTableOfContents, isPublicResource, paginateResources, resourcePublisher } from "./publishing.ts";
 import type { ResourceArticle, ResourceCategoryId } from "./types.ts";
 
@@ -29,6 +30,7 @@ export const resourceArticles: readonly ResourceArticle[] = [
   weldOnVsBoltOn,
   hingeMaterials,
   liftOffHingesGuide,
+  loadCapacitySpacing,
 ] as const;
 
 export function getPublishedResources() {
