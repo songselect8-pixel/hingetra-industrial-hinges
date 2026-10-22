@@ -11,6 +11,7 @@ import { greaseFittingHinges } from "./articles/grease-fitting-weld-on-hinges.ts
 import { alignmentClearance } from "./articles/weld-on-hinge-alignment-and-removal-clearance.ts";
 import { weldOnVsBoltOn } from "./articles/weld-on-vs-bolt-on-hinges.ts";
 import { hingeMaterials } from "./articles/weld-on-hinge-materials-and-finishes.ts";
+import { liftOffHingesGuide } from "./articles/lift-off-weld-on-hinges-selection-guide.ts";
 import { getResourceReadingTime, getResourceTableOfContents, isPublicResource, paginateResources, resourcePublisher } from "./publishing.ts";
 import type { ResourceArticle, ResourceCategoryId } from "./types.ts";
 
@@ -27,6 +28,7 @@ export const resourceArticles: readonly ResourceArticle[] = [
   alignmentClearance,
   weldOnVsBoltOn,
   hingeMaterials,
+  liftOffHingesGuide,
 ] as const;
 
 export function getPublishedResources() {
