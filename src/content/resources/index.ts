@@ -14,6 +14,7 @@ import { hingeMaterials } from "./articles/weld-on-hinge-materials-and-finishes.
 import { liftOffHingesGuide } from "./articles/lift-off-weld-on-hinges-selection-guide.ts";
 import { loadCapacitySpacing } from "./articles/weld-on-hinge-load-capacity-and-spacing.ts";
 import { sheetMetalDoorHingesGuide } from "./articles/sheet-metal-door-weld-on-hinges-guide.ts";
+import { industrialHingedJoints } from "./articles/industrial-hinged-joints-and-connection-types.ts";
 import { getResourceReadingTime, getResourceTableOfContents, isPublicResource, paginateResources, resourcePublisher } from "./publishing.ts";
 import type { ResourceArticle, ResourceCategoryId } from "./types.ts";
 
@@ -33,6 +34,7 @@ export const resourceArticles: readonly ResourceArticle[] = [
   liftOffHingesGuide,
   loadCapacitySpacing,
   sheetMetalDoorHingesGuide,
+  industrialHingedJoints,
 ] as const;
 
 export function getPublishedResources() {
